@@ -149,6 +149,7 @@ sources/0 = SubResource("TileSetAtlasSource_xokqg")
 sources/1 = SubResource("TileSetAtlasSource_w4ne6")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_32vng"]
+seed = 2
 frequency = 0.0021
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2ychw"]
