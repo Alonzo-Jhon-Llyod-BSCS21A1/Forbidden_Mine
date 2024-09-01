@@ -1,41 +1,50 @@
 extends TileMap
 
-var moisture = FastNoiseLite.new()
-var temperature = FastNoiseLite.new()
-var altitude = FastNoiseLite.new()
-
-var width = 16
-var height = 16
-# Called when the node enters the scene tree for the first time.
-@onready var player = get_parent().get_node("CharacterBody2D")
-
-var loaded_chunks = []
-
+@export var noise_height_text : NoiseTexture2D
+var noise : Noise
+var width : int = 5000
+var	height : int = 5000
 func _ready():
-	moisture.seed = randi()
-	temperature.seed = randi()
+	noise = noise_height_text.noise
+	generate_world()
 	
-	var player_tile_pos = local_to_map(player.position)
-	generate_chunk(player_tile_pos)
-	
-func generate_chunk(pos):
+func generate_world():
+	randomize()
+	noise.seed = randi()%10000
 	for x in range(width):
-		for y in range(height):
-			
-			var moist = moisture.get_noise_2d((width/2) + x,(height/2) + x) * 10
-			var temp = temperature.get_noise_2d((width/2) + x,(height/2) + x) * 10
-			var alt = pos.y - (height/2) + y
-			
-			if alt > 0:
-				set_cell(0, Vector2i(pos.x - (width/2) + x, pos.y - (height/2) + y),0, Vector2(6, 2))
-			else:
-				set_cell(0, Vector2i(pos.x - (width/2) + x, pos.y - (height/2) + y),0, Vector2(4, 1))
-			
-			if Vector2(pos.x, pos.y) not in loaded_chunks:
-				loaded_chunks.append(Vector2i(pos.x, pos.y))
+		var ground = abs(noise.get_noise_2d(x,0) * 64)
+		for y in range(ground, height):
+			var noise_val:float = noise.get_noise_2d(x,y)
+			if noise_val > -25 and y < 50:
+				position = (Vector2i(x, y-1))
+				if get_cell_atlas_coords(0, position) != Vector2i(0, 0) and get_cell_atlas_coords(0, position) != Vector2i(0, 1) and get_cell_atlas_coords(0, position) != Vector2i(6, 1):
+					set_cell(0,Vector2(x,y),0,Vector2i(0, 0)) 
+				else:
+					if noise_val > 0.0 and y < 50:
+						set_cell(0,Vector2(x,y),0,Vector2i(6, 1))
+					else:
+						set_cell(0,Vector2(x,y),0,Vector2i(0, 1))
+	
+	
+	
+	
+	
+	
+	
+	
+				#if get_cell_atlas_coords(0, position) != Vector2i(0, 0) and get_cell_atlas_coords(0, position) != Vector2i(0, 1):#Check hindi dirt un tass
+						#set_cell(0,Vector2(x,y),0,Vector2i(0, 0))
+					#print(Vector2i(0, 0).y) #lalagay grass
+				#elif get_cell_atlas_coords(0, position) != Vector2i(0, 0):
+					#if get_cell_source_id(0, position) != 0: #check if grass ung taas
+						#set_cell(0,Vector2(x,y),0,Vector2i(0, 1)) #lalagay dirt
+				#elif get_cell_atlas_coords(0, position) != Vector2i(0, 1): #Check if dirt ung taas
+					#set_cell(0,Vector2(x,y),0,Vector2i(0, 1)) #lalagay dirt
+				#else:
+					#set_cell(0,Vector2(x,y),0,Vector2i(0, 1))
+		
 				
-
 				
-			
-			
-			
+				
+	
+	
