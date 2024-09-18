@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c41klwo0k4hb1"]
+[gd_scene load_steps=10 format=3 uid="uid://c41klwo0k4hb1"]
 
 [ext_resource type="Texture2D" uid="uid://cpugo1sjv1qc8" path="res://brackeys_platformer_assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_1whjp"]
 [ext_resource type="Script" path="res://Worldgen.gd" id="1_bore3"]
 [ext_resource type="PackedScene" uid="uid://mclnmadsjcpj" path="res://character_body_2d.tscn" id="3_5ggpm"]
+[ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="3_fdor4"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="4_pq02c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6bqv"]
@@ -146,7 +147,15 @@ noise = SubResource("FastNoiseLite_fcco1")
 
 [node name="Node2D" type="Node2D"]
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -236964.0
+offset_top = -65024.0
+offset_right = 272229.0
+offset_bottom = 34564.0
+texture = ExtResource("3_fdor4")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_okwpe")
 script = ExtResource("1_bore3")
 noise_height_text = SubResource("NoiseTexture2D_1uhbx")
