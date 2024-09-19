@@ -155,7 +155,7 @@ offset_bottom = 34564.0
 texture = ExtResource("3_fdor4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-scale = Vector2(3, 3)
+scale = Vector2(5, 5)
 tile_set = SubResource("TileSet_okwpe")
 script = ExtResource("1_bore3")
 noise_height_text = SubResource("NoiseTexture2D_1uhbx")
