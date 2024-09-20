@@ -1,7 +1,7 @@
 extends TileMapLayer
 @export var noise_height_text : NoiseTexture2D
-const  SAVE_FILE_PATH = "user://SavingPrac.save"
-var width = 10000
+var SAVE_FILE_PATH = "user://"
+var width = 1000
 var height = 100
 var noise : Noise
 
@@ -15,25 +15,32 @@ var diamond =  Vector2i(0,14)
 var rng : RandomNumberGenerator 
 
 func _ready() -> void:
-	noise = noise_height_text.noise
-	noise.seed = 1
-	rng = RandomNumberGenerator.new()
-	rng.seed = 1
-	load_gamebinary()
-	#load_game1()
-	#load_game()
-	"grassanddirt()
-	stonegen()
-	deepgen()
-	irongen()
-	diamondgen()
-	watergen()
-	waterfill()
-	tree()
-	#save_world()
-	#save_world1()
-	save_worldbinary()"
-	pass # Replace with function body.
+	SAVE_FILE_PATH += GlobalVar.new_world
+	if GlobalVar.load == 0:
+		load_game()
+	if GlobalVar.load == 1:
+		noise = noise_height_text.noise
+		noise.seed = randi()
+		rng = RandomNumberGenerator.new()
+		rng.seed = 1
+		#load_gamebinary()
+		#load_game1()
+		#load_game()
+		grassanddirt()
+		stonegen()
+		deepgen()
+		irongen()
+		diamondgen()
+		watergen()
+		waterfill()
+		tree()
+		save_world()
+		#save_world1()
+		#save_worldbinary()
+		pass # Replace with function body.
+	if GlobalVar.load == 2:
+		load_game()
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
