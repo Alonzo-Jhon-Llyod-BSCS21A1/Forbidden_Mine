@@ -17,3 +17,6 @@ shape = SubResource("CapsuleShape2D_jca0p")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -81)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("1_wno0q")

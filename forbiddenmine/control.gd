@@ -40,4 +40,3 @@ func check_worldlist():
 	var parse_result = json.parse(json_string)
 	var save_data = json.get_data()
 	world_list = save_data
-	

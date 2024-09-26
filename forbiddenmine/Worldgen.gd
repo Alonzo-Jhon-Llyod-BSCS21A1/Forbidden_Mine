@@ -1,13 +1,14 @@
 extends TileMapLayer
 @export var noise_height_text : NoiseTexture2D
 var SAVE_FILE_PATH = "user://"
-var width = 1000
+var width = 10000
 var height = 100
 var noise : Noise
 
 var grass = Vector2i(0,0)
 var dirt = Vector2i(0,1)
 var water = Vector2i(4, 10)
+var sand = Vector2i(2, 1)
 var stone = Vector2i(6, 1)
 var deepstone = Vector2i(4,1)
 var iron = Vector2i(4,8)
@@ -23,9 +24,6 @@ func _ready() -> void:
 		noise.seed = randi()
 		rng = RandomNumberGenerator.new()
 		rng.seed = 1
-		#load_gamebinary()
-		#load_game1()
-		#load_game()
 		grassanddirt()
 		stonegen()
 		deepgen()
@@ -33,10 +31,9 @@ func _ready() -> void:
 		diamondgen()
 		watergen()
 		waterfill()
+		sandgen()
 		tree()
 		save_world()
-		#save_world1()
-		#save_worldbinary()
 		pass # Replace with function body.
 	if GlobalVar.load == 2:
 		load_game()
@@ -78,6 +75,16 @@ func waterfill():
 				if (get_cell_source_id(Vector2i(x,y+1)) == -1):
 					set_cell(Vector2i(x,y+1),1,water)
 					
+func sandgen():
+	for x in range(-width/2, width/2):
+		for y in range(height):
+			if (get_cell_atlas_coords(Vector2i(x, y)) == grass): 
+				if (get_cell_atlas_coords(Vector2i(x, y-1)) == water ):
+					set_cell(Vector2i(x,y),1,sand)
+				
+				
+	
+					
 func stonegen():
 	for x in range(-width/2, width/2):
 		var ground = abs(noise.get_noise_2d(x,0) * 64) 
@@ -93,43 +100,6 @@ func deepgen():
 			var noise_val:float = noise.get_noise_2d(x,y)
 			if noise_val > -2:
 				set_cell(Vector2i(x,y),1, deepstone)
-				
-"func irongen():
-	for x in range(-width/2, width/2):
-		var ground = abs(noise.get_noise_2d(x,0) * 64) 
-		for y in range(28, height):
-			var noise_val:float = noise.get_noise_2d(x,y)
-			if noise_val > 0:
-				if (get_cell_atlas_coords(Vector2i(x-10, y)) != iron):
-					if (get_cell_atlas_coords(Vector2i(x, y-10)) != iron):
-						if (get_cell_atlas_coords(Vector2i(x-10, y-10)) != iron):
-							if (get_cell_atlas_coords(Vector2i(x-5, y)) != iron):
-								if (get_cell_atlas_coords(Vector2i(x, y-5)) != iron):
-									if (get_cell_atlas_coords(Vector2i(x-5, y-5)) != iron):
-										if (get_cell_atlas_coords(Vector2i(x-5, y+5)) != iron):
-											set_cell(Vector2i(x,y),1, iron)"
-
-"func irongen():
-	for x in range(-width / 2, width / 2):
-		var ground = abs(noise.get_noise_2d(x, 0) * 64)
-		for y in range(ground+28, height):
-			var noise_val: float = noise.get_noise_2d(x, y)
-			if noise_val > 0:
-				if not is_nearby_iron(x, y):
-					set_cell(Vector2i(x, y), 1, iron)
-					
-func is_nearby_iron(x: int, y: int) -> bool:
-	var offsets = [
-		Vector2i(-10, 0), Vector2i(0, -10), Vector2i(-10, -10),
-		Vector2i(-5, 0), Vector2i(0, -5), Vector2i(-5, -5),
-		Vector2i(-5, 5)
-	]
-	
-	for offset in offsets:
-		if get_cell_atlas_coords(Vector2i(x, y) + offset) == iron:
-			return true       
-	return false"
-	
 
 func irongen():
 	for x in range(-width / 2, width / 2):
@@ -146,7 +116,7 @@ func diamondgen():
 	for x in range(-width / 2, width / 2):
 		for y in range(64, 100):
 			var noise_val: float = noise.get_noise_2d(x, y)
-			if (y > 90 and rng.randf() < 0.005) or (y > 64 and rng.randf() < 0.0005):
+			if (y > 95 and rng.randf() < 0.005) or (y > 90 and rng.randf() < 0.0005):
 				set_cell(Vector2i(x, y), 1, diamond)
 				set_cell(Vector2i(x-1, y), 1, diamond)
 				set_cell(Vector2i(x+1, y), 1, diamond)
@@ -189,57 +159,10 @@ func load_game():
 			set_cell(Vector2i(xx,yy),1, Vector2i(tile_data.x, tile_data.y))
 			count+=1
 			
-@export var world_save: WorldSave
 
-func save_world1():
-	var world_save:WorldSave = WorldSave.new()
-	var data: Array = []
-	for x in range(-width/2, width/2):
-		for y in range(-50, height):
-			var current_tile = get_cell_atlas_coords(Vector2i(x, y))
-			data.append({"x": x, "y": y, "tile_x": current_tile.x, "tile_y": current_tile.y})
-	var path = "user://savegame.tres"
-	world_save.tiles = data
-	var result = ResourceSaver.save(world_save, "user://savegame.tres")
-	if result == OK:
-		print("World data saved successfully at: ", path)
-	else:
-		print("Failed to save world data: ", result)
+
 			
 
-func save_worldbinary():
-	var data : Array = []
-	for x in range(-width/2, width/2):
-		for y in range(-50, height):
-			var current_tile = get_cell_atlas_coords(Vector2i(x, y))
-			data.append({"x": x, "y": y, "tile_x": current_tile.x, "tile_y": current_tile.y})
-	var path = "user://savegame.dat"
-	var databytes : Array = []
-	databytes = var_to_bytes(data)
-	var file = FileAccess.open(path, FileAccess.WRITE)
-	file.store_buffer(databytes)
-
-		
-func load_game1():
-	var path = "user://savegame.tres"
-	var world_save = ResourceLoader.load(path) as WorldSave
-	if world_save:
-		var data = world_save.tiles
-		for tile_data in data:
-			set_cell(Vector2i(tile_data["x"], tile_data["y"]), 1, Vector2i(tile_data["tile_x"], tile_data["tile_y"]))
-		print("World data loaded successfully from: ", path)
-	else:
-		print("Failed to load world data.")
-		
-func load_gamebinary():
-	var path = "user://savegame.dat"
-	var file = FileAccess.open(path, FileAccess.READ)
-	var databytes : Array = []
-	databytes = file.get_buffer(file.get_length())
-	var data : Array = []
-	data = bytes_to_var(databytes)
-	for tile_data in data:
-		set_cell(Vector2i(tile_data["x"], tile_data["y"]), 1, Vector2i(tile_data["tile_x"], tile_data["tile_y"]))
 
 
 
