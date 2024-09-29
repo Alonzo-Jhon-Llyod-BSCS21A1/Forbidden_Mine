@@ -1,5 +1,5 @@
 extends Control
-@onready var v_box_container: VBoxContainer = $TabContainer/CREATE/VBoxContainer
+@onready var v_box_container: VBoxContainer = $TabContainer/CREATE/VBoxContainer/ScrollContainer/VBoxContainer
 var file_path = "user://WorldList"
 var world_list = []
 var button = []

@@ -5,14 +5,14 @@ var width = 10000
 var height = 100
 var noise : Noise
 
-var grass = Vector2i(0,0)
-var dirt = Vector2i(0,1)
-var water = Vector2i(4, 10)
-var sand = Vector2i(2, 1)
-var stone = Vector2i(6, 1)
-var deepstone = Vector2i(4,1)
-var iron = Vector2i(4,8)
-var diamond =  Vector2i(0,14)
+var grass = Vector2i(4,0)
+var dirt = Vector2i(3,0)
+var water = Vector2i(4, 1)
+var sand = Vector2i(0, 0)
+var stone = Vector2i(1, 0)
+var deepstone = Vector2i(2,0)
+var iron = Vector2i(2,1)
+var diamond =  Vector2i(1,1)
 var rng : RandomNumberGenerator 
 
 func _ready() -> void:
@@ -24,7 +24,7 @@ func _ready() -> void:
 		noise.seed = randi()
 		rng = RandomNumberGenerator.new()
 		rng.seed = 1
-		grassanddirt()
+		grassanddirtsnow()
 		stonegen()
 		deepgen()
 		irongen()
@@ -44,15 +44,23 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func grassanddirt():
+func grassanddirtsnow():
 	for x in range(-width/2, width/2):
 		var ground = abs(noise.get_noise_2d(x,0) * 64)
 		for y in range(ground, height):
+			var noise_val: float = noise.get_noise_2d(x,y)
 			if y < 50:
-				if (get_cell_atlas_coords(Vector2i(x, y-1)) != grass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
-					set_cell(Vector2i(x,y),1, grass)
+				if (x> ((width/2)-(width/2))):
+					if (get_cell_atlas_coords(Vector2i(x, y-1)) != grass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
+						set_cell(Vector2i(x,y),1, grass)
+					else:
+						set_cell(Vector2i(x,y),1, dirt)
 				else:
-					set_cell(Vector2i(x,y),1, dirt)
+					if (get_cell_atlas_coords(Vector2i(x, y-1)) != Vector2i(5,0) and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
+						set_cell(Vector2i(x,y),1, Vector2i(5,0))
+					else:
+						set_cell(Vector2i(x,y),1, dirt)
+
 					
 func watergen():
 	for x in range(-width/2, width/2):
@@ -105,7 +113,7 @@ func irongen():
 	for x in range(-width / 2, width / 2):
 		for y in range(36, 100):
 			var noise_val: float = noise.get_noise_2d(x, y)
-			if y > 36 and rng.randf() < 0.005 or (y > 64 and rng.randf() < 0.0005):
+			if y > 36 and rng.randf() < 0.0028 or (y > 64 and rng.randf() < 0.00028):
 				set_cell(Vector2i(x, y), 1, iron)
 				set_cell(Vector2i(x-1, y), 1, iron)
 				set_cell(Vector2i(x+1, y), 1, iron)
@@ -116,7 +124,7 @@ func diamondgen():
 	for x in range(-width / 2, width / 2):
 		for y in range(64, 100):
 			var noise_val: float = noise.get_noise_2d(x, y)
-			if (y > 95 and rng.randf() < 0.005) or (y > 90 and rng.randf() < 0.0005):
+			if (y > 95 and rng.randf() < 0.0028) or (y > 90 and rng.randf() < 0.00028):
 				set_cell(Vector2i(x, y), 1, diamond)
 				set_cell(Vector2i(x-1, y), 1, diamond)
 				set_cell(Vector2i(x+1, y), 1, diamond)
@@ -129,9 +137,9 @@ func tree():
 		for y in range(ground-1, ground+1):
 			var noise_val:float = noise.get_noise_2d(x,y)
 			if (get_cell_atlas_coords(Vector2i(x, y)) == grass and rng.randf() < 0.2):
-				set_cell(Vector2i(x,y-1),1, Vector2i(0, 5))
-				set_cell(Vector2i(x,y-2),1, Vector2i(0, 4))
-				set_cell(Vector2i(x,y-3),1, Vector2i(0, 3))
+				set_cell(Vector2i(x,y-1),1, Vector2i(7, 1))
+				set_cell(Vector2i(x,y-2),1, Vector2i(7, 0))
+				set_cell(Vector2i(x,y-3),1, Vector2i(7, 0))
 				
 func save_world():
 	var save_data = {"worldgen": []}
