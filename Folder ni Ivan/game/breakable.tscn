@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqwdhrbh3l38q"]
+
+[ext_resource type="Script" path="res://breakable.gd" id="1_qelv0"]
+[ext_resource type="Texture2D" uid="uid://bvw2vobirlqgf" path="res://player/tileYellow_06.png" id="2_ssdk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcmy8"]
+size = Vector2(64, 65)
+
+[node name="breakable" type="CharacterBody2D"]
+script = ExtResource("1_qelv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ssdk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_kcmy8")
