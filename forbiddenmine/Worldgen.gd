@@ -18,7 +18,8 @@ var rng : RandomNumberGenerator
 func _ready() -> void:
 	SAVE_FILE_PATH += GlobalVar.new_world
 	if GlobalVar.load == 0:
-		load_game()
+		load_worldbinary()
+		#load_game()
 	if GlobalVar.load == 1:
 		noise = noise_height_text.noise
 		noise.seed = randi()
@@ -33,10 +34,9 @@ func _ready() -> void:
 		waterfill()
 		sandgen()
 		tree()
-		save_world()
+		save_worldbinary()
+		#save_world()
 		pass # Replace with function body.
-	if GlobalVar.load == 2:
-		load_game()
 		
 
 
@@ -140,7 +140,40 @@ func tree():
 				set_cell(Vector2i(x,y-1),1, Vector2i(7, 1))
 				set_cell(Vector2i(x,y-2),1, Vector2i(7, 0))
 				set_cell(Vector2i(x,y-3),1, Vector2i(7, 0))
-				
+			
+func save_worldbinary():
+	var path = "user://aegame.dat"
+	var file = FileAccess.open(path, FileAccess.WRITE)
+
+	for x in range(-width/2, width/2):
+		for y in range(-50, height):
+			var current_tile = get_cell_atlas_coords(Vector2i(x, y))
+			if get_cell_source_id(Vector2i(x, y)) == -1:
+				file.store_32(-1)
+				file.store_32(-1)
+			else:
+				file.store_32(current_tile.x)
+				file.store_32(current_tile.y)
+	file.close()
+
+	
+func load_worldbinary():
+	var path = "user://aegame.dat"
+	var file = FileAccess.open(path, FileAccess.READ)
+
+	if file:
+		for x in range(-width/2, width/2):
+			for y in range(-50, height):
+				var tile_x = file.get_32()
+				var tile_y = file.get_32()
+				if tile_x == -1 and tile_y == -1:
+					continue
+				else:
+					set_cell(Vector2i(x, y), 1, Vector2i(tile_x, tile_y))
+		file.close()
+	else:
+		print("Failed to open file at path:", path)
+
 func save_world():
 	var save_data = {"worldgen": []}
 	for x in range(-width/2, width/2):

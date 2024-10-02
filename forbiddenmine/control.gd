@@ -20,7 +20,7 @@ func _ready() -> void:
 
 func play():
 	for i in button:
-		if i.is_pressed():  # Check if the button is pressed
+		if i.is_pressed():
 			var world_name = i.get_meta("world_name")
 			GlobalVar.new_world = world_name
 			GlobalVar.load = 0
@@ -32,6 +32,7 @@ func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Create.tscn")
 	pass
 	
+
 func check_worldlist():
 	var save_file = FileAccess.open(file_path, FileAccess.READ)
 	var json_string = save_file.get_as_text()

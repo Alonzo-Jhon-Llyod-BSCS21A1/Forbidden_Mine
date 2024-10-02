@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://c41klwo0k4hb1"]
+[gd_scene load_steps=12 format=3 uid="uid://c41klwo0k4hb1"]
 
 [ext_resource type="Script" path="res://Worldgen.gd" id="1_bore3"]
+[ext_resource type="Script" path="res://Game.gd" id="1_fjc33"]
 [ext_resource type="Texture2D" uid="uid://bnq04y6f4jcgu" path="res://460435872_8331944006897283_5550847939126683555_n.png" id="2_njskh"]
 [ext_resource type="PackedScene" uid="uid://mclnmadsjcpj" path="res://character_body_2d.tscn" id="3_5ggpm"]
 [ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="3_fdor4"]
@@ -39,6 +40,7 @@ frequency = 0.0028
 noise = SubResource("FastNoiseLite_fcco1")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fjc33")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
