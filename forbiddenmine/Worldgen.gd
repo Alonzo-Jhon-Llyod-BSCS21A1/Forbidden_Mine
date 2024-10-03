@@ -142,9 +142,7 @@ func tree():
 				set_cell(Vector2i(x,y-3),1, Vector2i(7, 0))
 			
 func save_worldbinary():
-	var path = "user://aegame.dat"
-	var file = FileAccess.open(path, FileAccess.WRITE)
-
+	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.WRITE)
 	for x in range(-width/2, width/2):
 		for y in range(-50, height):
 			var current_tile = get_cell_atlas_coords(Vector2i(x, y))
@@ -158,8 +156,7 @@ func save_worldbinary():
 
 	
 func load_worldbinary():
-	var path = "user://aegame.dat"
-	var file = FileAccess.open(path, FileAccess.READ)
+	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ)
 
 	if file:
 		for x in range(-width/2, width/2):
@@ -172,8 +169,9 @@ func load_worldbinary():
 					set_cell(Vector2i(x, y), 1, Vector2i(tile_x, tile_y))
 		file.close()
 	else:
-		print("Failed to open file at path:", path)
+		print("Failed to open file at path:", SAVE_FILE_PATH)
 
+"""
 func save_world():
 	var save_data = {"worldgen": []}
 	for x in range(-width/2, width/2):
@@ -199,6 +197,7 @@ func load_game():
 			var y = tile_data["y"]
 			set_cell(Vector2i(xx,yy),1, Vector2i(tile_data.x, tile_data.y))
 			count+=1
+"""
 			
 
 

@@ -1,9 +1,9 @@
 extends Node2D
-
 @onready var tile_map_layer: TileMapLayer = $TileMapLayer
-
+var SAVE_FILE_PATH = "user://"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SAVE_FILE_PATH += GlobalVar.new_world
 	pass # Replace with function body.
 	
 func  _input(event: InputEvent) -> void:
@@ -16,8 +16,7 @@ func  _input(event: InputEvent) -> void:
 			modify_tile_in_binary(tile_coords.x, tile_coords.y, 7, 1)
 
 func modify_tile_in_binary(x, y, tile_x, tile_y):
-	var path = "user://aegame.dat"
-	var file = FileAccess.open(path, FileAccess.READ_WRITE)
+	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ_WRITE)
 	if file:
 		var x_offset = x + 5000
 		var y_offset = (y + 50) * 8
@@ -35,12 +34,7 @@ func modify_tile_in_binary(x, y, tile_x, tile_y):
 		
 		file.close()
 	else:
-		print("Failed to open file at path:", path)
-
-
-
-
-
+		print("Failed to open file at path:", SAVE_FILE_PATH)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

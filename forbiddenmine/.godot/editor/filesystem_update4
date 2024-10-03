@@ -1,0 +1,6 @@
+res://node_2d.tscn
+res://control.tscn
+res://Create.tscn
+res://character_body_2d.tscn
+res://Worldgen.gd
+res://Game.gd
