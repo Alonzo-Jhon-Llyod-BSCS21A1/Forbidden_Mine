@@ -44,14 +44,15 @@ script = ExtResource("1_fjc33")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
-offset_left = -236964.0
-offset_top = -65024.0
-offset_right = 272229.0
-offset_bottom = 34564.0
+offset_left = -251940.0
+offset_top = -69376.0
+offset_right = 257253.0
+offset_bottom = 30212.0
 texture = ExtResource("3_fdor4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 material = SubResource("CanvasItemMaterial_j5x2w")
+scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_okwpe")
 script = ExtResource("1_bore3")
 noise_height_text = SubResource("NoiseTexture2D_1uhbx")
@@ -88,3 +89,8 @@ action = "ui_right"
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
 color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

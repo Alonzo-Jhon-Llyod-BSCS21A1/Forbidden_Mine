@@ -1,3 +1,5 @@
+AnimatedSprite2D
+Timer
 Button
 VBoxContainer
 ScrollContainer
@@ -11,4 +13,3 @@ MultiplayerSynchronizer
 MultiplayerSpawner
 TouchScreenButton
 CanvasLayer
-LineEdit
