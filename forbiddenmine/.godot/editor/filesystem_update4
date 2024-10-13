@@ -3,5 +3,4 @@ res://control.tscn
 res://Create.tscn
 res://character_body_2d.tscn
 res://BreakAnimation.tscn
-res://break_animation.gd
-res://Game.gd
+res://Worldgen.gd

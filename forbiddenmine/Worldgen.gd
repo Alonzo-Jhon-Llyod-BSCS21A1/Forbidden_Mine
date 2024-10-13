@@ -34,6 +34,8 @@ func _ready() -> void:
 		waterfill()
 		sandgen()
 		tree()
+		load_vanillaDungeon()
+		load_winterDungeon()
 		save_worldbinary()
 		#save_world()
 		pass # Replace with function body.
@@ -153,11 +155,9 @@ func save_worldbinary():
 				file.store_32(current_tile.x)
 				file.store_32(current_tile.y)
 	file.close()
-
 	
 func load_worldbinary():
 	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ)
-
 	if file:
 		for x in range(-width/2, width/2):
 			for y in range(-50, height):
@@ -170,6 +170,41 @@ func load_worldbinary():
 		file.close()
 	else:
 		print("Failed to open file at path:", SAVE_FILE_PATH)
+		
+func load_vanillaDungeon():
+	var val1 = rng.randi_range(-5000, 0)
+	var val2 = rng.randi_range(20, 100)
+	var file = FileAccess.open("res://importantDungeons/vanillaDungeon", FileAccess.READ)
+	if file:
+		for x in range(val1, val1+143):
+			for y in range(val2, val2+80):
+				var tile_x = file.get_32()
+				var tile_y = file.get_32()
+				if tile_x == -1 and tile_y == -1:
+					continue
+				else:
+					set_cell(Vector2i(x, y), 1, Vector2i(tile_x, tile_y))
+		file.close()
+	else:
+		print("Failed to open file at path:", SAVE_FILE_PATH)
+		
+func load_winterDungeon():
+	var val1 = rng.randi_range(0, 5000)
+	var val2 = rng.randi_range(20, 100)
+	var file = FileAccess.open("res://importantDungeons/winterDungeon", FileAccess.READ)
+	if file:
+		for x in range(val1, val1+143):
+			for y in range(val2, val2+80):
+				var tile_x = file.get_32()
+				var tile_y = file.get_32()
+				if tile_x == -1 and tile_y == -1:
+					continue
+				else:
+					set_cell(Vector2i(x, y), 1, Vector2i(tile_x, tile_y))
+		file.close()
+	else:
+		print("Failed to open file at path:", SAVE_FILE_PATH)
+	
 
 """
 func save_world():

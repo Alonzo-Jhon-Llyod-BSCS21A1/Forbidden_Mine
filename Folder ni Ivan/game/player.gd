@@ -18,32 +18,34 @@ func _ready() -> void:
 
 func _input(event):
 	if event is InputEventMouseButton:
+		var mouse_pos = get_global_mouse_position()
+		var local_position = tilemap.to_local(mouse_pos)
+		var tile_coords = tilemap.local_to_map(local_position)
 		print("Mouse button pressed")
 		if event.pressed:
+			print("Mouse button pressed")
 			is_holding = true
 			holding_time = 0.0
-		elif event.released:
+			# Check if the tile exists and break it if needed
+			if tilemap.get_cell_source_id(Vector2i(tile_coords.x, tile_coords.y)) == -1:
+				print("Breaking tile at:", tile_coords)
+				break_tile(tile_coords)
+			# Check if holding time has exceeded threshold and exit if true
+			if holding_time >= hold_time_threshold:
+				print("Hold time exceeded, exiting from 'pressed' block.")
+				return  # Exit the 'if event.pressed' block early
+		# Handle button release or other events
+		elif event.is_released():
 			print("Mouse button released")
-			if is_holding and holding_time >= hold_time_threshold:
-				var mouse_pos = get_global_mouse_position()
-				var local_position = tilemap.to_local(mouse_pos)
-				var tile_coords = tilemap.local_to_map(local_position)
+			reset_holding()  # Reset holding state
 
-				if tilemap.get_cell_source_id(Vector2i(tile_coords.x, tile_coords.y)) != -1:
-					print("Breaking tile at:", tile_coords)
-					break_tile(tile_coords)  # Call break_tile function
-
-		reset_holding()  # Reset holding state
-
-func break_tile(tile_coords):
+func break_tile(mouse_pos):
 	# Replace the tile with a breakable animation
 	var breakable_block = break_animation_scene.instantiate()
-	breakable_block.position = tilemap.map_to_world(tile_coords)
+	breakable_block.position = tilemap.to_local(mouse_pos)
 	get_tree().current_scene.add_child(breakable_block)
 	breakable_block.start_break_animation()  # Call the animation method
 
-	# Remove the tile from the TileMap
-	tilemap.set_cell(Vector2i(tile_coords.x, tile_coords.y), -1)  # -1 removes the tile
 
 func reset_holding():
 	is_holding = false  # Reset holding state
