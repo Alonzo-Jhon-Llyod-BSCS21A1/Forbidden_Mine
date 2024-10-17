@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://cbdni5wosadrv"]
+
+[ext_resource type="Script" path="res://Resource/Inventory.gd" id="1_kfiil"]
+[ext_resource type="Resource" uid="uid://cxp6mqlxrikst" path="res://Resource/bird.tres" id="2_2jmpi"]
+[ext_resource type="PackedScene" uid="uid://besyyemh7ny5y" path="res://Resource/slot.tscn" id="2_nrxw2"]
+[ext_resource type="Resource" uid="uid://cakeaajdxq1f3" path="res://Resource/slime.tres" id="3_frviw"]
+[ext_resource type="PackedScene" uid="uid://bcqvdptppbrp2" path="res://Resource/recipe.tscn" id="5_1efx5"]
+[ext_resource type="Script" path="res://Resource/recipes.gd" id="5_84mud"]
+[ext_resource type="PackedScene" uid="uid://qymnw4fqqpkl" path="res://Resource/player.tscn" id="6_87vtw"]
+[ext_resource type="Script" path="res://crafttest.gd" id="6_m6cec"]
+[ext_resource type="Resource" uid="uid://v53ab7w756ug" path="res://Resource/vulture.tres" id="6_v0s7o"]
+[ext_resource type="PackedScene" uid="uid://blml8qkdb8180" path="res://Resource/abstractitem.tscn" id="7_k0qy4"]
+
+[sub_resource type="Resource" id="Resource_hhcw7"]
+script = ExtResource("6_m6cec")
+name = ""
+recipe = Array[ExtResource("6_m6cec")]([])
+type = "Material"
+description = ""
+
+[node name="TestScene" type="Node2D"]
+position = Vector2(381, 206)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+offset_left = 440.0
+offset_top = 206.0
+offset_right = 772.0
+offset_bottom = 454.0
+columns = 4
+script = ExtResource("1_kfiil")
+
+[node name="slot" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot2" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot3" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot4" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot5" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot6" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot7" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot8" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot9" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot10" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot11" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="slot12" parent="UI/Inventory" instance=ExtResource("2_nrxw2")]
+layout_mode = 2
+
+[node name="Recipes" type="VBoxContainer" parent="UI"]
+offset_left = 131.0
+offset_top = 203.0
+offset_right = 379.0
+offset_bottom = 463.0
+script = ExtResource("5_84mud")
+
+[node name="Recipe" parent="UI/Recipes" instance=ExtResource("5_1efx5")]
+layout_mode = 2
+item = ExtResource("6_v0s7o")
+
+[node name="Recipe2" parent="UI/Recipes" instance=ExtResource("5_1efx5")]
+layout_mode = 2
+item = SubResource("Resource_hhcw7")
+
+[node name="player" parent="." instance=ExtResource("6_87vtw")]
+position = Vector2(126, 489)
+
+[node name="Abstractitem" parent="." instance=ExtResource("7_k0qy4")]
+position = Vector2(-44, 237)
+item = ExtResource("2_2jmpi")
+
+[node name="Abstractitem2" parent="." instance=ExtResource("7_k0qy4")]
+position = Vector2(-224, 210)
+item = ExtResource("3_frviw")
+
+[connection signal="item_changed" from="UI/Inventory" to="UI/Recipes" method="_on_inventory_item_changed"]
