@@ -1,9 +1,6 @@
 res://node_2d.tscn
-res://Worldgen.gd
 res://control.tscn
 res://Create.tscn
 res://character_body_2d.tscn
 res://BreakAnimation.tscn
-res://GlobalVar.gd
-res://Game.gd
-res://break_animation.gd
+res://Worldgen.gd
