@@ -5,7 +5,34 @@
 [ext_resource type="PackedScene" uid="uid://mclnmadsjcpj" path="res://character_body_2d.tscn" id="3_5ggpm"]
 [ext_resource type="Texture2D" uid="uid://c7wd10jyx5va" path="res://461805058_1637236336821351_4543684665471186621_n (1).png" id="3_d702j"]
 [ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="3_fdor4"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="4_pq02c"]
+
+[sub_resource type="GDScript" id="GDScript_gxfhm"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j5x2w"]
 
@@ -141,30 +168,21 @@ texture = ExtResource("3_fdor4")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_5ggpm")]
 position = Vector2(-4, -473)
-script = ExtResource("4_pq02c")
+script = SubResource("GDScript_gxfhm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TouchScreenButton4" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
-position = Vector2(955, 468)
-texture_normal = ExtResource("3_fdor4")
-action = "ui_down"
-
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
 position = Vector2(950, 322)
 texture_normal = ExtResource("3_fdor4")
-action = "ui_up"
+action = "ui_accept"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
 position = Vector2(46, 449)
 texture_normal = ExtResource("3_fdor4")
 action = "ui_left"
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
 position = Vector2(242, 450)
 texture_normal = ExtResource("3_fdor4")
 action = "ui_right"
@@ -174,6 +192,7 @@ visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

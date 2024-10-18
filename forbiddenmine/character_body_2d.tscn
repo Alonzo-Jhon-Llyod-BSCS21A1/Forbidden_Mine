@@ -2,9 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="1_wno0q"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jca0p"]
-radius = 21.0
-height = 42.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lgul"]
+size = Vector2(42, 42)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
@@ -13,7 +12,7 @@ scale = Vector2(0.330566, 0.330566)
 texture = ExtResource("1_wno0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_jca0p")
+shape = SubResource("RectangleShape2D_4lgul")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -81)
