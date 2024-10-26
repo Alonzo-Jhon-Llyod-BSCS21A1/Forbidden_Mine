@@ -1,8 +1,9 @@
+Sprite2D
+AnimatedSprite2D
 TileMap
 PointLight2D
 DirectionalLight2D
 LightOccluder2D
-AnimatedSprite2D
 Timer
 Button
 VBoxContainer
@@ -12,4 +13,3 @@ VScrollBar
 CanvasModulate
 MultiplayerSynchronizer
 MultiplayerSpawner
-TouchScreenButton
