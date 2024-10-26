@@ -69,6 +69,7 @@ func _process(delta: float) -> void:
 	if not (char_coords.x <= -width/2 + 64 or char_coords.x >= width/2 - 64):
 		loadtwenty()
 		unwenty()
+	TileSet
 
 	
 func unload():

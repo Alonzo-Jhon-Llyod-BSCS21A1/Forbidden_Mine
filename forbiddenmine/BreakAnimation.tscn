@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cotibwuflm00l"]
 
 [ext_resource type="Script" path="res://break_animation.gd" id="1_4mp68"]
-[ext_resource type="Texture2D" uid="uid://unpt1j1axahj" path="res://break_block (1).png" id="2_fa0wn"]
+[ext_resource type="Texture2D" uid="uid://unpt1j1axahj" path="res://break_block.png" id="2_fa0wn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8rs6j"]
 atlas = ExtResource("2_fa0wn")
@@ -76,4 +76,3 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_vmyh7")
 animation = &"break"
 frame_progress = 0.0260902
-speed_scale = 0.85
