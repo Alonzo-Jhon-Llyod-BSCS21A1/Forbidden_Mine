@@ -1,6 +1,14 @@
+res://EnemyPrototype.tscn
+res://enemy_prototype.gd
+res://Game.gd
+res://GlobalVar.gd
 res://node_2d.tscn
-res://character_body_2d.gd
 res://control.tscn
 res://Create.tscn
 res://character_body_2d.tscn
 res://BreakAnimation.tscn
+res://coordinate_display.gd
+res://character_body_2d.gd
+res://create.gd
+res://PlayerVar.gd
+res://health_bar.gd

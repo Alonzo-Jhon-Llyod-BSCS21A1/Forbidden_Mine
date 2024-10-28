@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var health_bar: ProgressBar = $"../CanvasLayer/HealthBar"
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -250.0
@@ -34,3 +35,4 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("right"):
 		animated_sprite_2d.flip_h = false
 	move_and_slide()
+		

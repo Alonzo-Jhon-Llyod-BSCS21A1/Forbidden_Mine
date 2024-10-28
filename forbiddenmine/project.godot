@@ -18,6 +18,7 @@ config/icon="res://457905861_995796022322525_1255581322795427183_n.png"
 [autoload]
 
 GlobalVar="*res://GlobalVar.gd"
+PlayerVar="*res://PlayerVar.gd"
 
 [display]
 
