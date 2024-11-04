@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="crafttest" load_steps=3 format=3 uid="uid://cakeaajdxq1f3"]
+
+[ext_resource type="Texture2D" uid="uid://c8wswy0o4ihva" path="res://Sunny Land Collection Files/Assets/Characters/Chibi Enemies Pack/Sprites/Slimer/slimer1.png" id="1_ntqxl"]
+[ext_resource type="Script" path="res://crafttest.gd" id="2_5yuc6"]
+
+[resource]
+script = ExtResource("2_5yuc6")
+icon = ExtResource("1_ntqxl")
+name = "Runner"
+recipe = Array[ExtResource("2_5yuc6")]([])
+type = "Material"
+description = "Obtainable monster"
