@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="crafttest" load_steps=3 format=3 uid="uid://dkr25g3lisutv"]
+
+[ext_resource type="Texture2D" uid="uid://cwqbh0gs42qhx" path="res://Sunny Land Collection Files/Assets/Characters/sunny-mushroom/sprites/breatth-attack/_0009_Layer-10.png" id="1_aov8e"]
+[ext_resource type="Script" path="res://crafttest.gd" id="2_av31m"]
+
+[resource]
+script = ExtResource("2_av31m")
+icon = ExtResource("1_aov8e")
+name = "Shroom"
+recipe = Array[ExtResource("2_av31m")]([])
+type = "Material"
+description = "Obtainable Pet"
