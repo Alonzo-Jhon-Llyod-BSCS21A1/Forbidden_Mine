@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://qymnw4fqqpkl"]
+
+[ext_resource type="Script" path="res://craftings/Resource/player.gd" id="1_xjg1n"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_23kjl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gbn8"]
+radius = 60.6053
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(235, 362)
+script = ExtResource("1_xjg1n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(40.7864, -158.719)
+scale = Vector2(-81.2988, 76.0696)
+texture = SubResource("PlaceholderTexture2D_23kjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(39, -159)
+shape = SubResource("CircleShape2D_5gbn8")
+one_way_collision_margin = 0.0

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://blml8qkdb8180"]
+
+[ext_resource type="Script" path="res://Resource/abstractitem.gd" id="1_j64xa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc7ha"]
+
+[node name="Abstractitem" type="Sprite2D"]
+script = ExtResource("1_j64xa")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kc7ha")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_player_entered"]
