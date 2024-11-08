@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://mclnmadsjcpj"]
+[gd_scene load_steps=24 format=3 uid="uid://mclnmadsjcpj"]
 
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
 [ext_resource type="Texture2D" uid="uid://6viyny0lwv24" path="res://character/jump1.png" id="2_ky8k8"]
@@ -17,6 +17,22 @@
 [ext_resource type="Texture2D" uid="uid://vvhxv35ya65w" path="res://character/walk3.png" id="15_ecwnv"]
 [ext_resource type="Texture2D" uid="uid://by58qh8hcsiu1" path="res://character/walk4.png" id="16_o07f0"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fqkb"]
+atlas = ExtResource("13_sx2w2")
+region = Rect2(4, 0, 12, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_282u6"]
+atlas = ExtResource("14_nooj6")
+region = Rect2(4, 0, 12, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1dgr"]
+atlas = ExtResource("15_ecwnv")
+region = Rect2(4, 0, 12, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eatuu"]
+atlas = ExtResource("16_o07f0")
+region = Rect2(4, 0, 12, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5bmy"]
 animations = [{
 "frames": [{
@@ -25,6 +41,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5s1re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rq8cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ucttm")
+}],
+"loop": true,
+"name": &"fall",
 "speed": 5.0
 }, {
 "frames": [{
@@ -77,16 +107,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_sx2w2")
+"texture": SubResource("AtlasTexture_0fqkb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_nooj6")
+"texture": SubResource("AtlasTexture_282u6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_ecwnv")
+"texture": SubResource("AtlasTexture_q1dgr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_o07f0")
+"texture": SubResource("AtlasTexture_eatuu")
 }],
 "loop": true,
 "name": &"walk",
@@ -94,20 +124,27 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_faqnu"]
-size = Vector2(10, 14)
+size = Vector2(12, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47qpf"]
+size = Vector2(14, 18)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c5bmy")
-animation = &"jump"
+animation = &"walk"
 autoplay = "default"
 
-[node name="RayCast2D" type="RayCast2D" parent="AnimatedSprite2D"]
-target_position = Vector2(40, 0)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 2)
 shape = SubResource("RectangleShape2D_faqnu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_47qpf")

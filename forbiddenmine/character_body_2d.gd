@@ -1,6 +1,8 @@
 extends CharacterBody2D
+const  NAME = "Player"
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var health_bar: ProgressBar = $"../CanvasLayer/HealthBar"
+@onready var character_body_2d: CharacterBody2D = $"."
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -250.0
@@ -17,6 +19,7 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		animated_sprite_2d.animation = "fall"
 
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
@@ -34,5 +37,14 @@ func _physics_process(delta):
 		animated_sprite_2d.flip_h = true
 	if Input.is_action_just_pressed("right"):
 		animated_sprite_2d.flip_h = false
+		
+	for body in $Area2D.get_overlapping_bodies():
+		if body.get("NAME") == "Enemy":
+			print("tinamaain")
+			knock_back(body.velocity)
 	move_and_slide()
+	
+func knock_back(enemyVelocity : Vector2):
+	var knock_back_direction = (enemyVelocity - velocity).normalized() * 200
+	velocity.x = knock_back_direction.x
 		

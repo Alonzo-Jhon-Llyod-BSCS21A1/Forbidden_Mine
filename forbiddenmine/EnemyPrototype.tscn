@@ -1,13 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgj1pp72jn61i"]
+[gd_scene load_steps=11 format=3 uid="uid://bgj1pp72jn61i"]
 
 [ext_resource type="Texture2D" uid="uid://m0uqr4yivhfu" path="res://character/sword-attack2.png" id="1_6egkq"]
 [ext_resource type="Script" path="res://enemy_prototype.gd" id="1_yqnuk"]
+[ext_resource type="Texture2D" uid="uid://00s5wq6evx5x" path="res://character/sword-attack1.png" id="2_bhfaa"]
+[ext_resource type="Texture2D" uid="uid://dda4im2copk37" path="res://character/sword-attack3.png" id="4_nl533"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5js6e"]
+atlas = ExtResource("2_bhfaa")
+region = Rect2(0, 0, 14, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6f3e"]
+atlas = ExtResource("1_6egkq")
+region = Rect2(0, 0, 14, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7k1k6"]
+atlas = ExtResource("4_nl533")
+region = Rect2(0, 0, 17, 17)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g67h4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_6egkq")
+"texture": SubResource("AtlasTexture_5js6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6f3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7k1k6")
 }],
 "loop": true,
 "name": &"default",
@@ -15,14 +35,27 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cm2vt"]
-size = Vector2(11, 15)
+size = Vector2(12.5, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hnbp"]
+size = Vector2(16, 16)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_yqnuk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g67h4")
+autoplay = "default"
+frame_progress = 0.327026
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 0.5)
+position = Vector2(0.75, 0)
 shape = SubResource("RectangleShape2D_cm2vt")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_5hnbp")
+
+[connection signal="enemy_attack" from="." to="." method="_on_enemy_attack"]

@@ -1,13 +1,15 @@
-[gd_scene load_steps=16 format=4 uid="uid://c41klwo0k4hb1"]
+[gd_scene load_steps=18 format=4 uid="uid://c41klwo0k4hb1"]
 
 [ext_resource type="Script" path="res://Worldgen.gd" id="1_bore3"]
 [ext_resource type="Script" path="res://Game.gd" id="1_fjc33"]
 [ext_resource type="PackedScene" uid="uid://mclnmadsjcpj" path="res://character_body_2d.tscn" id="3_5ggpm"]
 [ext_resource type="Texture2D" uid="uid://c7wd10jyx5va" path="res://461805058_1637236336821351_4543684665471186621_n (1).png" id="3_d702j"]
 [ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="3_fdor4"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="4_s0ret"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="6_i81a0"]
+[ext_resource type="Script" path="res://Spectator.gd" id="6_jhyfc"]
 [ext_resource type="Script" path="res://coordinate_display.gd" id="7_ao62d"]
 [ext_resource type="Script" path="res://health_bar.gd" id="8_njo2q"]
+[ext_resource type="PackedScene" uid="uid://uk50afmp2jmg" path="res://DungeonWatcher.tscn" id="9_cqtiq"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j5x2w"]
 
@@ -162,7 +164,7 @@ noise_height_text = SubResource("NoiseTexture2D_1uhbx")
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_5ggpm")]
 position = Vector2(-8, -476)
 scale = Vector2(2, 2)
-script = ExtResource("4_s0ret")
+script = ExtResource("6_i81a0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -203,4 +205,12 @@ color = Color(0, 0, 0, 1)
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[node name="SpawnTime" type="Timer" parent="."]
+wait_time = 25.0
+autostart = true
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("9_cqtiq")]
+script = ExtResource("6_jhyfc")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnTime" to="." method="_on_spawn_time_timeout"]
