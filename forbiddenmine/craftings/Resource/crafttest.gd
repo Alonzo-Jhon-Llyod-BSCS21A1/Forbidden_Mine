@@ -6,7 +6,7 @@ class_name crafttest
 
 @export var recipe: Array[crafttest]
 
-@export_enum("Beast","Material")
+@export_enum("Weapon","Material")
 var type = "Material"
 
 @export_multiline var description: String

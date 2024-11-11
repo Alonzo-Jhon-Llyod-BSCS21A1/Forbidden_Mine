@@ -91,12 +91,4 @@ script = null
 position = Vector2(-200, 305)
 script = null
 
-[node name="Abstractitem2" parent="." instance=ExtResource("7_k0qy4")]
-position = Vector2(-236, 212)
-script = null
-
-[node name="Abstractitem4" parent="." instance=ExtResource("7_k0qy4")]
-position = Vector2(-31, 358)
-script = null
-
 [connection signal="item_changed" from="UI/Inventory" to="UI/Recipes" method="_on_inventory_item_changed"]

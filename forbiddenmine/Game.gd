@@ -1,9 +1,9 @@
 extends Node2D
 const BREAK_ANIMATION = preload("res://BreakAnimation.tscn")
 const enemy = preload("res://EnemyPrototype.tscn")
-@onready var timer: Timer = $Timer
 @onready var tile_map_layer: TileMapLayer = $TileMapLayer
 @onready var character_body_2d: CharacterBody2D = $CharacterBody2D
+@onready var break_timer: Timer = $BreakTimer
 
 var SAVE_FILE_PATH = "user://"
 var tile_coords
@@ -33,16 +33,16 @@ func  _input(event: InputEvent) -> void:
 					modify_tile_in_binary(tile_coords.x, tile_coords.y, 6, 5)
 			elif (tile_map_layer.get_cell_source_id(Vector2i(tile_coords.x,tile_coords.y)) != -1):
 				if min_x and max_x and min_y and max_y:
-					timer.wait_time = .1
-					timer.start()
+					break_timer.wait_time = .1
+					break_timer.start()
 					breakable_block = BREAK_ANIMATION.instantiate()
 					var block_position = tile_map_layer.map_to_local(tile_coords)
 					breakable_block.global_position = tile_map_layer.to_global(block_position)
 					add_child(breakable_block)
 					breakable_block.animated_sprite_2d.scale = tile_map_layer.scale
-					breakable_block.animated_sprite_2d.speed_scale = 1/timer.wait_time
+					breakable_block.animated_sprite_2d.speed_scale = 1/break_timer.wait_time
 		if event is InputEventMouseButton and event.is_released():
-			timer.stop()
+			break_timer.stop()
 			if is_instance_valid(breakable_block):
 				breakable_block.queue_free()
 		
@@ -71,9 +71,9 @@ func _on_timer_timeout() -> void:
 	modify_tile_in_binary(tile_coords.x, tile_coords.y, -1, -1)
 	pass # Replace with function body.
 
-
 func _on_spawn_time_timeout() -> void:
 	var enemytry = enemy.instantiate()
 	enemytry.scale = Vector2i(2,2)
 	add_child(enemytry)
 	pass # Replace with function body.
+	

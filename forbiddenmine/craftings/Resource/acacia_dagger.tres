@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="crafttest" load_steps=5 format=3 uid="uid://bojgms87hxqyg"]
+
+[ext_resource type="Texture2D" uid="uid://ccl5hvg15ppk5" path="res://craftings/Resource/acacia_dagger.png" id="1_1jt7w"]
+[ext_resource type="Script" path="res://craftings/Resource/crafttest.gd" id="2_c161l"]
+[ext_resource type="Resource" uid="uid://b1cw44orc7egt" path="res://craftings/Resource/stick.tres" id="3_agmfo"]
+[ext_resource type="Resource" uid="uid://b6h5fb634y5vj" path="res://craftings/Resource/acacia_planks.tres" id="4_i2jxm"]
+
+[resource]
+script = ExtResource("2_c161l")
+icon = ExtResource("1_1jt7w")
+name = "acacia dagger"
+recipe = Array[ExtResource("2_c161l")]([ExtResource("3_agmfo"), ExtResource("4_i2jxm")])
+type = "Weapon"
+description = ""
