@@ -1,12 +1,11 @@
 extends TileMapLayer
 @export var noise_height_text : NoiseTexture2D
 @onready var character_body_2d: CharacterBody2D = $"../CharacterBody2D"
-@export var noise_height_text_cave : NoiseTexture2D
+
 var SAVE_FILE_PATH = "user://"
 var width = 5000
 var height = 300
 var noise : Noise
-var noise_cave : Noise
 var grass = Vector2i(0,2)
 var  leaf = Vector2i(7, 0)
 var oaklog = Vector2i(7,1)
@@ -40,15 +39,14 @@ func _ready() -> void:
 		load_worldbinary()
 	if GlobalVar.load == 1:
 		noise = noise_height_text.noise
-		noise_cave = noise_height_text_cave.noise
 		rng = RandomNumberGenerator.new()
 		rng.seed = 1
 		grasses()
 		stonegen()
-		#watergen()
-		#waterfill()
-		#sandgen()
-		#tree()
+		watergen()
+		waterfill()
+		sandgen()
+		tree()
 		load_vanillaDungeon()
 		load_winterDungeon()
 		load_lavaDungeon()
@@ -56,54 +54,39 @@ func _ready() -> void:
 		save_worldbinary()
 			
 func grasses():
-	var terrain_generators = {
-	-1700: generate_snowgrass,
-	-700: generate_junglegrass,
-	800: generate_grass,
-	1800: generate_sandgrass,
-	9999: generate_ashgrass 
-}
 	for x in range(-width/2, width/2):
 		var ground = abs(noise.get_noise_2d(x,0) * 64)
 		for y in range(ground, 100):
 			var noise_val: float = noise.get_noise_2d(x,y)
-			for bound in terrain_generators.keys():
-				if x < bound:
-					terrain_generators[bound].call(x, y, noise_val)
-					break
+			if y < 50:
+				if (x < -1700):
+					if (get_cell_atlas_coords(Vector2i(x, y-1)) != snowgrass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
+						set_cell(Vector2i(x,y),1, snowgrass)
+						if noise_val > 0:
+							set_cell(Vector2i(x,y-1), 1, snow)
+					else:
+						set_cell(Vector2i(x,y),1, dirt)
+				elif (x < -700):
+					if (get_cell_atlas_coords(Vector2i(x, y-1)) != junglegrass and get_cell_atlas_coords(Vector2i(x, y-1)) != jungledirt):
+						set_cell(Vector2i(x,y),1, junglegrass)
+					else:
+						set_cell(Vector2i(x,y),1, jungledirt)
+						
+				elif (x < 800):
+					if (get_cell_atlas_coords(Vector2i(x, y-1)) != grass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
+						set_cell(Vector2i(x,y),1, grass)
+					else:
+						set_cell(Vector2i(x,y),1, dirt)
+				elif (x < 1800):
+					set_cell(Vector2i(x,y),1, sand)
+				else:
+					if (get_cell_atlas_coords(Vector2i(x, y-1)) != ashgrass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
+						set_cell(Vector2i(x,y),1, ashgrass)
+						if noise_val > 0:
+							set_cell(Vector2i(x,y-1), 1, ash)
+					else:
+						set_cell(Vector2i(x,y),1, dirt)
 					
-func generate_junglegrass(x, y, noise_val):
-	if (get_cell_atlas_coords(Vector2i(x, y-1)) != junglegrass and get_cell_atlas_coords(Vector2i(x, y-1)) != jungledirt):
-		set_cell(Vector2i(x,y),1, junglegrass)
-	else:
-		set_cell(Vector2i(x,y),1, jungledirt)
-	
-func generate_snowgrass(x, y, noise_val):
-	if (get_cell_atlas_coords(Vector2i(x, y-1)) != snowgrass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
-		set_cell(Vector2i(x,y),1, snowgrass)
-		if noise_val > 0:
-			set_cell(Vector2i(x,y-1), 1, snow)
-	else:
-		set_cell(Vector2i(x,y),1, dirt)
-		
-func generate_grass(x,y, noise_val):
-	if (get_cell_atlas_coords(Vector2i(x, y-1)) != grass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
-		set_cell(Vector2i(x,y),1, grass)
-	else:
-		set_cell(Vector2i(x,y),1, dirt)
-		
-func generate_sandgrass(x,y, noise_val):
-	set_cell(Vector2i(x,y),1, sand)
-	
-func generate_ashgrass(x,y, noise_val):
-	if (get_cell_atlas_coords(Vector2i(x, y-1)) != ashgrass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
-		set_cell(Vector2i(x,y),1, ashgrass)
-		if noise_val > 0:
-			set_cell(Vector2i(x,y-1), 1, ash)
-	else:
-		set_cell(Vector2i(x,y),1, dirt)
-
-	
 func watergen():
 	for x in range(-width/2, width/2):
 		for y in range(height):
@@ -133,37 +116,43 @@ func sandgen():
 					set_cell(Vector2i(x,y),1,sand)
 					
 func stonegen():
-	var materials = [
-		{ "chance": 0.3, "material": stone, "max_height": 150 },
-		{ "chance": 0.3, "material": deepstone, "max_height": 300 },
-		{ "chance": 0.2, "material": hardstone, "max_height": 300 },
-		{ "chance": 0.1, "material": diorite, "max_height": 300 },
-		{ "chance": -1, "material": andesite, "max_height": 300 }
-	]
-	var special_ores = [
-		{ "chance": 0.05, "material": iron, "min_height": 50 },
-		{ "chance": 0.025, "material": gold, "min_height": 100 },
-		{ "chance": 0.0125, "material": diamond, "min_height": 250 },
-		{ "chance": 0.00625, "material": ruby, "min_height": 250 },
-		{ "chance": 0.003125, "material": topaz, "min_height": 200 },
-		{ "chance": 0.0015625, "material": emerald, "min_height": 150 }
-	]
-	for x in range(-width / 2, width / 2):
-		var ground = abs(noise.get_noise_2d(x, 0) * 64)
-		for y in range(ground + 3, height):
-			var noise_cave: float = noise.get_noise_2d(x, y)
+	for x in range(-width/2, width/2):
+		var ground = abs(noise.get_noise_2d(x,0) * 64) 
+		for y in range(ground+3, height):
+			var noise_val:float = noise.get_noise_2d(x,y)
 			var rng = rng.randf()
-			for material in materials:
-				if rng > material["chance"]:
-					if y < material["max_height"]:
-						set_cell(Vector2i(x, y), 1, material["material"])
-						break
-			if rng > 0.5 and noise_cave < -0.28:
-				set_cell(Vector2i(x, y - 3), 1, Vector2i(-1, -1))
-			for ore in special_ores:
-				if rng < ore["chance"]:
-					if y > ore["min_height"]:
-						set_cell(Vector2i(x, y), 1, ore["material"])
+			if y < 200:
+				if rng > .3:
+					set_cell(Vector2i(x,y),1, stone)
+				elif rng > .2:
+					set_cell(Vector2i(x,y),1, hardstone)
+				elif rng > .1:
+					set_cell(Vector2i(x,y),1, diorite)
+				else:
+					set_cell(Vector2i(x,y),1, andesite)
+			else:
+				if rng > .4:
+					set_cell(Vector2i(x,y),1, deepstone)
+				elif rng > .3:
+					set_cell(Vector2i(x,y),1, hardstone)
+				elif rng > .2:
+					set_cell(Vector2i(x,y),1, diorite)
+				else:
+					set_cell(Vector2i(x,y),1, andesite)
+			if rng <0.7 and noise_val < -.3:
+				set_cell(Vector2i(x,y),1, Vector2i(-1, -1))
+			if rng < .05:
+				set_cell(Vector2i(x, y), 1, iron)		
+			if rng < .025 and y > 100:
+				set_cell(Vector2i(x, y), 1, gold)
+			if rng < .0125 and y > 250:
+				set_cell(Vector2i(x, y), 1, diamond)	
+			if rng < .00625:
+				set_cell(Vector2i(x, y), 1, ruby)
+			if rng < .003125:
+				set_cell(Vector2i(x, y), 1, topaz)	
+			if rng < .0015625:
+				set_cell(Vector2i(x, y), 1, emerald)				
 
 func tree():
 	for x in range(-width/2, width/2):
