@@ -12,6 +12,8 @@ var char_coords
 var charlocal_position
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var enemytry = enemy.instantiate()
+	add_child(enemytry)
 	SAVE_FILE_PATH += GlobalVar.new_world
 	pass # Replace with function body.
 	
@@ -69,11 +71,4 @@ func _on_timer_timeout() -> void:
 		breakable_block.queue_free()
 	tile_map_layer.set_cell(Vector2i(tile_coords.x,tile_coords.y),1, Vector2i(-1, -1))
 	modify_tile_in_binary(tile_coords.x, tile_coords.y, -1, -1)
-	pass # Replace with function body.
-
-
-func _on_spawn_time_timeout() -> void:
-	var enemytry = enemy.instantiate()
-	enemytry.scale = Vector2i(2,2)
-	add_child(enemytry)
 	pass # Replace with function body.

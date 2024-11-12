@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://mclnmadsjcpj"]
+[gd_scene load_steps=21 format=3 uid="uid://mclnmadsjcpj"]
 
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
 [ext_resource type="Texture2D" uid="uid://6viyny0lwv24" path="res://character/jump1.png" id="2_ky8k8"]
@@ -16,22 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://csu3kc7rn68lx" path="res://character/walk2.png" id="14_nooj6"]
 [ext_resource type="Texture2D" uid="uid://vvhxv35ya65w" path="res://character/walk3.png" id="15_ecwnv"]
 [ext_resource type="Texture2D" uid="uid://by58qh8hcsiu1" path="res://character/walk4.png" id="16_o07f0"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0fqkb"]
-atlas = ExtResource("13_sx2w2")
-region = Rect2(4, 0, 12, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_282u6"]
-atlas = ExtResource("14_nooj6")
-region = Rect2(4, 0, 12, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q1dgr"]
-atlas = ExtResource("15_ecwnv")
-region = Rect2(4, 0, 12, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eatuu"]
-atlas = ExtResource("16_o07f0")
-region = Rect2(4, 0, 12, 16)
+[ext_resource type="PackedScene" uid="uid://d5fe0hvws51t" path="res://inventory_ui.tscn" id="17_qybjw"]
+[ext_resource type="PackedScene" uid="uid://d35a6x6siepy7" path="res://inventory_hotbar.tscn" id="18_ioy0u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5bmy"]
 animations = [{
@@ -41,20 +27,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_5s1re")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_rq8cl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ucttm")
-}],
-"loop": true,
-"name": &"fall",
 "speed": 5.0
 }, {
 "frames": [{
@@ -107,16 +79,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0fqkb")
+"texture": ExtResource("13_sx2w2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_282u6")
+"texture": ExtResource("14_nooj6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q1dgr")
+"texture": ExtResource("15_ecwnv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eatuu")
+"texture": ExtResource("16_o07f0")
 }],
 "loop": true,
 "name": &"walk",
@@ -124,27 +96,76 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_faqnu"]
-size = Vector2(12, 16)
+size = Vector2(8.5, 12.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_47qpf"]
-size = Vector2(14, 18)
-
-[node name="CharacterBody2D" type="CharacterBody2D"]
-collision_layer = 2
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
+process_mode = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c5bmy")
-animation = &"walk"
+animation = &"jump"
 autoplay = "default"
 
+[node name="RayCast2D" type="RayCast2D" parent="AnimatedSprite2D"]
+target_position = Vector2(40, 0)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.25, 1.75)
 shape = SubResource("RectangleShape2D_faqnu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 5
+[node name="Interact_UI" type="CanvasLayer" parent="."]
+visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_47qpf")
+[node name="ColorRect" type="ColorRect" parent="Interact_UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = -49.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0.192157, 0.376471, 0.321569, 0.839216)
+
+[node name="Label" type="Label" parent="Interact_UI/ColorRect"]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 49.0
+text = "  			 PRESS E  TO 
+	   			PICKUP
+"
+horizontal_alignment = 1
+
+[node name="InventoryUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.192157, 0.376471, 0.321569, 1)
+
+[node name="Label" type="Label" parent="InventoryUI/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -169.0
+offset_top = 40.0
+offset_right = 169.0
+offset_bottom = 123.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "INVENTORY"
+
+[node name="Inventory UI" parent="InventoryUI/ColorRect" instance=ExtResource("17_qybjw")]
+
+[node name="Inventory_Hotbar" type="CanvasLayer" parent="."]
+
+[node name="Inventory_Hotbar" parent="Inventory_Hotbar" instance=ExtResource("18_ioy0u")]

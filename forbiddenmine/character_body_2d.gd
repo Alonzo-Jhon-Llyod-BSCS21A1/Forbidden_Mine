@@ -1,10 +1,14 @@
 extends CharacterBody2D
-const  NAME = "Player"
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var health_bar: ProgressBar = $"../CanvasLayer/HealthBar"
-@onready var character_body_2d: CharacterBody2D = $"."
+@onready var interact_ui = $Interact_UI
+@onready var inventory_ui = $InventoryUI
+@onready var inventory_hotbar = $Inventory_Hotbar 
 
-const SPEED = 100.0
+func _ready():
+	GlobalVar.set_player_references(self)
+
+@export var SPEED = 200.0
 const JUMP_VELOCITY = -250.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -19,7 +23,6 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		animated_sprite_2d.animation = "fall"
 
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
@@ -37,14 +40,44 @@ func _physics_process(delta):
 		animated_sprite_2d.flip_h = true
 	if Input.is_action_just_pressed("right"):
 		animated_sprite_2d.flip_h = false
-		
-	for body in $Area2D.get_overlapping_bodies():
-		if body.get("NAME") == "Enemy":
-			print("tinamaain")
-			knock_back(body.velocity)
 	move_and_slide()
 	
-func knock_back(enemyVelocity : Vector2):
-	var knock_back_direction = (enemyVelocity - velocity).normalized() * 200
-	velocity.x = knock_back_direction.x
+	#FOR INVENTORY
+
+func _input(event):
+	if event.is_action_pressed("UI_Inventory"):
+		inventory_ui.visible = !inventory_ui.visible
+		get_tree().paused = !get_tree().paused
+		inventory_hotbar.visible = !inventory_hotbar.visible
 		
+
+func apply_item_effect(item):
+	match item["effect"]:
+		"Stamina":
+			SPEED += 50
+			print("Speed increase to ", SPEED)
+		_:
+			print("There is no effect for this Item!")
+			
+func use_hotbar_item(slot_index):
+	if slot_index < GlobalVar.hotbar_inventory.size():
+		var item = GlobalVar.hotbar_inventory[slot_index]
+		if item != null:
+			# Use item
+			apply_item_effect(item)
+			# Remove item
+			item["quantity"] -= 1
+			if item["quantity"] <= 0:
+				GlobalVar.hotbar_inventory[slot_index] = null
+				GlobalVar.remove_item(item["type"], item["effect"])
+			GlobalVar.inventory_updated.emit()  
+
+# Hotbar shortcuts
+func _unhandled_input(event):
+	if event is InputEventKey and event.pressed:
+		# Then check for specific keys
+		for i in range(GlobalVar.hotbar_size):
+			# Assuming keys 1-5 are mapped to actions "hotbar_1" to "hotbar_5" in the Input Map
+			if Input.is_action_just_pressed("hotbar_" + str(i + 1)):
+				use_hotbar_item(i)
+				break
