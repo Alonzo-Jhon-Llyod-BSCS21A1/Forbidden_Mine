@@ -1,12 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://mclnmadsjcpj"]
+[gd_scene load_steps=19 format=3 uid="uid://mclnmadsjcpj"]
 
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
-[ext_resource type="Texture2D" uid="uid://6viyny0lwv24" path="res://character/jump1.png" id="2_ky8k8"]
-[ext_resource type="Texture2D" uid="uid://bm2sa8722upmv" path="res://character/jump2.png" id="3_1rnw2"]
-[ext_resource type="Texture2D" uid="uid://ddcbxi0xcnkov" path="res://character/jump3.png" id="4_5s1re"]
 [ext_resource type="Texture2D" uid="uid://drfyjifre761r" path="res://character/jump4.png" id="5_rq8cl"]
-[ext_resource type="Texture2D" uid="uid://bv6qdjec6pw0e" path="res://character/jump5.png" id="6_ucttm"]
-[ext_resource type="Texture2D" uid="uid://fctbsyob065k" path="res://character/jump6.png" id="7_hpbcp"]
 [ext_resource type="Texture2D" uid="uid://blo3xgy0jlht" path="res://character/punch1.png" id="8_rrbhd"]
 [ext_resource type="Texture2D" uid="uid://ctmvjrgc11i8k" path="res://character/punch2.png" id="9_6dxql"]
 [ext_resource type="Texture2D" uid="uid://00s5wq6evx5x" path="res://character/sword-attack1.png" id="10_yrkga"]
@@ -19,11 +14,19 @@
 [ext_resource type="PackedScene" uid="uid://d5fe0hvws51t" path="res://inventory_ui.tscn" id="17_qybjw"]
 [ext_resource type="PackedScene" uid="uid://d35a6x6siepy7" path="res://inventory_hotbar.tscn" id="18_ioy0u"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_10u7y"]
+atlas = ExtResource("1_juivv")
+region = Rect2(4, 0, 12, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m78w"]
+atlas = ExtResource("5_rq8cl")
+region = Rect2(3, 0, 13, 18)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5bmy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_juivv")
+"texture": SubResource("AtlasTexture_10u7y")
 }],
 "loop": true,
 "name": &"default",
@@ -31,25 +34,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ky8k8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_1rnw2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_5s1re")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_rq8cl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ucttm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_hpbcp")
+"texture": SubResource("AtlasTexture_4m78w")
 }],
 "loop": true,
-"name": &"jump",
+"name": &"fall",
 "speed": 5.0
 }, {
 "frames": [{
@@ -96,21 +84,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_faqnu"]
-size = Vector2(8.5, 12.5)
+size = Vector2(12, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfgaq"]
+size = Vector2(12, 16)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 process_mode = 3
+collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c5bmy")
-animation = &"jump"
 autoplay = "default"
 
-[node name="RayCast2D" type="RayCast2D" parent="AnimatedSprite2D"]
-target_position = Vector2(40, 0)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.25, 1.75)
 shape = SubResource("RectangleShape2D_faqnu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -169,3 +156,10 @@ text = "INVENTORY"
 [node name="Inventory_Hotbar" type="CanvasLayer" parent="."]
 
 [node name="Inventory_Hotbar" parent="Inventory_Hotbar" instance=ExtResource("18_ioy0u")]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_dfgaq")
