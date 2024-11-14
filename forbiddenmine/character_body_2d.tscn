@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://mclnmadsjcpj"]
+[gd_scene load_steps=21 format=3 uid="uid://mclnmadsjcpj"]
 
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_uq5mp"]
 [ext_resource type="Texture2D" uid="uid://drfyjifre761r" path="res://character/jump4.png" id="5_rq8cl"]
+[ext_resource type="Texture2D" uid="uid://m0uqr4yivhfu" path="res://character/sword-attack2.png" id="7_knymv"]
 [ext_resource type="Texture2D" uid="uid://blo3xgy0jlht" path="res://character/punch1.png" id="8_rrbhd"]
 [ext_resource type="Texture2D" uid="uid://ctmvjrgc11i8k" path="res://character/punch2.png" id="9_6dxql"]
 [ext_resource type="Texture2D" uid="uid://dda4im2copk37" path="res://character/sword-attack3.png" id="12_0nu48"]
@@ -24,6 +25,10 @@ region = Rect2(3, 0, 13, 18)
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnyew"]
 atlas = ExtResource("12_0nu48")
 region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_022g8"]
+atlas = ExtResource("7_knymv")
+region = Rect2(0, 0, 13, 17)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5bmy"]
 animations = [{
@@ -57,6 +62,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nnyew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_022g8")
 }],
 "loop": true,
 "name": &"sword_attack",
@@ -95,7 +103,7 @@ script = ExtResource("1_uq5mp")
 sprite_frames = SubResource("SpriteFrames_c5bmy")
 animation = &"sword_attack"
 autoplay = "default"
-frame_progress = 0.408409
+frame_progress = 0.870839
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_faqnu")

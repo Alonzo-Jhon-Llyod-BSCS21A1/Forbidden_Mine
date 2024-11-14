@@ -23,19 +23,9 @@ func _physics_process(delta):
 	if not GlobalVar.characterlocation == null:
 		if(tile_map_layer.get_cell_atlas_coords(GlobalVar.characterlocation) == Vector2i(0, 7)):
 			is_on_water = true
-			print("Gago")
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	if Input.is_action_pressed("Attack"):
-		animated_sprite_2d.animation = "sword_attack"
-		for body in $Area2D.get_overlapping_bodies():
-			if body.get("NAME") == "Enemy":
-				if attackcd == true:
-					body.Health -= 10
-					knock_back(body)
-					attackcd = false
-					$AttackCd.start()
 				
 	if velocity.x > 1 || velocity.x < -1:
 		animated_sprite_2d.animation = "walk"
@@ -45,7 +35,6 @@ func _physics_process(delta):
 	if not is_on_floor() and not is_on_water:
 		velocity.y += gravity * delta
 		animated_sprite_2d.animation = "fall"
-				
 			
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -59,6 +48,17 @@ func _physics_process(delta):
 		$Area2D/CollisionShape2D2.position.x = -1.5
 	if Input.is_action_just_pressed("right"):
 		animated_sprite_2d.flip_h = false
+	
+	if Input.is_action_pressed("Attack"):
+		animated_sprite_2d.animation = "sword_attack"
+		for body in $Area2D.get_overlapping_bodies():
+			if body.get("NAME") == "Enemy":
+				if attackcd == true:
+					body.Health -= 10
+					knock_back(body)
+					attackcd = false
+					$AttackCd.start()
+					
 	move_and_slide()
 	
 	#FOR INVENTORY
