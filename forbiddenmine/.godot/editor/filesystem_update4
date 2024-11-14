@@ -13,3 +13,5 @@ res://Create.tscn
 res://control.tscn
 res://try.tscn
 res://Game.gd
+res://camera.gd
+res://enemy_prototype.gd

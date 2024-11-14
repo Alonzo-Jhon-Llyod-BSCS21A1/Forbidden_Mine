@@ -1,5 +1,6 @@
 extends CharacterBody2D
 const  NAME = "Enemy"
+const  TRUENAME = "Gago"
 signal enemy_attack
 var attackcd = true
 @onready var character_body_2d: CharacterBody2D = $"."

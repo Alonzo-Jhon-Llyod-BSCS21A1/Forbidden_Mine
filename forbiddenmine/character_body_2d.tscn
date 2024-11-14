@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://mclnmadsjcpj"]
+[gd_scene load_steps=23 format=3 uid="uid://mclnmadsjcpj"]
 
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_uq5mp"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://blo3xgy0jlht" path="res://character/punch1.png" id="8_rrbhd"]
 [ext_resource type="Texture2D" uid="uid://ctmvjrgc11i8k" path="res://character/punch2.png" id="9_6dxql"]
 [ext_resource type="Texture2D" uid="uid://dda4im2copk37" path="res://character/sword-attack3.png" id="12_0nu48"]
+[ext_resource type="Script" path="res://camera.gd" id="12_mgvul"]
 [ext_resource type="Texture2D" uid="uid://dq7fb4lvosgor" path="res://character/walk1.png" id="13_sx2w2"]
 [ext_resource type="Texture2D" uid="uid://csu3kc7rn68lx" path="res://character/walk2.png" id="14_nooj6"]
 [ext_resource type="Texture2D" uid="uid://vvhxv35ya65w" path="res://character/walk3.png" id="15_ecwnv"]
@@ -91,6 +92,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_faqnu"]
 size = Vector2(12, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdh18"]
+size = Vector2(576, 325)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfgaq"]
 size = Vector2(15, 16)
 
@@ -103,13 +107,22 @@ script = ExtResource("1_uq5mp")
 sprite_frames = SubResource("SpriteFrames_c5bmy")
 animation = &"sword_attack"
 autoplay = "default"
-frame_progress = 0.870839
+frame_progress = 0.499965
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_faqnu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="Camera" type="Area2D" parent="Camera2D"]
+collision_layer = 0
+collision_mask = 255
+script = ExtResource("12_mgvul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Camera"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_bdh18")
 
 [node name="Interact_UI" type="CanvasLayer" parent="."]
 visible = false
