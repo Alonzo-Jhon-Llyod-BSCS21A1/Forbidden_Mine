@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://blml8qkdb8180"]
+
+[ext_resource type="Script" path="res://craftings/Resource/abstractitem.gd" id="1_j64xa"]
+[ext_resource type="Texture2D" uid="uid://ccl5hvg15ppk5" path="res://craftings/Resource/acacia_dagger.png" id="2_eo66r"]
+[ext_resource type="Script" path="res://craftings/Resource/crafttest.gd" id="3_hri5c"]
+
+[sub_resource type="Resource" id="Resource_x2303"]
+script = ExtResource("3_hri5c")
+icon = ExtResource("2_eo66r")
+name = "acacia dagger"
+recipe = Array[ExtResource("3_hri5c")]([])
+type = "Material"
+description = ""
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc7ha"]
+
+[node name="Abstractitem" type="Sprite2D"]
+script = ExtResource("1_j64xa")
+item = SubResource("Resource_x2303")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kc7ha")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_player_entered"]

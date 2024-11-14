@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://besyyemh7ny5y"]
+
+[ext_resource type="Script" path="res://craftings/Resource/slot.gd" id="1_w4u56"]
+
+[node name="slot" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_w4u56")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+expand_mode = 1

@@ -1,12 +1,9 @@
 extends TileMapLayer
 @export var noise_height_text : NoiseTexture2D
 @onready var character_body_2d: CharacterBody2D = $"../CharacterBody2D"
-var char_coords
-var charposition
-var charlocal_position
 
 var SAVE_FILE_PATH = "user://"
-var width = 10000
+var width = 5000
 var height = 300
 var noise : Noise
 var grass = Vector2i(0,2)
@@ -37,11 +34,7 @@ var emerald = Vector2i(5,1)
 var rng : RandomNumberGenerator 
 
 func _ready() -> void:
-	charposition = character_body_2d.global_position
-	charlocal_position = to_local(charposition)
-	char_coords = local_to_map(charlocal_position)
 	SAVE_FILE_PATH += GlobalVar.new_world
-	enabled = false
 	if GlobalVar.load == 0:
 		load_worldbinary()
 	if GlobalVar.load == 1:
@@ -59,75 +52,32 @@ func _ready() -> void:
 		load_lavaDungeon()
 		load_waterDungeon()
 		save_worldbinary()
-		unload()
-	enabled = true
-
-func _process(delta: float) -> void:
-	charposition = character_body_2d.global_position
-	charlocal_position = to_local(charposition)
-	char_coords = local_to_map(charlocal_position)
-	if not (char_coords.x <= -width/2 + 64 or char_coords.x >= width/2 - 64):
-		loadtwenty()
-		unwenty()
-
-	
-func unload():
-	for x in range(-width/2, width/2):
-		for y in range(-50, height):
-			set_cell(Vector2i(x,y-1), 1, Vector2i(-1, -1))	
 			
-func loadtwenty():
-	var xx_offset = char_coords.x-64+ 5000
-	var yy_offset = (-50 + 50) * 8
-	var tile_index = (xx_offset * 350 * 8) + yy_offset
-	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ)
-	if file:
-		file.seek(tile_index)
-		for x in range(char_coords.x-64, char_coords.x+64):
-			for y in range(-50, height):
-				var tile_xx = file.get_32()
-				var tile_yy = file.get_32()
-				if tile_xx == -1 and tile_yy == -1:
-					continue
-				else:
-					set_cell(Vector2i(x, y), 1, Vector2i(tile_xx, tile_yy))
-		file.close()
-		
-func unwenty():
-	for x in range(char_coords.x-128, char_coords.x-64):
-		for y in range(-50, height):
-			set_cell(Vector2i(x, y), 1, Vector2i(-1, -1))
-	for x in range(char_coords.x+128, char_coords.x+192):
-		for y in range(-50, height):
-			set_cell(Vector2i(x, y), 1, Vector2i(-1, -1))
-
-
-		
 func grasses():
 	for x in range(-width/2, width/2):
 		var ground = abs(noise.get_noise_2d(x,0) * 64)
 		for y in range(ground, 100):
 			var noise_val: float = noise.get_noise_2d(x,y)
 			if y < 50:
-				if (x < -3000):
+				if (x < -1700):
 					if (get_cell_atlas_coords(Vector2i(x, y-1)) != snowgrass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
 						set_cell(Vector2i(x,y),1, snowgrass)
 						if noise_val > 0:
 							set_cell(Vector2i(x,y-1), 1, snow)
 					else:
 						set_cell(Vector2i(x,y),1, dirt)
-				elif (x < -1000):
+				elif (x < -700):
 					if (get_cell_atlas_coords(Vector2i(x, y-1)) != junglegrass and get_cell_atlas_coords(Vector2i(x, y-1)) != jungledirt):
 						set_cell(Vector2i(x,y),1, junglegrass)
 					else:
 						set_cell(Vector2i(x,y),1, jungledirt)
 						
-				elif (x < 1000):
+				elif (x < 800):
 					if (get_cell_atlas_coords(Vector2i(x, y-1)) != grass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
 						set_cell(Vector2i(x,y),1, grass)
 					else:
 						set_cell(Vector2i(x,y),1, dirt)
-				elif (x < 3000):
+				elif (x < 1800):
 					set_cell(Vector2i(x,y),1, sand)
 				else:
 					if (get_cell_atlas_coords(Vector2i(x, y-1)) != ashgrass and get_cell_atlas_coords(Vector2i(x, y-1)) != dirt):
@@ -232,26 +182,19 @@ func save_worldbinary():
 	file.close()
 	
 func load_worldbinary():
-	var x_offset = 0-32+ 5000
-	var y_offset = (-50 + 50) * 8
-	var tile_index = (x_offset * 350 * 8) + y_offset
 	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ)
-	if file:
-		file.seek(tile_index)
-		for x in range(0-32, 0+32):
-			for y in range(-50, height):
-				var tile_x = file.get_32()
-				var tile_y = file.get_32()
-				if tile_x == -1 and tile_y == -1:
-					continue
-				else:
-					set_cell(Vector2i(x, y), 1, Vector2i(tile_x, tile_y))
-		file.close()
-	else:
-		print("Failed to open file at path:", SAVE_FILE_PATH)
+	for x in range(-width/2, width/2):
+		for y in range(-50, height):
+			var tile_x = file.get_32()
+			var tile_y = file.get_32()
+			if tile_x == -1 and tile_y == -1:
+				continue
+			else:
+				set_cell(Vector2i(x, y), 1, Vector2i(tile_x, tile_y))
+	file.close()
 		
 func load_vanillaDungeon():
-	var val1 = rng.randi_range(-1000, 1000)
+	var val1 = rng.randi_range(-700, 800-143)
 	var val2 = rng.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/vanillaDungeon", FileAccess.READ)
 	if file:
@@ -268,7 +211,7 @@ func load_vanillaDungeon():
 		print("Failed to open file at path:", SAVE_FILE_PATH)
 		
 func load_winterDungeon():
-	var val1 = rng.randi_range(-5000, -3000)
+	var val1 = rng.randi_range(-2500, -1700-143)
 	var val2 = rng.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/winterDungeon", FileAccess.READ)
 	if file:
@@ -285,7 +228,7 @@ func load_winterDungeon():
 		print("Failed to open file at path:", SAVE_FILE_PATH)
 		
 func load_lavaDungeon():
-	var val1 = rng.randi_range(3000, 5000-150)
+	var val1 = rng.randi_range(800, 2500-143)
 	var val2 = rng.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/lavaDungeon", FileAccess.READ)
 	if file:
@@ -302,7 +245,7 @@ func load_lavaDungeon():
 		print("Failed to open file at path:", SAVE_FILE_PATH)
 		
 func load_waterDungeon():
-	var val1 = rng.randi_range(-3000, -1000)
+	var val1 = rng.randi_range(-1700, -700-143)
 	var val2 = rng.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/waterDungeon", FileAccess.READ)
 	if file:

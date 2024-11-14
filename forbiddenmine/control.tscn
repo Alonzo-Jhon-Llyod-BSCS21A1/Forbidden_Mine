@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4antqql4c4a"]
+[gd_scene load_steps=11 format=3 uid="uid://b4antqql4c4a"]
 
 [ext_resource type="Script" path="res://control.gd" id="1_p5iyp"]
+[ext_resource type="VideoStream" path="res://menu.ogv" id="2_3eoh7"]
+[ext_resource type="Texture2D" uid="uid://cl18fqcwayrqb" path="res://LOGO.png" id="3_tmddc"]
+[ext_resource type="Texture2D" uid="uid://u0vka52cds43" path="res://button-normal.png" id="3_v7tyx"]
+[ext_resource type="Texture2D" uid="uid://bve0fb6s03e7n" path="res://button-clicked.png" id="4_inusy"]
+[ext_resource type="FontFile" uid="uid://b8fsmn5y38cdw" path="res://upheavtt.ttf" id="5_i4ja1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_purps"]
+texture = ExtResource("3_v7tyx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0y0oe"]
+texture = ExtResource("3_v7tyx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wlggs"]
+texture = ExtResource("4_inusy")
+
+[sub_resource type="Theme" id="Theme_dpmj1"]
+default_font = ExtResource("5_i4ja1")
+Button/styles/hover = SubResource("StyleBoxTexture_purps")
+Button/styles/normal = SubResource("StyleBoxTexture_0y0oe")
+Button/styles/pressed = SubResource("StyleBoxTexture_wlggs")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,11 +31,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p5iyp")
 
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_3eoh7")
+autoplay = true
+expand = true
+loop = true
+
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -33.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
@@ -34,10 +67,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-
-[node name="Button" type="Button" parent="TabContainer/CREATE/VBoxContainer"]
-layout_mode = 2
-text = "CREATE NEW WORLD"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/CREATE/VBoxContainer"]
 layout_mode = 2
@@ -60,4 +89,39 @@ anchor_right = 1.0
 offset_bottom = 31.0
 grow_horizontal = 2
 
-[connection signal="pressed" from="TabContainer/CREATE/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="Create-Button" type="Button" parent="."]
+texture_filter = 3
+layout_mode = 2
+offset_left = 478.0
+offset_top = 372.0
+offset_right = 729.0
+offset_bottom = 415.0
+theme = SubResource("Theme_dpmj1")
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 0
+text = "CREATE WORLD"
+
+[node name="Create-Button2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 478.0
+offset_top = 456.0
+offset_right = 729.0
+offset_bottom = 499.0
+theme = SubResource("Theme_dpmj1")
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "LOAD WORLD"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 109.0
+offset_right = 903.0
+offset_bottom = 293.0
+texture = ExtResource("3_tmddc")
+
+[connection signal="pressed" from="Create-Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Create-Button2" to="." method="_on_button_pressed"]

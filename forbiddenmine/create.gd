@@ -16,11 +16,12 @@ func _on_button_pressed() -> void:
 			else:
 				GlobalVar.load = 1
 				save_world()
+				PlayerVar.player_health = 100
 				get_tree().change_scene_to_file("res://node_2d.tscn")
 		else:
 			GlobalVar.load = 1
 			save_world()
-			print(world_list)
+			PlayerVar.player_health = 100
 			get_tree().change_scene_to_file("res://node_2d.tscn")
 	pass
 
