@@ -1,12 +1,11 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1731599095
+::res://::1731599540
 457905861_995796022322525_1255581322795427183_n.png::CompressedTexture2D::7092896208691876973::1731597175::1731597245::1::::<><>::
 460435872_8331944006897283_5550847939126683555_n.png::CompressedTexture2D::3333476716610509536::1731597175::1731597245::1::::<><>::
 461805058_1637236336821351_4543684665471186621_n (1).png::CompressedTexture2D::207780311297698906::1731597175::1731597245::1::::<><>::
 462577737_2418057168542219_8147016140717574990_n.jpg::CompressedTexture2D::28084942747991125::1731597175::1731597245::1::::<><>::
 BreakAnimation.tscn::PackedScene::5795197064033997553::1731597175::0::1::::<><>::res://break_animation.gd<>uid://unpt1j1axahj::::res://break_block.png
 break_animation.gd::GDScript::-1::1731597175::0::1::::<>Node2D<>::
-break_block (1).png::CompressedTexture2D::1431559849231683503::1731598444::1731599097::1::::<><>::
 break_block.png::CompressedTexture2D::1431559849231683503::1731597175::1731597245::1::::<><>::
 button-clicked.png::CompressedTexture2D::3870170866161345613::1731597502::1731597502::1::::<><>::
 button-normal.png::CompressedTexture2D::1456679278972988118::1731597502::1731597502::1::::<><>::
@@ -48,31 +47,7 @@ try.tscn::PackedScene::1630903750347692602::1731597175::0::1::::<><>::res://DAN-
 upheavtt.ttf::FontFile::4714089478191975116::1731598017::1731598017::1::::<><>::
 Worldgen.gd::GDScript::-1::1731597175::0::1::::<>TileMapLayer<>::
 WorldSAVE.gd::GDScript::-1::1731597175::0::1::::WorldSave<>Resource<>::
-::res://brackeys_platformer_assets/::1731598444
-::res://brackeys_platformer_assets/brackeys_platformer_assets/::1731598444
-LICENSE & CREDITS.txt::TextFile::-1::1731598444::0::1::::<><>::
-::res://brackeys_platformer_assets/brackeys_platformer_assets/fonts/::1731598444
-PixelOperator8-Bold.ttf::FontFile::8788788375005496780::1731598444::1731599097::1::::<><>::
-PixelOperator8.ttf::FontFile::3277636897460386473::1731598444::1731599097::1::::<><>::
-::res://brackeys_platformer_assets/brackeys_platformer_assets/music/::1731598444
-time_for_adventure.mp3::AudioStreamMP3::1614526853167403060::1731598444::1731599097::1::::<><>::
-::res://brackeys_platformer_assets/brackeys_platformer_assets/sounds/::1731598444
-coin.wav::AudioStreamWAV::6087023079609830928::1731598444::1731599097::1::::<><>::
-explosion.wav::AudioStreamWAV::4102622148338080465::1731598444::1731599097::1::::<><>::
-hurt.wav::AudioStreamWAV::3013762566157832658::1731598444::1731599097::1::::<><>::
-jump.wav::AudioStreamWAV::2609987458181824033::1731598444::1731599097::1::::<><>::
-power_up.wav::AudioStreamWAV::1644222049248494656::1731598444::1731599097::1::::<><>::
-tap.wav::AudioStreamWAV::4486289958542668936::1731598444::1731599097::1::::<><>::
-::res://brackeys_platformer_assets/brackeys_platformer_assets/sprites/::1731598444
-459100785_527414193142349_4688342686609659898_n.png::CompressedTexture2D::5878103814780753015::1731598444::1731599097::1::::<><>::
-coin.png::CompressedTexture2D::6430812411678455288::1731598444::1731599097::1::::<><>::
-fruit.png::CompressedTexture2D::4823622240681164075::1731598444::1731599097::1::::<><>::
-knight.png::CompressedTexture2D::1648142376333001395::1731598444::1731599097::1::::<><>::
-platforms.png::CompressedTexture2D::3468101344704986056::1731598444::1731599097::1::::<><>::
-slime_green.png::CompressedTexture2D::208561745862244622::1731598444::1731599097::1::::<><>::
-slime_purple.png::CompressedTexture2D::6023144877299056839::1731598444::1731599097::1::::<><>::
-world_tileset.png::CompressedTexture2D::5867352273960756325::1731598444::1731599097::1::::<><>::
-::res://character/::1731598891
+::res://character/::1731597246
 idle.png::CompressedTexture2D::795277470094664451::1731597175::1731597246::1::::<><>::
 jump1.png::CompressedTexture2D::2219735401640441479::1731597175::1731597246::1::::<><>::
 jump2.png::CompressedTexture2D::3285519696546837401::1731597175::1731597246::1::::<><>::
@@ -89,8 +64,8 @@ walk1.png::CompressedTexture2D::8348650549319041621::1731597175::1731597246::1::
 walk2.png::CompressedTexture2D::6079246196959963641::1731597175::1731597246::1::::<><>::
 walk3.png::CompressedTexture2D::1517784889083161550::1731597175::1731597246::1::::<><>::
 walk4.png::CompressedTexture2D::4134916916054878002::1731597175::1731597246::1::::<><>::
-::res://craftings/::1731598891
-::res://craftings/Resource/::1731598891
+::res://craftings/::1731597175
+::res://craftings/Resource/::1731597251
 abstractitem.gd::GDScript::-1::1731597251::0::1::::<>Sprite2D<>::
 abstractitem.tscn::PackedScene::3183998170840084571::1731597175::0::1::::<><>::res://craftings/Resource/abstractitem.gd<>uid://ccl5hvg15ppk5::::res://craftings/Resource/acacia_dagger.png<>res://craftings/Resource/crafttest.gd
 acacia_dagger.png::CompressedTexture2D::4937762333778450502::1731597175::1731597245::1::::<><>::
@@ -113,6 +88,6 @@ slot.tscn::PackedScene::2705835153690823228::1731597175::0::1::::<><>::res://cra
 stick.tres::Resource/crafttest::4216848481234920239::1731597175::0::1::::<><>::uid://5y70qb45on05::::res://craftings/Resource/stick_base.png<>res://craftings/Resource/crafttest.gd
 stick_base.png::CompressedTexture2D::2157198807131245652::1731597175::1731597245::1::::<><>::
 test_scene.tscn::PackedScene::4850028561889972547::1731597175::0::1::::<><>::res://craftings/Resource/Inventory.gd<>uid://besyyemh7ny5y::::res://craftings/Resource/slot.tscn<>uid://bcqvdptppbrp2::::res://craftings/Resource/recipe.tscn<>res://craftings/Resource/recipes.gd<>uid://qymnw4fqqpkl::::res://craftings/Resource/player.tscn<>uid://blml8qkdb8180::::res://craftings/Resource/abstractitem.tscn
-::res://importantDungeons/::1731598444
-::res://script/::1731598891
+::res://importantDungeons/::1731597175
+::res://script/::1731597175
 inventory.gd::GDScript::-1::1731597175::0::1::::<>Node2D<>::
