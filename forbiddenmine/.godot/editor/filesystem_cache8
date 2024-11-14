@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1731483514
+::res://::1731570833
 457905861_995796022322525_1255581322795427183_n.png::CompressedTexture2D::7092896208691876973::1731475275::1731475306::1::::<><>::
 460435872_8331944006897283_5550847939126683555_n.png::CompressedTexture2D::3333476716610509536::1731475275::1731475306::1::::<><>::
 461805058_1637236336821351_4543684665471186621_n (1).png::CompressedTexture2D::207780311297698906::1731475275::1731475306::1::::<><>::
@@ -7,37 +7,38 @@ fc8a56933c4b1c8d796fdb8f7a9f9475
 BreakAnimation.tscn::PackedScene::5795197064033997553::1731475275::0::1::::<><>::res://break_animation.gd<>uid://unpt1j1axahj::::res://break_block.png
 break_animation.gd::GDScript::-1::1731475276::0::1::::<>Node2D<>::
 break_block.png::CompressedTexture2D::1431559849231683503::1731475276::1731475306::1::::<><>::
-character_body_2d.gd::GDScript::-1::1731479623::0::1::::<>CharacterBody2D<>::
-character_body_2d.tscn::PackedScene::847086611846621527::1731483403::0::1::::<><>::uid://llidr6o12lkl::::res://character/idle.png<>uid://drfyjifre761r::::res://character/jump4.png<>uid://blo3xgy0jlht::::res://character/punch1.png<>uid://ctmvjrgc11i8k::::res://character/punch2.png<>uid://00s5wq6evx5x::::res://character/sword-attack1.png<>uid://m0uqr4yivhfu::::res://character/sword-attack2.png<>uid://dda4im2copk37::::res://character/sword-attack3.png<>uid://dq7fb4lvosgor::::res://character/walk1.png<>uid://csu3kc7rn68lx::::res://character/walk2.png<>uid://vvhxv35ya65w::::res://character/walk3.png<>uid://by58qh8hcsiu1::::res://character/walk4.png<>uid://d5fe0hvws51t::::res://inventory_ui.tscn<>uid://d35a6x6siepy7::::res://inventory_hotbar.tscn
+character_body_2d.gd::GDScript::-1::1731569143::0::1::::<>CharacterBody2D<>::
+character_body_2d.tscn::PackedScene::847086611846621527::1731569234::0::1::::<><>::uid://llidr6o12lkl::::res://character/idle.png<>res://character_body_2d.gd<>uid://drfyjifre761r::::res://character/jump4.png<>uid://blo3xgy0jlht::::res://character/punch1.png<>uid://ctmvjrgc11i8k::::res://character/punch2.png<>uid://dda4im2copk37::::res://character/sword-attack3.png<>uid://dq7fb4lvosgor::::res://character/walk1.png<>uid://csu3kc7rn68lx::::res://character/walk2.png<>uid://vvhxv35ya65w::::res://character/walk3.png<>uid://by58qh8hcsiu1::::res://character/walk4.png<>uid://d5fe0hvws51t::::res://inventory_ui.tscn<>uid://d35a6x6siepy7::::res://inventory_hotbar.tscn
 control.gd::GDScript::-1::1731475276::0::1::::<>Control<>::
-control.tscn::PackedScene::130080037229862522::1731483404::0::1::::<><>::res://control.gd
+control.tscn::PackedScene::130080037229862522::1731569235::0::1::::<><>::res://control.gd<>res://DAN-DA-DAN-Opening-.ogv
 coordinate_display.gd::GDScript::-1::1731475276::0::1::::<>Label<>::
 create.gd::GDScript::-1::1731475276::0::1::::<>Control<>::
-Create.tscn::PackedScene::9187760753813278414::1731483404::0::1::::<><>::res://create.gd
-DAN-DA-DAN-Opening-.ogv::VideoStreamTheora::-1::1731482934::0::1::::<><>::
+Create.tscn::PackedScene::9187760753813278414::1731569235::0::1::::<><>::res://create.gd
+DAN-DA-DAN-Opening-.ogv::VideoStreamTheora::-1::1731484151::0::1::::<><>::
 display.gd::GDScript::-1::1731475276::0::1::::<>CanvasLayer<>::
 display.tscn::PackedScene::2643206974865302303::1731475966::0::1::::<><>::res://display.gd
 drop.gd::GDScript::-1::1731475276::0::1::::<>CharacterBody2D<>::
-drop.tscn::PackedScene::6815628485892802819::1731483404::0::1::::<><>::res://drop.gd<>uid://c7wd10jyx5va::::res://461805058_1637236336821351_4543684665471186621_n (1).png
-DungeonWatcher.tscn::PackedScene::1426286813222225994::1731483404::0::1::::<><>::uid://nus4p66lqx6::::res://462577737_2418057168542219_8147016140717574990_n.jpg
-EnemyPrototype.tscn::PackedScene::2827739412551659472::1731483403::0::1::::<><>::uid://m0uqr4yivhfu::::res://character/sword-attack2.png<>res://enemy_prototype.gd<>uid://00s5wq6evx5x::::res://character/sword-attack1.png<>uid://dda4im2copk37::::res://character/sword-attack3.png
-enemy_prototype.gd::GDScript::-1::1731480958::0::1::::<>CharacterBody2D<>::
+drop.tscn::PackedScene::6815628485892802819::1731569235::0::1::::<><>::res://drop.gd<>uid://c7wd10jyx5va::::res://461805058_1637236336821351_4543684665471186621_n (1).png
+DungeonWatcher.tscn::PackedScene::1426286813222225994::1731569235::0::1::::<><>::uid://nus4p66lqx6::::res://462577737_2418057168542219_8147016140717574990_n.jpg
+EnemyPrototype.tscn::PackedScene::2827739412551659472::1731569234::0::1::::<><>::uid://m0uqr4yivhfu::::res://character/sword-attack2.png<>res://enemy_prototype.gd<>uid://00s5wq6evx5x::::res://character/sword-attack1.png<>uid://dda4im2copk37::::res://character/sword-attack3.png
+enemy_prototype.gd::GDScript::-1::1731564821::0::1::::<>CharacterBody2D<>::
 export_presets.cfg::TextFile::-1::1731475276::0::1::::<><>::
-Game.gd::GDScript::-1::1731475966::0::1::::<>Node2D<>::
+Game.gd::GDScript::-1::1731566001::0::1::::<>Node2D<>::
 GlobalVar.gd::GDScript::-1::1731475276::0::1::::<>Node<>::
 health_bar.gd::GDScript::-1::1731475276::0::1::::<>ProgressBar<>::
 icon.svg::CompressedTexture2D::8473008141480119219::1731475276::1731475306::1::::<><>::
-Inventory.tscn::PackedScene::1680521341696008943::1731483404::0::1::::<><>::res://script/inventory.gd
+Inventory.tscn::PackedScene::1680521341696008943::1731569235::0::1::::<><>::res://script/inventory.gd
 inventory_hotbar.gd::GDScript::-1::1731475276::0::1::::<>Control<>::
-inventory_hotbar.tscn::PackedScene::9186537621931748908::1731483404::0::1::::<><>::res://inventory_hotbar.gd
+inventory_hotbar.tscn::PackedScene::9186537621931748908::1731569235::0::1::::<><>::res://inventory_hotbar.gd
 inventory_slot.gd::GDScript::-1::1731475276::0::1::::<>Control<>::
-inventory_slot.tscn::PackedScene::4352556568505347162::1731483404::0::1::::<><>::res://inventory_slot.gd<>uid://c8b371x0ppc2h::::res://457905861_995796022322525_1255581322795427183_n.png
+inventory_slot.tscn::PackedScene::4352556568505347162::1731569235::0::1::::<><>::res://inventory_slot.gd<>uid://c8b371x0ppc2h::::res://457905861_995796022322525_1255581322795427183_n.png
 inventory_ui.gd::GDScript::-1::1731475276::0::1::::<>Control<>::
-inventory_ui.tscn::PackedScene::272809916557013199::1731483403::0::1::::<><>::res://inventory_ui.gd
-node_2d.tscn::PackedScene::6862619646446675840::1731483403::0::1::::<><>::res://Worldgen.gd<>res://Game.gd<>uid://mclnmadsjcpj::::res://character_body_2d.tscn<>uid://c7wd10jyx5va::::res://461805058_1637236336821351_4543684665471186621_n (1).png<>uid://dsynhalh8m3qt::::res://icon.svg<>res://character_body_2d.gd<>uid://x7b68050kdhv::::res://Inventory.tscn<>uid://bdwnh588ui1n4::::res://display.tscn<>uid://c8b371x0ppc2h::::res://457905861_995796022322525_1255581322795427183_n.png
-PlayerVar.gd::GDScript::-1::1731475709::0::1::::<>Node<>::
+inventory_ui.tscn::PackedScene::272809916557013199::1731569235::0::1::::<><>::res://inventory_ui.gd
+node_2d.tscn::PackedScene::6862619646446675840::1731569234::0::1::::<><>::res://Worldgen.gd<>res://Game.gd<>uid://mclnmadsjcpj::::res://character_body_2d.tscn<>uid://c7wd10jyx5va::::res://461805058_1637236336821351_4543684665471186621_n (1).png<>uid://dsynhalh8m3qt::::res://icon.svg<>uid://x7b68050kdhv::::res://Inventory.tscn<>uid://bdwnh588ui1n4::::res://display.tscn<>uid://c8b371x0ppc2h::::res://457905861_995796022322525_1255581322795427183_n.png<>uid://bgj1pp72jn61i::::res://EnemyPrototype.tscn
+PlayerVar.gd::GDScript::-1::1731564430::0::1::::<>Node<>::
 Spectator.gd::GDScript::-1::1731475276::0::1::::<>CharacterBody2D<>::
 tilemap_packed.png::CompressedTexture2D::1025031470737829812::1731475276::1731475306::1::::<><>::
+try.tscn::PackedScene::1630903750347692602::1731569235::0::1::::<><>::res://DAN-DA-DAN-Opening-.ogv<>uid://c7wd10jyx5va::::res://461805058_1637236336821351_4543684665471186621_n (1).png
 Worldgen.gd::GDScript::-1::1731475276::0::1::::<>TileMapLayer<>::
 WorldSAVE.gd::GDScript::-1::1731475276::0::1::::WorldSave<>Resource<>::
 ::res://character/::1731475306
@@ -58,7 +59,7 @@ walk2.png::CompressedTexture2D::6079246196959963641::1731475276::1731475306::1::
 walk3.png::CompressedTexture2D::1517784889083161550::1731475276::1731475306::1::::<><>::
 walk4.png::CompressedTexture2D::4134916916054878002::1731475276::1731475306::1::::<><>::
 ::res://craftings/::1731475276
-::res://craftings/Resource/::1731475321
+::res://craftings/Resource/::1731562210
 abstractitem.gd::GDScript::-1::1731475276::0::1::::<>Sprite2D<>::
 abstractitem.tscn::PackedScene::3183998170840084571::1731475276::0::1::::<><>::res://craftings/Resource/abstractitem.gd<>uid://ccl5hvg15ppk5::::res://craftings/Resource/acacia_dagger.png<>res://craftings/Resource/crafttest.gd
 acacia_dagger.png::CompressedTexture2D::4937762333778450502::1731475276::1731475306::1::::<><>::
@@ -67,7 +68,7 @@ acacia_logs.png::CompressedTexture2D::5539283410430629038::1731475276::173147530
 acacia_logs.tres::Resource/crafttest::3147045329611014485::1731475276::0::1::::<><>::uid://ck6jgn4vyvbba::::res://craftings/Resource/acacia_logs.png<>res://craftings/Resource/crafttest.gd
 acacia_planks.png::CompressedTexture2D::8087661664395589727::1731475276::1731475306::1::::<><>::
 acacia_planks.tres::Resource/crafttest::4578556021227253147::1731475276::0::1::::<><>::uid://dnhyuur33q74f::::res://craftings/Resource/acacia_planks.png<>res://craftings/Resource/crafttest.gd
-crafttest.gd::GDScript::-1::1731475321::0::1::::crafttest<>Resource<>::
+crafttest.gd::GDScript::-1::1731562210::0::1::::crafttest<>Resource<>::
 Inventory.gd::GDScript::-1::1731475276::0::1::::<>GridContainer<>::
 player.gd::GDScript::-1::1731475276::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::1173319584102150267::1731475276::0::1::::<><>::res://craftings/Resource/player.gd

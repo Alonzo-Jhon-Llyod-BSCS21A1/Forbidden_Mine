@@ -26,7 +26,7 @@ func  _input(event: InputEvent) -> void:
 			var min_y = GlobalVar.characterlocation.y - GlobalVar.action_distance <= tile_coords.y
 			var max_y = GlobalVar.characterlocation.y + GlobalVar.action_distance >= tile_coords.y
 			var touch_self = tile_coords.x == GlobalVar.characterlocation.x and tile_coords.y == GlobalVar.characterlocation.y
-			if tile_map_layer.get_cell_source_id(Vector2i(tile_coords.x, tile_coords.y)) == -1:
+			if tile_map_layer.get_cell_source_id(Vector2i(tile_coords.x, tile_coords.y)) == -1 or (tile_map_layer.get_cell_atlas_coords(Vector2i(tile_coords.x,tile_coords.y)) ==  Vector2i(0,7)):
 				if min_x and max_x and min_y and max_y and not touch_self:
 					print(min_x, max_x, GlobalVar.characterlocation, tile_coords.x, tile_coords.y)
 					tile_map_layer.set_cell(Vector2i(tile_coords.x, tile_coords.y), 1, Vector2i(6, 5))
@@ -56,12 +56,25 @@ func modify_tile_in_binary(x, y, tile_x, tile_y):
 		file.store_32(tile_x)
 		file.store_32(tile_y)
 		file.close()
-		
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	GlobalVar.charposition = character_body_2d.global_position
 	charlocal_position = to_local(GlobalVar.charposition) / tile_map_layer.scale
 	GlobalVar.characterlocation = tile_map_layer.local_to_map(charlocal_position)
+	
+	for x in range(GlobalVar.characterlocation.x - 16, GlobalVar.characterlocation.x + 16):
+		for y in range(GlobalVar.characterlocation.y - 16, GlobalVar.characterlocation.y+ 16):
+			if (tile_map_layer.get_cell_atlas_coords(Vector2i(x,y)) ==  Vector2i(0,7)):
+				if tile_map_layer.get_cell_source_id(Vector2i(x-1, y)) == -1:
+					tile_map_layer.set_cell(Vector2i(x-1, y), 1, Vector2i(0,7))
+					modify_tile_in_binary(x-1, y, 0, 7)
+				if tile_map_layer.get_cell_source_id(Vector2i(x+1, y)) == -1:
+					tile_map_layer.set_cell(Vector2i(x+1, y), 1, Vector2i(0,7))
+					modify_tile_in_binary(x+1, y, 0, 7)
+				if tile_map_layer.get_cell_source_id(Vector2i(x, y+1)) == -1:
+					tile_map_layer.set_cell(Vector2i(x, y+1), 1, Vector2i(0,7))
+					modify_tile_in_binary(x, y+1, 0, 7)
 	pass
 
 func _on_timer_timeout() -> void:

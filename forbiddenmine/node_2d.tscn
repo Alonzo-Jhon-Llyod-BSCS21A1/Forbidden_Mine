@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://mclnmadsjcpj" path="res://character_body_2d.tscn" id="3_5ggpm"]
 [ext_resource type="Texture2D" uid="uid://c7wd10jyx5va" path="res://461805058_1637236336821351_4543684665471186621_n (1).png" id="3_d702j"]
 [ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="3_fdor4"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="4_s0ret"]
 [ext_resource type="PackedScene" uid="uid://x7b68050kdhv" path="res://Inventory.tscn" id="9_2h60w"]
 [ext_resource type="PackedScene" uid="uid://bdwnh588ui1n4" path="res://display.tscn" id="9_yy0nf"]
 [ext_resource type="Texture2D" uid="uid://c8b371x0ppc2h" path="res://457905861_995796022322525_1255581322795427183_n.png" id="10_vai1t"]
+[ext_resource type="PackedScene" uid="uid://bgj1pp72jn61i" path="res://EnemyPrototype.tscn" id="10_wr1n8"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j5x2w"]
 
@@ -107,9 +107,9 @@ texture_region_size = Vector2i(8, 8)
 7:6/0 = 0
 7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 0:7/0 = 0
-0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
+0:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
+1:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 2:7/0 = 0
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 3:7/0 = 0
@@ -126,6 +126,8 @@ texture_region_size = Vector2i(8, 8)
 [sub_resource type="TileSet" id="TileSet_okwpe"]
 tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 8
+physics_layer_1/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_bdn4r")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_fcco1"]
@@ -157,7 +159,6 @@ noise_height_text = SubResource("NoiseTexture2D_1uhbx")
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_5ggpm")]
 position = Vector2(-8, -476)
 scale = Vector2(2, 2)
-script = ExtResource("4_s0ret")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -206,6 +207,10 @@ item_effect = "+150"
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("10_wr1n8")]
+position = Vector2(167, -468)
+scale = Vector2(2, 2)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

@@ -1,11 +1,10 @@
 [gd_scene load_steps=19 format=3 uid="uid://mclnmadsjcpj"]
 
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_uq5mp"]
 [ext_resource type="Texture2D" uid="uid://drfyjifre761r" path="res://character/jump4.png" id="5_rq8cl"]
 [ext_resource type="Texture2D" uid="uid://blo3xgy0jlht" path="res://character/punch1.png" id="8_rrbhd"]
 [ext_resource type="Texture2D" uid="uid://ctmvjrgc11i8k" path="res://character/punch2.png" id="9_6dxql"]
-[ext_resource type="Texture2D" uid="uid://00s5wq6evx5x" path="res://character/sword-attack1.png" id="10_yrkga"]
-[ext_resource type="Texture2D" uid="uid://m0uqr4yivhfu" path="res://character/sword-attack2.png" id="11_e0hm1"]
 [ext_resource type="Texture2D" uid="uid://dda4im2copk37" path="res://character/sword-attack3.png" id="12_0nu48"]
 [ext_resource type="Texture2D" uid="uid://dq7fb4lvosgor" path="res://character/walk1.png" id="13_sx2w2"]
 [ext_resource type="Texture2D" uid="uid://csu3kc7rn68lx" path="res://character/walk2.png" id="14_nooj6"]
@@ -21,6 +20,10 @@ region = Rect2(4, 0, 12, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4m78w"]
 atlas = ExtResource("5_rq8cl")
 region = Rect2(3, 0, 13, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnyew"]
+atlas = ExtResource("12_0nu48")
+region = Rect2(0, 0, 17, 17)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c5bmy"]
 animations = [{
@@ -53,13 +56,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_yrkga")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_e0hm1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_0nu48")
+"texture": SubResource("AtlasTexture_nnyew")
 }],
 "loop": true,
 "name": &"sword_attack",
@@ -87,15 +84,18 @@ animations = [{
 size = Vector2(12, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfgaq"]
-size = Vector2(12, 16)
+size = Vector2(15, 16)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 process_mode = 3
 collision_layer = 2
+script = ExtResource("1_uq5mp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c5bmy")
+animation = &"sword_attack"
 autoplay = "default"
+frame_progress = 0.408409
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_faqnu")
@@ -159,7 +159,13 @@ text = "INVENTORY"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
-collision_mask = 5
+collision_mask = 13
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_dfgaq")
+
+[node name="AttackCd" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="AttackCd" to="." method="_on_attack_cd_timeout"]

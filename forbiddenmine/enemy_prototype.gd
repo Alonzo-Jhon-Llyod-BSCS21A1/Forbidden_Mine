@@ -3,6 +3,7 @@ const  NAME = "Enemy"
 signal enemy_attack
 var attackcd = true
 @onready var character_body_2d: CharacterBody2D = $"."
+var Health = 100
 
 const SPEED = 50
 const GRAVITY = 500  # Adjust this value for gravity strength
@@ -10,9 +11,10 @@ const JUMP_VELOCITY = -400.0
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity to the enemy's vertical velocity
+	if Health <= 0:
+		self.queue_free()
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
-
 	# Move towards the player's position
 	if GlobalVar.charposition != null:
 		if position.distance_to(GlobalVar.charposition) > 2:
@@ -26,10 +28,11 @@ func _physics_process(delta: float) -> void:
 		if body.get("NAME")== "Player":
 			if attackcd == true:
 				knock_back(body)
+				PlayerVar.player_health -= 3
 				attackcd = false
 				$Hitbox/AttackCD.start()			
 	move_and_slide()
-	
+
 func knock_back(Player):
 	var knock_back_direction = (velocity - Player.velocity).normalized() * 300
 	Player.velocity.x = knock_back_direction.x

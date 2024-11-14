@@ -1,6 +1,7 @@
+Timer
+TileMapLayer
 VideoStreamPlayer
 AnimationPlayer
-Timer
 CollisionShape2D
 Area2D
 CharacterBody2D
@@ -8,8 +9,6 @@ AnimatedSprite2D
 Sprite2D
 ProgressBar
 CanvasLayer
-TileMapLayer
 RayCast2D
 Label
 Camera2D
-TileMap
