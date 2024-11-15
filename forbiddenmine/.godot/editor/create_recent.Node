@@ -1,6 +1,10 @@
 VideoStreamPlayer
-Label
+TextureButton
 Button
+ScrollContainer
+VScrollBar
+VBoxContainer
+Label
 TextureRect
 CollisionShape2D
 Area2D
@@ -8,7 +12,3 @@ Timer
 TileMapLayer
 AnimationPlayer
 CharacterBody2D
-AnimatedSprite2D
-Sprite2D
-ProgressBar
-CanvasLayer
