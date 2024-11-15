@@ -1,4 +1,5 @@
 res://control.tscn
-res://craftings/Resource/abstractitem.gd
-res://craftings/Resource/Inventory.gd
 res://Create.tscn
+res://load.gd
+res://CreatedWorld.tscn
+res://control.gd
