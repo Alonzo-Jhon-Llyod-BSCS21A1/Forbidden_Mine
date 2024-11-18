@@ -1,13 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://c41klwo0k4hb1"]
+[gd_scene load_steps=13 format=4 uid="uid://c41klwo0k4hb1"]
 
 [ext_resource type="Script" path="res://Worldgen.gd" id="1_bore3"]
 [ext_resource type="Script" path="res://Game.gd" id="1_fjc33"]
 [ext_resource type="PackedScene" uid="uid://mclnmadsjcpj" path="res://character_body_2d.tscn" id="3_5ggpm"]
 [ext_resource type="Texture2D" uid="uid://c7wd10jyx5va" path="res://461805058_1637236336821351_4543684665471186621_n (1).png" id="3_d702j"]
 [ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="3_fdor4"]
-[ext_resource type="PackedScene" uid="uid://x7b68050kdhv" path="res://Inventory.tscn" id="9_2h60w"]
 [ext_resource type="PackedScene" uid="uid://bdwnh588ui1n4" path="res://display.tscn" id="9_yy0nf"]
-[ext_resource type="Texture2D" uid="uid://c8b371x0ppc2h" path="res://457905861_995796022322525_1255581322795427183_n.png" id="10_vai1t"]
 [ext_resource type="PackedScene" uid="uid://bgj1pp72jn61i" path="res://EnemyPrototype.tscn" id="10_wr1n8"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j5x2w"]
@@ -187,20 +185,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
-
-[node name="Inventory" parent="." instance=ExtResource("9_2h60w")]
-position = Vector2(1, -23)
-item_type = "Armory"
-item_name = "Sword"
-item_texture = ExtResource("10_vai1t")
-item_effect = "+150 damage"
-
-[node name="Inventory2" parent="." instance=ExtResource("9_2h60w")]
-position = Vector2(57, -24)
-item_type = "Armory"
-item_name = "Sword"
-item_texture = ExtResource("10_vai1t")
-item_effect = "+150"
 
 [node name="Display" parent="." instance=ExtResource("9_yy0nf")]
 

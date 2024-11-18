@@ -81,24 +81,26 @@ func use_hotbar_item(slot_index):
 	if slot_index < GlobalVar.hotbar_inventory.size():
 		var item = GlobalVar.hotbar_inventory[slot_index]
 		if item != null:
-			# Use item
-			apply_item_effect(item)
-			# Remove item
-			item["quantity"] -= 1
-			if item["quantity"] <= 0:
-				GlobalVar.hotbar_inventory[slot_index] = null
-				GlobalVar.remove_item(item["type"], item["effect"])
-			GlobalVar.inventory_updated.emit()  
+			# Assign the selected item to GlobalVar.Item_onhold
+			GlobalVar.Item_onhold = item
+			print("Selected item:", item["name"], "with effect:", item["effect"], "and quantity:", item["quantity"])
+		else:
+			# Set GlobalVar.Item_onhold to null for an empty slot
+			GlobalVar.Item_onhold = null
+			print("Selected an empty slot. Item_onhold set to null.")
+	else:
+		print("Invalid slot index:", slot_index)
 
 # Hotbar shortcuts
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed:
-		# Then check for specific keys
 		for i in range(GlobalVar.hotbar_size):
-			# Assuming keys 1-5 are mapped to actions "hotbar_1" to "hotbar_5" in the Input Map
+			# Assuming keys 1-5 are mapped to actions "hotbar_1" to "hotbar_5"
 			if Input.is_action_just_pressed("hotbar_" + str(i + 1)):
-				use_hotbar_item(i)
+				use_hotbar_item(i)  # Select the item or assign null for an empty slot
 				break
+
+
 				
 func knock_back(Enemy):
 	var knock_back_direction = (velocity - Enemy.velocity).normalized() * 300
