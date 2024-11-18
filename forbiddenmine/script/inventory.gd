@@ -1,5 +1,6 @@
 @tool
-extends Node2D
+extends CharacterBody2D
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @export var item_type = ""
 @export var item_name = ""
@@ -7,21 +8,23 @@ extends Node2D
 @export var item_effect = ""
 
 var scene_path: String = "res://Inventory.tscn"
-
-@onready var icon_sprite = $Sprite2D
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 var player_in_range = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if not Engine.is_editor_hint():
-		icon_sprite.texture = item_texture
+		sprite_2d.texture = item_texture
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _physics_process(delta: float) -> void:
+	if not is_on_floor():
+		velocity.y += gravity * delta
+	move_and_slide()
+	
 	if Engine.is_editor_hint():
-		icon_sprite.texture = item_texture
-		
+		sprite_2d.texture = item_texture	
 	if player_in_range and Input.is_action_just_pressed("ui_add"):
 		pickup_item()
 		

@@ -1,3 +1,6 @@
+CollisionShape2D
+CharacterBody2D
+Node2D
 VideoStreamPlayer
 TextureButton
 Button
@@ -6,9 +9,6 @@ VScrollBar
 VBoxContainer
 Label
 TextureRect
-CollisionShape2D
 Area2D
 Timer
 TileMapLayer
-AnimationPlayer
-CharacterBody2D
