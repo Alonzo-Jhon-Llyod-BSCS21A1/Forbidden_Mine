@@ -43,8 +43,9 @@ func _ready() -> void:
 			button_theme.set_color("font_color_pressed", "Button", Color.WHITE)  # Pressed state
 			
 			newbutton.theme = button_theme
-
 			newbutton.button_down.connect(play)
+			
+			button.append(newbutton)
 			v_box_container.add_child(label)
 			v_box_container.add_child(newbutton)
 			
