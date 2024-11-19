@@ -1,8 +1,0 @@
-res://node_2d.tscn
-res://GlobalVar.gd
-res://drop.tscn
-res://Inventory.tscn
-res://character_body_2d.gd
-res://Game.gd
-res://script/inventory.gd
-res://inventory_ui.tscn
