@@ -39,6 +39,14 @@ func _ready() -> void:
 		load_worldbinary()
 	if GlobalVar.load == 1:
 		noise = noise_height_text.noise
+		if GlobalVar.Worldseed != null:
+			noise.seed = GlobalVar.Worldseed
+			print(GlobalVar.Worldseed)
+			print("Null")
+		else:
+			noise.seed = randi()
+			print("not Null")
+		noise = noise_height_text.noise
 		rng = RandomNumberGenerator.new()
 		rng.seed = 1
 		grasses()

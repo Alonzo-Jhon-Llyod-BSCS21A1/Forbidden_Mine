@@ -4,6 +4,7 @@ var new_world
 @warning_ignore("shadowed_global_identifier")
 @onready var inventory_slot_scene = preload("res://inventory_slot.tscn")
 
+var Worldseed
 var load = 0
 var action_distance = 4
 var characterlocation

@@ -2,6 +2,7 @@ extends Node2D
 const BREAK_ANIMATION = preload("res://BreakAnimation.tscn")
 const enemy = preload("res://EnemyPrototype.tscn")
 const itemdrop = preload("res://Inventory.tscn")
+const recipe = preload("res://Recipe.tscn")
 @onready var timer: Timer = $Timer
 @onready var tile_map_layer: TileMapLayer = $TileMapLayer
 @onready var character_body_2d: CharacterBody2D = $CharacterBody2D
@@ -73,7 +74,10 @@ func _input(event: InputEvent) -> void:
 			timer.stop()
 			if is_instance_valid(breakable_block):
 				breakable_block.queue_free()
-
+				
+		if event.is_action_pressed("Craft"):
+			var recipe_ins = recipe.instantiate()
+			add_child(recipe_ins)
 		
 func modify_tile_in_binary(x, y, tile_x, tile_y):
 	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ_WRITE)
@@ -135,6 +139,7 @@ func drop_item(tile_data: Vector2i):
 		add_child(itemdrop)
 	else:
 		print("wala boi", breakable_block)
+		
 
 func _on_spawn_timer_timeout() -> void:
 	var enemytry = enemy.instantiate()
