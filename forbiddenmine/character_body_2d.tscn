@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://mclnmadsjcpj"]
+[gd_scene load_steps=22 format=3 uid="uid://mclnmadsjcpj"]
 
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_uq5mp"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://csu3kc7rn68lx" path="res://character/walk2.png" id="14_nooj6"]
 [ext_resource type="Texture2D" uid="uid://vvhxv35ya65w" path="res://character/walk3.png" id="15_ecwnv"]
 [ext_resource type="Texture2D" uid="uid://by58qh8hcsiu1" path="res://character/walk4.png" id="16_o07f0"]
-[ext_resource type="PackedScene" uid="uid://d5fe0hvws51t" path="res://inventory_ui.tscn" id="17_qybjw"]
 [ext_resource type="PackedScene" uid="uid://d35a6x6siepy7" path="res://inventory_hotbar.tscn" id="18_ioy0u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10u7y"]
@@ -147,32 +146,6 @@ text = "  			 PRESS E  TO
 	   			PICKUP
 "
 horizontal_alignment = 1
-
-[node name="InventoryUI" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.192157, 0.376471, 0.321569, 1)
-
-[node name="Label" type="Label" parent="InventoryUI/ColorRect"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -169.0
-offset_top = 40.0
-offset_right = 169.0
-offset_bottom = 123.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 60
-text = "INVENTORY"
-
-[node name="Inventory UI" parent="InventoryUI/ColorRect" instance=ExtResource("17_qybjw")]
 
 [node name="Inventory_Hotbar" type="CanvasLayer" parent="."]
 

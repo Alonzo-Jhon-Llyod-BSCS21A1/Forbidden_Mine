@@ -63,12 +63,6 @@ func _physics_process(delta):
 	
 	#FOR INVENTORY
 
-func _input(event):
-	if event.is_action_pressed("UI_Inventory"):
-		inventory_ui.visible = !inventory_ui.visible
-		get_tree().paused = !get_tree().paused
-		inventory_hotbar.visible = !inventory_hotbar.visible
-
 func apply_item_effect(item):
 	match item["effect"]:
 		"Stamina":
@@ -99,8 +93,6 @@ func _unhandled_input(event):
 			if Input.is_action_just_pressed("hotbar_" + str(i + 1)):
 				use_hotbar_item(i)  # Select the item or assign null for an empty slot
 				break
-
-
 				
 func knock_back(Enemy):
 	var knock_back_direction = (velocity - Enemy.velocity).normalized() * 300

@@ -163,9 +163,13 @@ func reduce_item_quantity(item):
 			if inventory[i]["quantity"] <= 0:
 				inventory[i] = null
 				print("Item removed from inventory.")
+				if GlobalVar.Item_onhold == item:
+					GlobalVar.Item_onhold = null
+					print("Item_onhold cleared as item is depleted.")
 			break
 	sync_inventory_to_hotbar()
 	inventory_updated.emit()
+
 
 
 
