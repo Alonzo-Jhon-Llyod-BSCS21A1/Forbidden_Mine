@@ -8,12 +8,11 @@ func _on_button_pressed() -> void:
 	if GlobalVar.new_world.is_empty():
 		print("aba")
 	else:
-		if $LineEdit2.text != null:
-			GlobalVar.Worldseed =   hash($LineEdit2.text)
+		if $LineEdit2.text.strip_edges() != "":
+			GlobalVar.Worldseed = hash($LineEdit2.text)
 		else:
 			print("Input is invalid or empty.")
 
-			
 		if FileAccess.file_exists(file_path):
 			check_worldlist()
 			if GlobalVar.new_world in world_list:

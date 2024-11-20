@@ -3,6 +3,9 @@ const BREAK_ANIMATION = preload("res://BreakAnimation.tscn")
 const enemy = preload("res://EnemyPrototype.tscn")
 const itemdrop = preload("res://Inventory.tscn")
 const recipe = preload("res://Recipe.tscn")
+const  inventory = preload("res://Inventorty_UI.tscn")
+var inventory_instance = null
+var inventory_on_off = false
 @onready var timer: Timer = $Timer
 @onready var tile_map_layer: TileMapLayer = $TileMapLayer
 @onready var character_body_2d: CharacterBody2D = $CharacterBody2D
@@ -78,6 +81,20 @@ func _input(event: InputEvent) -> void:
 		if event.is_action_pressed("Craft"):
 			var recipe_ins = recipe.instantiate()
 			add_child(recipe_ins)
+			
+		if event.is_action_pressed("UI_Inventory"):
+			if inventory_instance and is_instance_valid(inventory_instance):
+				# Inventory is open, so close it
+				inventory_instance.queue_free()
+				inventory_instance = null
+				print("Inventory closed.")
+			else:
+				# Inventory is closed, so open it
+				inventory_instance = inventory.instantiate()
+				add_child(inventory_instance)
+				print("Inventory opened.")
+
+			
 		
 func modify_tile_in_binary(x, y, tile_x, tile_y):
 	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ_WRITE)
