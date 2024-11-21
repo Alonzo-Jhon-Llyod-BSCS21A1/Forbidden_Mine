@@ -1,9 +1,9 @@
 extends CanvasLayer
 
 var tile_to_item_data = {	
-    "Accacia Dagger": {"name": "Accacia Dagger", "type": "weapon", "texture": preload("res://Item assets/weapon/acacia_dagger.png"), "effect": "Slash"},
-    "Accacia Sword": {"name": "Accacia Sword", "type": "weapon", "texture": preload("res://Item assets/weapon/accacia_sword.png"), "effect": "Slash"},
-    "Accacia BroadSword": {"name": "Gem Sword", "type": "weapon", "texture": preload("res://Item assets/weapon/accacia_broadsword.png"), "effect": "Slash"},
+    "Acacia Dagger": {"name": "Acacia Dagger", "type": "weapon", "texture": preload("res://Item assets/weapon/acacia_dagger.png"), "effect": "Slash"},
+    "Acacia Sword": {"name": "Acacia Sword", "type": "weapon", "texture": preload("res://Item assets/weapon/accacia_sword.png"), "effect": "Slash"},
+    "Acacia BroadSword": {"name": "Acacia BroadSword", "type": "weapon", "texture": preload("res://Item assets/weapon/accacia_broadsword.png"), "effect": "Slash"},
     
     "Frosted Oak Dagger": {"name": "Frosted Oak Dagger", "type": "weapon", "texture": preload("res://Item assets/weapon/frosted_oak_dagger.png"), "effect": "Slash"},
     "Frosted Oak Sword": {"name": "Frosted Oak Sword", "type": "weapon", "texture": preload("res://Item assets/weapon/frosted_oak_sword.png"), "effect": "Slash"},
@@ -48,7 +48,7 @@ var tile_to_item_data = {
     "Magma Dagger": {"name": "Magma Dagger", "type": "weapon", "texture": preload("res://Item assets/weapon/magma_dagger.png"), "effect": "Slash"},
     "Magma Sword": {"name": "Magma Sword", "type": "weapon", "texture": preload("res://Item assets/weapon/magma_sword.png"), "effect": "Slash"},
     "Magma BroadSword": {"name": "Magma BroadSword", "type": "weapon", "texture": preload("res://Item assets/weapon/magma_broadsword.png"), "effect": "Slash"},
-
+    
     }
 
 func remove_item(item, item_index):
@@ -102,24 +102,24 @@ func craft_item(recipe: Dictionary) -> void:
 func _on_button_pressed() -> void:
     var recipe = {
         "Stick": 1,
-        "Accia Planks": 1,
-        "result": tile_to_item_data["Accacia Dagger"]
+        "Acacia Planks": 1,
+        "result": tile_to_item_data["Acacia Dagger"]
     }
     craft_item(recipe)
     
 func _on_button_2_pressed() -> void:
         var recipe = {
             "Stick": 1,
-            "Accia Planks": 2,
-            "result": tile_to_item_data["Accacia Sword"]
+            "Acacia Planks": 2,
+            "result": tile_to_item_data["Acacia Sword"]
         }
         craft_item(recipe)
 
 func _on_button_3_pressed() -> void:
     var recipe = {
         "Stick": 1,
-        "Accia Planks": 4,
-        "result": tile_to_item_data["Accacia BroadSword"]
+        "Acacia Planks": 4,
+        "result": tile_to_item_data["Acacia BroadSword"]
     }
     craft_item(recipe)
 

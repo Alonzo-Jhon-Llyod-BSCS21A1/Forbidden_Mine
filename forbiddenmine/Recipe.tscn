@@ -74,7 +74,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("1_brjwc")
 
-[node name="Button" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect"]
+[node name="Buttonacacia" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -91,7 +91,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("3_dr3pm")
 
-[node name="Button2" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect2"]
+[node name="Button2acacia" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -108,7 +108,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("2_rxugr")
 
-[node name="Button3" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect3"]
+[node name="Button3acacia" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -128,7 +128,7 @@ offset_left = 15.0
 offset_top = -10.489
 offset_right = 198.0
 offset_bottom = 10.511
-text = "Accacia Wood Weapons
+text = "Acacia Wood Weapons
 "
 scroll_active = false
 autowrap_mode = 1
@@ -151,7 +151,7 @@ offset_right = 38.0
 offset_bottom = -41.0
 texture = ExtResource("11_a4hwe")
 
-[node name="Button4" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect"]
+[node name="Button4frosted" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -168,7 +168,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("10_imwps")
 
-[node name="Button5" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect2"]
+[node name="Button5frosted" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect2"]
 layout_mode = 0
 offset_left = -71.0
 offset_top = 69.0
@@ -185,7 +185,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("12_jssdo")
 
-[node name="Button6" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect3"]
+[node name="Button6frosted" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect3"]
 layout_mode = 0
 offset_left = 68.0
 offset_top = 80.0
@@ -228,7 +228,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("25_mc50i")
 
-[node name="Button7" type="Button" parent="TabContainer/Weapon/oak/TextureRect"]
+[node name="Button7oak" type="Button" parent="TabContainer/Weapon/oak/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -245,7 +245,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("26_7mtk1")
 
-[node name="Button8" type="Button" parent="TabContainer/Weapon/oak/TextureRect2"]
+[node name="Button8oak" type="Button" parent="TabContainer/Weapon/oak/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -262,7 +262,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("24_f30jl")
 
-[node name="Button9" type="Button" parent="TabContainer/Weapon/oak/TextureRect3"]
+[node name="Button9oak" type="Button" parent="TabContainer/Weapon/oak/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -305,7 +305,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("20_qbw2h")
 
-[node name="Button10" type="Button" parent="TabContainer/Weapon/jungle/TextureRect"]
+[node name="Button10jungle" type="Button" parent="TabContainer/Weapon/jungle/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -322,7 +322,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("37_gtuce")
 
-[node name="Button11" type="Button" parent="TabContainer/Weapon/jungle/TextureRect2"]
+[node name="Button11jungle" type="Button" parent="TabContainer/Weapon/jungle/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -339,7 +339,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("19_mtm1o")
 
-[node name="Button12" type="Button" parent="TabContainer/Weapon/jungle/TextureRect3"]
+[node name="Button12jungle" type="Button" parent="TabContainer/Weapon/jungle/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -382,7 +382,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("31_lui8q")
 
-[node name="Button13" type="Button" parent="TabContainer/Weapon/stone/TextureRect"]
+[node name="Button13stone" type="Button" parent="TabContainer/Weapon/stone/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -399,7 +399,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("32_u2qts")
 
-[node name="Button14" type="Button" parent="TabContainer/Weapon/stone/TextureRect2"]
+[node name="Button14stone" type="Button" parent="TabContainer/Weapon/stone/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -416,7 +416,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("30_3rm32")
 
-[node name="Button15" type="Button" parent="TabContainer/Weapon/stone/TextureRect3"]
+[node name="Button15stone" type="Button" parent="TabContainer/Weapon/stone/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -459,7 +459,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("17_4gt41")
 
-[node name="Button16" type="Button" parent="TabContainer/Weapon/iron/TextureRect"]
+[node name="Button16iron" type="Button" parent="TabContainer/Weapon/iron/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -476,7 +476,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("18_2oj8v")
 
-[node name="Button17" type="Button" parent="TabContainer/Weapon/iron/TextureRect2"]
+[node name="Button17iron" type="Button" parent="TabContainer/Weapon/iron/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -493,7 +493,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("16_82p3c")
 
-[node name="Button18" type="Button" parent="TabContainer/Weapon/iron/TextureRect3"]
+[node name="Button18iron" type="Button" parent="TabContainer/Weapon/iron/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -536,7 +536,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("14_whpbu")
 
-[node name="Button19" type="Button" parent="TabContainer/Weapon/gold/TextureRect"]
+[node name="Button19gold" type="Button" parent="TabContainer/Weapon/gold/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -553,7 +553,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("15_1a1yw")
 
-[node name="Button20" type="Button" parent="TabContainer/Weapon/gold/TextureRect2"]
+[node name="Button20gold" type="Button" parent="TabContainer/Weapon/gold/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -570,7 +570,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("13_qr8d0")
 
-[node name="Button21" type="Button" parent="TabContainer/Weapon/gold/TextureRect3"]
+[node name="Button21gold" type="Button" parent="TabContainer/Weapon/gold/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -613,7 +613,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("5_iqguj")
 
-[node name="Button22" type="Button" parent="TabContainer/Weapon/diamond/TextureRect"]
+[node name="Button22diamond" type="Button" parent="TabContainer/Weapon/diamond/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -630,7 +630,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("6_verlr")
 
-[node name="Button23" type="Button" parent="TabContainer/Weapon/diamond/TextureRect2"]
+[node name="Button23diamond" type="Button" parent="TabContainer/Weapon/diamond/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -647,7 +647,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("4_3yb7d")
 
-[node name="Button24" type="Button" parent="TabContainer/Weapon/diamond/TextureRect3"]
+[node name="Button24diamond" type="Button" parent="TabContainer/Weapon/diamond/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -689,7 +689,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("8_s0t3w")
 
-[node name="Button25" type="Button" parent="TabContainer/Weapon/emerald/TextureRect"]
+[node name="Button25emerald" type="Button" parent="TabContainer/Weapon/emerald/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -706,7 +706,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("9_mn3ud")
 
-[node name="Button26" type="Button" parent="TabContainer/Weapon/emerald/TextureRect2"]
+[node name="Button26emerald" type="Button" parent="TabContainer/Weapon/emerald/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -723,7 +723,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("7_qtqr8")
 
-[node name="Button27" type="Button" parent="TabContainer/Weapon/emerald/TextureRect3"]
+[node name="Button27emerald" type="Button" parent="TabContainer/Weapon/emerald/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -765,7 +765,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("28_q8ilo")
 
-[node name="Button28" type="Button" parent="TabContainer/Weapon/ruby/TextureRect"]
+[node name="Button28ruby" type="Button" parent="TabContainer/Weapon/ruby/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -782,7 +782,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("29_7eilx")
 
-[node name="Button29" type="Button" parent="TabContainer/Weapon/ruby/TextureRect2"]
+[node name="Button29ruby" type="Button" parent="TabContainer/Weapon/ruby/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -799,7 +799,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("27_m87tl")
 
-[node name="Button30" type="Button" parent="TabContainer/Weapon/ruby/TextureRect3"]
+[node name="Button30ruby" type="Button" parent="TabContainer/Weapon/ruby/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -841,7 +841,7 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("34_hy48y")
 
-[node name="Button31" type="Button" parent="TabContainer/Weapon/topaz/TextureRect"]
+[node name="Button31topaz" type="Button" parent="TabContainer/Weapon/topaz/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
@@ -858,7 +858,7 @@ offset_right = 126.0
 offset_bottom = -43.0
 texture = ExtResource("35_uy68s")
 
-[node name="Button32" type="Button" parent="TabContainer/Weapon/topaz/TextureRect2"]
+[node name="Button32topaz" type="Button" parent="TabContainer/Weapon/topaz/TextureRect2"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 80.0
@@ -875,7 +875,7 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("33_m86q5")
 
-[node name="Button33" type="Button" parent="TabContainer/Weapon/topaz/TextureRect3"]
+[node name="Button33topaz" type="Button" parent="TabContainer/Weapon/topaz/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
@@ -917,12 +917,29 @@ offset_right = 38.0
 offset_bottom = -42.0
 texture = ExtResource("22_nixks")
 
-[node name="Button35" type="Button" parent="TabContainer/Weapon/magma/TextureRect"]
+[node name="Button34magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect"]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 57.0
 offset_right = 55.0
 offset_bottom = 88.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect22" type="TextureRect" parent="TabContainer/Weapon/magma"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = -118.0
+offset_right = 126.0
+offset_bottom = -43.0
+texture = ExtResource("23_sn84k")
+
+[node name="Button35magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect22"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 80.0
+offset_right = 56.0
+offset_bottom = 111.0
 text = "CRAFT"
 alignment = 0
 
@@ -934,29 +951,12 @@ offset_right = 177.0
 offset_bottom = -42.0
 texture = ExtResource("21_15pah")
 
-[node name="Button36" type="Button" parent="TabContainer/Weapon/magma/TextureRect3"]
+[node name="Button36magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect3"]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 69.0
 offset_right = 56.0
 offset_bottom = 100.0
-text = "CRAFT"
-alignment = 0
-
-[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/magma"]
-layout_mode = 0
-offset_left = 44.0
-offset_top = -118.0
-offset_right = 126.0
-offset_bottom = -43.0
-texture = ExtResource("23_sn84k")
-
-[node name="Button35" type="Button" parent="TabContainer/Weapon/magma/TextureRect2"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 80.0
-offset_right = 56.0
-offset_bottom = 111.0
 text = "CRAFT"
 alignment = 0
 
@@ -1082,27 +1082,27 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 
-[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect3/Button3" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect/Button4" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect3/Button6" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect/Button7" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect3/Button9" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect/Button10" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect3/Button12" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect/Button13" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect3/Button15" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect/Button16" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect3/Button18" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect/Button19" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect3/Button21" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect/Button22" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect3/Button24" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect/Button25" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect3/Button27" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect/Button28" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect3/Button30" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect/Button31" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect3/Button33" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect/Button35" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect3/Button36" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect/Button7oak" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect3/Button9oak" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect/Button10jungle" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect3/Button12jungle" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect/Button13stone" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect3/Button15stone" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect/Button16iron" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect3/Button18iron" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect/Button19gold" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect3/Button21gold" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect/Button22diamond" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect3/Button24diamond" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect/Button25emerald" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect3/Button27emerald" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect/Button28ruby" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect3/Button30ruby" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect/Button31topaz" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect3/Button33topaz" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect/Button34magma" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect3/Button36magma" to="." method="_on_button_2_pressed"]
