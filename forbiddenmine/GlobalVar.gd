@@ -22,30 +22,62 @@ func _ready():
 	hotbar_inventory.resize(hotbar_size)
 	sync_inventory_to_hotbar()
 
-# Add item to inventory or hotbar
 func add_item(item, to_hotbar = false):
 	var added_to_hotbar = false
+	var stack_limit = 64  # Default stack limit (for tiles)
+	
+	# Set the correct stack limit based on item type
+	if item["type"] == "weapon":
+		stack_limit = 1
+	elif item["type"] == "tile":
+		stack_limit = 64
+
 	if to_hotbar:
 		added_to_hotbar = add_hotbar_item(item)
 		inventory_updated.emit()
+
 	if not added_to_hotbar:
 		for i in range(inventory.size()):
 			# Check if the item exists in the inventory and matches both type and effect
-			if inventory[i] != null and inventory[i]["name"] == item["name"] and inventory[i]["effect"] == item["effect"]:
-				inventory[i]["quantity"] += item["quantity"]
-				inventory_updated.emit()
-				sync_inventory_to_hotbar()
-				print("Item added", inventory)
-				return true
+			if inventory[i] != null and inventory[i]["name"] == item["name"]:
+				# Ensure "effect" exists before accessing
+				if inventory[i].has("effect") and item.has("effect") and inventory[i]["effect"] == item["effect"]:
+					# Check if the item has reached the stack limit
+					if inventory[i]["quantity"] < stack_limit:
+						inventory[i]["quantity"] += item["quantity"]
+						inventory_updated.emit()
+						sync_inventory_to_hotbar()
+						print("Item added", inventory)
+						return true
+					else:
+						print("Stack limit reached for", item["name"])
+				# Handle case where "effect" doesn't match or doesn't exist
+				elif !inventory[i].has("effect") and !item.has("effect"):
+					if inventory[i]["quantity"] < stack_limit:
+						inventory[i]["quantity"] += item["quantity"]
+						inventory_updated.emit()
+						sync_inventory_to_hotbar()
+						print("Item added", inventory)
+						return true
+					else:
+						print("Stack limit reached for", item["name"])
 			elif inventory[i] == null:
 				inventory[i] = item
 				inventory_updated.emit()
 				sync_inventory_to_hotbar()
 				print("Item added", inventory)
 				return true
-		return false
+		
+	# If the item couldn't be added to any existing slot, add it to the next available slot
+	inventory.append(item)
+	inventory_updated.emit()
+	sync_inventory_to_hotbar()
+	print("Item added", inventory)
+	return true
 
-# Remove an item completely from inventory and return it for dropping
+
+
+
 func remove_item(item_type, item_effect):
 	for i in range(inventory.size()):
 		if inventory[i] != null and inventory[i]["type"] == item_type and inventory[i]["effect"] == item_effect:
@@ -156,19 +188,23 @@ func sync_hotbar_to_inventory():
 			inventory[i] = hotbar_inventory[i]
 	inventory_updated.emit()
 	
-func reduce_item_quantity(item):
-	for i in range(inventory.size()):
-		if inventory[i] != null and inventory[i] == item:
-			inventory[i]["quantity"] -= 1
-			if inventory[i]["quantity"] <= 0:
-				inventory[i] = null
-				print("Item removed from inventory.")
-				if GlobalVar.Item_onhold == item:
-					GlobalVar.Item_onhold = null
-					print("Item_onhold cleared as item is depleted.")
-			break
-	sync_inventory_to_hotbar()
-	inventory_updated.emit()
+func reduce_item_quantity(index):
+	if inventory[index] != null:
+		var item = inventory[index]
+		item["quantity"] -= 1
+		if item["quantity"] <= 0:
+			inventory[index] = null
+			print("Item removed from inventory.")
+			# If this item is currently on hold, clear it
+			if GlobalVar.Item_onhold == index:
+				GlobalVar.Item_onhold = null
+				print("Item_onhold cleared as item is depleted.")
+		sync_inventory_to_hotbar()
+		inventory_updated.emit()
+		return true
+	return false
+
+
 
 
 

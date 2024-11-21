@@ -3,9 +3,9 @@ const BREAK_ANIMATION = preload("res://BreakAnimation.tscn")
 const enemy = preload("res://EnemyPrototype.tscn")
 const itemdrop = preload("res://Inventory.tscn")
 const recipe = preload("res://Recipe.tscn")
+var recipe_instance = null
 const  inventory = preload("res://Inventorty_UI.tscn")
 var inventory_instance = null
-var inventory_on_off = false
 @onready var timer: Timer = $Timer
 @onready var tile_map_layer: TileMapLayer = $TileMapLayer
 @onready var character_body_2d: CharacterBody2D = $CharacterBody2D
@@ -19,10 +19,7 @@ var charlocal_position
 # Called when the node enters the scene tree for the first time.
 
 var item_to_tile_data = {
-	"Stone": Vector2i(1, 0),
-	"Ruby": Vector2i(3, 1),
-	"Gold": Vector2i(2, 1),
-	"Emerald": Vector2i(5, 1)
+	"Stone": Vector2i(1, 0)
 }
 
 func _ready() -> void:
@@ -46,16 +43,18 @@ func _input(event: InputEvent) -> void:
 			   tile_map_layer.get_cell_atlas_coords(Vector2i(tile_coords.x, tile_coords.y)) == Vector2i(0, 7):
 				# Placing a block
 				if min_x and max_x and min_y and max_y and not touch_self:
-					if GlobalVar.Item_onhold != null and GlobalVar.Item_onhold["type"] == "tiles":
-						var item_name = GlobalVar.Item_onhold["name"]
-						if item_name in item_to_tile_data:
-							var tile_data = item_to_tile_data[item_name]
-							tile_map_layer.set_cell(Vector2i(tile_coords.x, tile_coords.y), 1, tile_data)
-							modify_tile_in_binary(tile_coords.x, tile_coords.y, tile_data.x, tile_data.y)
-							print("Placed block:", item_name, "at", tile_coords)
-							GlobalVar.reduce_item_quantity(GlobalVar.Item_onhold)
-						else:
-							print("No tile data found for item:", item_name)
+					if GlobalVar.Item_onhold != null:
+						var item_hold = GlobalVar.inventory[GlobalVar.Item_onhold]
+						if item_hold["type"] == "tiles":
+							var item_name = item_hold["name"]
+							if item_name in item_to_tile_data:
+								var tile_data = item_to_tile_data[item_name]
+								tile_map_layer.set_cell(Vector2i(tile_coords.x, tile_coords.y), 1, tile_data)
+								modify_tile_in_binary(tile_coords.x, tile_coords.y, tile_data.x, tile_data.y)
+								print("Placed block:", item_name, "at", tile_coords)
+								GlobalVar.reduce_item_quantity(GlobalVar.Item_onhold)
+							else:
+								print("No tile data found for item:", item_name)
 					else:
 						print("No valid tile selected for placement.")
 
@@ -79,8 +78,12 @@ func _input(event: InputEvent) -> void:
 				breakable_block.queue_free()
 				
 		if event.is_action_pressed("Craft"):
-			var recipe_ins = recipe.instantiate()
-			add_child(recipe_ins)
+			if recipe_instance and is_instance_valid(recipe_instance):
+				recipe_instance.queue_free()
+				recipe_instance = null
+			else :
+				recipe_instance = recipe.instantiate()
+				add_child(recipe_instance)
 			
 		if event.is_action_pressed("UI_Inventory"):
 			if inventory_instance and is_instance_valid(inventory_instance):

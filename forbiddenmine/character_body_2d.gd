@@ -71,19 +71,21 @@ func apply_item_effect(item):
 		_:
 			print("There is no effect for this Item!")
 			
+
 func use_hotbar_item(slot_index):
 	if slot_index < GlobalVar.hotbar_inventory.size():
 		var item = GlobalVar.hotbar_inventory[slot_index]
 		if item != null:
-			# Assign the selected item to GlobalVar.Item_onhold
-			GlobalVar.Item_onhold = item
-			print("Selected item:", item["name"], "with effect:", item["effect"], "and quantity:", item["quantity"])
+			# Store the index of the selected item to Item_onhold
+			GlobalVar.Item_onhold = slot_index
+			print("Selected item: ", item["name"], "with effect: ", item["effect"], "and quantity: ", item["quantity"])
 		else:
 			# Set GlobalVar.Item_onhold to null for an empty slot
 			GlobalVar.Item_onhold = null
 			print("Selected an empty slot. Item_onhold set to null.")
 	else:
 		print("Invalid slot index:", slot_index)
+
 
 # Hotbar shortcuts
 func _unhandled_input(event):
