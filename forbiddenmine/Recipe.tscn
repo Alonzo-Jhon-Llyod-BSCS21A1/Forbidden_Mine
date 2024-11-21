@@ -996,7 +996,7 @@ offset_top = 151.0
 offset_right = -197.0
 offset_bottom = 200.0
 theme_override_font_sizes/font_size = 25
-text = "Recipe for BroadSword
+text = "Recipe for BroadSwords
 
 "
 
@@ -1050,7 +1050,7 @@ offset_top = 18.0
 offset_right = -230.0
 offset_bottom = 41.0
 theme_override_font_sizes/font_size = 25
-text = "Recipe for Sword
+text = "Recipe for Swords
 "
 
 [node name="For sword" type="Label" parent="TabContainer/Weapon/recipes GUIDE/Sword Recipes"]
