@@ -1,0 +1,7 @@
+res://control.tscn
+res://Recipe.tscn
+res://recipe.gd
+res://character_body_2d.tscn
+res://node_2d.tscn
+res://inventory_ui.tscn
+res://inventory_slot.tscn

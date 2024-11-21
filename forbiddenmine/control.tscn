@@ -93,10 +93,10 @@ text = "LOAD WORLD"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 433.0
-offset_top = 558.0
-offset_right = 768.0
-offset_bottom = 607.0
+offset_left = 413.0
+offset_top = 551.0
+offset_right = 755.0
+offset_bottom = 600.0
 text = "©2024 Basta Enterprise. All Rights Reserved.
 Magulang mo pa rin yan"
 horizontal_alignment = 1
