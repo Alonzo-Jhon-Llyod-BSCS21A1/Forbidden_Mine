@@ -1001,6 +1001,7 @@ text = "Recipe for BroadSword
 "
 
 [node name="For broadSword" type="Label" parent="TabContainer/Weapon/recipes GUIDE/BroadSword Recipes"]
+layout_mode = 0
 offset_top = 70.0
 offset_right = 174.0
 offset_bottom = 95.0
@@ -1053,6 +1054,7 @@ text = "Recipe for Sword
 "
 
 [node name="For sword" type="Label" parent="TabContainer/Weapon/recipes GUIDE/Sword Recipes"]
+layout_mode = 0
 offset_top = 70.0
 offset_right = 174.0
 offset_bottom = 95.0
@@ -1083,26 +1085,38 @@ layout_mode = 2
 metadata/_tab_index = 3
 
 [connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect2/Button2acacia" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect/Button7oak" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect3/Button9oak" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect/Button10jungle" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect3/Button12jungle" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect/Button13stone" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect3/Button15stone" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect/Button16iron" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect3/Button18iron" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect/Button19gold" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect3/Button21gold" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect/Button22diamond" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect3/Button24diamond" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect/Button25emerald" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect3/Button27emerald" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect/Button28ruby" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect3/Button30ruby" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect/Button31topaz" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect3/Button33topaz" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect/Button34magma" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect3/Button36magma" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect2/Button5frosted" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect/Button7oak" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect2/Button8oak" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect3/Button9oak" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect/Button10jungle" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect2/Button11jungle" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect3/Button12jungle" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect/Button13stone" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect2/Button14stone" to="." method="_on_button_14_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect3/Button15stone" to="." method="_on_button_15_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect/Button16iron" to="." method="_on_button_16_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect2/Button17iron" to="." method="_on_button_17_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect3/Button18iron" to="." method="_on_button_18_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect/Button19gold" to="." method="_on_button_19_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect2/Button20gold" to="." method="_on_button_20_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect3/Button21gold" to="." method="_on_button_21_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect/Button22diamond" to="." method="_on_button_22_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect2/Button23diamond" to="." method="_on_button_23_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect3/Button24diamond" to="." method="_on_button_24_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect/Button25emerald" to="." method="_on_button_25_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect2/Button26emerald" to="." method="_on_button_26_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect3/Button27emerald" to="." method="_on_button_27_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect/Button28ruby" to="." method="_on_button_28_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect2/Button29ruby" to="." method="_on_button_29_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect3/Button30ruby" to="." method="_on_button_30_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect/Button31topaz" to="." method="_on_button_31_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect2/Button32topaz" to="." method="_on_button_32_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect3/Button33topaz" to="." method="_on_button_33_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect/Button34magma" to="." method="_on_button_34_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect22/Button35magma" to="." method="_on_button_35_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect3/Button36magma" to="." method="_on_button_36_pressed"]

@@ -1,6 +1,6 @@
-res://control.tscn
-res://Recipe.tscn
 res://recipe.gd
+res://Recipe.tscn
+res://control.tscn
 res://character_body_2d.tscn
 res://node_2d.tscn
 res://inventory_ui.tscn
