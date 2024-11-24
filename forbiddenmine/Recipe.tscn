@@ -979,14 +979,14 @@ autowrap_mode = 1
 [node name="recipes GUIDE" type="Label" parent="TabContainer/Weapon"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.715
-anchor_top = 0.081
-anchor_right = 0.715
-anchor_bottom = 0.081
-offset_left = 289.32
-offset_top = 98.023
-offset_right = 329.32
-offset_bottom = 121.023
+anchor_left = 0.92
+anchor_top = 0.074
+anchor_right = 0.92
+anchor_bottom = 0.074
+offset_left = 53.16
+offset_top = 102.342
+offset_right = 93.16
+offset_bottom = 125.342
 
 [node name="BroadSword Recipes" type="Label" parent="TabContainer/Weapon/recipes GUIDE"]
 self_modulate = Color(0.45098, 0.87451, 0.392157, 1)
