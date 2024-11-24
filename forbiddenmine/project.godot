@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="ForbiddenMine"
-run/main_scene="res://control.tscn"
+run/main_scene="res://Scene/control.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://457905861_995796022322525_1255581322795427183_n.png"
 
 [autoload]
 
-GlobalVar="*res://GlobalVar.gd"
-PlayerVar="*res://PlayerVar.gd"
+GlobalVar="*res://script/GlobalVar.gd"
+PlayerVar="*res://script/PlayerVar.gd"
 
 [display]
 
