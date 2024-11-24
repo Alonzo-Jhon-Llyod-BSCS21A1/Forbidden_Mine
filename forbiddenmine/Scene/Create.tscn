@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://d35vcvk5hoep7"]
+
+[ext_resource type="Script" path="res://script/create.gd" id="1_3qhyl"]
+[ext_resource type="Texture2D" uid="uid://ds4ihf43o0nxg" path="res://Media/button-normal.png" id="2_jehgg"]
+[ext_resource type="FontFile" uid="uid://bo4nr4tji5dlc" path="res://Media/upheavtt.ttf" id="3_fdmp3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jg6a2"]
+texture = ExtResource("2_jehgg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xii45"]
+texture = ExtResource("2_jehgg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1amp7"]
+
+[sub_resource type="Theme" id="Theme_odfqt"]
+Button/styles/hover = SubResource("StyleBoxTexture_jg6a2")
+Button/styles/normal = SubResource("StyleBoxTexture_xii45")
+Button/styles/pressed = SubResource("StyleBoxTexture_1amp7")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3qhyl")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 77.0
+offset_right = 716.0
+offset_bottom = 108.0
+placeholder_text = "World Name:"
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 117.0
+offset_right = 716.0
+offset_bottom = 148.0
+placeholder_text = "Seed:"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 159.0
+offset_right = 645.0
+offset_bottom = 201.0
+theme = SubResource("Theme_odfqt")
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_fdmp3")
+text = "CREATE"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

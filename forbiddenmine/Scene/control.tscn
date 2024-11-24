@@ -1,0 +1,105 @@
+[gd_scene load_steps=15 format=3 uid="uid://b4antqql4c4a"]
+
+[ext_resource type="Script" path="res://script/control.gd" id="1_22hvf"]
+[ext_resource type="VideoStream" path="res://Media/menu.ogv" id="2_ugo1m"]
+[ext_resource type="Texture2D" uid="uid://ds4ihf43o0nxg" path="res://Media/button-normal.png" id="3_1hrqb"]
+[ext_resource type="Texture2D" uid="uid://bdc27t50cl8oq" path="res://Media/button-clicked.png" id="4_t33qr"]
+[ext_resource type="FontFile" uid="uid://bo4nr4tji5dlc" path="res://Media/upheavtt.ttf" id="5_ckuqh"]
+[ext_resource type="Texture2D" uid="uid://3kpuipyg0qph" path="res://Media/LOGO.png" id="6_t1wo7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ee2ka"]
+texture = ExtResource("3_1hrqb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lu0du"]
+texture = ExtResource("3_1hrqb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jpbt1"]
+texture = ExtResource("4_t33qr")
+
+[sub_resource type="Theme" id="Theme_t6ws4"]
+Button/styles/hover = SubResource("StyleBoxTexture_ee2ka")
+Button/styles/normal = SubResource("StyleBoxTexture_lu0du")
+Button/styles/pressed = SubResource("StyleBoxTexture_jpbt1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y78x3"]
+texture = ExtResource("3_1hrqb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nsn57"]
+texture = ExtResource("3_1hrqb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wjrgq"]
+texture = ExtResource("4_t33qr")
+
+[sub_resource type="Theme" id="Theme_r66w2"]
+Button/styles/hover = SubResource("StyleBoxTexture_y78x3")
+Button/styles/hover_pressed_mirrored = null
+Button/styles/normal = SubResource("StyleBoxTexture_nsn57")
+Button/styles/pressed = SubResource("StyleBoxTexture_wjrgq")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_22hvf")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_ugo1m")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 492.0
+offset_top = 332.0
+offset_right = 672.0
+offset_bottom = 376.0
+theme = SubResource("Theme_t6ws4")
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ckuqh")
+text = "CREATE WORLD"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 111.0
+offset_right = 852.0
+offset_bottom = 259.0
+texture = ExtResource("6_t1wo7")
+
+[node name="LoadButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 408.0
+offset_right = 671.0
+offset_bottom = 450.0
+theme = SubResource("Theme_r66w2")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ckuqh")
+text = "LOAD WORLD"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 551.0
+offset_right = 755.0
+offset_bottom = 600.0
+text = "©2024 Basta Enterprise. All Rights Reserved.
+Magulang mo pa rin yan"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]

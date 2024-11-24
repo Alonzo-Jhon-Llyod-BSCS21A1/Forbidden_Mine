@@ -7,7 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var item_texture: Texture
 @export var item_effect = ""
 
-var scene_path: String = "res://Inventory.tscn"
+var scene_path: String = "res://Scene/Inventory.tscn"
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 var player_in_range = false
