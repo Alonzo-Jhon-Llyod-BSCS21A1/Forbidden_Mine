@@ -106,7 +106,6 @@ script = ExtResource("1_uq5mp")
 sprite_frames = SubResource("SpriteFrames_c5bmy")
 animation = &"sword_attack"
 autoplay = "default"
-frame_progress = 0.499965
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_faqnu")

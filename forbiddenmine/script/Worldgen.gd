@@ -162,20 +162,25 @@ func stonegen():
 				set_cell(Vector2i(x, y), 1, topaz)	
 			if rng < .0015625:
 				set_cell(Vector2i(x, y), 1, emerald)				
-
+				
 func tree():
-	for x in range(-width/2, width/2):
-		var ground = abs(noise.get_noise_2d(x,0) * 64) 
-		for y in range(ground-1, ground+1):
-			var noise_val:float = noise.get_noise_2d(x,y)
-			if (get_cell_atlas_coords(Vector2i(x, y)) == grass and rng.randf() < 0.2):
-				set_cell(Vector2i(x,y-1),1, oaklog)
-				set_cell(Vector2i(x,y-2),1, leaf)
-				set_cell(Vector2i(x,y-3),1, leaf)
-			if (get_cell_atlas_coords(Vector2i(x,y)) == snowgrass and rng.randf() < 0.2):
-				set_cell(Vector2i(x,y-1),1, frostedleaf)
-				set_cell(Vector2i(x,y-2),1, frostedleaf)
-				set_cell(Vector2i(x,y-3),1, frostedleaf)
+	for x in range(-width / 2, width / 2):
+		var ground = abs(noise.get_noise_2d(x, 0) * 64)
+		for y in range(ground - 1, ground + 1):
+			var rng_val: float = rng.randf()
+			var is_grass = (get_cell_atlas_coords(Vector2i(x, y)) == grass)
+			var is_snowgrass = (get_cell_atlas_coords(Vector2i(x, y)) == snowgrass)
+			if (is_grass or is_snowgrass) and rng_val < 0.2:
+				var tree_height = randi_range(4, 6)
+				var leaf_radius = 2
+				for h in range(tree_height -2):
+					set_cell(Vector2i(x, y - h - 1), 1, oaklog if is_grass else frostedoaklog)
+				for lx in range(-leaf_radius, leaf_radius + 1):
+					for ly in range(-leaf_radius, leaf_radius + 1):
+						if lx * lx + ly * ly <= leaf_radius * leaf_radius:
+							var leaf_pos = Vector2i(x + lx, y - (tree_height - 1) + ly - 1)
+							if get_cell_atlas_coords(leaf_pos) == Vector2i(-1, -1):
+								set_cell(leaf_pos, 1, leaf if is_grass else frostedleaf)
 			
 func save_worldbinary():
 	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.WRITE)
