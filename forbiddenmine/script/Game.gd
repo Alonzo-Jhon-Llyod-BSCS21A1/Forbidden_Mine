@@ -19,7 +19,99 @@ var charlocal_position
 # Called when the node enters the scene tree for the first time.
 
 var item_to_tile_data = {
-	"Stone": Vector2i(1, 0)
+	"Stone": Vector2i(1, 0),
+	
+	"Ruby": Vector2i(3, 1),
+	
+	"Gold": Vector2i(2, 1),
+	
+	"Emerald": Vector2i(5, 1),
+	
+	"DeepStone": Vector2i(2, 0),
+	
+	"HardStone": Vector2i(3, 0),
+	
+	"Deorite": Vector2i(4, 0),
+	
+	"Andesite": Vector2i(5, 0),
+	
+	"JungleLeafBlock": Vector2i(6, 0),
+	
+	"Leaf Block": Vector2i(7, 0),
+	
+	"Jungle Log": Vector2i(6, 1),
+	
+	"Oak Log": Vector2i(7, 1),
+	
+	"Grass Block": Vector2i(0, 2),
+	
+	"Dirt": Vector2i(1, 2),
+	
+	"Frosted Leaf Block": Vector2i(6, 2),
+	
+	"Acacia Leaf Block": Vector2i(7, 2),
+	
+	"Snow Grass Block": Vector2i(0, 3),
+	
+	"Snow Block": Vector2i(1, 3),
+	
+	"Ice Block": Vector2i(2, 3),
+	
+	"Magma Block": Vector2i(3, 3),
+	
+	"Frosted Oak Log": Vector2i(6, 3),
+	
+	"Acacia Log": Vector2i(7, 3),
+	
+	"Jungle Grass Block": Vector2i(0, 4),
+	
+	"Jungle Dirt Block": Vector2i(1, 4),
+	
+	"Big Cactus Block": Vector2i(6, 4),
+	
+	"Small Cactus Block": Vector2i(7, 4),
+	
+	"Ash Grass Block": Vector2i(0, 5),
+	
+	"Ash Dirt Block": Vector2i(1, 5),
+	
+	"Emerald Block": Vector2i(2, 5),
+	
+	"Topaz Block": Vector2i(3, 5),
+	
+	"Ruby Block": Vector2i(4, 5),
+	
+	"Iron Block": Vector2i(5, 5),
+	
+	"Diamond Block": Vector2i(6, 5),
+	
+	"Gold Block": Vector2i(7, 5),
+	
+	"Obsidian Block": Vector2i(1, 6),
+	
+	"Andesite Block": Vector2i(2, 6),
+	
+	"Acacia Plank": Vector2i(3, 6),
+	
+	"Oak Block": Vector2i(4, 6),
+	
+	"Moss Stone Block": Vector2i(5, 6),
+	
+	"Sand Stone Block": Vector2i(6, 6),
+	
+	"Brick Block": Vector2i(7, 6),
+	
+	"Diorite Block": Vector2i(2, 7),
+	
+	"Frosted Oak Planks": Vector2i(3, 7),
+	
+	"Jungle Planks": Vector2i(4, 7),
+	
+	"Snowbrick": Vector2i(5, 7),
+	
+	"Deepstone Brick Block": Vector2i(6, 7),
+	
+	"Stone Brickblock": Vector2i(7, 7),
 }
 
 func _ready() -> void:
