@@ -1,0 +1,13 @@
+res://Scene/control.tscn
+res://script/Game.gd
+res://Scene/Create.tscn
+res://Scene/CreatedWorld.tscn
+res://Scene/display.tscn
+res://Scene/DungeonWatcher.tscn
+res://Scene/EnemyPrototype.tscn
+res://Scene/Inventorty_UI.tscn
+res://Scene/Inventory.tscn
+res://Scene/inventory_hotbar.tscn
+res://Scene/inventory_slot.tscn
+res://Scene/inventory_ui.tscn
+res://Scene/node_2d.tscn
