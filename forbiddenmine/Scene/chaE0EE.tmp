@@ -134,12 +134,13 @@ size = Vector2(15, 16)
 process_mode = 3
 collision_layer = 2
 script = ExtResource("1_uq5mp")
+SPEED = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c5bmy")
-animation = &"walk"
+animation = &"fall"
 autoplay = "default"
-frame_progress = 0.302707
+frame_progress = 0.0223175
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_faqnu")

@@ -98,6 +98,7 @@ func craft_item(recipe: Dictionary) -> void:
 		GlobalVar.add_item(result_item)
 		GlobalVar.inventory_updated.emit()
 		GlobalVar.sync_inventory_to_hotbar()
+		GlobalVar.save_inventory()
 		return
 	
 	print("Not enough materials")

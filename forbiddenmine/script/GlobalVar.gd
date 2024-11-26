@@ -183,6 +183,68 @@ func reduce_item_quantity(index):
 		return true
 	return false
 
+var save_file_path = "user://inventory_data.save"  # Save file with .save extension
+
+# Save the inventory data to a .save file
+func save_inventory():
+	var file = FileAccess.open(save_file_path, FileAccess.WRITE)
+	if file:
+		var inventory_data = {
+			"inventory": inventory.map(func(item):
+			if item != null:
+				item.duplicate()
+				item["texture"] = item["texture"].resource_path
+			return item
+			)
+		}
+		var json_string = JSON.stringify(inventory_data)
+		file.store_string(json_string)
+		file.close()
+		print("Inventory saved successfully to .save file.")
+	else:
+		print("Error: Could not open the file for saving.")
+
+
+
+# Load the inventory data from a .save file
+func load_inventory():
+	if not FileAccess.file_exists(save_file_path):
+		print("Error: Save file does not exist.")
+		return
+
+	var file = FileAccess.open(save_file_path, FileAccess.READ)
+	if file:
+		var json_data = file.get_as_text()
+		file.close()
+
+		# Create a JSON instance and parse the data
+		var json_instance = JSON.new()
+		var parse_result = json_instance.parse(json_data)
+
+		if parse_result == OK:  # Check if parsing succeeded
+			var loaded_data = json_instance.get_data()  # Access the parsed result
+			if loaded_data.has("inventory") and loaded_data["inventory"] is Array:
+				# Restore the inventory items
+				inventory = loaded_data["inventory"].map(func(item):
+					if item != null:
+						item["texture"] = ResourceLoader.load(item["texture"])  # Convert path back to texture
+					return item
+				)
+				sync_inventory_to_hotbar()  # Ensure hotbar is synced
+				print("Inventory loaded successfully from .save file.")
+			else:
+				print("Error: Loaded data is invalid or corrupted.")
+		else:
+			print("Error: Failed to parse the inventory data. Error code:", parse_result)
+	else:
+		print("Error: Failed to open the save file.")
+
+
+
+
+
+
+
 
 
 

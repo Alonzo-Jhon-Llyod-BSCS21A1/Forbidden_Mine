@@ -34,7 +34,7 @@ func check_worldlist():
 	var json_string = save_file.get_as_text()
 	save_file.close()
 	var json = JSON.new()
-	var parse_result = json.parse(json_string)
+	var _parse_result = json.parse(json_string)
 	var save_data = json.get_data()
 	world_list = save_data
 	

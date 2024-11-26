@@ -1,7 +1,7 @@
 extends Node2D
 const BREAK_ANIMATION = preload("res://Scene/BreakAnimation.tscn")
 const enemy = preload("res://Scene/EnemyPrototype.tscn")
-const itemdrop = preload("res://Scene/Inventory.tscn")
+const itemdrops = preload("res://Scene/Inventory.tscn")
 const recipe = preload("res://Scene/Recipe.tscn")
 var recipe_instance = null
 const  inventory = preload("res://Scene/Inventorty_UI.tscn")
@@ -137,7 +137,7 @@ func _input(event: InputEvent) -> void:
 				if min_x and max_x and min_y and max_y and not touch_self:
 					if GlobalVar.Item_onhold != null:
 						var item_hold = GlobalVar.inventory[GlobalVar.Item_onhold]
-						if item_hold["type"] == "tiles":
+						if item_hold.has("type") and item_hold["type"] == "tiles":
 							var item_name = item_hold["name"]
 							if item_name in item_to_tile_data:
 								var tile_data = item_to_tile_data[item_name]
@@ -147,6 +147,8 @@ func _input(event: InputEvent) -> void:
 								GlobalVar.reduce_item_quantity(GlobalVar.Item_onhold)
 							else:
 								print("No tile data found for item:", item_name)
+						else:
+								print("Item is not of type 'tiles'.")
 					else:
 						print("No valid tile selected for placement.")
 
@@ -203,7 +205,7 @@ func modify_tile_in_binary(x, y, tile_x, tile_y):
 		file.close()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	GlobalVar.charposition = character_body_2d.global_position
 	charlocal_position = to_local(GlobalVar.charposition) / tile_map_layer.scale
 	GlobalVar.characterlocation = tile_map_layer.local_to_map(charlocal_position)
@@ -227,7 +229,6 @@ func _on_timer_timeout() -> void:
 		breakable_block.queue_free()
 	tile_map_layer.set_cell(Vector2i(tile_coords.x,tile_coords.y),1, Vector2i(-1, -1))
 	modify_tile_in_binary(tile_coords.x, tile_coords.y, -1, -1)
-	var itemdrop = itemdrop.instantiate()
 	drop_item(breakblock)
 	pass # Replace with function body.
 
@@ -244,7 +245,7 @@ func drop_item(tile_data: Vector2i):
 		
 		Vector2i(2, 0): {"name": "DeepStone", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/deepstone.png")},
 		
-		Vector2i(3, 0): {"name": "HardStonde", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/hardstone.png")},
+		Vector2i(3, 0): {"name": "HardStone", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/hardstone.png")},
 		
 		Vector2i(4, 0): {"name": "Deorite", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/diorite_block.png")},
 		

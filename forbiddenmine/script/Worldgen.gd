@@ -31,12 +31,13 @@ var diamond =  Vector2i(1,1)
 var ruby = Vector2i(3,1)
 var topaz = Vector2i(4,1)
 var emerald = Vector2i(5,1)
-var rng : RandomNumberGenerator 
+var rngs : RandomNumberGenerator 
 
 func _ready() -> void:
 	SAVE_FILE_PATH += GlobalVar.new_world
 	if GlobalVar.load == 0:
 		load_worldbinary()
+		GlobalVar.load_inventory()
 	if GlobalVar.load == 1:
 		noise = noise_height_text.noise
 		print(GlobalVar.Worldseed)
@@ -48,8 +49,8 @@ func _ready() -> void:
 			noise.seed = randi()
 			print("Null")
 		noise = noise_height_text.noise
-		rng = RandomNumberGenerator.new()
-		rng.seed = 1
+		rngs = RandomNumberGenerator.new()
+		rngs.seed = 1
 		grasses()
 		stonegen()
 		watergen()
@@ -129,7 +130,7 @@ func stonegen():
 		var ground = abs(noise.get_noise_2d(x,0) * 64) 
 		for y in range(ground+3, height):
 			var noise_val:float = noise.get_noise_2d(x,y)
-			var rng = rng.randf()
+			var rng = rngs.randf()
 			if y < 200:
 				if rng > .3:
 					set_cell(Vector2i(x,y),1, stone)
@@ -167,7 +168,7 @@ func tree():
 	for x in range(-width / 2, width / 2):
 		var ground = abs(noise.get_noise_2d(x, 0) * 64)
 		for y in range(ground - 1, ground + 1):
-			var rng_val: float = rng.randf()
+			var rng_val: float = rngs.randf()
 			var is_grass = (get_cell_atlas_coords(Vector2i(x, y)) == grass)
 			var is_snowgrass = (get_cell_atlas_coords(Vector2i(x, y)) == snowgrass)
 			if (is_grass or is_snowgrass) and rng_val < 0.2:
@@ -208,8 +209,8 @@ func load_worldbinary():
 	file.close()
 		
 func load_vanillaDungeon():
-	var val1 = rng.randi_range(-700, 800-143)
-	var val2 = rng.randi_range(100, 150)
+	var val1 = rngs.randi_range(-700, 800-143)
+	var val2 = rngs.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/vanillaDungeon", FileAccess.READ)
 	if file:
 		for x in range(val1, val1+143):
@@ -225,8 +226,8 @@ func load_vanillaDungeon():
 		print("Failed to open file at path:", SAVE_FILE_PATH)
 		
 func load_winterDungeon():
-	var val1 = rng.randi_range(-2500, -1700-143)
-	var val2 = rng.randi_range(100, 150)
+	var val1 = rngs.randi_range(-2500, -1700-143)
+	var val2 = rngs.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/winterDungeon", FileAccess.READ)
 	if file:
 		for x in range(val1, val1+143):
@@ -242,8 +243,8 @@ func load_winterDungeon():
 		print("Failed to open file at path:", SAVE_FILE_PATH)
 		
 func load_lavaDungeon():
-	var val1 = rng.randi_range(800, 2500-143)
-	var val2 = rng.randi_range(100, 150)
+	var val1 = rngs.randi_range(800, 2500-143)
+	var val2 = rngs.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/lavaDungeon", FileAccess.READ)
 	if file:
 		for x in range(val1, val1+143):
@@ -259,8 +260,8 @@ func load_lavaDungeon():
 		print("Failed to open file at path:", SAVE_FILE_PATH)
 		
 func load_waterDungeon():
-	var val1 = rng.randi_range(-1700, -700-143)
-	var val2 = rng.randi_range(100, 150)
+	var val1 = rngs.randi_range(-1700, -700-143)
+	var val2 = rngs.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/waterDungeon", FileAccess.READ)
 	if file:
 		for x in range(val1, val1+143):
