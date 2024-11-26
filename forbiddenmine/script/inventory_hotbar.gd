@@ -15,16 +15,14 @@ func _update_hotbar():
 		var item = GlobalVar.hotbar_inventory[i]
 		var slot = GlobalVar.inventory_slot_scene.instantiate()
 		slot.set_slot_index(i)  # Set the index here
-		
 		slot.drag_start.connect(_on_drag_start)
 		slot.drag_end.connect(_on_drag_end)
-		
 		hotbar_container.add_child(slot)
 		if item != null:
 			slot.set_item(item)
 		else:
 			slot.set_empty()
-		slot.update_assignment_status()
+
 # Clear hotbar slots
 func clear_hotbar_container():
 	while hotbar_container.get_child_count() > 0:

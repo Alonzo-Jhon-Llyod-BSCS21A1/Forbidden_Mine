@@ -142,7 +142,7 @@ func _on_timer_timeout() -> void:
 # Function to drop an item based on the tile type
 func drop_item(tile_data: Vector2i):
 	var tile_to_item_data = {
-		Vector2i(1, 0): {"name": "Stone", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/stone.png")},
+		Vector2i(1, 0): {"name": "Stone", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/stone.png"), "effect": "restore_health", "value" : 50},
 		
 		Vector2i(3, 1): {"name": "Ruby", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/ruby_ore_drop.png")},
 		
