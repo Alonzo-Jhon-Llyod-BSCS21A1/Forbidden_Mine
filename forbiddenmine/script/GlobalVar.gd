@@ -25,9 +25,7 @@ func _ready():
 
 func add_item(item, to_hotbar = false):
 	var added_to_hotbar = false
-	var stack_limit = 64  # Default stack limit (for tiles)
-	
-	# Set the correct stack limit based on item type
+	var stack_limit = 64
 	if item["type"] == "weapon":
 		stack_limit = 1
 	elif item["type"] == "tile":
@@ -39,11 +37,8 @@ func add_item(item, to_hotbar = false):
 
 	if not added_to_hotbar:
 		for i in range(inventory.size()):
-			# Check if the item exists in the inventory and matches both type and effect
 			if inventory[i] != null and inventory[i]["name"] == item["name"]:
-				# Ensure "effect" exists before accessing
 				if inventory[i].has("effect") and item.has("effect") and inventory[i]["effect"] == item["effect"]:
-					# Check if the item has reached the stack limit
 					if inventory[i]["quantity"] < stack_limit:
 						inventory[i]["quantity"] += item["quantity"]
 						inventory_updated.emit()
@@ -52,7 +47,6 @@ func add_item(item, to_hotbar = false):
 						return true
 					else:
 						print("Stack limit reached for", item["name"])
-				# Handle case where "effect" doesn't match or doesn't exist
 				elif !inventory[i].has("effect") and !item.has("effect"):
 					if inventory[i]["quantity"] < stack_limit:
 						inventory[i]["quantity"] += item["quantity"]
@@ -68,8 +62,6 @@ func add_item(item, to_hotbar = false):
 				sync_inventory_to_hotbar()
 				print("Item added", inventory)
 				return true
-		
-	# If the item couldn't be added to any existing slot, add it to the next available slot
 	inventory.append(item)
 	inventory_updated.emit()
 	sync_inventory_to_hotbar()
@@ -108,8 +100,7 @@ func adjust_drop_position(position):
 			position += random_offset
 			break
 	return position
-
-# Drop an item in the game world
+			
 func drop_item(item_data, drop_position):
 	var item_scene = load(item_data["scene_path"])
 	var item_instance = item_scene.instantiate()
@@ -136,20 +127,6 @@ func remove_hotbar_item(item_type, item_effect):
 			inventory_updated.emit()
 			return true
 	return false
-
-# Unassign an item from the hotbar
-func unassign_hotbar_item(item_type, item_effect):
-	for i in range(hotbar_inventory.size()):
-		if hotbar_inventory[i] != null and hotbar_inventory[i]["type"] == item_type and hotbar_inventory[i]["effect"] == item_effect:
-			hotbar_inventory[i] = null
-			sync_hotbar_to_inventory()  # Sync changes back to the inventory
-			inventory_updated.emit()
-			return true
-	return false
-
-# Check if an item is assigned to the hotbar
-func is_item_assigned_to_hotbar(item_to_check):
-	return item_to_check in hotbar_inventory
 
 # Swap two items in the inventory
 func swap_inventory_items(index1, index2):
@@ -190,7 +167,7 @@ func sync_hotbar_to_inventory():
 	inventory_updated.emit()
 	
 func reduce_item_quantity(index):
-	if inventory[index] != null:
+	if index >= 0 and index < inventory.size() and inventory[index] != null:
 		var item = inventory[index]
 		item["quantity"] -= 1
 		if item["quantity"] <= 0:
@@ -200,10 +177,12 @@ func reduce_item_quantity(index):
 			if GlobalVar.Item_onhold == index:
 				GlobalVar.Item_onhold = null
 				print("Item_onhold cleared as item is depleted.")
-		sync_inventory_to_hotbar()
+		sync_inventory_to_hotbar()  # Sync changes to the hotbar
 		inventory_updated.emit()
+		print("Item added", inventory)
 		return true
 	return false
+
 
 
 

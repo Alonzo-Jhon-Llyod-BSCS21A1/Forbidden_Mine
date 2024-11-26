@@ -64,37 +64,21 @@ func _physics_process(delta):
 	#FOR INVENTORY
 
 func apply_item_effect(item):
-	match item["effect"]:
-		"Stamina":
-			SPEED += 50
-			print("Speed increase to ", SPEED)
+	match item.get("effect", ""):
+		"restore_health":
+			var value = item.get("value", 0)
+			PlayerVar.player_health += value
+			print("Restored ", value, " health")
+		"restore_stamina":
+			var value = item.get("value", 0)
+			GlobalVar.player_node.restore_stamina(value)
+			print("Restored ", value, " stamina")
+		"buff_speed":
+			var value = item.get("value", 0)
+			SPEED += value
+			print("Speed increased by ", value, ". Current speed: ", SPEED)
 		_:
-			print("There is no effect for this Item!")
-			
-
-func use_hotbar_item(slot_index):
-	if slot_index < GlobalVar.hotbar_inventory.size():
-		var item = GlobalVar.hotbar_inventory[slot_index]
-		if item != null:
-			# Store the index of the selected item to Item_onhold
-			GlobalVar.Item_onhold = slot_index
-			print("Selected item: ", item["name"], "with effect: ", item["effect"], "and quantity: ", item["quantity"])
-		else:
-			# Set GlobalVar.Item_onhold to null for an empty slot
-			GlobalVar.Item_onhold = null
-			print("Selected an empty slot. Item_onhold set to null.")
-	else:
-		print("Invalid slot index:", slot_index)
-
-
-# Hotbar shortcuts
-func _unhandled_input(event):
-	if event is InputEventKey and event.pressed:
-		for i in range(GlobalVar.hotbar_size):
-			# Assuming keys 1-5 are mapped to actions "hotbar_1" to "hotbar_5"
-			if Input.is_action_just_pressed("hotbar_" + str(i + 1)):
-				use_hotbar_item(i)  # Select the item or assign null for an empty slot
-				break
+			print("This item has no recognized effect!")
 				
 func knock_back(Enemy):
 	var knock_back_direction = (velocity - Enemy.velocity).normalized() * 300
