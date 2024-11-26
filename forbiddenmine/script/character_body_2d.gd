@@ -34,6 +34,12 @@ func _physics_process(delta):
 	# Handle downward movement while swimming
 	if is_on_water and Input.is_action_pressed("down"):
 		velocity.y = SWIM_SPEED  # Swim downward
+		
+	if velocity.x > 1 || velocity.x < -1:
+		animated_sprite_2d.animation = "swim" if is_on_water else "walk"
+	else:
+		animated_sprite_2d.animation = "default"
+
 	
 	# Handle gravity or swimming buoyancy
 	if is_on_water:
@@ -46,9 +52,8 @@ func _physics_process(delta):
 	
 	# Handle horizontal movement
 	var direction = Input.get_axis("left", "right")
-	if Input.is_action_pressed("left") or Input.is_action_pressed("right"):
+	if direction:
 		velocity.x = direction * (SWIM_SPEED if is_on_water else SPEED)
-		animated_sprite_2d.animation = "swim" if is_on_water else "walk"
 		animated_sprite_2d.flip_h = direction < 0
 		$Area2D/CollisionShape2D2.position.x = -1.5 if direction < 0 else 1.5
 	else:
