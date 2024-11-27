@@ -1,9 +1,9 @@
 extends Node
 
 var new_world
+var inventory_file_path = "user://"
 @warning_ignore("shadowed_global_identifier")
 @onready var inventory_slot_scene = preload("res://Scene/inventory_slot.tscn")
-
 var Worldseed
 @warning_ignore("shadowed_global_identifier")
 var load = 0
@@ -26,15 +26,19 @@ func _ready():
 func add_item(item, to_hotbar = false):
 	var added_to_hotbar = false
 	var stack_limit = 64
+
+	# Set stack limit based on item type
 	if item["type"] == "weapon":
 		stack_limit = 1
 	elif item["type"] == "tile":
 		stack_limit = 64
 
+	# Add to hotbar if requested
 	if to_hotbar:
 		added_to_hotbar = add_hotbar_item(item)
 		inventory_updated.emit()
-
+		
+	# Try to stack the item if possible
 	if not added_to_hotbar:
 		for i in range(inventory.size()):
 			if inventory[i] != null and inventory[i]["name"] == item["name"]:
@@ -43,7 +47,7 @@ func add_item(item, to_hotbar = false):
 						inventory[i]["quantity"] += item["quantity"]
 						inventory_updated.emit()
 						sync_inventory_to_hotbar()
-						print("Item added", inventory)
+						print("Item added:", inventory)
 						return true
 					else:
 						print("Stack limit reached for", item["name"])
@@ -52,34 +56,30 @@ func add_item(item, to_hotbar = false):
 						inventory[i]["quantity"] += item["quantity"]
 						inventory_updated.emit()
 						sync_inventory_to_hotbar()
-						print("Item added", inventory)
+						print("Item added:", inventory)
 						return true
 					else:
 						print("Stack limit reached for", item["name"])
-			elif inventory[i] == null:
-				inventory[i] = item
-				inventory_updated.emit()
-				sync_inventory_to_hotbar()
-				print("Item added", inventory)
-				return true
-	inventory.append(item)
-	inventory_updated.emit()
-	sync_inventory_to_hotbar()
-	print("Item added", inventory)
-	return true
 
-
-
-
-func remove_item(item_type, item_effect):
+	# Add to the first available empty slot
 	for i in range(inventory.size()):
-		if inventory[i] != null and inventory[i]["type"] == item_type and inventory[i]["effect"] == item_effect:
-			var removed_item = inventory[i]
-			inventory[i] = null
+		if inventory[i] == null:
+			inventory[i] = item
 			inventory_updated.emit()
 			sync_inventory_to_hotbar()
-			return removed_item
-	return null
+			print("Item added:", inventory)
+			return true
+
+	# Add a new slot if space is still available
+	if inventory.size() < 36:
+		inventory.append(item)
+		inventory_updated.emit()
+		sync_inventory_to_hotbar()
+		print("Item added:", inventory)
+		return true
+
+	print("Inventory is full. Cannot add item:", item["name"])
+	return false
 
 # Increase the size of the inventory
 func increase_inventory_size(extra_slots):
@@ -89,25 +89,26 @@ func increase_inventory_size(extra_slots):
 # Set the reference to the player node
 func set_player_references(player):
 	player_node = player
-
-# Adjust the drop position to avoid overlap
-func adjust_drop_position(position):
-	var radius = 100
-	var nearby_items = get_tree().get_nodes_in_group("Items")
-	for item in nearby_items:
-		if item.global_position.distance_to(position) < radius:
-			var random_offset = Vector2(randf_range(-radius, radius), randf_range(-radius, radius))
-			position += random_offset
-			break
-	return position
 			
-func drop_item(item_data, drop_position):
-	var item_scene = load(item_data["scene_path"])
-	var item_instance = item_scene.instantiate()
-	item_instance.set_item_data(item_data)
-	drop_position = adjust_drop_position(drop_position)
-	item_instance.global_position = drop_position
-	get_tree().current_scene.add_child(item_instance)
+func drop_item():
+	if Item_onhold != null and Item_onhold >= 0 and Item_onhold < inventory.size():
+		var item = inventory[Item_onhold]
+		if item != null:
+			var item_scene = load(item["scene_path"])
+			var item_instance = item_scene.instantiate()
+			item_instance.set_item_data(item)
+			item_instance.global_position = charposition
+			get_tree().current_scene.add_child(item_instance)
+			inventory_updated.emit()
+			sync_inventory_to_hotbar()
+			reduce_item_quantity(Item_onhold)
+			print("Item dropped:", item["name"])
+			
+		else:
+			print("No valid item on hold.")
+	else:
+		print("No item on hold to drop.")
+
 
 # Add an item to the hotbar
 func add_hotbar_item(item):
@@ -182,62 +183,84 @@ func reduce_item_quantity(index):
 		print("Item added", inventory)
 		return true
 	return false
-
-var save_file_path = "user://inventory_data.save"  # Save file with .save extension
-
 # Save the inventory data to a .save file
 func save_inventory():
-	var file = FileAccess.open(save_file_path, FileAccess.WRITE)
+	if new_world != null:
+		inventory_file_path += new_world + ".save"
+	var file = FileAccess.open(inventory_file_path, FileAccess.WRITE)
 	if file:
 		var inventory_data = {
 			"inventory": inventory.map(func(item):
 			if item != null:
-				item.duplicate()
-				item["texture"] = item["texture"].resource_path
-			return item
+				var duplicate_item = item.duplicate()
+				if duplicate_item.has("texture") and duplicate_item["texture"] != null:
+					duplicate_item["texture"] = duplicate_item["texture"].resource_path
+				return duplicate_item
+			else:
+				return null
 			)
 		}
 		var json_string = JSON.stringify(inventory_data)
 		file.store_string(json_string)
 		file.close()
-		print("Inventory saved successfully to .save file.")
+		print("Inventory saved successfully to", inventory_file_path)
 	else:
 		print("Error: Could not open the file for saving.")
 
-
-
 # Load the inventory data from a .save file
 func load_inventory():
-	if not FileAccess.file_exists(save_file_path):
+	if new_world != null:
+		inventory_file_path += new_world + ".save"
+	if not FileAccess.file_exists(inventory_file_path):
 		print("Error: Save file does not exist.")
 		return
 
-	var file = FileAccess.open(save_file_path, FileAccess.READ)
+	var file = FileAccess.open(inventory_file_path, FileAccess.READ)
 	if file:
 		var json_data = file.get_as_text()
 		file.close()
 
-		# Create a JSON instance and parse the data
 		var json_instance = JSON.new()
 		var parse_result = json_instance.parse(json_data)
 
-		if parse_result == OK:  # Check if parsing succeeded
-			var loaded_data = json_instance.get_data()  # Access the parsed result
+		if parse_result == OK:
+			var loaded_data = json_instance.get_data()
 			if loaded_data.has("inventory") and loaded_data["inventory"] is Array:
-				# Restore the inventory items
 				inventory = loaded_data["inventory"].map(func(item):
 					if item != null:
-						item["texture"] = ResourceLoader.load(item["texture"])  # Convert path back to texture
+						if item.has("texture") and item["texture"] != null:
+							item["texture"] = ResourceLoader.load(item["texture"])
 					return item
 				)
-				sync_inventory_to_hotbar()  # Ensure hotbar is synced
-				print("Inventory loaded successfully from .save file.")
+				sync_inventory_to_hotbar()
+				print("Inventory loaded successfully from", inventory_file_path)
 			else:
 				print("Error: Loaded data is invalid or corrupted.")
 		else:
 			print("Error: Failed to parse the inventory data. Error code:", parse_result)
 	else:
 		print("Error: Failed to open the save file.")
+		
+func has_space_for_item(item: Dictionary) -> bool:
+	var stack_limit = 64
+	if item["type"] == "weapon":
+		stack_limit = 1
+	elif item["type"] == "tile":
+		stack_limit = 64
+
+	# Check for stackable space or empty slots
+	for inv_item in inventory:
+		if inv_item == null:
+			return true
+		if inv_item["name"] == item["name"] and inv_item["quantity"] < stack_limit:
+			if !inv_item.has("effect") or (item.has("effect") and inv_item["effect"] == item["effect"]):
+				return true
+
+	# No empty slot or stackable space
+	return false
+
+
+
 
 
 

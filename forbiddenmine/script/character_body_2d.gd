@@ -5,7 +5,7 @@ var attackcd = true
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interact_ui = $Interact_UI
 @onready var tile_map_layer: TileMapLayer = $"../TileMapLayer"
-
+@onready var footstep_sound: AudioStreamPlayer2D = $FootstepSound
 @export var SPEED = 200.0
 const JUMP_VELOCITY = -250.0
 const SWIM_SPEED = 250.0  # Reduced speed while swimming
@@ -37,10 +37,12 @@ func _physics_process(delta):
 		
 	if velocity.x > 1 || velocity.x < -1:
 		animated_sprite_2d.animation = "swim" if is_on_water else "walk"
+		if is_on_floor():
+			if !footstep_sound.playing:
+				footstep_sound.play()
 	else:
 		animated_sprite_2d.animation = "default"
 
-	
 	# Handle gravity or swimming buoyancy
 	if is_on_water:
 		velocity.y = move_toward(velocity.y, 0, SWIM_GRAVITY * delta)
@@ -58,6 +60,7 @@ func _physics_process(delta):
 		$Area2D/CollisionShape2D2.position.x = -1.5 if direction < 0 else 1.5
 	else:
 		velocity.x = move_toward(velocity.x, 0, 10)
+		footstep_sound.stop()
 		if not is_on_water and is_on_floor():
 			animated_sprite_2d.animation = "default"
 

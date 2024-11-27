@@ -43,12 +43,9 @@ func set_item(new_item):
 func _input(event: InputEvent) -> void:
 	if event is InputEvent and event.is_pressed():
 		if Input.is_action_pressed("Drop"):
-			if item != null:
+			if GlobalVar.Item_onhold != null:
 				var drop_position = GlobalVar.player_node.global_position
-				var drop_offset = Vector2(0, 50)
-				drop_offset = drop_offset.rotated(GlobalVar.player_node.rotation)
-				GlobalVar.drop_item(item, drop_position + drop_offset)
-				GlobalVar.remove_item(item["type"], item["effect"])
+				GlobalVar.drop_item()
 				
 		if Input.is_action_pressed("Use"):
 			if GlobalVar.Item_onhold != null:

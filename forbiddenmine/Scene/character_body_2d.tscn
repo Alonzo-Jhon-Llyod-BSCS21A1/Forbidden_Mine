@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://mclnmadsjcpj"]
+[gd_scene load_steps=30 format=3 uid="uid://mclnmadsjcpj"]
 
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
 [ext_resource type="Script" path="res://script/character_body_2d.gd" id="1_uq5mp"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://vvhxv35ya65w" path="res://character/walk3.png" id="15_ecwnv"]
 [ext_resource type="Texture2D" uid="uid://by58qh8hcsiu1" path="res://character/walk4.png" id="16_o07f0"]
 [ext_resource type="PackedScene" uid="uid://d35a6x6siepy7" path="res://Scene/inventory_hotbar.tscn" id="18_ioy0u"]
+[ext_resource type="AudioStream" uid="uid://bj6jfekqpu1o5" path="res://Audio/Footsteps Grass Sound Effect (HD).mp3" id="21_ptd0o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10u7y"]
 atlas = ExtResource("1_juivv")
@@ -194,5 +195,8 @@ shape = SubResource("RectangleShape2D_dfgaq")
 
 [node name="AttackCd" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="FootstepSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_ptd0o")
 
 [connection signal="timeout" from="AttackCd" to="." method="_on_attack_cd_timeout"]
