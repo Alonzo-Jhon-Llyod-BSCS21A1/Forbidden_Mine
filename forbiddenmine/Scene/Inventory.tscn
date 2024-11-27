@@ -8,9 +8,9 @@ radius = 24.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u05k"]
 
 [node name="Inventory" type="CharacterBody2D" groups=["Items"]]
-position = Vector2(0, 9.97754e+08)
+position = Vector2(0, 9.98919e+08)
 collision_layer = 0
-velocity = Vector2(0, 1.39886e+06)
+velocity = Vector2(0, 1.39968e+06)
 script = ExtResource("1_vd3m6")
 
 [node name="Area2D" type="Area2D" parent="."]

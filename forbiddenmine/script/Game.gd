@@ -251,7 +251,7 @@ func drop_item(tile_data: Vector2i):
 		
 		Vector2i(5, 0): {"name": "Andesite", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/andesite_block.png")},
 		
-		Vector2i(6, 0): {"name": "JungleLeafBlock", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(6, 0): {"name": "JungleLeafBlock", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/jungle_leaf.png")},
 		
 		Vector2i(7, 0): {"name": "Leaf Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		
@@ -261,17 +261,17 @@ func drop_item(tile_data: Vector2i):
 		
 		Vector2i(4, 1): {"name": "Topaz Ore", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/topaz_ore_drop.png")},
 		
-		Vector2i(6, 1): {"name": "Jungle Log", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(6, 1): {"name": "Jungle Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/jungle_logs.png")},
 		
-		Vector2i(7, 1): {"name": "Oak Log", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(7, 1): {"name": "Oak Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/oak_logs.png")},
 		
 		Vector2i(0, 2): {"name": "Grass Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		
 		Vector2i(1, 2): {"name": "Dirt", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		
-		Vector2i(6, 2): {"name": "Frosted Leaf Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(6, 2): {"name": "Frosted Leaf Block", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_leaf.png")},
 		
-		Vector2i(7, 2): {"name": "Acacia Leaf Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(7, 2): {"name": "Acacia Leaf Block", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/accacia_leaf.png")},
 		
 		Vector2i(0, 3): {"name": "Snow Grass Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		
@@ -281,13 +281,13 @@ func drop_item(tile_data: Vector2i):
 		
 		Vector2i(3, 3): {"name": "Magma Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/magma_block.png")},
 		
-		Vector2i(6, 3): {"name": "Frosted Oak Log", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(6, 3): {"name": "Frosted Oak Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_logs.png")},
 		
-		Vector2i(7, 3): {"name": "Acacia Log", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(7, 3): {"name": "Acacia Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/acacia_logs.png")},
 		
 		Vector2i(0, 4): {"name": "Jungle Grass Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		
-		Vector2i(1, 4): {"name": "Jungle Dirt Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(1, 4): {"name": "Jungle Dirt Block", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_planks.png")},
 		
 		Vector2i(6, 4): {"name": "Big Cactus Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		
@@ -313,7 +313,7 @@ func drop_item(tile_data: Vector2i):
 		
 		Vector2i(2, 6): {"name": "Andesite Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		
-		Vector2i(3, 6): {"name": "Acacia Plank", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},  
+		Vector2i(3, 6): {"name": "Acacia Plank", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/acacia_planks.png")},  
 		
 		Vector2i(4, 6): {"name": "Oak Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/brickblock.png")},  
 		
@@ -325,9 +325,9 @@ func drop_item(tile_data: Vector2i):
 		
 		Vector2i(2, 7): {"name": "Diorite Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},  
 		
-		Vector2i(3, 7): {"name": "Frosted Oak Planks", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},  
+		Vector2i(3, 7): {"name": "Frosted Oak Planks", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_planks.png")},  
 		
-		Vector2i(4, 7): {"name": "Jungle Planks", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},  
+		Vector2i(4, 7): {"name": "Jungle Planks", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/jungle_planks.png")},  
 		
 		Vector2i(5, 7): {"name": "Snowbrick", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/snowbrickblock.png")},  
 		
