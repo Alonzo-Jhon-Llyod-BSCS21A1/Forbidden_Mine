@@ -1,19 +1,21 @@
 extends CharacterBody2D
-#const  NAME = "Enemy"
-signal enemy_attack
-@onready var character_body_2d: CharacterBody2D = $"."
 
-const SPEED = 200
-const GRAVITY = 500  # Adjust this value for gravity strength
-const JUMP_VELOCITY = -400.0
+@export var SPECTATOR_SPEED = 800.0  # Increased speed for fast movement
+var spectator_mode = true  # Set true to enable spectator mode by default
 
-func _physics_process(delta: float) -> void:
-	# Move towards the player's position
-	if GlobalVar.charposition != null:
-		if position.distance_to(GlobalVar.charposition) > 1:
-			var direction = (GlobalVar.charposition - position).normalized()
-			#velocity = direction * SPEED
-			velocity.x = direction.x * SPEED
-			$AnimatedSprite2D.flip_h =direction.x < 0
-						
-	move_and_slide()
+func _physics_process(delta):
+	if spectator_mode:
+		handle_spectator_movement(delta)
+
+func handle_spectator_movement(delta):
+	# Capture movement input for free movement
+	var direction = Vector2(
+		Input.get_axis("left", "right"),
+		Input.get_axis("up", "down")
+	).normalized()
+
+	# Apply movement with spectator speed
+	velocity = direction * SPECTATOR_SPEED
+
+	# Apply the movement directly (no collision)
+	global_position += velocity * delta
