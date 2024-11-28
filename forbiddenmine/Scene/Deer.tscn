@@ -1,0 +1,71 @@
+[gd_scene load_steps=13 format=3 uid="uid://c7i7sgmmrrtxd"]
+
+[ext_resource type="Script" path="res://script/deer.gd" id="1_jh88w"]
+[ext_resource type="Texture2D" uid="uid://beljsx7ek0oug" path="res://character/deer/deer1.png" id="2_w8bgn"]
+[ext_resource type="Texture2D" uid="uid://df6p7gf4jw7kp" path="res://character/deer/deer2.png" id="3_pp17u"]
+[ext_resource type="Texture2D" uid="uid://dbu4mmvr8xa2g" path="res://character/deer/deer3.png" id="4_b075t"]
+[ext_resource type="Texture2D" uid="uid://f7yvomqafx3t" path="res://character/deer/deer4.png" id="5_adnvm"]
+[ext_resource type="Texture2D" uid="uid://be61haatjv1j2" path="res://character/deer/deer5.png" id="6_psbtq"]
+[ext_resource type="Texture2D" uid="uid://6mv8tok0muxr" path="res://character/deer/deer6.png" id="7_lgpid"]
+[ext_resource type="Texture2D" uid="uid://dhefb782nkl1w" path="res://character/deer/deer7.png" id="8_18qhs"]
+[ext_resource type="Texture2D" uid="uid://c7giushq6f01p" path="res://character/deer/deer8.png" id="9_bi153"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jc003"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w8bgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pp17u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b075t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_adnvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_psbtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lgpid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_18qhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bi153")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6fbt"]
+size = Vector2(35, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbp46"]
+size = Vector2(35, 32)
+
+[node name="Deer" type="CharacterBody2D"]
+script = ExtResource("1_jh88w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_jc003")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_n6fbt")
+one_way_collision_margin = 0.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_bbp46")
