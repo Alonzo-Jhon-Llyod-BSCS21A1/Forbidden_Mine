@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+#WEAPONS
 
 @onready var button1 = $TabContainer/Weapon/acaccia/TextureRect/Buttonacacia
 @onready var button2 = $TabContainer/Weapon/acaccia/TextureRect2/Button2acacia
@@ -37,6 +38,48 @@ extends CanvasLayer
 @onready var button34 = $TabContainer/Weapon/magma/TextureRect/Button34magma
 @onready var button35 = $TabContainer/Weapon/magma/TextureRect2/Button35magma
 @onready var button36 = $TabContainer/Weapon/magma/TextureRect3/Button36magma
+
+#TOOLS
+
+@onready var button_1 = $TabContainer/Tools/acacia/TextureRect/ButtonACACIA
+@onready var button_2 = $TabContainer/Tools/acacia/TextureRect2/ButtonACACIA2
+@onready var button_3 = $TabContainer/Tools/acacia/TextureRect3/ButtonACACIA3
+#@onready var button_4 = 
+#@onready var button_5 = 
+#@onready var button_6 = 
+#@onready var button_7 = 
+#@onready var button_8 = 
+#@onready var button_9 = 
+#@onready var button_10 = 
+#@onready var button_11 = 
+#@onready var button_12 = 
+#@onready var button_13 = 
+#@onready var button_14 = 
+#@onready var button_15 = 
+#@onready var button_16 = 
+#@onready var button_17 = 
+#@onready var button_18 = 
+#@onready var button_19 = 
+#@onready var button_20 = 
+#@onready var button_21 = 
+#@onready var button_22 = 
+#@onready var button_23 = 
+#@onready var button_24 = 
+#@onready var button_25 = 
+#@onready var button_26 = 
+#@onready var button_27 = 
+#@onready var button_28 = 
+#@onready var button_29 = 
+#@onready var button_30 = 
+#@onready var button_31 = 
+#@onready var button_32 = 
+#@onready var button_33 = 
+#@onready var button_34 = 
+#@onready var button_35 = 
+#@onready var button_36 = 
+
+
+
 
 
 var tile_to_item_data = {
@@ -86,7 +129,11 @@ var tile_to_item_data = {
 
 	"Magma Dagger": {"name": "Magma Dagger", "type": "weapon", "texture": preload("res://Item assets/weapon/magma_dagger.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
 	"Magma Sword": {"name": "Magma Sword", "type": "weapon", "texture": preload("res://Item assets/weapon/magma_sword.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
-	"Magma BroadSword": {"name": "Magma BroadSword", "type": "weapon", "texture": preload("res://Item assets/weapon/magma_broadsword.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"}
+	"Magma BroadSword": {"name": "Magma BroadSword", "type": "weapon", "texture": preload("res://Item assets/weapon/magma_broadsword.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+	
+	"Acacia Axe": {"name": "Acacia Axe", "type": "tool", "texture": preload("res://Item assets/tools/accacia_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+	"Acacia Pickaxe": {"name": "Acacia Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/accacia_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+	"Acacia Shovel": {"name": "Acacia Shovel", "type": "tool", "texture": preload("res://Item assets/tools/accacia_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
 
 
 
@@ -1841,3 +1888,70 @@ func _on_button_36_pressed() -> void:
 		"result": tile_to_item_data["Magma BroadSword"]
 	}
 	craft_item(recipe)
+#-----------------------------------------------------------------------
+
+func _on_button_acacia_pressed() -> void:
+	var recipe = {
+		"Stick" : 2,
+		"Acacia Planks" : 3,
+		"result": tile_to_item_data["Acacia Axe"]
+	}
+	craft_item(recipe)
+
+func _on_button_acacia_2_pressed() -> void:
+	var recipe = {
+		"Stick" : 2,
+		"Acacia Planks" : 5,
+		"result": tile_to_item_data["Acacia Pickaxe"]
+	}
+	craft_item(recipe)
+
+
+func _on_button_acacia_3_pressed() -> void:
+	var recipe = {
+		"Stick" : 2,
+		"Acacia Planks" : 1,
+		"result": tile_to_item_data["Acacia Shovel"]
+	}
+	craft_item(recipe)
+
+
+func _on_button_frost_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_frost_2_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_frost_3_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_oak_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_oak_2_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_oak_3_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button_1_SHOW() -> void:
+	button_1.visible = true
+	button_2.visible = false
+	button_3.visible = false
+
+func _on_button_2_SHOW() -> void:
+	button_2.visible = true
+	button_1.visible = false
+	button_3.visible = false
+
+func _on_button_3_SHOW() -> void:
+	button_3.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	
