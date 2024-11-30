@@ -1,0 +1,1338 @@
+[gd_scene load_steps=52 format=3 uid="uid://dn5s8bstqe12"]
+
+[ext_resource type="Script" path="res://script/recipe.gd" id="1_f1rv3"]
+[ext_resource type="Texture2D" uid="uid://deiqk8hbsxdbd" path="res://Item assets/weapon/acacia_dagger.png" id="2_qybxj"]
+[ext_resource type="Texture2D" uid="uid://gtm2tid1lna2" path="res://Item assets/weapon/accacia_sword.png" id="3_yhyl4"]
+[ext_resource type="Texture2D" uid="uid://vl3wf3pqhefj" path="res://Item assets/weapon/accacia_broadsword.png" id="4_j7e64"]
+[ext_resource type="Texture2D" uid="uid://85usw67blrod" path="res://Item assets/wood-tree-blocks/acacia_planks.png" id="4_xbcm5"]
+[ext_resource type="Texture2D" uid="uid://04626tcfw1bj" path="res://Item assets/weapon/frosted_oak_dagger.png" id="5_eny7g"]
+[ext_resource type="Texture2D" uid="uid://b7b5ry48jncs8" path="res://Item assets/wood-tree-blocks/stick_base.png" id="5_m42cx"]
+[ext_resource type="Texture2D" uid="uid://gfieb74ga4oh" path="res://Item assets/weapon/frosted_oak_broadsword.png" id="6_ru60n"]
+[ext_resource type="Texture2D" uid="uid://ybwj82yqaps5" path="res://Item assets/weapon/frosted_oak_sword.png" id="7_x1ifl"]
+[ext_resource type="Texture2D" uid="uid://dn74iwqo6g1en" path="res://Item assets/weapon/oak_dagger.png" id="8_toqf1"]
+[ext_resource type="Texture2D" uid="uid://d2nth12eu7760" path="res://Item assets/wood-tree-blocks/frosted_oak_planks.png" id="9_m8gf7"]
+[ext_resource type="Texture2D" uid="uid://dyfjilc34ebie" path="res://Item assets/weapon/oak_sword.png" id="9_xhos3"]
+[ext_resource type="Texture2D" uid="uid://dhu1ld61a3tyg" path="res://Item assets/weapon/oak_broadsword.png" id="10_2do4a"]
+[ext_resource type="Texture2D" uid="uid://bxlcb3me4xsr5" path="res://Item assets/weapon/jungle_dagger.png" id="11_thngl"]
+[ext_resource type="Texture2D" uid="uid://dv5nbtxqmla1j" path="res://Item assets/weapon/jungle_sword.png" id="12_75htj"]
+[ext_resource type="Texture2D" uid="uid://bmyueu3lfoov7" path="res://Item assets/weapon/jungle_broadsword.png" id="13_2qhjs"]
+[ext_resource type="Texture2D" uid="uid://doeg2wy5sn730" path="res://Item assets/wood-tree-blocks/oak_planks.png" id="13_46jsm"]
+[ext_resource type="Texture2D" uid="uid://d1teyq0bsonyf" path="res://Item assets/weapon/stone_dagger.png" id="14_7t5d4"]
+[ext_resource type="Texture2D" uid="uid://bc8gm17g2377a" path="res://Item assets/weapon/stone_sword.png" id="15_kk84m"]
+[ext_resource type="Texture2D" uid="uid://7i5hu13jtsbd" path="res://Item assets/weapon/stone_broadsword.png" id="16_sh3h2"]
+[ext_resource type="Texture2D" uid="uid://dfs51mklajbj7" path="res://Item assets/weapon/iron_dagger.png" id="17_an0ue"]
+[ext_resource type="Texture2D" uid="uid://glsje4u8nvpt" path="res://Item assets/weapon/iron_sword.png" id="18_ia58o"]
+[ext_resource type="Texture2D" uid="uid://beugqfom3v6hg" path="res://Item assets/weapon/iron_broadsword.png" id="19_k2c64"]
+[ext_resource type="Texture2D" uid="uid://bwsvw5yk8sksk" path="res://Item assets/weapon/gold_dagger.png" id="20_uvkob"]
+[ext_resource type="Texture2D" uid="uid://cu8ghbfiuip6m" path="res://Item assets/weapon/gold_sword.png" id="21_5rn72"]
+[ext_resource type="Texture2D" uid="uid://bai1x8j2uis6l" path="res://Item assets/weapon/gold_broadsword.png" id="22_dy7cy"]
+[ext_resource type="Texture2D" uid="uid://c1mg3okbsksuk" path="res://Item assets/weapon/diamond_dagger.png" id="23_4leef"]
+[ext_resource type="Texture2D" uid="uid://b7yywf571hwlb" path="res://Item assets/weapon/diamond_sword.png" id="24_m1tnr"]
+[ext_resource type="Texture2D" uid="uid://bnglvnl1yhuq8" path="res://Item assets/weapon/diamond_broadsword.png" id="25_ytfij"]
+[ext_resource type="Texture2D" uid="uid://db77kj75or078" path="res://Item assets/weapon/emerald_dagger.png" id="26_i35lg"]
+[ext_resource type="Texture2D" uid="uid://b1m5p2ccx430n" path="res://Item assets/weapon/emerald_sword.png" id="27_25ol3"]
+[ext_resource type="Texture2D" uid="uid://b83fsgh4qqd3g" path="res://Item assets/weapon/emerald_broadsword.png" id="28_drmuc"]
+[ext_resource type="Texture2D" uid="uid://doobxshpuqaa" path="res://Item assets/weapon/ruby_dagger.png" id="29_4i424"]
+[ext_resource type="Texture2D" uid="uid://cnaia8qio4e8k" path="res://Item assets/weapon/ruby_sword.png" id="30_h16gi"]
+[ext_resource type="Texture2D" uid="uid://chj08ois4tlow" path="res://Item assets/weapon/ruby_broadsword.png" id="31_k5hgp"]
+[ext_resource type="Texture2D" uid="uid://be0xynf7t467v" path="res://Item assets/weapon/topaz_dagger.png" id="32_qqoc8"]
+[ext_resource type="Texture2D" uid="uid://dlcg0da7xxeec" path="res://Item assets/weapon/topaz_sword.png" id="33_kdlot"]
+[ext_resource type="Texture2D" uid="uid://7xnjbty7iffg" path="res://Item assets/weapon/topaz_broadsword.png" id="34_lttjx"]
+[ext_resource type="Texture2D" uid="uid://b7hwubn7cbhjj" path="res://Item assets/weapon/magma_dagger.png" id="35_38q0e"]
+[ext_resource type="Texture2D" uid="uid://b4b7gw7bvlpnc" path="res://Item assets/weapon/magma_sword.png" id="36_50l3u"]
+[ext_resource type="Texture2D" uid="uid://dstxraf6xcvy1" path="res://Item assets/weapon/magma_broadsword.png" id="37_h4fkg"]
+[ext_resource type="Texture2D" uid="uid://ca4g2l37w3stf" path="res://Item assets/weapon/!_broadsword_recipe.png" id="38_dg5mm"]
+[ext_resource type="Texture2D" uid="uid://vxqlniqu60bp" path="res://Item assets/weapon/!_dagger_recipe.png" id="39_pw1pa"]
+[ext_resource type="Texture2D" uid="uid://dlmpiexmarcbx" path="res://Item assets/weapon/!_sword_recipe.png" id="40_u072f"]
+[ext_resource type="Texture2D" uid="uid://rt4eqlkcr74c" path="res://Media/inventory.png" id="41_rfiko"]
+[ext_resource type="Texture2D" uid="uid://b7uinvsd5h3ru" path="res://Item assets/tools/accacia_axe.png" id="42_rmyco"]
+[ext_resource type="Texture2D" uid="uid://c2531101xwhya" path="res://Item assets/tools/accacia_pickaxe.png" id="43_nk4gm"]
+[ext_resource type="Texture2D" uid="uid://dexk5d4j5e2ff" path="res://Item assets/tools/accacia_shovel.png" id="44_ofusr"]
+[ext_resource type="Texture2D" uid="uid://bhbig4mb3m1kd" path="res://Item assets/tools/frosted_oak_axe.png" id="45_8ncjx"]
+[ext_resource type="Texture2D" uid="uid://bk3sydairuo7c" path="res://Item assets/tools/frosted_oak_pickaxe.png" id="46_qgk7u"]
+[ext_resource type="Texture2D" uid="uid://bnu16axf1sm50" path="res://Item assets/tools/frosted_oak_shovel.png" id="47_k8y6v"]
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource("1_f1rv3")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Weapon" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon"]
+z_as_relative = false
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 2.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("41_rfiko")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="acaccia" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 41.0
+offset_top = 77.365
+offset_right = 81.0
+offset_bottom = 100.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/acaccia"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = -107.0
+offset_right = 57.0
+offset_bottom = -68.0
+texture = ExtResource("2_qybxj")
+
+[node name="Buttonacacia" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 600.0
+offset_top = 334.0
+offset_right = 1055.0
+offset_bottom = 497.0
+text = "CRAFT"
+flat = true
+
+[node name="AcaciaPlanks" type="Sprite2D" parent="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("4_xbcm5")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -15.0
+offset_top = -14.0
+offset_right = 54.0
+offset_bottom = 50.0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/acaccia"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = -127.0
+offset_right = 171.0
+offset_bottom = -62.0
+rotation = 0.0016998
+texture = ExtResource("3_yhyl4")
+
+[node name="Button2acacia" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect2"]
+visible = false
+layout_mode = 0
+offset_left = 511.601
+offset_top = 353.131
+offset_right = 966.601
+offset_bottom = 517.131
+text = "CRAFT"
+flat = true
+
+[node name="AcaciaPlanks" type="Sprite2D" parent="TabContainer/Weapon/acaccia/TextureRect2/Button2acacia"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("4_xbcm5")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect2/Button2acacia"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect2/Button2acacia/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 2		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/acaccia/TextureRect2/Button2acacia"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button2" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -3.98639
+offset_top = 8.00679
+offset_right = 60.0136
+offset_bottom = 72.0068
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/acaccia"]
+layout_mode = 0
+offset_left = 201.0
+offset_top = -113.0
+offset_right = 255.0
+offset_bottom = -59.0
+texture = ExtResource("4_j7e64")
+
+[node name="Button3acacia" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect3"]
+visible = false
+layout_mode = 0
+offset_left = 419.0
+offset_top = 339.0
+offset_right = 874.0
+offset_bottom = 502.0
+text = "CRAFT"
+flat = true
+
+[node name="AcaciaPlanks" type="Sprite2D" parent="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("4_xbcm5")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 4		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button3" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+offset_left = -6.0
+offset_top = -8.0
+offset_right = 63.0
+offset_bottom = 56.0
+
+[node name="frosted oak" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 42.0
+offset_top = 213.365
+offset_right = 82.0
+offset_bottom = 236.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/frosted oak"]
+layout_mode = 0
+offset_left = 306.0
+offset_top = -241.0
+offset_right = 345.0
+offset_bottom = -202.0
+texture = ExtResource("5_eny7g")
+
+[node name="Button4frosted" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 311.0
+offset_top = 330.0
+offset_right = 766.0
+offset_bottom = 495.0
+text = "CRAFT"
+flat = true
+
+[node name="FrostedPlanks" type="Sprite2D" parent="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("9_m8gf7")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button4" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+offset_left = -16.0
+offset_top = -15.0
+offset_right = 53.0
+offset_bottom = 49.0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/frosted oak"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = -251.0
+offset_right = 543.0
+offset_bottom = -197.0
+texture = ExtResource("6_ru60n")
+
+[node name="Button5frosted" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect2"]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 340.0
+offset_right = 582.0
+offset_bottom = 505.0
+text = "CRAFT"
+flat = true
+
+[node name="FrostedPlanks" type="Sprite2D" parent="TabContainer/Weapon/frosted oak/TextureRect2/Button5frosted"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("9_m8gf7")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect2/Button5frosted"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect2/Button5frosted/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 4		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/frosted oak/TextureRect2/Button5frosted"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button5" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+offset_left = -103.0
+offset_top = -5.0
+offset_right = -34.0
+offset_bottom = 59.0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/frosted oak"]
+layout_mode = 0
+offset_left = 388.0
+offset_top = -261.0
+offset_right = 453.0
+offset_bottom = -196.0
+texture = ExtResource("7_x1ifl")
+
+[node name="Button6frosted" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect3"]
+visible = false
+layout_mode = 0
+offset_left = 230.0
+offset_top = 350.0
+offset_right = 683.0
+offset_bottom = 514.0
+text = "CRAFT"
+flat = true
+
+[node name="FrostedPlanks" type="Sprite2D" parent="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("9_m8gf7")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 2		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button6" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+offset_left = 94.0
+offset_top = 5.0
+offset_right = 163.0
+offset_bottom = 69.0
+
+[node name="oak" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 39.0
+offset_top = 349.365
+offset_right = 79.0
+offset_bottom = 372.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/oak"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = -290.0
+offset_right = 58.0
+offset_bottom = -251.0
+texture = ExtResource("8_toqf1")
+
+[node name="Button7oak" type="Button" parent="TabContainer/Weapon/oak/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 602.0
+offset_top = 243.0
+offset_right = 1055.0
+offset_bottom = 408.0
+text = "CRAFT"
+flat = true
+
+[node name="OakPlanks" type="Sprite2D" parent="TabContainer/Weapon/oak/TextureRect/Button7oak"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("13_46jsm")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/oak/TextureRect/Button7oak"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/oak/TextureRect/Button7oak/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/oak/TextureRect/Button7oak"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button7" type="Button" parent="TabContainer/Weapon/oak/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+offset_left = -14.0
+offset_top = -13.0
+offset_right = 55.0
+offset_bottom = 51.0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/oak"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = -309.0
+offset_right = 171.0
+offset_bottom = -244.0
+rotation = 0.0016998
+texture = ExtResource("9_xhos3")
+
+[node name="Button8oak" type="Button" parent="TabContainer/Weapon/oak/TextureRect2"]
+visible = false
+layout_mode = 0
+offset_left = 514.0
+offset_top = 261.0
+offset_right = 969.0
+offset_bottom = 424.0
+text = "CRAFT"
+flat = true
+
+[node name="OakPlanks" type="Sprite2D" parent="TabContainer/Weapon/oak/TextureRect2/Button8oak"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("13_46jsm")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/oak/TextureRect2/Button8oak"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/oak/TextureRect2/Button8oak/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 2		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/oak/TextureRect2/Button8oak"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button8" type="Button" parent="TabContainer/Weapon/oak/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+offset_left = -5.98978
+offset_top = 6.01019
+offset_right = 63.0102
+offset_bottom = 70.0102
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/oak"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = -298.0
+offset_right = 257.0
+offset_bottom = -244.0
+texture = ExtResource("10_2do4a")
+
+[node name="Button9oak" type="Button" parent="TabContainer/Weapon/oak/TextureRect3"]
+visible = false
+layout_mode = 0
+offset_left = 416.0
+offset_top = 251.0
+offset_right = 870.0
+offset_bottom = 416.0
+text = "CRAFT"
+flat = true
+
+[node name="OakPlanks" type="Sprite2D" parent="TabContainer/Weapon/oak/TextureRect3/Button9oak"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("13_46jsm")
+
+[node name="plus" type="Label" parent="TabContainer/Weapon/oak/TextureRect3/Button9oak"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Weapon/oak/TextureRect3/Button9oak/plus"]
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     1                         			 4		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/oak/TextureRect3/Button9oak"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
+
+[node name="Button9" type="Button" parent="TabContainer/Weapon/oak/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 64.0
+offset_bottom = 59.0
+
+[node name="jungle" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 39.0
+offset_top = 485.365
+offset_right = 79.0
+offset_bottom = 508.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/jungle"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = -425.0
+offset_right = 349.0
+offset_bottom = -386.0
+texture = ExtResource("11_thngl")
+
+[node name="Button10jungle" type="Button" parent="TabContainer/Weapon/jungle/TextureRect"]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 32.0
+offset_right = 49.0
+offset_bottom = 63.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/jungle"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = -446.0
+offset_right = 459.0
+offset_bottom = -381.0
+texture = ExtResource("12_75htj")
+
+[node name="Button11jungle" type="Button" parent="TabContainer/Weapon/jungle/TextureRect2"]
+layout_mode = 0
+offset_top = 52.0
+offset_right = 57.0
+offset_bottom = 83.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/jungle"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = -433.0
+offset_right = 544.0
+offset_bottom = -379.0
+texture = ExtResource("13_2qhjs")
+
+[node name="Button12jungle" type="Button" parent="TabContainer/Weapon/jungle/TextureRect3"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 41.0
+offset_right = 57.0
+offset_bottom = 72.0
+text = "CRAFT"
+alignment = 0
+
+[node name="stone" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 277.0
+offset_top = 81.365
+offset_right = 317.0
+offset_bottom = 104.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/stone"]
+layout_mode = 0
+offset_left = -221.0
+offset_top = 67.0
+offset_right = -182.0
+offset_bottom = 106.0
+texture = ExtResource("14_7t5d4")
+
+[node name="Button13stone" type="Button" parent="TabContainer/Weapon/stone/TextureRect"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 61.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/stone"]
+layout_mode = 0
+offset_left = -129.0
+offset_top = 47.0
+offset_right = -64.0
+offset_bottom = 112.0
+rotation = 0.0016998
+texture = ExtResource("15_kk84m")
+
+[node name="Button14stone" type="Button" parent="TabContainer/Weapon/stone/TextureRect2"]
+layout_mode = 0
+offset_left = -3.90991
+offset_top = 53.0067
+offset_right = 53.0901
+offset_bottom = 84.0067
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/stone"]
+layout_mode = 0
+offset_left = -34.0
+offset_top = 61.0
+offset_right = 20.0
+offset_bottom = 115.0
+texture = ExtResource("16_sh3h2")
+
+[node name="Button15stone" type="Button" parent="TabContainer/Weapon/stone/TextureRect3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 59.0
+offset_bottom = 70.0
+text = "CRAFT"
+alignment = 0
+
+[node name="iron" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 275.0
+offset_top = 211.365
+offset_right = 315.0
+offset_bottom = 234.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/iron"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = -62.0
+offset_right = 112.0
+offset_bottom = -23.0
+texture = ExtResource("17_an0ue")
+
+[node name="Button16iron" type="Button" parent="TabContainer/Weapon/iron/TextureRect"]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 30.0
+offset_right = 49.0
+offset_bottom = 61.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/iron"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = -84.0
+offset_right = 226.0
+offset_bottom = -19.0
+texture = ExtResource("18_ia58o")
+
+[node name="Button17iron" type="Button" parent="TabContainer/Weapon/iron/TextureRect2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 51.0
+offset_right = 58.0
+offset_bottom = 82.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/iron"]
+layout_mode = 0
+offset_left = 251.0
+offset_top = -72.0
+offset_right = 305.0
+offset_bottom = -18.0
+texture = ExtResource("19_k2c64")
+
+[node name="Button18iron" type="Button" parent="TabContainer/Weapon/iron/TextureRect3"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 39.0
+offset_right = 60.0
+offset_bottom = 70.0
+text = "CRAFT"
+alignment = 0
+
+[node name="gold" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 275.0
+offset_top = 347.365
+offset_right = 315.0
+offset_bottom = 370.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/gold"]
+layout_mode = 0
+offset_left = -218.0
+offset_top = -112.0
+offset_right = -179.0
+offset_bottom = -73.0
+texture = ExtResource("20_uvkob")
+
+[node name="Button19gold" type="Button" parent="TabContainer/Weapon/gold/TextureRect"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 61.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/gold"]
+layout_mode = 0
+offset_left = -128.0
+offset_top = -130.0
+offset_right = -63.0
+offset_bottom = -65.0
+rotation = 0.0016998
+texture = ExtResource("21_5rn72")
+
+[node name="Button20gold" type="Button" parent="TabContainer/Weapon/gold/TextureRect2"]
+layout_mode = 0
+offset_left = -3.9116
+offset_top = 52.0067
+offset_right = 53.0884
+offset_bottom = 83.0067
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/gold"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = -113.0
+offset_right = 22.0
+offset_bottom = -59.0
+texture = ExtResource("22_dy7cy")
+
+[node name="Button21gold" type="Button" parent="TabContainer/Weapon/gold/TextureRect3"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 40.0
+offset_right = 57.0
+offset_bottom = 71.0
+text = "CRAFT"
+alignment = 0
+
+[node name="diamond" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 275.0
+offset_top = 484.365
+offset_right = 315.0
+offset_bottom = 507.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/diamond"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = -245.0
+offset_right = 110.0
+offset_bottom = -206.0
+texture = ExtResource("23_4leef")
+
+[node name="Button22diamond" type="Button" parent="TabContainer/Weapon/diamond/TextureRect"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 61.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/diamond"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = -268.0
+offset_right = 226.0
+offset_bottom = -203.0
+texture = ExtResource("24_m1tnr")
+
+[node name="Button23diamond" type="Button" parent="TabContainer/Weapon/diamond/TextureRect2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 50.0
+offset_right = 59.0
+offset_bottom = 81.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/diamond"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = -254.0
+offset_right = 304.0
+offset_bottom = -200.0
+texture = ExtResource("25_ytfij")
+
+[node name="Button24diamond" type="Button" parent="TabContainer/Weapon/diamond/TextureRect3"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 41.0
+offset_right = 56.0
+offset_bottom = 72.0
+text = "CRAFT"
+alignment = 0
+
+[node name="emerald" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 2
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 503.0
+offset_top = 79.365
+offset_right = 543.0
+offset_bottom = 102.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/emerald"]
+layout_mode = 0
+offset_left = -449.0
+offset_top = 244.0
+offset_right = -410.0
+offset_bottom = 283.0
+texture = ExtResource("26_i35lg")
+
+[node name="Button25emerald" type="Button" parent="TabContainer/Weapon/emerald/TextureRect"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 34.0
+offset_right = 52.0
+offset_bottom = 65.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/emerald"]
+layout_mode = 0
+offset_left = -358.0
+offset_top = 227.0
+offset_right = -293.0
+offset_bottom = 292.0
+rotation = 0.0016998
+texture = ExtResource("27_25ol3")
+
+[node name="Button26emerald" type="Button" parent="TabContainer/Weapon/emerald/TextureRect2"]
+layout_mode = 0
+offset_top = 53.0
+offset_right = 57.0
+offset_bottom = 84.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/emerald"]
+layout_mode = 0
+offset_left = -261.0
+offset_top = 241.0
+offset_right = -207.0
+offset_bottom = 295.0
+texture = ExtResource("28_drmuc")
+
+[node name="Button27emerald" type="Button" parent="TabContainer/Weapon/emerald/TextureRect3"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 58.0
+offset_bottom = 71.0
+text = "CRAFT"
+alignment = 0
+
+[node name="ruby" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 2
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 502.0
+offset_top = 209.365
+offset_right = 542.0
+offset_bottom = 232.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/ruby"]
+layout_mode = 0
+offset_left = -153.0
+offset_top = 116.0
+offset_right = -114.0
+offset_bottom = 155.0
+texture = ExtResource("29_4i424")
+
+[node name="Button28ruby" type="Button" parent="TabContainer/Weapon/ruby/TextureRect"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 32.0
+offset_right = 44.0
+offset_bottom = 63.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/ruby"]
+layout_mode = 0
+offset_left = -67.0
+offset_top = 96.0
+offset_right = -2.0
+offset_bottom = 161.0
+texture = ExtResource("30_h16gi")
+
+[node name="Button29ruby" type="Button" parent="TabContainer/Weapon/ruby/TextureRect2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 53.0
+offset_right = 59.0
+offset_bottom = 84.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/ruby"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 112.0
+offset_right = 79.0
+offset_bottom = 166.0
+texture = ExtResource("31_k5hgp")
+
+[node name="Button30ruby" type="Button" parent="TabContainer/Weapon/ruby/TextureRect3"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 41.0
+offset_right = 57.0
+offset_bottom = 72.0
+text = "CRAFT"
+alignment = 0
+
+[node name="topaz" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 2
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 501.0
+offset_top = 346.365
+offset_right = 541.0
+offset_bottom = 369.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/topaz"]
+layout_mode = 0
+offset_left = -442.0
+offset_top = 67.0
+offset_right = -403.0
+offset_bottom = 106.0
+texture = ExtResource("32_qqoc8")
+
+[node name="Button31topaz" type="Button" parent="TabContainer/Weapon/topaz/TextureRect"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 30.0
+offset_right = 53.0
+offset_bottom = 61.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/topaz"]
+layout_mode = 0
+offset_left = -354.0
+offset_top = 46.0
+offset_right = -289.0
+offset_bottom = 111.0
+rotation = 0.0016998
+texture = ExtResource("33_kdlot")
+
+[node name="Button32topaz" type="Button" parent="TabContainer/Weapon/topaz/TextureRect2"]
+layout_mode = 0
+offset_left = -4.90651
+offset_top = 55.0084
+offset_right = 52.0935
+offset_bottom = 86.0084
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/topaz"]
+layout_mode = 0
+offset_left = -258.0
+offset_top = 64.0
+offset_right = -204.0
+offset_bottom = 118.0
+texture = ExtResource("34_lttjx")
+
+[node name="Button33topaz" type="Button" parent="TabContainer/Weapon/topaz/TextureRect3"]
+layout_mode = 0
+offset_top = 39.0
+offset_right = 58.0
+offset_bottom = 70.0
+rotation = 0.0145818
+text = "CRAFT"
+alignment = 0
+
+[node name="magma" type="Label" parent="TabContainer/Weapon"]
+layout_mode = 2
+anchor_top = 0.155
+anchor_bottom = 0.155
+offset_left = 499.0
+offset_top = 483.365
+offset_right = 539.0
+offset_bottom = 506.365
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Weapon/magma"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = -69.0
+offset_right = -111.0
+offset_bottom = -30.0
+texture = ExtResource("35_38q0e")
+
+[node name="Button34magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 40.0
+offset_right = 43.0
+offset_bottom = 71.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect22" type="TextureRect" parent="TabContainer/Weapon/magma"]
+layout_mode = 0
+offset_left = -63.0
+offset_top = -92.0
+offset_right = 2.0
+offset_bottom = -28.0
+texture = ExtResource("36_50l3u")
+
+[node name="Button35magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect22"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 61.0
+offset_right = 53.0
+offset_bottom = 92.0
+text = "CRAFT"
+alignment = 0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/magma"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -75.0
+offset_right = 82.0
+offset_bottom = -21.0
+texture = ExtResource("37_h4fkg")
+
+[node name="Button36magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect3"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 40.0
+offset_right = 57.0
+offset_bottom = 71.0
+text = "CRAFT"
+alignment = 0
+
+[node name="recipes GUIDE" type="Label" parent="TabContainer/Weapon"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.92
+anchor_top = 0.074
+anchor_right = 0.92
+anchor_bottom = 0.074
+offset_left = 53.16
+offset_top = 102.342
+offset_right = 93.16
+offset_bottom = 125.342
+
+[node name="BroadSword Recipes" type="Label" parent="TabContainer/Weapon/recipes GUIDE"]
+self_modulate = Color(0.45098, 0.87451, 0.392157, 1)
+layout_mode = 2
+offset_left = -374.0
+offset_top = 151.0
+offset_right = -197.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 25
+text = "Recipe for BroadSwords
+
+"
+
+[node name="For broadSword" type="Label" parent="TabContainer/Weapon/recipes GUIDE/BroadSword Recipes"]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 174.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 25
+text = "1 Stick + 4 materials ="
+
+[node name="broadSword_recipe" type="TextureRect" parent="TabContainer/Weapon/recipes GUIDE/BroadSword Recipes/For broadSword"]
+layout_mode = 0
+offset_left = 266.0
+offset_top = -11.0
+offset_right = 327.0
+offset_bottom = 43.0
+texture = ExtResource("38_dg5mm")
+
+[node name="Dagger Recipes" type="Label" parent="TabContainer/Weapon/recipes GUIDE"]
+self_modulate = Color(0.45098, 0.87451, 0.392157, 1)
+layout_mode = 2
+offset_left = -376.0
+offset_top = -109.0
+offset_right = -231.0
+offset_bottom = -86.0
+theme_override_font_sizes/font_size = 25
+text = "Recipe for Daggers"
+
+[node name="For dager" type="Label" parent="TabContainer/Weapon/recipes GUIDE/Dagger Recipes"]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 176.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 25
+text = "1 Stick + 1 material ="
+
+[node name="dagger_recipe" type="TextureRect" parent="TabContainer/Weapon/recipes GUIDE/Dagger Recipes/For dager"]
+layout_mode = 0
+offset_left = 274.0
+offset_top = -15.0
+offset_right = 334.0
+offset_bottom = 40.0
+texture = ExtResource("39_pw1pa")
+
+[node name="Sword Recipes" type="Label" parent="TabContainer/Weapon/recipes GUIDE"]
+self_modulate = Color(0.45098, 0.87451, 0.392157, 1)
+layout_mode = 2
+offset_left = -375.0
+offset_top = 18.0
+offset_right = -230.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 25
+text = "Recipe for Swords
+"
+
+[node name="For sword" type="Label" parent="TabContainer/Weapon/recipes GUIDE/Sword Recipes"]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 174.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 25
+text = "1 Stick + 2 materials ="
+
+[node name="sword_recipe" type="TextureRect" parent="TabContainer/Weapon/recipes GUIDE/Sword Recipes/For sword"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = -23.0
+offset_right = 341.0
+offset_bottom = 47.0
+texture = ExtResource("40_u072f")
+
+[node name="Tools" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Tools"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 26.0
+offset_right = 61.0
+offset_bottom = 66.0
+texture = ExtResource("42_rmyco")
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 29.0
+offset_right = 110.0
+offset_bottom = 69.0
+texture = ExtResource("43_nk4gm")
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 29.0
+offset_right = 160.0
+offset_bottom = 69.0
+texture = ExtResource("44_ofusr")
+
+[node name="TextureRect4" type="TextureRect" parent="TabContainer/Tools"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 27.0
+offset_right = 204.0
+offset_bottom = 67.0
+texture = ExtResource("45_8ncjx")
+
+[node name="TextureRect5" type="TextureRect" parent="TabContainer/Tools"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 29.0
+offset_right = 246.0
+offset_bottom = 69.0
+texture = ExtResource("46_qgk7u")
+
+[node name="TextureRect6" type="TextureRect" parent="TabContainer/Tools"]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 27.0
+offset_right = 305.0
+offset_bottom = 67.0
+texture = ExtResource("47_k8y6v")
+
+[node name="TextureRect7" type="TextureRect" parent="TabContainer/Tools"]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 101.0
+offset_right = 387.0
+offset_bottom = 141.0
+
+[node name="Blocks" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="TabBar4" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect/Button" to="." method="_on_button_pressedSHOW"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect2/Button2acacia" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect2/Button2" to="." method="_on_button_pressedSHOW2"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect3/Button3" to="." method="_on_button_pressedSHOW3"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect/Button4" to="." method="_on_button_pressedSHOW4"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect2/Button5frosted" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect2/Button5" to="." method="_on_button_pressedSHOW3"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/frosted oak/TextureRect3/Button6" to="." method="_on_button_pressedSHOW3"]
+[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect/Button7oak" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect2/Button8oak" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/oak/TextureRect3/Button9oak" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect/Button10jungle" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect2/Button11jungle" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/jungle/TextureRect3/Button12jungle" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect/Button13stone" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect2/Button14stone" to="." method="_on_button_14_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/stone/TextureRect3/Button15stone" to="." method="_on_button_15_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect/Button16iron" to="." method="_on_button_16_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect2/Button17iron" to="." method="_on_button_17_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/iron/TextureRect3/Button18iron" to="." method="_on_button_18_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect/Button19gold" to="." method="_on_button_19_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect2/Button20gold" to="." method="_on_button_20_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/gold/TextureRect3/Button21gold" to="." method="_on_button_21_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect/Button22diamond" to="." method="_on_button_22_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect2/Button23diamond" to="." method="_on_button_23_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/diamond/TextureRect3/Button24diamond" to="." method="_on_button_24_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect/Button25emerald" to="." method="_on_button_25_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect2/Button26emerald" to="." method="_on_button_26_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/emerald/TextureRect3/Button27emerald" to="." method="_on_button_27_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect/Button28ruby" to="." method="_on_button_28_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect2/Button29ruby" to="." method="_on_button_29_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/ruby/TextureRect3/Button30ruby" to="." method="_on_button_30_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect/Button31topaz" to="." method="_on_button_31_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect2/Button32topaz" to="." method="_on_button_32_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect3/Button33topaz" to="." method="_on_button_33_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect/Button34magma" to="." method="_on_button_34_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect22/Button35magma" to="." method="_on_button_35_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect3/Button36magma" to="." method="_on_button_36_pressed"]

@@ -1,2 +1,3 @@
+res://Scene/Recipe.tscn
 res://Scene/control.tscn
-res://script/Game.gd
+res://script/recipe.gd

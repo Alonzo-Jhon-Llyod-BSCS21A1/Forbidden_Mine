@@ -355,3 +355,5 @@ func _on_spawn_timer_timeout() -> void:
 	enemytry.scale = Vector2(2, 2)
 	add_child(enemytry)
 	pass # Replace with function body.
+	
+	
