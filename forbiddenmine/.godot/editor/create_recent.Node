@@ -1,6 +1,1 @@
-Button
-Label
-RichTextLabel
-TextureRect
-Control
-Container
+AnimatedSprite2D

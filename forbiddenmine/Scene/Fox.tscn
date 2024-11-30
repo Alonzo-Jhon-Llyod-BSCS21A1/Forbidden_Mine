@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlgcphdykxrct"]
+
+[ext_resource type="Script" path="res://script/fox.gd" id="1_yoqyc"]
+[ext_resource type="Texture2D" uid="uid://jmj4aceaxs5w" path="res://character/fox/Sprite-0001.png" id="2_p0uxm"]
+[ext_resource type="Texture2D" uid="uid://bg5ol3xju2aqa" path="res://character/fox/Sprite-0002.png" id="3_3tpvm"]
+[ext_resource type="Texture2D" uid="uid://bsan5m5mmscvs" path="res://character/fox/Sprite-0003.png" id="4_0pkos"]
+[ext_resource type="Texture2D" uid="uid://cmpxtxndtr8do" path="res://character/fox/Sprite-0004.png" id="5_bimr1"]
+[ext_resource type="Texture2D" uid="uid://dis2r4ykugiry" path="res://character/fox/Sprite-0005.png" id="6_hrm8j"]
+[ext_resource type="Texture2D" uid="uid://nmmlc6c1o05c" path="res://character/fox/Sprite-0006.png" id="7_4447i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7r42p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p0uxm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3tpvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0pkos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bimr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hrm8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4447i")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0td2"]
+size = Vector2(38, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ktdy"]
+size = Vector2(38, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etc0t"]
+size = Vector2(38, 22)
+
+[node name="Fox" type="CharacterBody2D"]
+script = ExtResource("1_yoqyc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7r42p")
+animation = &"run"
+frame = 3
+frame_progress = 0.521935
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Timer" type="Timer" parent="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(10, -2)
+shape = SubResource("RectangleShape2D_k0td2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, -1)
+shape = SubResource("RectangleShape2D_0ktdy")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(10, -1)
+shape = SubResource("RectangleShape2D_etc0t")

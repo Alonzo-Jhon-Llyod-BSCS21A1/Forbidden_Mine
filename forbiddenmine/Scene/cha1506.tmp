@@ -1,0 +1,203 @@
+[gd_scene load_steps=30 format=3 uid="uid://mclnmadsjcpj"]
+
+[ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
+[ext_resource type="Script" path="res://script/character_body_2d.gd" id="1_uq5mp"]
+[ext_resource type="Texture2D" uid="uid://drfyjifre761r" path="res://character/jump4.png" id="5_rq8cl"]
+[ext_resource type="Texture2D" uid="uid://deqxrmw6poiod" path="res://character/swim/swim1.png" id="6_ncqpd"]
+[ext_resource type="Texture2D" uid="uid://bf71msc2nf1f5" path="res://character/swim/swim2.png" id="7_3a51i"]
+[ext_resource type="Texture2D" uid="uid://m0uqr4yivhfu" path="res://character/sword-attack2.png" id="7_knymv"]
+[ext_resource type="Texture2D" uid="uid://b4tta1h3a8fj8" path="res://character/swim/swim3.png" id="8_hjy7q"]
+[ext_resource type="Texture2D" uid="uid://blo3xgy0jlht" path="res://character/punch1.png" id="8_rrbhd"]
+[ext_resource type="Texture2D" uid="uid://ci5gu0jd0c6r0" path="res://character/swim/swim4.png" id="9_2xpd0"]
+[ext_resource type="Texture2D" uid="uid://ctmvjrgc11i8k" path="res://character/punch2.png" id="9_6dxql"]
+[ext_resource type="Texture2D" uid="uid://d0dvstbm73mvb" path="res://character/swim/swim5.png" id="10_fsw6k"]
+[ext_resource type="Texture2D" uid="uid://7sxx4ifjxtv0" path="res://character/swim/swim6.png" id="11_bnxlf"]
+[ext_resource type="Texture2D" uid="uid://dda4im2copk37" path="res://character/sword-attack3.png" id="12_0nu48"]
+[ext_resource type="Texture2D" uid="uid://v5gssnrwim64" path="res://character/swim/swim7.png" id="12_fc8bj"]
+[ext_resource type="Script" path="res://script/camera.gd" id="12_mgvul"]
+[ext_resource type="Texture2D" uid="uid://dq7fb4lvosgor" path="res://character/walk1.png" id="13_sx2w2"]
+[ext_resource type="Texture2D" uid="uid://csu3kc7rn68lx" path="res://character/walk2.png" id="14_nooj6"]
+[ext_resource type="Texture2D" uid="uid://vvhxv35ya65w" path="res://character/walk3.png" id="15_ecwnv"]
+[ext_resource type="Texture2D" uid="uid://by58qh8hcsiu1" path="res://character/walk4.png" id="16_o07f0"]
+[ext_resource type="PackedScene" uid="uid://d35a6x6siepy7" path="res://Scene/inventory_hotbar.tscn" id="18_ioy0u"]
+[ext_resource type="AudioStream" uid="uid://bj6jfekqpu1o5" path="res://Audio/Footsteps Grass Sound Effect (HD).mp3" id="21_ptd0o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10u7y"]
+atlas = ExtResource("1_juivv")
+region = Rect2(4, 0, 12, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m78w"]
+atlas = ExtResource("5_rq8cl")
+region = Rect2(3, 0, 13, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnyew"]
+atlas = ExtResource("12_0nu48")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_022g8"]
+atlas = ExtResource("7_knymv")
+region = Rect2(0, 0, 13, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5bmy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10u7y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m78w")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_rrbhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6dxql")
+}],
+"loop": true,
+"name": &"punch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ncqpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3a51i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hjy7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2xpd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fsw6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bnxlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fc8bj")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnyew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_022g8")
+}],
+"loop": true,
+"name": &"sword_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_sx2w2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nooj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ecwnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o07f0")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_faqnu"]
+size = Vector2(12, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdh18"]
+size = Vector2(576, 325)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfgaq"]
+size = Vector2(15, 16)
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
+process_mode = 3
+collision_layer = 2
+script = ExtResource("1_uq5mp")
+SPEED = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c5bmy")
+animation = &"walk"
+autoplay = "default"
+frame_progress = 0.302707
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_faqnu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Camera" type="Area2D" parent="Camera2D"]
+collision_layer = 0
+collision_mask = 255
+script = ExtResource("12_mgvul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Camera"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_bdh18")
+
+[node name="Interact_UI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Interact_UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -138.0
+offset_top = -49.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0.192157, 0.376471, 0.321569, 0.839216)
+
+[node name="Label" type="Label" parent="Interact_UI/ColorRect"]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 49.0
+text = "  			 PRESS E  TO 
+	   			PICKUP
+"
+horizontal_alignment = 1
+
+[node name="Inventory_Hotbar" type="CanvasLayer" parent="."]
+
+[node name="Inventory_Hotbar" parent="Inventory_Hotbar" instance=ExtResource("18_ioy0u")]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 13
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_dfgaq")
+
+[node name="AttackCd" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="FootstepSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_ptd0o")
+
+[connection signal="timeout" from="AttackCd" to="." method="_on_attack_cd_timeout"]

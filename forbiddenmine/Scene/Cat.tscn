@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://covfeuha8k581"]
+
+[ext_resource type="Script" path="res://script/cat.gd" id="1_j251q"]
+[ext_resource type="Texture2D" uid="uid://bt7v6h4mb1po3" path="res://character/cat/cat/cat1.png" id="2_6t0cg"]
+[ext_resource type="Texture2D" uid="uid://bwpkibjpq3iul" path="res://character/cat/cat/cat2.png" id="3_144re"]
+[ext_resource type="Texture2D" uid="uid://cgwqo56qteoae" path="res://character/cat/cat/cat3.png" id="4_d7a8c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kdgjl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6t0cg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_144re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d7a8c")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unhad"]
+size = Vector2(20, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8etr"]
+size = Vector2(20, 16)
+
+[node name="Cat" type="CharacterBody2D"]
+script = ExtResource("1_j251q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kdgjl")
+animation = &"walk"
+
+[node name="WalkCollision" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_unhad")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_s8etr")
+
+[node name="Timer" type="Timer" parent="Area2D"]

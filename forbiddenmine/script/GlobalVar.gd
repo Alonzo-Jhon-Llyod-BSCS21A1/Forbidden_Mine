@@ -1,7 +1,6 @@
 extends Node
 
 var new_world
-var inventory_file_path = "user://"
 @warning_ignore("shadowed_global_identifier")
 @onready var inventory_slot_scene = preload("res://Scene/inventory_slot.tscn")
 var Worldseed
@@ -185,6 +184,7 @@ func reduce_item_quantity(index):
 	return false
 # Save the inventory data to a .save file
 func save_inventory():
+	var inventory_file_path = "user://Inventory"
 	if new_world != null:
 		inventory_file_path += new_world + ".save"
 	var file = FileAccess.open(inventory_file_path, FileAccess.WRITE)
@@ -209,6 +209,7 @@ func save_inventory():
 
 # Load the inventory data from a .save file
 func load_inventory():
+	var inventory_file_path = "user://Inventory"
 	if new_world != null:
 		inventory_file_path += new_world + ".save"
 	if not FileAccess.file_exists(inventory_file_path):
