@@ -2429,12 +2429,42 @@ offset_bottom = 56.0
 texture = ExtResource("45_8ncjx")
 
 [node name="ButtonFROST" type="Button" parent="TabContainer/Tools/frosted/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -11.0
-offset_top = 45.0
-offset_right = 59.0
-offset_bottom = 76.0
+offset_left = 315.0
+offset_top = 346.0
+offset_right = 770.0
+offset_bottom = 509.0
 text = "CRAFT"
+flat = true
+
+[node name="FrostedPlanks" type="Sprite2D" parent="TabContainer/Tools/frosted/TextureRect/ButtonFROST"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("9_m8gf7")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/frosted/TextureRect/ButtonFROST"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/frosted/TextureRect/ButtonFROST/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/frosted/TextureRect/ButtonFROST"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#4" type="Button" parent="TabContainer/Tools/frosted/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2455,12 +2485,42 @@ offset_bottom = 59.0
 texture = ExtResource("46_qgk7u")
 
 [node name="ButtonFROST2" type="Button" parent="TabContainer/Tools/frosted/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -13.0
-offset_top = 41.0
-offset_right = 57.0
-offset_bottom = 72.0
+offset_left = 219.0
+offset_top = 343.0
+offset_right = 673.0
+offset_bottom = 507.0
 text = "CRAFT"
+flat = true
+
+[node name="FrostedPlanks" type="Sprite2D" parent="TabContainer/Tools/frosted/TextureRect2/ButtonFROST2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("9_m8gf7")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/frosted/TextureRect2/ButtonFROST2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/frosted/TextureRect2/ButtonFROST2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/frosted/TextureRect2/ButtonFROST2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#5" type="Button" parent="TabContainer/Tools/frosted/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2480,12 +2540,42 @@ offset_bottom = 58.0
 texture = ExtResource("47_k8y6v")
 
 [node name="ButtonFROST3" type="Button" parent="TabContainer/Tools/frosted/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -10.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 74.0
+offset_left = 125.0
+offset_top = 344.0
+offset_right = 579.0
+offset_bottom = 509.0
 text = "CRAFT"
+flat = true
+
+[node name="FrostedPlanks" type="Sprite2D" parent="TabContainer/Tools/frosted/TextureRect3/ButtonFROST3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("9_m8gf7")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/frosted/TextureRect3/ButtonFROST3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/frosted/TextureRect3/ButtonFROST3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/frosted/TextureRect3/ButtonFROST3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#6" type="Button" parent="TabContainer/Tools/frosted/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2510,12 +2600,42 @@ offset_bottom = 200.0
 texture = ExtResource("58_k722q")
 
 [node name="ButtonOAK" type="Button" parent="TabContainer/Tools/Oak/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 38.0
-offset_right = 61.0
-offset_bottom = 73.0
+offset_left = 607.0
+offset_top = 252.0
+offset_right = 1061.0
+offset_bottom = 416.0
 text = "CRAFT"
+flat = true
+
+[node name="OakPlanks" type="Sprite2D" parent="TabContainer/Tools/Oak/TextureRect/ButtonOAK"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("13_46jsm")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Oak/TextureRect/ButtonOAK"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Oak/TextureRect/ButtonOAK/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Oak/TextureRect/ButtonOAK"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#7" type="Button" parent="TabContainer/Tools/Oak/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2536,12 +2656,42 @@ offset_bottom = 200.0
 texture = ExtResource("59_0vh47")
 
 [node name="ButtonOAK2" type="Button" parent="TabContainer/Tools/Oak/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -8.0
-offset_top = 35.0
-offset_right = 62.0
-offset_bottom = 70.0
+offset_left = 511.0
+offset_top = 251.0
+offset_right = 966.0
+offset_bottom = 416.0
 text = "CRAFT"
+flat = true
+
+[node name="OakPlanks" type="Sprite2D" parent="TabContainer/Tools/Oak/TextureRect2/ButtonOAK2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("13_46jsm")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Oak/TextureRect2/ButtonOAK2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Oak/TextureRect2/ButtonOAK2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Oak/TextureRect2/ButtonOAK2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#8" type="Button" parent="TabContainer/Tools/Oak/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2562,12 +2712,42 @@ offset_bottom = 200.0
 texture = ExtResource("60_cdl3k")
 
 [node name="ButtonOAK3" type="Button" parent="TabContainer/Tools/Oak/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -10.0
-offset_top = 36.0
-offset_right = 60.0
-offset_bottom = 71.0
+offset_left = 414.0
+offset_top = 252.0
+offset_right = 870.0
+offset_bottom = 416.0
 text = "CRAFT"
+flat = true
+
+[node name="OakPlanks" type="Sprite2D" parent="TabContainer/Tools/Oak/TextureRect3/ButtonOAK3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("13_46jsm")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Oak/TextureRect3/ButtonOAK3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Oak/TextureRect3/ButtonOAK3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Oak/TextureRect3/ButtonOAK3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#9" type="Button" parent="TabContainer/Tools/Oak/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2591,12 +2771,42 @@ offset_bottom = 199.0
 texture = ExtResource("61_lnjnr")
 
 [node name="ButtonJUNGLE" type="Button" parent="TabContainer/Tools/Jungle/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 43.0
-offset_right = 61.0
-offset_bottom = 74.0
+offset_left = 319.0
+offset_top = 252.0
+offset_right = 773.0
+offset_bottom = 418.0
 text = "CRAFT"
+flat = true
+
+[node name="JunglePlanks" type="Sprite2D" parent="TabContainer/Tools/Jungle/TextureRect/ButtonJUNGLE"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("17_re7nu")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Jungle/TextureRect/ButtonJUNGLE"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Jungle/TextureRect/ButtonJUNGLE/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Jungle/TextureRect/ButtonJUNGLE"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#10" type="Button" parent="TabContainer/Tools/Jungle/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2616,12 +2826,42 @@ offset_bottom = 200.0
 texture = ExtResource("62_d6tdf")
 
 [node name="ButtonJUNGLE2" type="Button" parent="TabContainer/Tools/Jungle/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -8.0
-offset_top = 40.0
-offset_right = 62.0
-offset_bottom = 71.0
+offset_left = 224.0
+offset_top = 252.0
+offset_right = 678.0
+offset_bottom = 416.0
 text = "CRAFT"
+flat = true
+
+[node name="JunglePlanks" type="Sprite2D" parent="TabContainer/Tools/Jungle/TextureRect2/ButtonJUNGLE2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("17_re7nu")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Jungle/TextureRect2/ButtonJUNGLE2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Jungle/TextureRect2/ButtonJUNGLE2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5	"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Jungle/TextureRect2/ButtonJUNGLE2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#11" type="Button" parent="TabContainer/Tools/Jungle/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2641,12 +2881,42 @@ offset_bottom = 199.0
 texture = ExtResource("63_vrqut")
 
 [node name="ButtonJUNGLE3" type="Button" parent="TabContainer/Tools/Jungle/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 43.0
-offset_right = 61.0
-offset_bottom = 74.0
+offset_left = 128.0
+offset_top = 253.0
+offset_right = 582.0
+offset_bottom = 417.0
 text = "CRAFT"
+flat = true
+
+[node name="JunglePlanks" type="Sprite2D" parent="TabContainer/Tools/Jungle/TextureRect3/ButtonJUNGLE3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("17_re7nu")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Jungle/TextureRect3/ButtonJUNGLE3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Jungle/TextureRect3/ButtonJUNGLE3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Jungle/TextureRect3/ButtonJUNGLE3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#12" type="Button" parent="TabContainer/Tools/Jungle/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2670,12 +2940,42 @@ offset_bottom = 285.0
 texture = ExtResource("64_6jeu5")
 
 [node name="ButtonSTONE" type="Button" parent="TabContainer/Tools/Stone/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -14.0
-offset_top = 44.0
-offset_right = 53.0
-offset_bottom = 75.0
+offset_left = 602.0
+offset_top = 167.0
+offset_right = 1055.0
+offset_bottom = 331.0
 text = "CRAFT"
+flat = true
+
+[node name="Stone" type="Sprite2D" parent="TabContainer/Tools/Stone/TextureRect/ButtonSTONE"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("21_26k7g")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Stone/TextureRect/ButtonSTONE"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Stone/TextureRect/ButtonSTONE/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Stone/TextureRect/ButtonSTONE"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#13" type="Button" parent="TabContainer/Tools/Stone/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2695,12 +2995,42 @@ offset_bottom = 286.0
 texture = ExtResource("65_p4occ")
 
 [node name="ButtonSTONE2" type="Button" parent="TabContainer/Tools/Stone/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -10.0
-offset_top = 43.0
-offset_right = 62.0
-offset_bottom = 74.0
+offset_left = 511.0
+offset_top = 166.0
+offset_right = 965.0
+offset_bottom = 330.0
 text = "CRAFT"
+flat = true
+
+[node name="Stone" type="Sprite2D" parent="TabContainer/Tools/Stone/TextureRect2/ButtonSTONE2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("21_26k7g")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Stone/TextureRect2/ButtonSTONE2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Stone/TextureRect2/ButtonSTONE2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Stone/TextureRect2/ButtonSTONE2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#14" type="Button" parent="TabContainer/Tools/Stone/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2720,12 +3050,42 @@ offset_bottom = 286.0
 texture = ExtResource("66_hah5x")
 
 [node name="ButtonSTONE3" type="Button" parent="TabContainer/Tools/Stone/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 45.0
-offset_right = 63.0
-offset_bottom = 76.0
+offset_left = 413.0
+offset_top = 166.0
+offset_right = 867.0
+offset_bottom = 330.0
 text = "CRAFT"
+flat = true
+
+[node name="Stone" type="Sprite2D" parent="TabContainer/Tools/Stone/TextureRect3/ButtonSTONE3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("21_26k7g")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/Stone/TextureRect3/ButtonSTONE3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/Stone/TextureRect3/ButtonSTONE3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/Stone/TextureRect3/ButtonSTONE3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#15" type="Button" parent="TabContainer/Tools/Stone/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2749,12 +3109,42 @@ offset_bottom = 285.0
 texture = ExtResource("67_6pob7")
 
 [node name="ButtonIRON" type="Button" parent="TabContainer/Tools/iron/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -14.0
-offset_top = 46.0
-offset_right = 56.0
-offset_bottom = 77.0
+offset_left = 313.0
+offset_top = 167.0
+offset_right = 767.0
+offset_bottom = 331.0
 text = "CRAFT"
+flat = true
+
+[node name="Iron" type="Sprite2D" parent="TabContainer/Tools/iron/TextureRect/ButtonIRON"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("25_sn3od")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/iron/TextureRect/ButtonIRON"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/iron/TextureRect/ButtonIRON/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/iron/TextureRect/ButtonIRON"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#16" type="Button" parent="TabContainer/Tools/iron/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2774,12 +3164,42 @@ offset_bottom = 287.0
 texture = ExtResource("68_kwhpe")
 
 [node name="ButtonIRON2" type="Button" parent="TabContainer/Tools/iron/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -8.0
-offset_top = 43.0
-offset_right = 62.0
-offset_bottom = 74.0
+offset_left = 222.0
+offset_top = 165.0
+offset_right = 676.0
+offset_bottom = 329.0
 text = "CRAFT"
+flat = true
+
+[node name="Iron" type="Sprite2D" parent="TabContainer/Tools/iron/TextureRect2/ButtonIRON2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("25_sn3od")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/iron/TextureRect2/ButtonIRON2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/iron/TextureRect2/ButtonIRON2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/iron/TextureRect2/ButtonIRON2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#17" type="Button" parent="TabContainer/Tools/iron/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2798,12 +3218,42 @@ offset_bottom = 285.0
 texture = ExtResource("69_v68he")
 
 [node name="ButtonIRON3" type="Button" parent="TabContainer/Tools/iron/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 46.0
-offset_right = 61.0
-offset_bottom = 77.0
+offset_left = 127.0
+offset_top = 167.0
+offset_right = 581.0
+offset_bottom = 332.0
 text = "CRAFT"
+flat = true
+
+[node name="Iron" type="Sprite2D" parent="TabContainer/Tools/iron/TextureRect3/ButtonIRON3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("25_sn3od")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/iron/TextureRect3/ButtonIRON3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/iron/TextureRect3/ButtonIRON3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/iron/TextureRect3/ButtonIRON3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#18" type="Button" parent="TabContainer/Tools/iron/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2827,12 +3277,42 @@ offset_bottom = 376.0
 texture = ExtResource("70_ffbe4")
 
 [node name="ButtonGOLD" type="Button" parent="TabContainer/Tools/gold/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -13.0
-offset_top = 42.0
-offset_right = 57.0
-offset_bottom = 73.0
+offset_left = 602.0
+offset_top = 76.0
+offset_right = 1057.0
+offset_bottom = 239.0
 text = "CRAFT"
+flat = true
+
+[node name="Gold" type="Sprite2D" parent="TabContainer/Tools/gold/TextureRect/ButtonGOLD"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("29_rgk8l")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/gold/TextureRect/ButtonGOLD"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/gold/TextureRect/ButtonGOLD/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/gold/TextureRect/ButtonGOLD"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#19" type="Button" parent="TabContainer/Tools/gold/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2852,12 +3332,42 @@ offset_bottom = 375.0
 texture = ExtResource("71_4k54i")
 
 [node name="ButtonGOLD2" type="Button" parent="TabContainer/Tools/gold/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -8.0
-offset_top = 43.0
-offset_right = 62.0
-offset_bottom = 74.0
+offset_left = 512.0
+offset_top = 77.0
+offset_right = 966.0
+offset_bottom = 241.0
 text = "CRAFT"
+flat = true
+
+[node name="Gold" type="Sprite2D" parent="TabContainer/Tools/gold/TextureRect2/ButtonGOLD2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("29_rgk8l")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/gold/TextureRect2/ButtonGOLD2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/gold/TextureRect2/ButtonGOLD2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/gold/TextureRect2/ButtonGOLD2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#20" type="Button" parent="TabContainer/Tools/gold/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2876,12 +3386,42 @@ offset_bottom = 375.0
 texture = ExtResource("72_ewstr")
 
 [node name="ButtonGOLD3" type="Button" parent="TabContainer/Tools/gold/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 46.0
-offset_right = 61.0
-offset_bottom = 77.0
+offset_left = 414.0
+offset_top = 77.0
+offset_right = 869.0
+offset_bottom = 241.0
 text = "CRAFT"
+flat = true
+
+[node name="Gold" type="Sprite2D" parent="TabContainer/Tools/gold/TextureRect3/ButtonGOLD3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("29_rgk8l")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/gold/TextureRect3/ButtonGOLD3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/gold/TextureRect3/ButtonGOLD3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/gold/TextureRect3/ButtonGOLD3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#21" type="Button" parent="TabContainer/Tools/gold/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2905,12 +3445,42 @@ offset_bottom = 374.0
 texture = ExtResource("73_b5d4i")
 
 [node name="ButtonDIAMOND" type="Button" parent="TabContainer/Tools/diamond/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -14.0
-offset_top = 45.0
-offset_right = 54.0
-offset_bottom = 76.0
+offset_left = 312.0
+offset_top = 78.0
+offset_right = 765.0
+offset_bottom = 242.0
 text = "CRAFT"
+flat = true
+
+[node name="Diamond" type="Sprite2D" parent="TabContainer/Tools/diamond/TextureRect/ButtonDIAMOND"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("33_omfw3")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/diamond/TextureRect/ButtonDIAMOND"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/diamond/TextureRect/ButtonDIAMOND/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/diamond/TextureRect/ButtonDIAMOND"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#22" type="Button" parent="TabContainer/Tools/diamond/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2930,12 +3500,42 @@ offset_bottom = 375.0
 texture = ExtResource("74_6ugw0")
 
 [node name="ButtonDIAMOND2" type="Button" parent="TabContainer/Tools/diamond/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 43.0
-offset_right = 59.0
-offset_bottom = 74.0
+offset_left = 222.0
+offset_top = 77.0
+offset_right = 676.0
+offset_bottom = 240.0
 text = "CRAFT"
+flat = true
+
+[node name="Diamond" type="Sprite2D" parent="TabContainer/Tools/diamond/TextureRect2/ButtonDIAMOND2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("33_omfw3")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/diamond/TextureRect2/ButtonDIAMOND2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/diamond/TextureRect2/ButtonDIAMOND2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/diamond/TextureRect2/ButtonDIAMOND2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#23" type="Button" parent="TabContainer/Tools/diamond/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2955,12 +3555,42 @@ offset_bottom = 375.0
 texture = ExtResource("75_nhuvd")
 
 [node name="ButtonDIAMOND3" type="Button" parent="TabContainer/Tools/diamond/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -6.0
-offset_top = 42.0
-offset_right = 62.0
-offset_bottom = 73.0
+offset_left = 129.0
+offset_top = 77.0
+offset_right = 583.0
+offset_bottom = 240.0
 text = "CRAFT"
+flat = true
+
+[node name="Diamond" type="Sprite2D" parent="TabContainer/Tools/diamond/TextureRect3/ButtonDIAMOND3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("33_omfw3")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/diamond/TextureRect3/ButtonDIAMOND3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/diamond/TextureRect3/ButtonDIAMOND3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/diamond/TextureRect3/ButtonDIAMOND3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#24" type="Button" parent="TabContainer/Tools/diamond/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -2984,12 +3614,42 @@ offset_bottom = 463.0
 texture = ExtResource("76_5k3ha")
 
 [node name="ButtonEMERALD" type="Button" parent="TabContainer/Tools/emerald/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -14.0
-offset_top = 46.0
-offset_right = 56.0
-offset_bottom = 77.0
+offset_left = 600.0
+offset_top = -11.0
+offset_right = 1054.0
+offset_bottom = 153.0
 text = "CRAFT"
+flat = true
+
+[node name="Emerald" type="Sprite2D" parent="TabContainer/Tools/emerald/TextureRect/ButtonEMERALD"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("37_perwf")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/emerald/TextureRect/ButtonEMERALD"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/emerald/TextureRect/ButtonEMERALD/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/emerald/TextureRect/ButtonEMERALD"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#25" type="Button" parent="TabContainer/Tools/emerald/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3008,12 +3668,42 @@ offset_bottom = 464.0
 texture = ExtResource("77_pygtf")
 
 [node name="ButtonEMERALD2" type="Button" parent="TabContainer/Tools/emerald/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -8.0
-offset_top = 45.0
-offset_right = 62.0
-offset_bottom = 76.0
+offset_left = 513.0
+offset_top = -12.0
+offset_right = 965.0
+offset_bottom = 151.0
 text = "CRAFT"
+flat = true
+
+[node name="Emerald" type="Sprite2D" parent="TabContainer/Tools/emerald/TextureRect2/ButtonEMERALD2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("37_perwf")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/emerald/TextureRect2/ButtonEMERALD2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/emerald/TextureRect2/ButtonEMERALD2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/emerald/TextureRect2/ButtonEMERALD2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#26" type="Button" parent="TabContainer/Tools/emerald/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3032,12 +3722,42 @@ offset_bottom = 465.0
 texture = ExtResource("78_ylyf7")
 
 [node name="ButtonEMERALD3" type="Button" parent="TabContainer/Tools/emerald/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 45.0
-offset_right = 61.0
-offset_bottom = 76.0
+offset_left = 415.0
+offset_top = -14.0
+offset_right = 869.0
+offset_bottom = 152.0
 text = "CRAFT"
+flat = true
+
+[node name="Emerald" type="Sprite2D" parent="TabContainer/Tools/emerald/TextureRect3/ButtonEMERALD3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("37_perwf")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/emerald/TextureRect3/ButtonEMERALD3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/emerald/TextureRect3/ButtonEMERALD3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/emerald/TextureRect3/ButtonEMERALD3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#27" type="Button" parent="TabContainer/Tools/emerald/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3061,12 +3781,42 @@ offset_bottom = 465.0
 texture = ExtResource("79_u8g4e")
 
 [node name="ButtonRUBY" type="Button" parent="TabContainer/Tools/ruby/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -14.0
-offset_top = 47.0
-offset_right = 57.0
-offset_bottom = 78.0
+offset_left = 314.0
+offset_top = -14.0
+offset_right = 768.0
+offset_bottom = 150.0
 text = "CRAFT"
+flat = true
+
+[node name="Ruby" type="Sprite2D" parent="TabContainer/Tools/ruby/TextureRect/ButtonRUBY"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("41_1os4h")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/ruby/TextureRect/ButtonRUBY"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/ruby/TextureRect/ButtonRUBY/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/ruby/TextureRect/ButtonRUBY"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#28" type="Button" parent="TabContainer/Tools/ruby/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3086,12 +3836,42 @@ offset_bottom = 463.0
 texture = ExtResource("80_07p3d")
 
 [node name="ButtonRUBY2" type="Button" parent="TabContainer/Tools/ruby/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -10.0
-offset_top = 45.0
-offset_right = 61.0
-offset_bottom = 76.0
+offset_left = 222.0
+offset_top = -11.0
+offset_right = 675.0
+offset_bottom = 153.0
 text = "CRAFT"
+flat = true
+
+[node name="Ruby" type="Sprite2D" parent="TabContainer/Tools/ruby/TextureRect2/ButtonRUBY2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("41_1os4h")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/ruby/TextureRect2/ButtonRUBY2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/ruby/TextureRect2/ButtonRUBY2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/ruby/TextureRect2/ButtonRUBY2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#29" type="Button" parent="TabContainer/Tools/ruby/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3111,12 +3891,42 @@ offset_bottom = 464.0
 texture = ExtResource("81_dg1po")
 
 [node name="ButtonRUBY3" type="Button" parent="TabContainer/Tools/ruby/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 45.0
-offset_right = 62.0
-offset_bottom = 76.0
+offset_left = 128.0
+offset_top = -12.0
+offset_right = 582.0
+offset_bottom = 152.0
 text = "CRAFT"
+flat = true
+
+[node name="Ruby" type="Sprite2D" parent="TabContainer/Tools/ruby/TextureRect3/ButtonRUBY3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("41_1os4h")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/ruby/TextureRect3/ButtonRUBY3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/ruby/TextureRect3/ButtonRUBY3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/ruby/TextureRect3/ButtonRUBY3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#30" type="Button" parent="TabContainer/Tools/ruby/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3139,12 +3949,42 @@ offset_bottom = 553.0
 texture = ExtResource("82_t734r")
 
 [node name="ButtonTOPAZ" type="Button" parent="TabContainer/Tools/topaz/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -15.0
-offset_top = 43.0
-offset_right = 55.0
-offset_bottom = 74.0
+offset_left = 601.0
+offset_top = -102.0
+offset_right = 1056.0
+offset_bottom = 63.0
 text = "CRAFT"
+flat = true
+
+[node name="Topaz" type="Sprite2D" parent="TabContainer/Tools/topaz/TextureRect/ButtonTOPAZ"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("45_p70xm")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/topaz/TextureRect/ButtonTOPAZ"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/topaz/TextureRect/ButtonTOPAZ/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/topaz/TextureRect/ButtonTOPAZ"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#31" type="Button" parent="TabContainer/Tools/topaz/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3163,12 +4003,42 @@ offset_bottom = 554.0
 texture = ExtResource("83_imvod")
 
 [node name="ButtonTOPAZ2" type="Button" parent="TabContainer/Tools/topaz/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 43.0
-offset_right = 61.0
-offset_bottom = 74.0
+offset_left = 510.0
+offset_top = -102.0
+offset_right = 964.0
+offset_bottom = 62.0
 text = "CRAFT"
+flat = true
+
+[node name="Topaz" type="Sprite2D" parent="TabContainer/Tools/topaz/TextureRect2/ButtonTOPAZ2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("45_p70xm")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/topaz/TextureRect2/ButtonTOPAZ2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/topaz/TextureRect2/ButtonTOPAZ2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5	"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/topaz/TextureRect2/ButtonTOPAZ2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#32" type="Button" parent="TabContainer/Tools/topaz/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3187,12 +4057,42 @@ offset_bottom = 554.0
 texture = ExtResource("84_uudms")
 
 [node name="ButtonTOPAZ3" type="Button" parent="TabContainer/Tools/topaz/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -8.0
-offset_top = 45.0
-offset_right = 62.0
-offset_bottom = 76.0
+offset_left = 415.0
+offset_top = -102.0
+offset_right = 870.0
+offset_bottom = 61.0
 text = "CRAFT"
+flat = true
+
+[node name="Topaz" type="Sprite2D" parent="TabContainer/Tools/topaz/TextureRect3/ButtonTOPAZ3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("45_p70xm")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/topaz/TextureRect3/ButtonTOPAZ3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/topaz/TextureRect3/ButtonTOPAZ3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/topaz/TextureRect3/ButtonTOPAZ3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#33" type="Button" parent="TabContainer/Tools/topaz/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3215,12 +4115,42 @@ offset_bottom = 553.0
 texture = ExtResource("85_o41lh")
 
 [node name="ButtonMAGMA" type="Button" parent="TabContainer/Tools/magma/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = -14.0
-offset_top = 45.0
-offset_right = 54.0
-offset_bottom = 76.0
+offset_left = 314.0
+offset_top = -101.0
+offset_right = 767.0
+offset_bottom = 62.0
 text = "CRAFT"
+flat = true
+
+[node name="Magma" type="Sprite2D" parent="TabContainer/Tools/magma/TextureRect/ButtonMAGMA"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("49_hdjm7")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/magma/TextureRect/ButtonMAGMA"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/magma/TextureRect/ButtonMAGMA/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 3		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/magma/TextureRect/ButtonMAGMA"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#34" type="Button" parent="TabContainer/Tools/magma/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3239,12 +4169,42 @@ offset_bottom = 553.0
 texture = ExtResource("86_j6bhj")
 
 [node name="ButtonMAGMA2" type="Button" parent="TabContainer/Tools/magma/TextureRect2"]
+visible = false
 layout_mode = 0
-offset_left = -9.0
-offset_top = 47.0
-offset_right = 62.0
-offset_bottom = 78.0
+offset_left = 223.0
+offset_top = -102.0
+offset_right = 677.0
+offset_bottom = 63.0
 text = "CRAFT"
+flat = true
+
+[node name="Magma" type="Sprite2D" parent="TabContainer/Tools/magma/TextureRect2/ButtonMAGMA2"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("49_hdjm7")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/magma/TextureRect2/ButtonMAGMA2"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/magma/TextureRect2/ButtonMAGMA2/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 5		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/magma/TextureRect2/ButtonMAGMA2"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#35" type="Button" parent="TabContainer/Tools/magma/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3264,12 +4224,42 @@ offset_bottom = 554.0
 texture = ExtResource("87_38ulb")
 
 [node name="ButtonMAGMA3" type="Button" parent="TabContainer/Tools/magma/TextureRect3"]
+visible = false
 layout_mode = 0
-offset_left = -7.0
-offset_top = 44.0
-offset_right = 64.0
-offset_bottom = 75.0
+offset_left = 128.0
+offset_top = -102.0
+offset_right = 582.0
+offset_bottom = 61.0
 text = "CRAFT"
+flat = true
+
+[node name="Magma" type="Sprite2D" parent="TabContainer/Tools/magma/TextureRect3/ButtonMAGMA3"]
+position = Vector2(326, -184)
+scale = Vector2(8.125, 7.875)
+texture = ExtResource("49_hdjm7")
+
+[node name="plus" type="Label" parent="TabContainer/Tools/magma/TextureRect3/ButtonMAGMA3"]
+offset_left = 167.0
+offset_top = -241.0
+offset_right = 280.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 80
+text = "+"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="TabContainer/Tools/magma/TextureRect3/ButtonMAGMA3/plus"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 91.0
+offset_right = 221.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 30
+text = "     2                         			 1		"
+
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Tools/magma/TextureRect3/ButtonMAGMA3"]
+position = Vector2(126, -184)
+scale = Vector2(8, 7.775)
+texture = ExtResource("5_m42cx")
 
 [node name="Button#36" type="Button" parent="TabContainer/Tools/magma/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
@@ -3385,8 +4375,41 @@ metadata/_tab_index = 3
 [connection signal="pressed" from="TabContainer/Tools/acacia/TextureRect3/ButtonACACIA3" to="." method="_on_button_acacia_3_pressed"]
 [connection signal="pressed" from="TabContainer/Tools/acacia/TextureRect3/Button#3" to="." method="_on_button_3_SHOW"]
 [connection signal="pressed" from="TabContainer/Tools/frosted/TextureRect/ButtonFROST" to="." method="_on_button_frost_pressed"]
+[connection signal="pressed" from="TabContainer/Tools/frosted/TextureRect/Button#4" to="." method="_on_button_4_SHOW"]
 [connection signal="pressed" from="TabContainer/Tools/frosted/TextureRect2/ButtonFROST2" to="." method="_on_button_frost_2_pressed"]
+[connection signal="pressed" from="TabContainer/Tools/frosted/TextureRect2/Button#5" to="." method="_on_button_5_SHOW"]
 [connection signal="pressed" from="TabContainer/Tools/frosted/TextureRect3/ButtonFROST3" to="." method="_on_button_frost_3_pressed"]
+[connection signal="pressed" from="TabContainer/Tools/frosted/TextureRect3/Button#6" to="." method="_on_button_6_SHOW"]
 [connection signal="pressed" from="TabContainer/Tools/Oak/TextureRect/ButtonOAK" to="." method="_on_button_oak_pressed"]
+[connection signal="pressed" from="TabContainer/Tools/Oak/TextureRect/Button#7" to="." method="_on_button_7_SHOW"]
 [connection signal="pressed" from="TabContainer/Tools/Oak/TextureRect2/ButtonOAK2" to="." method="_on_button_oak_2_pressed"]
+[connection signal="pressed" from="TabContainer/Tools/Oak/TextureRect2/Button#8" to="." method="_on_button_8_SHOW"]
 [connection signal="pressed" from="TabContainer/Tools/Oak/TextureRect3/ButtonOAK3" to="." method="_on_button_oak_3_pressed"]
+[connection signal="pressed" from="TabContainer/Tools/Oak/TextureRect3/Button#9" to="." method="_on_button_9_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/Jungle/TextureRect/Button#10" to="." method="_on_button_10_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/Jungle/TextureRect2/Button#11" to="." method="_on_button_11_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/Jungle/TextureRect3/Button#12" to="." method="_on_button_12_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/Stone/TextureRect/Button#13" to="." method="_on_button_13_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/Stone/TextureRect2/Button#14" to="." method="_on_button_14_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/Stone/TextureRect3/Button#15" to="." method="_on_button_15_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/iron/TextureRect/Button#16" to="." method="_on_button_16_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/iron/TextureRect2/Button#17" to="." method="_on_button_17_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/iron/TextureRect3/Button#18" to="." method="_on_button_18_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/gold/TextureRect/Button#19" to="." method="_on_button_19_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/gold/TextureRect2/Button#20" to="." method="_on_button_20_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/gold/TextureRect3/Button#21" to="." method="_on_button_21_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/diamond/TextureRect/Button#22" to="." method="_on_button_22_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/diamond/TextureRect2/Button#23" to="." method="_on_button_23_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/diamond/TextureRect3/Button#24" to="." method="_on_button_24_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/emerald/TextureRect/Button#25" to="." method="_on_button_25_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/emerald/TextureRect2/Button#26" to="." method="_on_button_26_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/emerald/TextureRect3/Button#27" to="." method="_on_button_27_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/ruby/TextureRect/Button#28" to="." method="_on_button_28_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/ruby/TextureRect2/Button#29" to="." method="_on_button_29_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/ruby/TextureRect3/Button#30" to="." method="_on_button_30_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/topaz/TextureRect/Button#31" to="." method="_on_button_31_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/topaz/TextureRect2/Button#32" to="." method="_on_button_32_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/topaz/TextureRect3/Button#33" to="." method="_on_button_33_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/magma/TextureRect/Button#34" to="." method="_on_button_34_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/magma/TextureRect2/Button#35" to="." method="_on_button_35_SHOW"]
+[connection signal="pressed" from="TabContainer/Tools/magma/TextureRect3/Button#36" to="." method="_on_button_36_SHOW"]
