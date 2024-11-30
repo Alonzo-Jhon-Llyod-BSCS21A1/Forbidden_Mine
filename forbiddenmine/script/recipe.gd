@@ -35,7 +35,7 @@ extends CanvasLayer
 @onready var button32 = $TabContainer/Weapon/topaz/TextureRect2/Button32topaz
 @onready var button33 = $TabContainer/Weapon/topaz/TextureRect3/Button33topaz
 @onready var button34 = $TabContainer/Weapon/magma/TextureRect/Button34magma
-@onready var button35 = $TabContainer/Weapon/magma/TextureRect22/Button35magma
+@onready var button35 = $TabContainer/Weapon/magma/TextureRect2/Button35magma
 @onready var button36 = $TabContainer/Weapon/magma/TextureRect3/Button36magma
 
 

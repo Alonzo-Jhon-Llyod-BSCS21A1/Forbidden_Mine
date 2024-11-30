@@ -122,6 +122,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("4_xbcm5")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -131,6 +132,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -176,6 +178,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("4_xbcm5")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect2/Button2acacia"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -185,6 +188,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect2/Button2acacia/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -229,6 +233,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("4_xbcm5")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -238,6 +243,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/acaccia/TextureRect3/Button3acacia/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -252,6 +258,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button3" type="Button" parent="TabContainer/Weapon/acaccia/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -6.0
 offset_top = -8.0
 offset_right = 63.0
@@ -291,6 +298,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("9_m8gf7")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -300,6 +308,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect/Button4frosted/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -314,6 +323,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button4" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -16.0
 offset_top = -15.0
 offset_right = 53.0
@@ -343,6 +353,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("9_m8gf7")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect2/Button5frosted"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -352,6 +363,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect2/Button5frosted/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -366,6 +378,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button5" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -2.0
 offset_top = 5.0
 offset_right = 60.0
@@ -395,6 +408,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("9_m8gf7")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -404,6 +418,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/frosted oak/TextureRect3/Button6frosted/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -418,6 +433,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button6" type="Button" parent="TabContainer/Weapon/frosted oak/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -10.0
 offset_top = -7.0
 offset_right = 59.0
@@ -457,6 +473,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("13_46jsm")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/oak/TextureRect/Button7oak"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -466,6 +483,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/oak/TextureRect/Button7oak/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -480,6 +498,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button7" type="Button" parent="TabContainer/Weapon/oak/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -14.0
 offset_top = -13.0
 offset_right = 55.0
@@ -510,6 +529,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("13_46jsm")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/oak/TextureRect2/Button8oak"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -519,6 +539,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/oak/TextureRect2/Button8oak/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -533,6 +554,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button8" type="Button" parent="TabContainer/Weapon/oak/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -5.98978
 offset_top = 6.01019
 offset_right = 63.0102
@@ -562,6 +584,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("13_46jsm")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/oak/TextureRect3/Button9oak"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -571,6 +594,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/oak/TextureRect3/Button9oak/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -585,6 +609,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button9" type="Button" parent="TabContainer/Weapon/oak/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -5.0
 offset_top = -5.0
 offset_right = 64.0
@@ -624,6 +649,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("17_re7nu")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/jungle/TextureRect/Button10jungle"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -633,6 +659,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/jungle/TextureRect/Button10jungle/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -647,6 +674,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button10" type="Button" parent="TabContainer/Weapon/jungle/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -17.0
 offset_top = -15.0
 offset_right = 52.0
@@ -676,6 +704,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("17_re7nu")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/jungle/TextureRect2/Button11jungle"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -685,6 +714,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/jungle/TextureRect2/Button11jungle/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -699,6 +729,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button11" type="Button" parent="TabContainer/Weapon/jungle/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -5.0
 offset_top = 6.0
 offset_right = 64.0
@@ -728,6 +759,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("17_re7nu")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/jungle/TextureRect3/Button12jungle"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -737,6 +769,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/jungle/TextureRect3/Button12jungle/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -751,6 +784,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button12" type="Button" parent="TabContainer/Weapon/jungle/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -6.0
 offset_top = -6.0
 offset_right = 63.0
@@ -790,6 +824,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("21_26k7g")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/stone/TextureRect/Button13stone"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -799,6 +834,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/stone/TextureRect/Button13stone/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -813,6 +849,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button13" type="Button" parent="TabContainer/Weapon/stone/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -11.0
 offset_top = -11.0
 offset_right = 58.0
@@ -843,6 +880,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("21_26k7g")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/stone/TextureRect2/Button14stone"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -852,6 +890,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/stone/TextureRect2/Button14stone/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -866,6 +905,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button14" type="Button" parent="TabContainer/Weapon/stone/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -6.98465
 offset_top = 9.01189
 offset_right = 62.0154
@@ -874,9 +914,9 @@ offset_bottom = 73.0119
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/stone"]
 layout_mode = 0
 offset_left = -34.0
-offset_top = 61.0
+offset_top = 60.0
 offset_right = 20.0
-offset_bottom = 115.0
+offset_bottom = 114.0
 texture = ExtResource("16_sh3h2")
 
 [node name="Button15stone" type="Button" parent="TabContainer/Weapon/stone/TextureRect3"]
@@ -895,6 +935,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("21_26k7g")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/stone/TextureRect3/Button15stone"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -904,6 +945,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/stone/TextureRect3/Button15stone/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -918,6 +960,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button15" type="Button" parent="TabContainer/Weapon/stone/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -7.0
 offset_top = -5.0
 offset_right = 62.0
@@ -957,6 +1000,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("25_sn3od")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/iron/TextureRect/Button16iron"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -966,6 +1010,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/iron/TextureRect/Button16iron/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -980,6 +1025,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button16" type="Button" parent="TabContainer/Weapon/iron/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -18.0
 offset_top = -14.0
 offset_right = 51.0
@@ -1009,6 +1055,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("25_sn3od")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/iron/TextureRect2/Button17iron"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1018,6 +1065,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/iron/TextureRect2/Button17iron/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1032,6 +1080,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button17" type="Button" parent="TabContainer/Weapon/iron/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -8.0
 offset_top = 11.0
 offset_right = 61.0
@@ -1039,9 +1088,9 @@ offset_bottom = 75.0
 
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/iron"]
 layout_mode = 0
-offset_left = 251.0
+offset_left = 255.0
 offset_top = -72.0
-offset_right = 305.0
+offset_right = 309.0
 offset_bottom = -18.0
 texture = ExtResource("19_k2c64")
 
@@ -1061,6 +1110,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("25_sn3od")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/iron/TextureRect3/Button18iron"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1070,6 +1120,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/iron/TextureRect3/Button18iron/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1084,9 +1135,10 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button18" type="Button" parent="TabContainer/Weapon/iron/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
-offset_left = -3.0
+layout_mode = 0
+offset_left = -7.0
 offset_top = -4.0
-offset_right = 66.0
+offset_right = 63.0
 offset_bottom = 60.0
 
 [node name="gold" type="Label" parent="TabContainer/Weapon"]
@@ -1123,6 +1175,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("29_rgk8l")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/gold/TextureRect/Button19gold"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1132,6 +1185,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/gold/TextureRect/Button19gold/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1146,6 +1200,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button19" type="Button" parent="TabContainer/Weapon/gold/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -13.0
 offset_top = -11.0
 offset_right = 56.0
@@ -1176,6 +1231,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("29_rgk8l")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/gold/TextureRect2/Button20gold"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1185,6 +1241,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/gold/TextureRect2/Button20gold/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1199,6 +1256,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button20" type="Button" parent="TabContainer/Weapon/gold/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -6.98636
 offset_top = 8.01189
 offset_right = 62.0136
@@ -1207,9 +1265,9 @@ offset_bottom = 72.0119
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/gold"]
 layout_mode = 0
 offset_left = -32.0
-offset_top = -113.0
+offset_top = -117.0
 offset_right = 22.0
-offset_bottom = -59.0
+offset_bottom = -63.0
 texture = ExtResource("22_dy7cy")
 
 [node name="Button21gold" type="Button" parent="TabContainer/Weapon/gold/TextureRect3"]
@@ -1228,6 +1286,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("29_rgk8l")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/gold/TextureRect3/Button21gold"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1237,6 +1296,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/gold/TextureRect3/Button21gold/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1251,10 +1311,11 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button21" type="Button" parent="TabContainer/Weapon/gold/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
-offset_left = -6.0
-offset_top = -10.0
-offset_right = 63.0
-offset_bottom = 54.0
+layout_mode = 0
+offset_left = -8.0
+offset_top = -6.0
+offset_right = 62.0
+offset_bottom = 59.0
 
 [node name="diamond" type="Label" parent="TabContainer/Weapon"]
 layout_mode = 1
@@ -1290,6 +1351,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("33_omfw3")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/diamond/TextureRect/Button22diamond"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1299,6 +1361,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/diamond/TextureRect/Button22diamond/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1313,6 +1376,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button22" type="Button" parent="TabContainer/Weapon/diamond/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -15.0
 offset_top = -15.0
 offset_right = 54.0
@@ -1342,6 +1406,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("33_omfw3")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/diamond/TextureRect2/Button23diamond"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1351,6 +1416,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/diamond/TextureRect2/Button23diamond/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1365,6 +1431,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button23" type="Button" parent="TabContainer/Weapon/diamond/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -9.0
 offset_top = 8.0
 offset_right = 60.0
@@ -1372,10 +1439,10 @@ offset_bottom = 72.0
 
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/diamond"]
 layout_mode = 0
-offset_left = 250.0
-offset_top = -254.0
-offset_right = 304.0
-offset_bottom = -200.0
+offset_left = 255.0
+offset_top = -255.0
+offset_right = 309.0
+offset_bottom = -201.0
 texture = ExtResource("25_ytfij")
 
 [node name="Button24diamond" type="Button" parent="TabContainer/Weapon/diamond/TextureRect3"]
@@ -1394,6 +1461,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("33_omfw3")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/diamond/TextureRect3/Button24diamond"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1403,6 +1471,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/diamond/TextureRect3/Button24diamond/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1417,10 +1486,11 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button24" type="Button" parent="TabContainer/Weapon/diamond/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
-offset_left = -2.0
+layout_mode = 0
+offset_left = -8.0
 offset_top = -7.0
-offset_right = 67.0
-offset_bottom = 57.0
+offset_right = 63.0
+offset_bottom = 60.0
 
 [node name="emerald" type="Label" parent="TabContainer/Weapon"]
 layout_mode = 2
@@ -1455,6 +1525,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("37_perwf")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/emerald/TextureRect/Button25emerald"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1464,6 +1535,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/emerald/TextureRect/Button25emerald/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1478,6 +1550,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button25" type="Button" parent="TabContainer/Weapon/emerald/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -11.0
 offset_top = -10.0
 offset_right = 58.0
@@ -1508,6 +1581,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("37_perwf")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/emerald/TextureRect2/Button26emerald"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1517,6 +1591,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/emerald/TextureRect2/Button26emerald/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1531,6 +1606,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button26" type="Button" parent="TabContainer/Weapon/emerald/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -4.98978
 offset_top = 6.0085
 offset_right = 64.0102
@@ -1560,6 +1636,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("37_perwf")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/emerald/TextureRect3/Button27emerald"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1569,6 +1646,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/emerald/TextureRect3/Button27emerald/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1583,6 +1661,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button27" type="Button" parent="TabContainer/Weapon/emerald/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -6.0
 offset_top = -6.0
 offset_right = 63.0
@@ -1621,6 +1700,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("41_1os4h")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/ruby/TextureRect/Button28ruby"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1630,6 +1710,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/ruby/TextureRect/Button28ruby/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1644,8 +1725,9 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button28" type="Button" parent="TabContainer/Weapon/ruby/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -18.0
-offset_top = -10.0
+offset_top = -12.0
 offset_right = 51.0
 offset_bottom = 54.0
 
@@ -1673,6 +1755,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("41_1os4h")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/ruby/TextureRect2/Button29ruby"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1682,6 +1765,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/ruby/TextureRect2/Button29ruby/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1696,6 +1780,7 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button29" type="Button" parent="TabContainer/Weapon/ruby/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -7.0
 offset_top = 8.0
 offset_right = 62.0
@@ -1703,10 +1788,10 @@ offset_bottom = 72.0
 
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/ruby"]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 112.0
-offset_right = 79.0
-offset_bottom = 166.0
+offset_left = 28.0
+offset_top = 111.0
+offset_right = 82.0
+offset_bottom = 165.0
 texture = ExtResource("31_k5hgp")
 
 [node name="Button30ruby" type="Button" parent="TabContainer/Weapon/ruby/TextureRect3"]
@@ -1725,6 +1810,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("41_1os4h")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/ruby/TextureRect3/Button30ruby"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1734,6 +1820,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/ruby/TextureRect3/Button30ruby/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1748,9 +1835,10 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button30" type="Button" parent="TabContainer/Weapon/ruby/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
-offset_left = -4.0
+layout_mode = 0
+offset_left = -6.0
 offset_top = -7.0
-offset_right = 65.0
+offset_right = 64.0
 offset_bottom = 57.0
 
 [node name="topaz" type="Label" parent="TabContainer/Weapon"]
@@ -1786,6 +1874,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("45_p70xm")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/topaz/TextureRect/Button31topaz"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1795,6 +1884,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/topaz/TextureRect/Button31topaz/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1809,17 +1899,18 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button31" type="Button" parent="TabContainer/Weapon/topaz/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -15.0
-offset_top = -8.0
+offset_top = -11.0
 offset_right = 54.0
 offset_bottom = 56.0
 
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/topaz"]
 layout_mode = 0
-offset_left = -354.0
-offset_top = 46.0
-offset_right = -289.0
-offset_bottom = 111.0
+offset_left = -355.0
+offset_top = 50.0
+offset_right = -290.0
+offset_bottom = 115.0
 rotation = 0.0016998
 texture = ExtResource("33_kdlot")
 
@@ -1839,6 +1930,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("45_p70xm")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/topaz/TextureRect2/Button32topaz"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1848,6 +1940,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/topaz/TextureRect2/Button32topaz/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1862,17 +1955,18 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button32" type="Button" parent="TabContainer/Weapon/topaz/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
-offset_left = -6.98126
-offset_top = 11.0119
-offset_right = 62.0187
-offset_bottom = 75.0119
+layout_mode = 0
+offset_left = -7.0
+offset_top = 7.0
+offset_right = 62.0
+offset_bottom = 70.0
 
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/topaz"]
 layout_mode = 0
-offset_left = -258.0
-offset_top = 64.0
-offset_right = -204.0
-offset_bottom = 118.0
+offset_left = -257.0
+offset_top = 63.0
+offset_right = -203.0
+offset_bottom = 117.0
 texture = ExtResource("34_lttjx")
 
 [node name="Button33topaz" type="Button" parent="TabContainer/Weapon/topaz/TextureRect3"]
@@ -1891,6 +1985,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("45_p70xm")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/topaz/TextureRect3/Button33topaz"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1900,6 +1995,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/topaz/TextureRect3/Button33topaz/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1914,10 +2010,11 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button33" type="Button" parent="TabContainer/Weapon/topaz/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
-offset_left = -8.0
-offset_top = -9.0
+layout_mode = 0
+offset_left = -9.0
+offset_top = -6.0
 offset_right = 61.0
-offset_bottom = 55.0
+offset_bottom = 56.0
 
 [node name="magma" type="Label" parent="TabContainer/Weapon"]
 layout_mode = 2
@@ -1952,6 +2049,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("49_hdjm7")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/magma/TextureRect/Button34magma"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -1961,6 +2059,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/magma/TextureRect/Button34magma/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -1975,12 +2074,13 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button34" type="Button" parent="TabContainer/Weapon/magma/TextureRect"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -17.0
 offset_top = -11.0
 offset_right = 52.0
 offset_bottom = 53.0
 
-[node name="TextureRect22" type="TextureRect" parent="TabContainer/Weapon/magma"]
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Weapon/magma"]
 layout_mode = 0
 offset_left = -61.0
 offset_top = -87.0
@@ -1988,7 +2088,7 @@ offset_right = 4.0
 offset_bottom = -23.0
 texture = ExtResource("36_50l3u")
 
-[node name="Button35magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect22"]
+[node name="Button35magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect2"]
 visible = false
 layout_mode = 0
 offset_left = 223.0
@@ -1998,12 +2098,13 @@ offset_bottom = 75.0
 text = "CRAFT"
 flat = true
 
-[node name="magmazore" type="Sprite2D" parent="TabContainer/Weapon/magma/TextureRect22/Button35magma"]
+[node name="magmazore" type="Sprite2D" parent="TabContainer/Weapon/magma/TextureRect2/Button35magma"]
 position = Vector2(326, -184)
 scale = Vector2(8.125, 7.875)
 texture = ExtResource("49_hdjm7")
 
-[node name="plus" type="Label" parent="TabContainer/Weapon/magma/TextureRect22/Button35magma"]
+[node name="plus" type="Label" parent="TabContainer/Weapon/magma/TextureRect2/Button35magma"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -2012,7 +2113,8 @@ theme_override_font_sizes/font_size = 80
 text = "+"
 horizontal_alignment = 1
 
-[node name="count" type="Label" parent="TabContainer/Weapon/magma/TextureRect22/Button35magma/plus"]
+[node name="count" type="Label" parent="TabContainer/Weapon/magma/TextureRect2/Button35magma/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -2020,13 +2122,14 @@ offset_bottom = 133.0
 theme_override_font_sizes/font_size = 30
 text = "     1                         			2		"
 
-[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/magma/TextureRect22/Button35magma"]
+[node name="StickBase" type="Sprite2D" parent="TabContainer/Weapon/magma/TextureRect2/Button35magma"]
 position = Vector2(126, -184)
 scale = Vector2(8, 7.775)
 texture = ExtResource("5_m42cx")
 
-[node name="Button35" type="Button" parent="TabContainer/Weapon/magma/TextureRect22"]
+[node name="Button35" type="Button" parent="TabContainer/Weapon/magma/TextureRect2"]
 self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
 offset_left = -11.0
 offset_top = 6.0
 offset_right = 58.0
@@ -2034,10 +2137,10 @@ offset_bottom = 70.0
 
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Weapon/magma"]
 layout_mode = 0
-offset_left = 28.0
-offset_top = -75.0
-offset_right = 82.0
-offset_bottom = -21.0
+offset_left = 30.0
+offset_top = -76.0
+offset_right = 84.0
+offset_bottom = -22.0
 texture = ExtResource("37_h4fkg")
 
 [node name="Button36magma" type="Button" parent="TabContainer/Weapon/magma/TextureRect3"]
@@ -2056,6 +2159,7 @@ scale = Vector2(8.125, 7.875)
 texture = ExtResource("49_hdjm7")
 
 [node name="plus" type="Label" parent="TabContainer/Weapon/magma/TextureRect3/Button36magma"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = -241.0
 offset_right = 280.0
@@ -2065,6 +2169,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="count" type="Label" parent="TabContainer/Weapon/magma/TextureRect3/Button36magma/plus"]
+layout_mode = 0
 offset_left = -103.0
 offset_top = 91.0
 offset_right = 221.0
@@ -2079,9 +2184,10 @@ texture = ExtResource("5_m42cx")
 
 [node name="Button36" type="Button" parent="TabContainer/Weapon/magma/TextureRect3"]
 self_modulate = Color(1, 1, 1, 0.156863)
-offset_left = -3.0
+layout_mode = 0
+offset_left = -6.0
 offset_top = -5.0
-offset_right = 66.0
+offset_right = 65.0
 offset_bottom = 59.0
 
 [node name="Tools" type="TabBar" parent="TabContainer"]
@@ -2222,7 +2328,7 @@ metadata/_tab_index = 3
 [connection signal="pressed" from="TabContainer/Weapon/topaz/TextureRect3/Button33" to="." method="_on_button_pressedSHOW33"]
 [connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect/Button34magma" to="." method="_on_button_34_pressed"]
 [connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect/Button34" to="." method="_on_button_pressedSHOW34"]
-[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect22/Button35magma" to="." method="_on_button_35_pressed"]
-[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect22/Button35" to="." method="_on_button_pressedSHOW35"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect2/Button35magma" to="." method="_on_button_35_pressed"]
+[connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect2/Button35" to="." method="_on_button_pressedSHOW35"]
 [connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect3/Button36magma" to="." method="_on_button_36_pressed"]
 [connection signal="pressed" from="TabContainer/Weapon/magma/TextureRect3/Button36" to="." method="_on_button_pressedSHOW36"]
