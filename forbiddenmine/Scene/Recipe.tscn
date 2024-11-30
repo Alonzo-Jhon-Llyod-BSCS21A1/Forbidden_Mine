@@ -1,6 +1,7 @@
 [gd_scene load_steps=88 format=3 uid="uid://dn5s8bstqe12"]
 
 [ext_resource type="Script" path="res://script/recipe.gd" id="1_f1rv3"]
+[ext_resource type="Texture2D" uid="uid://btv7vj4o0o36x" path="res://Media/inventory_noSquare.png" id="2_3hlfb"]
 [ext_resource type="Texture2D" uid="uid://deiqk8hbsxdbd" path="res://Item assets/weapon/acacia_dagger.png" id="2_qybxj"]
 [ext_resource type="Texture2D" uid="uid://gtm2tid1lna2" path="res://Item assets/weapon/accacia_sword.png" id="3_yhyl4"]
 [ext_resource type="Texture2D" uid="uid://vl3wf3pqhefj" path="res://Item assets/weapon/accacia_broadsword.png" id="4_j7e64"]
@@ -48,7 +49,6 @@
 [ext_resource type="Texture2D" uid="uid://dstxraf6xcvy1" path="res://Item assets/weapon/magma_broadsword.png" id="37_h4fkg"]
 [ext_resource type="Texture2D" uid="uid://cyd8dm1cnchrc" path="res://Item assets/stone-ore-blocks/emerald_ore_drop.png" id="37_perwf"]
 [ext_resource type="Texture2D" uid="uid://38c3im6r7xre" path="res://Item assets/stone-ore-blocks/ruby_ore_drop.png" id="41_1os4h"]
-[ext_resource type="Texture2D" uid="uid://rt4eqlkcr74c" path="res://Media/inventory.png" id="41_rfiko"]
 [ext_resource type="Texture2D" uid="uid://b7uinvsd5h3ru" path="res://Item assets/tools/accacia_axe.png" id="42_rmyco"]
 [ext_resource type="Texture2D" uid="uid://c2531101xwhya" path="res://Item assets/tools/accacia_pickaxe.png" id="43_nk4gm"]
 [ext_resource type="Texture2D" uid="uid://dexk5d4j5e2ff" path="res://Item assets/tools/accacia_shovel.png" id="44_ofusr"]
@@ -115,9 +115,8 @@ offset_right = 2.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("41_rfiko")
+texture = ExtResource("2_3hlfb")
 expand_mode = 1
-metadata/_edit_lock_ = true
 
 [node name="acaccia" type="Label" parent="TabContainer/Weapon"]
 layout_mode = 1
@@ -2237,7 +2236,7 @@ offset_right = 2.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("41_rfiko")
+texture = ExtResource("2_3hlfb")
 expand_mode = 1
 
 [node name="acacia" type="Label" parent="TabContainer/Tools"]
@@ -2437,6 +2436,16 @@ offset_right = 59.0
 offset_bottom = 76.0
 text = "CRAFT"
 
+[node name="Button#4" type="Button" parent="TabContainer/Tools/frosted/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 57.0
+offset_bottom = 67.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/frosted"]
 layout_mode = 0
 offset_left = 232.0
@@ -2453,6 +2462,15 @@ offset_right = 57.0
 offset_bottom = 72.0
 text = "CRAFT"
 
+[node name="Button#5" type="Button" parent="TabContainer/Tools/frosted/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -12.0
+offset_right = 55.0
+offset_bottom = 66.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/frosted"]
 layout_mode = 0
 offset_left = 326.0
@@ -2468,6 +2486,16 @@ offset_top = 43.0
 offset_right = 60.0
 offset_bottom = 74.0
 text = "CRAFT"
+
+[node name="Button#6" type="Button" parent="TabContainer/Tools/frosted/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -10.0
+offset_top = -1.0
+offset_right = 57.0
+offset_bottom = 65.0
+text = "
+"
 
 [node name="Oak" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2489,6 +2517,16 @@ offset_right = 61.0
 offset_bottom = 73.0
 text = "CRAFT"
 
+[node name="Button#7" type="Button" parent="TabContainer/Tools/Oak/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 60.0
+offset_bottom = 61.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/Oak"]
 layout_mode = 0
 offset_left = 147.0
@@ -2505,6 +2543,16 @@ offset_right = 62.0
 offset_bottom = 70.0
 text = "CRAFT"
 
+[node name="Button#8" type="Button" parent="TabContainer/Tools/Oak/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -6.0
+offset_top = -3.0
+offset_right = 61.0
+offset_bottom = 63.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/Oak"]
 layout_mode = 0
 offset_left = 244.0
@@ -2520,6 +2568,16 @@ offset_top = 36.0
 offset_right = 60.0
 offset_bottom = 71.0
 text = "CRAFT"
+
+[node name="Button#9" type="Button" parent="TabContainer/Tools/Oak/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = -2.0
+offset_right = 60.0
+offset_bottom = 64.0
+text = "
+"
 
 [node name="Jungle" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2540,6 +2598,16 @@ offset_right = 61.0
 offset_bottom = 74.0
 text = "CRAFT"
 
+[node name="Button#10" type="Button" parent="TabContainer/Tools/Jungle/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = -2.0
+offset_right = 60.0
+offset_bottom = 64.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/Jungle"]
 offset_left = 435.0
 offset_top = 146.0
@@ -2555,6 +2623,16 @@ offset_right = 62.0
 offset_bottom = 71.0
 text = "CRAFT"
 
+[node name="Button#11" type="Button" parent="TabContainer/Tools/Jungle/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = -3.0
+offset_right = 60.0
+offset_bottom = 63.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/Jungle"]
 offset_left = 531.0
 offset_top = 145.0
@@ -2569,6 +2647,16 @@ offset_top = 43.0
 offset_right = 61.0
 offset_bottom = 74.0
 text = "CRAFT"
+
+[node name="Button#12" type="Button" parent="TabContainer/Tools/Jungle/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -6.0
+offset_top = -3.0
+offset_right = 61.0
+offset_bottom = 63.0
+text = "
+"
 
 [node name="Stone" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2589,6 +2677,16 @@ offset_right = 53.0
 offset_bottom = 75.0
 text = "CRAFT"
 
+[node name="Button#13" type="Button" parent="TabContainer/Tools/Stone/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -12.0
+offset_top = 2.0
+offset_right = 55.0
+offset_bottom = 68.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/Stone"]
 offset_left = 148.0
 offset_top = 232.0
@@ -2604,6 +2702,16 @@ offset_right = 62.0
 offset_bottom = 74.0
 text = "CRAFT"
 
+[node name="Button#14" type="Button" parent="TabContainer/Tools/Stone/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = 2.0
+offset_right = 60.0
+offset_bottom = 68.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/Stone"]
 offset_left = 246.0
 offset_top = 232.0
@@ -2618,6 +2726,16 @@ offset_top = 45.0
 offset_right = 63.0
 offset_bottom = 76.0
 text = "CRAFT"
+
+[node name="Button#15" type="Button" parent="TabContainer/Tools/Stone/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -10.0
+offset_top = 2.0
+offset_right = 57.0
+offset_bottom = 68.0
+text = "
+"
 
 [node name="iron" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2638,6 +2756,16 @@ offset_right = 56.0
 offset_bottom = 77.0
 text = "CRAFT"
 
+[node name="Button#16" type="Button" parent="TabContainer/Tools/iron/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -13.0
+offset_top = 3.0
+offset_right = 54.0
+offset_bottom = 69.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/iron"]
 offset_left = 437.0
 offset_top = 233.0
@@ -2653,6 +2781,15 @@ offset_right = 62.0
 offset_bottom = 74.0
 text = "CRAFT"
 
+[node name="Button#17" type="Button" parent="TabContainer/Tools/iron/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -8.0
+offset_right = 59.0
+offset_bottom = 66.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/iron"]
 offset_left = 532.0
 offset_top = 231.0
@@ -2667,6 +2804,16 @@ offset_top = 46.0
 offset_right = 61.0
 offset_bottom = 77.0
 text = "CRAFT"
+
+[node name="Button#18" type="Button" parent="TabContainer/Tools/iron/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -8.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 69.0
+text = "
+"
 
 [node name="gold" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2687,6 +2834,16 @@ offset_right = 57.0
 offset_bottom = 73.0
 text = "CRAFT"
 
+[node name="Button#19" type="Button" parent="TabContainer/Tools/gold/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -10.0
+offset_top = -4.0
+offset_right = 57.0
+offset_bottom = 62.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/gold"]
 offset_left = 147.0
 offset_top = 321.0
@@ -2702,6 +2859,15 @@ offset_right = 62.0
 offset_bottom = 74.0
 text = "CRAFT"
 
+[node name="Button#20" type="Button" parent="TabContainer/Tools/gold/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -4.0
+offset_right = 63.0
+offset_bottom = 66.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/gold"]
 offset_left = 245.0
 offset_top = 321.0
@@ -2716,6 +2882,16 @@ offset_top = 46.0
 offset_right = 61.0
 offset_bottom = 77.0
 text = "CRAFT"
+
+[node name="Button#21" type="Button" parent="TabContainer/Tools/gold/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = 1.0
+offset_right = 60.0
+offset_bottom = 67.0
+text = "
+"
 
 [node name="diamond" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2736,6 +2912,16 @@ offset_right = 54.0
 offset_bottom = 76.0
 text = "CRAFT"
 
+[node name="Button#22" type="Button" parent="TabContainer/Tools/diamond/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -15.0
+offset_top = 1.0
+offset_right = 52.0
+offset_bottom = 67.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/diamond"]
 offset_left = 437.0
 offset_top = 321.0
@@ -2751,6 +2937,16 @@ offset_right = 59.0
 offset_bottom = 74.0
 text = "CRAFT"
 
+[node name="Button#23" type="Button" parent="TabContainer/Tools/diamond/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -9.0
+offset_top = -1.0
+offset_right = 58.0
+offset_bottom = 65.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/diamond"]
 offset_left = 531.0
 offset_top = 321.0
@@ -2765,6 +2961,16 @@ offset_top = 42.0
 offset_right = 62.0
 offset_bottom = 73.0
 text = "CRAFT"
+
+[node name="Button#24" type="Button" parent="TabContainer/Tools/diamond/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = 1.0
+offset_right = 60.0
+offset_bottom = 67.0
+text = "
+"
 
 [node name="emerald" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2785,6 +2991,15 @@ offset_right = 56.0
 offset_bottom = 77.0
 text = "CRAFT"
 
+[node name="Button#25" type="Button" parent="TabContainer/Tools/emerald/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -13.0
+offset_right = 54.0
+offset_bottom = 66.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/emerald"]
 offset_left = 147.0
 offset_top = 410.0
@@ -2800,6 +3015,15 @@ offset_right = 62.0
 offset_bottom = 76.0
 text = "CRAFT"
 
+[node name="Button#26" type="Button" parent="TabContainer/Tools/emerald/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -5.0
+offset_right = 62.0
+offset_bottom = 66.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/emerald"]
 offset_left = 244.0
 offset_top = 411.0
@@ -2814,6 +3038,16 @@ offset_top = 45.0
 offset_right = 61.0
 offset_bottom = 76.0
 text = "CRAFT"
+
+[node name="Button#27" type="Button" parent="TabContainer/Tools/emerald/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -1.0
+offset_right = 59.0
+offset_bottom = 65.0
+text = "
+"
 
 [node name="ruby" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2834,6 +3068,16 @@ offset_right = 57.0
 offset_bottom = 78.0
 text = "CRAFT"
 
+[node name="Button#28" type="Button" parent="TabContainer/Tools/ruby/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -12.0
+offset_top = -1.0
+offset_right = 55.0
+offset_bottom = 65.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/ruby"]
 offset_left = 437.0
 offset_top = 409.0
@@ -2849,6 +3093,16 @@ offset_right = 61.0
 offset_bottom = 76.0
 text = "CRAFT"
 
+[node name="Button#29" type="Button" parent="TabContainer/Tools/ruby/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -8.0
+offset_top = 1.0
+offset_right = 59.0
+offset_bottom = 67.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/ruby"]
 offset_left = 531.0
 offset_top = 410.0
@@ -2863,6 +3117,15 @@ offset_top = 45.0
 offset_right = 62.0
 offset_bottom = 76.0
 text = "CRAFT"
+
+[node name="Button#30" type="Button" parent="TabContainer/Tools/ruby/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -6.0
+offset_right = 61.0
+offset_bottom = 66.0
+text = "
+"
 
 [node name="topaz" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2883,6 +3146,15 @@ offset_right = 55.0
 offset_bottom = 74.0
 text = "CRAFT"
 
+[node name="Button#31" type="Button" parent="TabContainer/Tools/topaz/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -13.0
+offset_right = 54.0
+offset_bottom = 66.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/topaz"]
 offset_left = 149.0
 offset_top = 500.0
@@ -2898,6 +3170,15 @@ offset_right = 61.0
 offset_bottom = 74.0
 text = "CRAFT"
 
+[node name="Button#32" type="Button" parent="TabContainer/Tools/topaz/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -9.0
+offset_right = 58.0
+offset_bottom = 66.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/topaz"]
 offset_left = 244.0
 offset_top = 500.0
@@ -2912,6 +3193,15 @@ offset_top = 45.0
 offset_right = 62.0
 offset_bottom = 76.0
 text = "CRAFT"
+
+[node name="Button#33" type="Button" parent="TabContainer/Tools/topaz/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -6.0
+offset_right = 61.0
+offset_bottom = 66.0
+text = "
+"
 
 [node name="magma" type="Label" parent="TabContainer/Tools"]
 offset_right = 40.0
@@ -2932,6 +3222,15 @@ offset_right = 54.0
 offset_bottom = 76.0
 text = "CRAFT"
 
+[node name="Button#34" type="Button" parent="TabContainer/Tools/magma/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -14.0
+offset_right = 53.0
+offset_bottom = 66.0
+text = "
+"
+
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/Tools/magma"]
 offset_left = 436.0
 offset_top = 499.0
@@ -2947,6 +3246,16 @@ offset_right = 62.0
 offset_bottom = 78.0
 text = "CRAFT"
 
+[node name="Button#35" type="Button" parent="TabContainer/Tools/magma/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -6.0
+offset_top = 1.0
+offset_right = 61.0
+offset_bottom = 67.0
+text = "
+"
+
 [node name="TextureRect3" type="TextureRect" parent="TabContainer/Tools/magma"]
 offset_left = 531.0
 offset_top = 500.0
@@ -2961,6 +3270,15 @@ offset_top = 44.0
 offset_right = 64.0
 offset_bottom = 75.0
 text = "CRAFT"
+
+[node name="Button#36" type="Button" parent="TabContainer/Tools/magma/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_right = 60.0
+offset_bottom = 66.0
+text = "
+"
 
 [node name="Blocks" type="TabBar" parent="TabContainer"]
 visible = false
@@ -2979,7 +3297,7 @@ offset_right = 2.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("41_rfiko")
+texture = ExtResource("2_3hlfb")
 expand_mode = 1
 metadata/_edit_lock_ = true
 

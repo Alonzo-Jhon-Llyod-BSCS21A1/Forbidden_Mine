@@ -44,39 +44,39 @@ extends CanvasLayer
 @onready var button_1 = $TabContainer/Tools/acacia/TextureRect/ButtonACACIA
 @onready var button_2 = $TabContainer/Tools/acacia/TextureRect2/ButtonACACIA2
 @onready var button_3 = $TabContainer/Tools/acacia/TextureRect3/ButtonACACIA3
-#@onready var button_4 = 
-#@onready var button_5 = 
-#@onready var button_6 = 
-#@onready var button_7 = 
-#@onready var button_8 = 
-#@onready var button_9 = 
-#@onready var button_10 = 
-#@onready var button_11 = 
-#@onready var button_12 = 
-#@onready var button_13 = 
-#@onready var button_14 = 
-#@onready var button_15 = 
-#@onready var button_16 = 
-#@onready var button_17 = 
-#@onready var button_18 = 
-#@onready var button_19 = 
-#@onready var button_20 = 
-#@onready var button_21 = 
-#@onready var button_22 = 
-#@onready var button_23 = 
-#@onready var button_24 = 
-#@onready var button_25 = 
-#@onready var button_26 = 
-#@onready var button_27 = 
-#@onready var button_28 = 
-#@onready var button_29 = 
-#@onready var button_30 = 
-#@onready var button_31 = 
-#@onready var button_32 = 
-#@onready var button_33 = 
-#@onready var button_34 = 
-#@onready var button_35 = 
-#@onready var button_36 = 
+@onready var button_4 = $TabContainer/Tools/frosted/TextureRect/ButtonFROST
+@onready var button_5 = $TabContainer/Tools/frosted/TextureRect2/ButtonFROST2
+@onready var button_6 = $TabContainer/Tools/frosted/TextureRect3/ButtonFROST3
+@onready var button_7 = $TabContainer/Tools/Oak/TextureRect/ButtonOAK
+@onready var button_8 = $TabContainer/Tools/Oak/TextureRect2/ButtonOAK2
+@onready var button_9 = $TabContainer/Tools/Oak/TextureRect3/ButtonOAK3
+@onready var button_10 = $TabContainer/Tools/Jungle/TextureRect/ButtonJUNGLE
+@onready var button_11 = $TabContainer/Tools/Jungle/TextureRect2/ButtonJUNGLE2
+@onready var button_12 = $TabContainer/Tools/Jungle/TextureRect3/ButtonJUNGLE3
+@onready var button_13 = $TabContainer/Tools/Stone/TextureRect/ButtonSTONE
+@onready var button_14 = $TabContainer/Tools/Stone/TextureRect2/ButtonSTONE2
+@onready var button_15 = $TabContainer/Tools/Stone/TextureRect3/ButtonSTONE3
+@onready var button_16 = $TabContainer/Tools/iron/TextureRect/ButtonIRON
+@onready var button_17 = $TabContainer/Tools/iron/TextureRect2/ButtonIRON2
+@onready var button_18 = $TabContainer/Tools/iron/TextureRect3/ButtonIRON3
+@onready var button_19 = $TabContainer/Tools/gold/TextureRect/ButtonGOLD
+@onready var button_20 = $TabContainer/Tools/gold/TextureRect2/ButtonGOLD2
+@onready var button_21 = $TabContainer/Tools/gold/TextureRect3/ButtonGOLD3
+@onready var button_22 = $TabContainer/Tools/diamond/TextureRect/ButtonDIAMOND
+@onready var button_23 = $TabContainer/Tools/diamond/TextureRect2/ButtonDIAMOND2
+@onready var button_24 = $TabContainer/Tools/diamond/TextureRect3/ButtonDIAMOND3
+@onready var button_25 = $TabContainer/Tools/emerald/TextureRect/ButtonEMERALD 
+@onready var button_26 = $TabContainer/Tools/emerald/TextureRect2/ButtonEMERALD2
+@onready var button_27 = $TabContainer/Tools/emerald/TextureRect3/ButtonEMERALD3
+@onready var button_28 = $TabContainer/Tools/ruby/TextureRect/ButtonRUBY
+@onready var button_29 = $TabContainer/Tools/ruby/TextureRect2/ButtonRUBY2
+@onready var button_30 = $TabContainer/Tools/ruby/TextureRect3/ButtonRUBY3
+@onready var button_31 = $TabContainer/Tools/topaz/TextureRect/ButtonTOPAZ
+@onready var button_32 = $TabContainer/Tools/topaz/TextureRect2/ButtonTOPAZ2
+@onready var button_33 = $TabContainer/Tools/topaz/TextureRect3/ButtonTOPAZ3
+@onready var button_34 = $TabContainer/Tools/magma/TextureRect/ButtonMAGMA
+@onready var button_35 = $TabContainer/Tools/magma/TextureRect2/ButtonMAGMA2
+@onready var button_36 = $TabContainer/Tools/magma/TextureRect3/ButtonMAGMA3
 
 
 
@@ -1917,41 +1917,1647 @@ func _on_button_acacia_3_pressed() -> void:
 
 
 func _on_button_frost_pressed() -> void:
-	pass # Replace with function body.
+	var recipe = {
+		"Stick" : 2,
+		"Frosted Oak Planks" : 3,
+		"result": tile_to_item_data["Frosted Oak Axe"]
+	}
+	craft_item(recipe)
 
 
 func _on_button_frost_2_pressed() -> void:
-	pass # Replace with function body.
-
+	var recipe = {
+		"Stick" : 2,
+		"Frosted Oak Planks" : 5,
+		"result": tile_to_item_data["Frosted Oak Pickaxe"]
+	}
+	craft_item(recipe)
 
 func _on_button_frost_3_pressed() -> void:
-	pass # Replace with function body.
+	var recipe = {
+		"Stick" : 2,
+		"Frosted Oak Planks" : 1,
+		"result": tile_to_item_data["Frosted Oak Shovel"]
+	}
+	craft_item(recipe)
 
 
 func _on_button_oak_pressed() -> void:
-	pass # Replace with function body.
+	var recipe = {
+		"Stick" : 2,
+		"Oak Planks" : 3,
+		"result": tile_to_item_data["Oak Axe"]
+	}
+	craft_item(recipe)
 
 
 func _on_button_oak_2_pressed() -> void:
-	pass # Replace with function body.
+	var recipe = {
+		"Stick" : 2,
+		"Oak Planks" : 5,
+		"result": tile_to_item_data["Oak Pickaxe"]
+	}
+	craft_item(recipe)
 
 
 func _on_button_oak_3_pressed() -> void:
-	pass # Replace with function body.
+	var recipe = {
+		"Stick" : 2,
+		"Oak Planks" : 1,
+		"result": tile_to_item_data["Oak Shovel"]
+	}
+	craft_item(recipe)
+	
+func _on_button_jungle_pressed() -> void:
+	var recipe = {
+		"Stick" : 2,
+		"Jungle Wood" : 3,
+		"result": tile_to_item_data["Jungle Axe"]
+	}
+	craft_item(recipe)
+	
+func _on_button_jungle_2_pressed() -> void:
+	var recipe = {
+		"Stick" : 2,
+		"Jungle Wood" : 5,
+		"result": tile_to_item_data["Jungle Pickaxe"]
+	}
+	craft_item(recipe)
 
+func _on_button_jungle_3_pressed() -> void:
+	var recipe = {
+		"Stick" : 2,
+		"Jungle Wood" : 1,
+		"result": tile_to_item_data["Jungle Shovel"]
+	}
+	craft_item(recipe)
+
+
+func _on_button_iron_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Iron Ore": 3,
+	"result": tile_to_item_data["Iron Axe"]
+	}
+	craft_item(recipe)
+
+func _on_button_iron_2_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Iron Ore": 5,
+	"result": tile_to_item_data["Iron Pickaxe"]
+	}
+	craft_item(recipe)
+
+func _on_button_iron_3_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Iron Ore": 1,
+	"result": tile_to_item_data["Iron Shovel"]
+	}
+	craft_item(recipe)
+
+func _on_button_gold_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Gold Ore": 3,
+	"result": tile_to_item_data["Gold Axe"]
+	}
+	craft_item(recipe)
+
+func _on_button_gold_2_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Gold Ore": 5,
+	"result": tile_to_item_data["Gold Pickaxe"]
+	}
+	craft_item(recipe)
+
+func _on_button_gold_3_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Gold Ore": 1,
+	"result": tile_to_item_data["Gold Shovel"]
+	}
+	craft_item(recipe)
+
+func _on_button_diamond_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Diamond Ore": 3,
+	"result": tile_to_item_data["Diamond Axe"]
+	}
+	craft_item(recipe)
+
+func _on_button_diamond_2_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Diamond Ore": 5,
+	"result": tile_to_item_data["Diamond Pickaxe"]
+	}
+	craft_item(recipe)
+
+func _on_button_diamond_3_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Diamond Ore": 1,
+	"result": tile_to_item_data["Diamond Shovel"]
+	}
+	craft_item(recipe)
+
+func _on_button_emerald_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Emerald Ore": 3,
+	"result": tile_to_item_data["Emerald Axe"]
+	}
+	craft_item(recipe)
+
+func _on_button_emerald_2_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Emerald Ore": 5,
+	"result": tile_to_item_data["Emerald Pickaxe"]
+	}
+	craft_item(recipe)
+
+func _on_button_emerald_3_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Emerald Ore": 1,
+	"result": tile_to_item_data["Emerald Shovel"]
+	}
+	craft_item(recipe)
+
+func _on_button_ruby_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Ruby Ore": 3,
+	"result": tile_to_item_data["Ruby Axe"]
+	}
+	craft_item(recipe)
+
+func _on_button_ruby_2_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Ruby Ore": 5,
+	"result": tile_to_item_data["Ruby Pickaxe"]
+	}
+	craft_item(recipe)
+
+func _on_button_ruby_3_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Ruby Ore": 1,
+	"result": tile_to_item_data["Ruby Shovel"]
+	}
+	craft_item(recipe)
+
+func _on_button_topaz_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Topaz Ore": 3,
+	"result": tile_to_item_data["Topaz Axe"]
+	}
+	craft_item(recipe)
+
+func _on_button_topaz_2_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Topaz Ore": 5,
+	"result": tile_to_item_data["Topaz Pickaxe"]
+	}
+	craft_item(recipe)
+
+func _on_button_topaz_3_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Topaz Ore": 1,
+	"result": tile_to_item_data["Topaz Shovel"]
+	}
+	craft_item(recipe)
+
+func _on_button_magma_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Magma Ore": 3,
+	"result": tile_to_item_data["Magma Axe"]
+	}
+	craft_item(recipe)
+
+func _on_button_magma_2_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Magma Ore": 5,
+	"result": tile_to_item_data["Magma Pickaxe"]
+	}
+	craft_item(recipe)
+
+func _on_button_magma_3_pressed() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Magma Ore": 1,
+	"result": tile_to_item_data["Magma Shovel"]
+	}
+	craft_item(recipe)
 
 func _on_button_1_SHOW() -> void:
 	button_1.visible = true
 	button_2.visible = false
 	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
 
 func _on_button_2_SHOW() -> void:
 	button_2.visible = true
 	button_1.visible = false
 	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
 
 func _on_button_3_SHOW() -> void:
 	button_3.visible = true
 	button_1.visible = false
 	button_2.visible = false
-	
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_4_SHOW() -> void:
+	button_4.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+
+func _on_button_5_SHOW() -> void:
+	button_5.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_6_SHOW() -> void:
+	button_6.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+func _on_button_7_SHOW() -> void:
+	button_7.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_8_SHOW() -> void:
+	button_8.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_9_SHOW() -> void:
+	button_9.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_10_SHOW() -> void:
+	button_10.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_11_SHOW() -> void:
+	button_11.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_12_SHOW() -> void:
+	button_12.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_13_SHOW() -> void:
+	button_13.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_14_SHOW() -> void:
+	button_14.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+func _on_button_15_SHOW() -> void:
+	button_15.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_16_SHOW() -> void:
+	button_16.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_17_SHOW() -> void:
+	button_17.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_18_SHOW() -> void:
+	button_18.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_19_SHOW() -> void:
+	button_19.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_20_SHOW() -> void:
+	button_20.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_21_SHOW() -> void:
+	button_21.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_22_SHOW() -> void:
+	button_22.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+func _on_button_23_SHOW() -> void:
+	button_23.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_24_SHOW() -> void:
+	button_24.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_25_SHOW() -> void:
+	button_25.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_26_SHOW() -> void:
+	button_26.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_27_SHOW() -> void:
+	button_27.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_28_SHOW() -> void:
+	button_28.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_29_SHOW() -> void:
+	button_29.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_30_SHOW() -> void:
+	button_30.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_31_SHOW() -> void:
+	button_31.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_32_SHOW() -> void:
+	button_32.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_33_SHOW() -> void:
+	button_33.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_34.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_34_SHOW() -> void:
+	button_34.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_35.visible = false
+	button_36.visible = false
+
+
+func _on_button_35_SHOW() -> void:
+	button_35.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_36.visible = false
+
+
+func _on_button_36_SHOW() -> void:
+	button_36.visible = true
+	button_1.visible = false
+	button_2.visible = false
+	button_3.visible = false
+	button_4.visible = false
+	button_5.visible = false
+	button_6.visible = false
+	button_7.visible = false
+	button_8.visible = false
+	button_9.visible = false
+	button_10.visible = false
+	button_11.visible = false
+	button_12.visible = false
+	button_13.visible = false
+	button_14.visible = false
+	button_15.visible = false
+	button_16.visible = false
+	button_17.visible = false
+	button_18.visible = false
+	button_19.visible = false
+	button_20.visible = false
+	button_21.visible = false
+	button_22.visible = false
+	button_23.visible = false
+	button_24.visible = false
+	button_25.visible = false
+	button_26.visible = false
+	button_27.visible = false
+	button_28.visible = false
+	button_29.visible = false
+	button_30.visible = false
+	button_31.visible = false
+	button_32.visible = false
+	button_33.visible = false
+	button_34.visible = false
+	button_35.visible = false
