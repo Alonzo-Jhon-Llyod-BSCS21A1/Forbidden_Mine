@@ -244,7 +244,7 @@ func drop_item(tile_data: Vector2i):
 		
 		Vector2i(6, 3): {"name": "Frosted Oak Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_logs.png")},
 		
-		Vector2i(7, 3): {"name": "Acacia Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/acacia_logs.png")},
+		Vector2i(7, 3): {"name": "Acacia Logs", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/acacia_logs.png")},
 		
 		Vector2i(0, 4): {"name": "Jungle Grass Block", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/jungle_leaf.png")},
 		

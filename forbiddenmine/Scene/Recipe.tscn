@@ -4395,6 +4395,7 @@ scale = Vector2(8, 8)
 texture = ExtResource("88_6tjcp")
 
 [node name="count" type="Label" parent="TabContainer/Materials/TEMP/Acacia PLANKS/CRAFT1"]
+layout_mode = 0
 offset_left = 216.0
 offset_top = -144.0
 offset_right = 226.0
@@ -4418,6 +4419,7 @@ offset_bottom = 125.0
 texture = ExtResource("5_m42cx")
 
 [node name="CRAFT2" type="Button" parent="TabContainer/Materials/TEMP/Sticks"]
+visible = false
 layout_mode = 0
 offset_left = 512.0
 offset_top = 339.0
@@ -4432,6 +4434,7 @@ scale = Vector2(8, 8)
 texture = ExtResource("4_xbcm5")
 
 [node name="count2" type="Label" parent="TabContainer/Materials/TEMP/Sticks/CRAFT2"]
+layout_mode = 0
 offset_left = 217.0
 offset_top = -142.0
 offset_right = 227.0
