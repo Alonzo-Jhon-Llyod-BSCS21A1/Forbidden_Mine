@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://mclnmadsjcpj"]
 
+[ext_resource type="Script" path="res://script/character_body_2d.gd" id="1_ehga4"]
 [ext_resource type="Texture2D" uid="uid://llidr6o12lkl" path="res://character/idle.png" id="1_juivv"]
-[ext_resource type="Script" path="res://script/Spectator.gd" id="1_swcjo"]
 [ext_resource type="Texture2D" uid="uid://drfyjifre761r" path="res://character/jump4.png" id="5_rq8cl"]
 [ext_resource type="Texture2D" uid="uid://deqxrmw6poiod" path="res://character/swim/swim1.png" id="6_ncqpd"]
 [ext_resource type="Texture2D" uid="uid://bf71msc2nf1f5" path="res://character/swim/swim2.png" id="7_3a51i"]
@@ -134,7 +134,7 @@ size = Vector2(15, 16)
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 process_mode = 3
 collision_layer = 2
-script = ExtResource("1_swcjo")
+script = ExtResource("1_ehga4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c5bmy")
