@@ -1,7 +1,6 @@
 @tool
 extends CharacterBody2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-@onready var pickupsound: AudioStreamPlayer2D = $pickupsound
 
 @export var item_type = ""
 @export var item_name = ""
@@ -41,7 +40,6 @@ func pickup_item():
 	if !GlobalVar.has_space_for_item(item):
 		return
 	if GlobalVar.player_node:
-		pickupsound.play()
 		GlobalVar.add_item(item, false)
 		self.queue_free()
 	

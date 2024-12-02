@@ -9,6 +9,9 @@ var inventory_instance = null
 @onready var timer: Timer = $Timer
 @onready var tile_map_layer: TileMapLayer = $TileMapLayer
 @onready var character_body_2d: CharacterBody2D = $CharacterBody2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+
 
 var SAVE_FILE_PATH = "user://"
 var tile_coords
@@ -19,100 +22,55 @@ var charlocal_position
 # Called when the node enters the scene tree for the first time.
 
 var item_to_tile_data = {
-	"Stone": Vector2i(1, 0),
-	
-	"Ruby": Vector2i(3, 1),
-	
-	"Gold": Vector2i(2, 1),
-	
-	"Emerald": Vector2i(5, 1),
-	
-	"DeepStone": Vector2i(2, 0),
-	
-	"HardStone": Vector2i(3, 0),
-	
-	"Deorite": Vector2i(4, 0),
-	
-	"Andesite": Vector2i(5, 0),
-	
-	"JungleLeafBlock": Vector2i(6, 0),
-	
-	"Leaf Block": Vector2i(7, 0),
-	
-	"Jungle Log": Vector2i(6, 1),
-	
-	"Oak Log": Vector2i(7, 1),
-	
-	"Grass Block": Vector2i(0, 2),
-	
-	"Dirt": Vector2i(1, 2),
-	
-	"Frosted Leaf Block": Vector2i(6, 2),
-	
-	"Acacia Leaf Block": Vector2i(7, 2),
-	
-	"Snow Grass Block": Vector2i(0, 3),
-	
-	"Snow Block": Vector2i(1, 3),
-	
-	"Ice Block": Vector2i(2, 3),
-	
-	"Magma Block": Vector2i(3, 3),
-	
-	"Frosted Oak Log": Vector2i(6, 3),
-	
-	"Acacia Log": Vector2i(7, 3),
-	
-	"Jungle Grass Block": Vector2i(0, 4),
-	
-	"Jungle Dirt Block": Vector2i(1, 4),
-	
-	"Big Cactus Block": Vector2i(6, 4),
-	
-	"Small Cactus Block": Vector2i(7, 4),
-	
-	"Ash Grass Block": Vector2i(0, 5),
-	
-	"Ash Dirt Block": Vector2i(1, 5),
-	
-	"Emerald Block": Vector2i(2, 5),
-	
-	"Topaz Block": Vector2i(3, 5),
-	
-	"Ruby Block": Vector2i(4, 5),
-	
-	"Iron Block": Vector2i(5, 5),
-	
-	"Diamond Block": Vector2i(6, 5),
-	
-	"Gold Block": Vector2i(7, 5),
-	
-	"Obsidian Block": Vector2i(1, 6),
-	
-	"Andesite Block": Vector2i(2, 6),
-	
-	"Acacia Plank": Vector2i(3, 6),
-	
-	"Oak Block": Vector2i(4, 6),
-	
-	"Moss Stone Block": Vector2i(5, 6),
-	
-	"Sand Stone Block": Vector2i(6, 6),
-	
-	"Brick Block": Vector2i(7, 6),
-	
-	"Diorite Block": Vector2i(2, 7),
-	
-	"Frosted Oak Planks": Vector2i(3, 7),
-	
-	"Jungle Planks": Vector2i(4, 7),
-	
-	"Snowbrick": Vector2i(5, 7),
-	
-	"Deepstone Brick Block": Vector2i(6, 7),
-	
-	"Stone Brickblock": Vector2i(7, 7),
+	"Stone": {"tile": Vector2i(1, 0), "durability": 50},
+	"Ruby": {"tile": Vector2i(3, 1), "durability": 80},
+	"Gold": {"tile": Vector2i(2, 1), "durability": 60},
+	"Emerald": {"tile": Vector2i(5, 1), "durability": 85},
+	"DeepStone": {"tile": Vector2i(2, 0), "durability": 70},
+	"HardStone": {"tile": Vector2i(3, 0), "durability": 75},
+	"Deorite": {"tile": Vector2i(4, 0), "durability": 65},
+	"Andesite": {"tile": Vector2i(5, 0), "durability": 60},
+	"JungleLeafBlock": {"tile": Vector2i(6, 0), "durability": 20},
+	"Leaf Block": {"tile": Vector2i(7, 0), "durability": 15},
+	"Jungle Log": {"tile": Vector2i(6, 1), "durability": 40},
+	"Oak Log": {"tile": Vector2i(7, 1), "durability": 45},
+	"Grass Block": {"tile": Vector2i(0, 2), "durability": 10},
+	"Dirt": {"tile": Vector2i(1, 2), "durability": 10},
+	"Frosted Leaf Block": {"tile": Vector2i(6, 2), "durability": 15},
+	"Acacia Leaf Block": {"tile": Vector2i(7, 2), "durability": 20},
+	"Snow Grass Block": {"tile": Vector2i(0, 3), "durability": 12},
+	"Snow Block": {"tile": Vector2i(1, 3), "durability": 12},
+	"Ice Block": {"tile": Vector2i(2, 3), "durability": 5},
+	"Magma Block": {"tile": Vector2i(3, 3), "durability": 80},
+	"Frosted Oak Log": {"tile": Vector2i(6, 3), "durability": 50},
+	"Acacia Log": {"tile": Vector2i(7, 3), "durability": 45},
+	"Jungle Grass Block": {"tile": Vector2i(0, 4), "durability": 10},
+	"Jungle Dirt Block": {"tile": Vector2i(1, 4), "durability": 10},
+	"Big Cactus Block": {"tile": Vector2i(6, 4), "durability": 5},
+	"Small Cactus Block": {"tile": Vector2i(7, 4), "durability": 3},
+	"Ash Grass Block": {"tile": Vector2i(0, 5), "durability": 15},
+	"Ash Dirt Block": {"tile": Vector2i(1, 5), "durability": 10},
+	"Emerald Block": {"tile": Vector2i(2, 5), "durability": 85},
+	"Topaz Block": {"tile": Vector2i(3, 5), "durability": 75},
+	"Ruby Block": {"tile": Vector2i(4, 5), "durability": 90},
+	"Iron Block": {"tile": Vector2i(5, 5), "durability": 100},
+	"Diamond Block": {"tile": Vector2i(6, 5), "durability": 120},
+	"Gold Block": {"tile": Vector2i(7, 5), "durability": 80},
+	"Obsidian Block": {"tile": Vector2i(1, 6), "durability": 200},
+	"Andesite Block": {"tile": Vector2i(2, 6), "durability": 65},
+	"Acacia Plank": {"tile": Vector2i(3, 6), "durability": 30},
+	"Oak Block": {"tile": Vector2i(4, 6), "durability": 40},
+	"Moss Stone Block": {"tile": Vector2i(5, 6), "durability": 60},
+	"Sand Stone Block": {"tile": Vector2i(6, 6), "durability": 50},
+	"Brick Block": {"tile": Vector2i(7, 6), "durability": 70},
+	"Diorite Block": {"tile": Vector2i(2, 7), "durability": 65},
+	"Frosted Oak Planks": {"tile": Vector2i(3, 7), "durability": 35},
+	"Jungle Planks": {"tile": Vector2i(4, 7), "durability": 25},
+	"Snowbrick": {"tile": Vector2i(5, 7), "durability": 50},
+	"Deepstone Brick Block": {"tile": Vector2i(6, 7), "durability": 70},
+	"Stone Brickblock": {"tile": Vector2i(7, 7), "durability": 75},
 }
+
 
 func _ready() -> void:
 	SAVE_FILE_PATH += GlobalVar.new_world
@@ -155,7 +113,7 @@ func _input(event: InputEvent) -> void:
 			elif tile_map_layer.get_cell_source_id(Vector2i(tile_coords.x, tile_coords.y)) != -1:
 				# Breaking a block
 				if min_x and max_x and min_y and max_y:
-					timer.wait_time = .1
+					timer.wait_time = 2
 					timer.start()
 					breakable_block = BREAK_ANIMATION.instantiate()
 					var block_position = tile_map_layer.map_to_local(tile_coords)
@@ -164,6 +122,7 @@ func _input(event: InputEvent) -> void:
 					breakable_block.animated_sprite_2d.scale = tile_map_layer.scale
 					breakable_block.animated_sprite_2d.speed_scale = 1 / timer.wait_time
 					breakblock = tile_map_layer.get_cell_atlas_coords(Vector2i(tile_coords.x, tile_coords.y))
+					audio_stream_player_2d.play()
 
 		elif event is InputEventMouseButton and event.is_released():
 			# Stop breaking
@@ -227,6 +186,8 @@ func _process(_delta: float) -> void:
 func _on_timer_timeout() -> void:
 	if is_instance_valid(breakable_block):
 		breakable_block.queue_free()
+	if audio_stream_player_2d.playing:
+		audio_stream_player_2d.stop()
 	tile_map_layer.set_cell(Vector2i(tile_coords.x,tile_coords.y),1, Vector2i(-1, -1))
 	modify_tile_in_binary(tile_coords.x, tile_coords.y, -1, -1)
 	drop_item(breakblock)

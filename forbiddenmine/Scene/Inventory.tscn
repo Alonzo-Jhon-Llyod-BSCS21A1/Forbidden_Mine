@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://x7b68050kdhv"]
+[gd_scene load_steps=4 format=3 uid="uid://x7b68050kdhv"]
 
 [ext_resource type="Script" path="res://script/inventory.gd" id="1_vd3m6"]
-[ext_resource type="AudioStream" uid="uid://7uljl2uxj317" path="res://Audio/take-it-90781.mp3" id="2_ast6f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nm85c"]
 radius = 24.0
@@ -9,9 +8,9 @@ radius = 24.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u05k"]
 
 [node name="Inventory" type="CharacterBody2D" groups=["Items"]]
-position = Vector2(0, 8.23e+09)
+position = Vector2(0, 1.00392e+10)
 collision_layer = 0
-velocity = Vector2(0, 4.00979e+06)
+velocity = Vector2(0, 4.43135e+06)
 script = ExtResource("1_vd3m6")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -27,9 +26,6 @@ position = Vector2(0, 4.76837e-07)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.76837e-07)
 shape = SubResource("RectangleShape2D_7u05k")
-
-[node name="pickupsound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_ast6f")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
