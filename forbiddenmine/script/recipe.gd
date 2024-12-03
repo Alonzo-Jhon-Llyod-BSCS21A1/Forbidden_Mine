@@ -139,8 +139,8 @@ var tile_to_item_data = {
 
 #MATERIALS
 
-"Acacia Planks": {"name": "Acacia Planks", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/acacia_planks.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
-"Stick": {"name": "Acacia Shovel", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/stick_base.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Acacia Plank": {"name": "Acacia Plank", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/acacia_planks.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Stick": {"name": "Stick", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/stick_base.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
 
 }
 
@@ -1932,7 +1932,7 @@ func _on_button_frost_pressed() -> void:
 func _on_button_frost_2_pressed() -> void:
 	var recipe = {
 		"Stick" : 2,
-		"Frosted Oak Planks" : 5,
+		#"Frosted Oak Planks" : 5,
 		"result": tile_to_item_data["Frosted Oak Pickaxe"]
 	}
 	craft_item(recipe)
@@ -3572,15 +3572,15 @@ func _on_button_36_SHOW() -> void:
 
 func _on_button_TEST1() -> void:
 	var recipe = {
-	"Acacia Logs": 1,
-	"result": tile_to_item_data["Acacia Planks"]
+	"Acacia Log": 1,
+	"result": tile_to_item_data["Acacia Plank"]
 	}
 	craft_item(recipe)
 
 
 func _on_button_TEST2() -> void:
 	var recipe = {
-	"Acacia Planks": 2,
+	"Acacia Plank": 2,
 	"result": tile_to_item_data["Stick"]
 	}
 	craft_item(recipe)
