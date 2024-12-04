@@ -72,6 +72,7 @@ func _ready() -> void:
 		load_lavaDungeon()
 		load_waterDungeon()
 		save_worldbinary()
+		PlayerVar.save_player_data()
 			
 func grasses():
 	for x in range(-width/2, width/2):
@@ -319,14 +320,19 @@ func load_lavaDungeon():
 	var val2 = rngs.randi_range(100, 150)
 	var file = FileAccess.open("res://importantDungeons/lavaDungeon", FileAccess.READ)
 	if file:
-		for x in range(val1, val1+143):
-			for y in range(val2, val2+80):
+		for x in range(val1, val1 + 143):
+			for y in range(val2, val2 + 80):
 				var tile_x = file.get_32()
 				var tile_y = file.get_32()
+				
 				if tile_x == -1 and tile_y == -1:
 					continue
 				else:
 					set_cell(Vector2i(x, y), 1, Vector2i(tile_x, tile_y))
+					if tile_x == 4 and tile_y == 5:
+						PlayerVar.lavaartifact = Vector2i(x, y)
+						
+				
 		file.close()
 	else:
 		print("Failed to open file at path:", SAVE_FILE_PATH)

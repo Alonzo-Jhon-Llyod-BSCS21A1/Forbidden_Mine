@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnqiqwf4urqg5"]
+
+[ext_resource type="Script" path="res://Scene/game_controls.gd" id="1_3klsc"]
+
+[node name="GameControls" type="CanvasLayer"]
+script = ExtResource("1_3klsc")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -141.5
+offset_right = 94.0
+offset_bottom = 141.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "W = JUMP/UP
+D = RIGHT
+A = LEFT
+S = DOWN
+
+E = PICK UP
+G = DROP
+F = USE
+
+C = CRAFT
+Shift+I = Open Inventory
+"
+
+[node name="Back" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "BACK"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

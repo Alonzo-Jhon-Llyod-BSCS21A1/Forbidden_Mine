@@ -67,7 +67,4 @@ offset_right = 35.0
 offset_bottom = 17.0
 text = "Back"
 
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
-
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirm_delete_pressed"]

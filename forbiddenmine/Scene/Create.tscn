@@ -55,4 +55,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_fdmp3")
 text = "CREATE"
 
+[node name="BACK" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 8.0
+text = "BACK"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BACK" to="." method="_on_back_pressed"]

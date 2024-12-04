@@ -15,6 +15,10 @@ var hunger_timer = 0
 var thirst_timer = 0
 var health_reduction_timer = 0
 
+var lavaartifact
+var waterartifact
+var earthartifact
+var iceartifact
 func reduce_hunger_and_thirst(delta):
 
 	hunger_timer += delta
@@ -58,10 +62,15 @@ func save_player_data() -> void:
 	var player_data_file_path = "user://PlayerStats"
 	if GlobalVar.new_world != null:
 		player_data_file_path += GlobalVar.new_world + ".save"
+	
+	# Convert Vector2i to string for saving
 	var player_data = {
 		"health": player_health,
 		"hunger": player_hunger,
-		"thirst": player_thirst
+		"thirst": player_thirst,
+		"artifacts": {
+			"lavaartifact": str(lavaartifact.x) + "," + str(lavaartifact.y),
+		}
 	}
 
 	# Save the dictionary to a JSON file
@@ -70,10 +79,13 @@ func save_player_data() -> void:
 		file.store_string(JSON.stringify(player_data))
 		file.close()
 
+
+
 func load_player_data() -> void:
 	var player_data_file_path = "user://PlayerStats"
 	if GlobalVar.new_world != null:
 		player_data_file_path += GlobalVar.new_world + ".save"
+	
 	var file = FileAccess.open(player_data_file_path, FileAccess.READ)
 	if file:
 		var content = file.get_as_text()
@@ -81,10 +93,20 @@ func load_player_data() -> void:
 		var error = json_parser.parse(content)
 		if error == OK:
 			var data = json_parser.data
-			player_health = data.get("health")
-			player_hunger = data.get("hunger")
-			player_thirst = data.get("thirst")
+			player_health = data.get("health", player_health)
+			player_hunger = data.get("hunger", player_hunger)
+			player_thirst = data.get("thirst", player_thirst)
+			var artifacts = data.get("artifacts", {})
+			lavaartifact = string_to_vector2i(artifacts.get("lavaartifact", "0,0"))
 		file.close()
+
+# Helper function to convert string "x,y" to Vector2i
+func string_to_vector2i(str: String) -> Vector2i:
+	var parts = str.split(",")
+	if parts.size() == 2:
+		return Vector2i(parts[0].to_int(), parts[1].to_int())
+	return Vector2i.ZERO  # Return a default value if parsing fails
+
 		
 var previous_health = player_health
 var previous_hunger = player_hunger

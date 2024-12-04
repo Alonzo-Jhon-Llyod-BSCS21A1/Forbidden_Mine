@@ -91,6 +91,19 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_ckuqh")
 text = "LOAD WORLD"
 
+[node name="Controls" type="Button" parent="."]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 481.0
+offset_right = 673.0
+offset_bottom = 523.0
+theme = SubResource("Theme_r66w2")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ckuqh")
+text = "CONTROLS"
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 413.0
@@ -103,3 +116,4 @@ horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="Controls" to="." method="_on_controls_pressed"]

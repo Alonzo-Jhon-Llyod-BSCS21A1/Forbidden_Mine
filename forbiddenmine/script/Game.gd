@@ -71,8 +71,18 @@ var item_to_tile_data = {
 	"Stone Brickblock": {"tile": Vector2i(7, 7), "durability": 75},
 }
 
+const LAVA = preload("res://Scene/Artifacts/Lava.tscn")
+
 
 func _ready() -> void:
+	if GlobalVar.load == 0:
+		PlayerVar.load_player_data()
+	if PlayerVar.lavaartifact != null:
+		var lavasrtifact = LAVA.instantiate()
+		var lavaart_position = tile_map_layer.map_to_local(PlayerVar.lavaartifact)
+		lavasrtifact.global_position = tile_map_layer.to_global(lavaart_position)
+		lavasrtifact.scale = tile_map_layer.scale
+		add_child(lavasrtifact)
 	SAVE_FILE_PATH += GlobalVar.new_world
 	pass # Replace with function body.
 	
