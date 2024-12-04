@@ -3,11 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bj6jfekqpu1o5"
-valid=false
+path="res://.godot/imported/Footsteps Grass Sound Effect (HD).mp3-0e8a9c6950047ebabcad8c43ed8ebddb.mp3str"
 
 [deps]
 
 source_file="res://Audio/Footsteps Grass Sound Effect (HD).mp3"
+dest_files=["res://.godot/imported/Footsteps Grass Sound Effect (HD).mp3-0e8a9c6950047ebabcad8c43ed8ebddb.mp3str"]
 
 [params]
 
