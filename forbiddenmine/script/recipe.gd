@@ -152,23 +152,40 @@ func remove_item(item, item_index):
 		if GlobalVar.hotbar_inventory[i] == item:
 			GlobalVar.hotbar_inventory[i] = null
 			break
-
+			
 func craft_item(recipe: Dictionary) -> void:
 	var materials_found = {}
 	var material_indices = {}
 	var can_craft = true
 
-# Check if required materials are available
+	# Check if required materials are available
 	for material_name in recipe.keys():
 		if material_name != "result":
 			var material = null
 			var material_index = -1
-			for i in range(GlobalVar.inventory.size()):
-				var item = GlobalVar.inventory[i]
-				if item != null and item["name"] == material_name and item["quantity"] >= recipe[material_name]:
-					material = item
-					material_index = i
-					break
+			# Check if the material is a list of possible materials (e.g., wood types)
+			if material_name == "Wood":  # Replace with your specific key for wood types
+				var wood_types = ["Acacia Planks", "Oak Planks", "Birch Planks"]  # Add all possible wood types here
+				var found = false
+				for wood_type in wood_types:
+					for i in range(GlobalVar.inventory.size()):
+						var item = GlobalVar.inventory[i]
+						if item != null and item["name"] == wood_type and item["quantity"] >= recipe[material_name]:
+							material = item
+							material_index = i
+							found = true
+							break
+					if found:
+						break
+			else:
+				# Regular material handling for other materials
+				for i in range(GlobalVar.inventory.size()):
+					var item = GlobalVar.inventory[i]
+					if item != null and item["name"] == material_name and item["quantity"] >= recipe[material_name]:
+						material = item
+						material_index = i
+						break
+
 			if material == null:
 				can_craft = false
 				break
@@ -183,11 +200,10 @@ func craft_item(recipe: Dictionary) -> void:
 			print("Cannot craft, inventory is full.")
 			return
 
-	# Deduct materials from inventory
+		# Deduct materials from inventory
 		print("Crafted " + recipe["result"]["name"])
 		for material_name in materials_found.keys():
 			materials_found[material_name]["quantity"] -= recipe[material_name]
-
 			if materials_found[material_name]["quantity"] <= 0:
 				remove_item(materials_found[material_name], material_indices[material_name])
 
@@ -201,6 +217,7 @@ func craft_item(recipe: Dictionary) -> void:
 		GlobalVar.save_inventory()
 
 	print("Not enough materials")
+
 
 
 
@@ -3572,7 +3589,7 @@ func _on_button_36_SHOW() -> void:
 
 func _on_button_TEST1() -> void:
 	var recipe = {
-	"Acacia Logs": 1,
+	"Acacia Log": 1,
 	"result": tile_to_item_data["Acacia Planks"]
 	}
 	craft_item(recipe)
@@ -3580,12 +3597,10 @@ func _on_button_TEST1() -> void:
 
 func _on_button_TEST2() -> void:
 	var recipe = {
-	"Acacia Planks": 2,
+	"Wood": 2,  # Here, "Wood" will match any of the wood types you defined in the list
 	"result": tile_to_item_data["Stick"]
 	}
 	craft_item(recipe)
-	
-
 
 func _on_button_TESTshow1() -> void:
 	button_m1.visible = true

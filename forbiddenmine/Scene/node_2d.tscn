@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c41klwo0k4hb1"]
+[gd_scene load_steps=13 format=4 uid="uid://c41klwo0k4hb1"]
 
 [ext_resource type="Script" path="res://script/Worldgen.gd" id="1_bore3"]
 [ext_resource type="Script" path="res://script/Game.gd" id="1_fjc33"]
@@ -6,9 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cg8gp0xkl32a8" path="res://UpdatedTILEMAP.png" id="3_5jouv"]
 [ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="3_fdor4"]
 [ext_resource type="AudioStream" uid="uid://dadypxc2rrp2p" path="res://Audio/mining-with-pick-axe-in-a-group-29590-[AudioTrimmer.com].mp3" id="8_00hk5"]
-[ext_resource type="Script" path="res://script/Spectator.gd" id="8_ir32a"]
 [ext_resource type="PackedScene" uid="uid://bdwnh588ui1n4" path="res://Scene/display.tscn" id="9_yy0nf"]
-[ext_resource type="PackedScene" uid="uid://bgj1pp72jn61i" path="res://Scene/EnemyPrototype.tscn" id="10_wr1n8"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j5x2w"]
 
@@ -148,8 +146,6 @@ noise_height_text = SubResource("NoiseTexture2D_1uhbx")
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_5ggpm")]
 position = Vector2(-8, -476)
 scale = Vector2(2, 2)
-script = ExtResource("8_ir32a")
-SPECTATOR_SPEED = 800.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -184,10 +180,6 @@ one_shot = true
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
-
-[node name="CharacterBody2D2" parent="." instance=ExtResource("10_wr1n8")]
-position = Vector2(167, -468)
-scale = Vector2(2, 2)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_00hk5")
