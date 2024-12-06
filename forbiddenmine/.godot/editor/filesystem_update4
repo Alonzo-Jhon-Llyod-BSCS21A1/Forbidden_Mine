@@ -1,6 +1,1 @@
-res://Scene/control.tscn
-res://script/inventory_slot.gd
-res://script/load.gd
-res://script/Worldgen.gd
-res://script/camera.gd
-res://script/display.gd
+res://Scene/game_controls.tscn
