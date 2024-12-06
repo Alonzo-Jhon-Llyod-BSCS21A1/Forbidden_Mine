@@ -135,8 +135,10 @@ func sandgen():
 					set_cell(Vector2i(x,y),1,sand)
 					
 func stonegen():
-	var magma = Vector2i(3, 3)
-	var lava = Vector2i(1, 7)
+	var magma 
+	var lava 
+	
+	
 	
 	for x in range(-width / 2, width / 2):
 		# Use the noise function to generate a base ground height

@@ -76,7 +76,7 @@ func check_worldlist():
 	var json_string = save_file.get_as_text()
 	save_file.close()
 	var json = JSON.new()
-	var parse_result = json.parse(json_string)
+	var _parse_result = json.parse(json_string)
 	var save_data = json.get_data()
 	world_list = save_data
 
@@ -138,7 +138,7 @@ func _on_confirm_delete_pressed() -> void:
 func save_worldlist():
 	# Save the updated world list back to the file
 	var json = JSON.new()
-	var json_string = json.stringify(world_list)
+	var json_string = JSON.stringify(world_list)
 	var save_file = FileAccess.open(file_path, FileAccess.WRITE)
 	if save_file:
 		save_file.store_string(json_string)

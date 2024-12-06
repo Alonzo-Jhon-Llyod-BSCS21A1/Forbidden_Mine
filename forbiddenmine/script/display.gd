@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if PlayerVar.player_health != null:
 		$HealthBar.value = PlayerVar.player_health
 	if PlayerVar.player_hunger != null:

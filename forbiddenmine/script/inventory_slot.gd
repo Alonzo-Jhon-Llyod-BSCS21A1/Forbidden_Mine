@@ -44,7 +44,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEvent and event.is_pressed():
 		if Input.is_action_pressed("Drop"):
 			if GlobalVar.Item_onhold != null:
-				var drop_position = GlobalVar.player_node.global_position
+				var _drop_position = GlobalVar.player_node.global_position
 				GlobalVar.drop_item()
 				
 		if Input.is_action_pressed("Use"):

@@ -1,6 +1,6 @@
 extends Area2D
 var detected_objects = {}
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for body in get_overlapping_bodies():
 		var true_name = body.get("TRUENAME")
 		if true_name and not detected_objects.has(true_name):
