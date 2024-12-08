@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://blymhih4a017u"]
+
+[ext_resource type="AudioStream" uid="uid://bno4m3iovnpbi" path="res://Audio/OST Citampi Story Soundtrack - Town Theme.mp3" id="1_wlvkx"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_wlvkx")
+autoplay = true
