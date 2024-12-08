@@ -11,7 +11,14 @@ var inventory_instance = null
 @onready var character_body_2d: CharacterBody2D = $CharacterBody2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
+@onready var color_rect = $CanvasLayer2/ColorRect
 
+var color_day = Color(0.53, 0.81, 0.92) # Sky blue (R:135, G:206, B:235)
+var color_night = Color(0.29, 0.0, 0.51) # Dark violet (R:74, G:0, B:130)
+var duration = 30.0 # Duration of the transition in seconds
+
+var time_elapsed = 0.0
+var transitioning_to_night = true
 
 var SAVE_FILE_PATH = "user://"
 var tile_coords
@@ -127,6 +134,10 @@ func _ready() -> void:
 		lavasrtifact.scale = tile_map_layer.scale
 		add_child(lavasrtifact)
 	SAVE_FILE_PATH += GlobalVar.new_world
+	
+	color_rect.color = color_day
+	color_rect.size = get_viewport_rect().size
+	
 	pass # Replace with function body.
 	
 func _input(event: InputEvent) -> void:
@@ -239,6 +250,30 @@ func _process(_delta: float) -> void:
 				if tile_map_layer.get_cell_source_id(Vector2i(x, y+1)) == -1:
 					tile_map_layer.set_cell(Vector2i(x, y+1), 1, Vector2i(0,7))
 					modify_tile_in_binary(x, y+1, 0, 7)
+					
+	time_elapsed += _delta
+
+	# Calculate the progress of the transition
+	var t = time_elapsed / duration
+
+	if transitioning_to_night:
+		# Interpolate from day to night color
+		color_rect.color = color_day.lerp(color_night, t)
+		if t >= 1.0:
+			# Switch to transitioning back to day
+			transitioning_to_night = false
+			time_elapsed = 0.0
+	else:
+		# Interpolate from night to day color
+		color_rect.color = color_night.lerp(color_day, t)
+		if t >= 1.0:
+			# Switch to transitioning back to night
+			transitioning_to_night = true
+			time_elapsed = 0.0
+
+	# Ensure the ColorRect dynamically resizes to the viewport
+	color_rect.size = get_viewport_rect().size
+	
 	pass
 
 func _on_timer_timeout() -> void:
