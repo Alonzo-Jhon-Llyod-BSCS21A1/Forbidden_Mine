@@ -70,7 +70,8 @@ func save_player_data() -> void:
 		"thirst": player_thirst,
 		"artifacts": {
 			"lavaartifact": str(lavaartifact.x) + "," + str(lavaartifact.y),
-		}
+		},
+		"Location" : GlobalVar.charposition
 	}
 
 	# Save the dictionary to a JSON file
@@ -98,7 +99,15 @@ func load_player_data() -> void:
 			player_thirst = data.get("thirst", player_thirst)
 			var artifacts = data.get("artifacts", {})
 			lavaartifact = string_to_vector2i(artifacts.get("lavaartifact", "0,0"))
+			
+			# Convert the "Location" string to Vector2 directly, like how lavaartifact is handled
+			var location_str = data.get("Location", "0,0")
+			GlobalVar.charposition = Vector2(
+				int(location_str.split(",")[0]),
+				int(location_str.split(",")[1])
+			)
 		file.close()
+
 
 # Helper function to convert string "x,y" to Vector2i
 func string_to_vector2i(str: String) -> Vector2i:
@@ -113,8 +122,8 @@ var previous_hunger = player_hunger
 var previous_thirst = player_thirst
 
 func check_and_save_player_data() -> void:
+	save_player_data()
 	if player_health != previous_health or player_hunger != previous_hunger or player_thirst != previous_thirst:
-		save_player_data()
 		previous_health = player_health
 		previous_hunger = player_hunger
 		previous_thirst = player_thirst
