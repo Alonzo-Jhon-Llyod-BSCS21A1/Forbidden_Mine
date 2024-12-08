@@ -140,7 +140,7 @@ var tile_to_item_data = {
 #MATERIALS
 
 "Acacia Planks": {"name": "Acacia Planks", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/acacia_planks.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
-"Stick": {"name": "Acacia Shovel", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/stick_base.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Stick": {"name": "Stick", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/stick_base.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
 
 }
 
@@ -157,6 +157,7 @@ func craft_item(recipe: Dictionary) -> void:
 	var materials_found = {}
 	var material_indices = {}
 	var can_craft = true
+	var achievements_updated = false  # Flag to track if any achievement is updated
 
 	# Check if required materials are available
 	for material_name in recipe.keys():
@@ -216,10 +217,54 @@ func craft_item(recipe: Dictionary) -> void:
 		GlobalVar.sync_inventory_to_hotbar()
 		GlobalVar.save_inventory()
 
-	print("Not enough materials")
+		# Check for achievement progress and update
+		for material_name in materials_found.keys():
+			match material_name:
+				"Acacia Planks":
+					if !Achievement.achievements["acacia_artisan"]:
+						Achievement.achievements["acacia_artisan"] = true
+						achievements_updated = true
+				"Oak Planks":
+					if !Achievement.achievements["oak_enthusiast"]:
+						Achievement.achievements["oak_enthusiast"] = true
+						achievements_updated = true
+				"Stone":
+					if !Achievement.achievements["stone_shaper"]:
+						Achievement.achievements["stone_shaper"] = true
+						achievements_updated = true
+				"Gold Ore":
+					if !Achievement.achievements["golden_touch"]:
+						Achievement.achievements["golden_touch"] = true
+						achievements_updated = true
+				"Iron Ore":
+					if !Achievement.achievements["iron_forge"]:
+						Achievement.achievements["iron_forge"] = true
+						achievements_updated = true
+				"Diamond Ore":
+					if !Achievement.achievements["diamond_crafter"]:
+						Achievement.achievements["diamond_crafter"] = true
+						achievements_updated = true
+				"Emerald Ore":
+					if !Achievement.achievements["emerald_engineer"]:
+						Achievement.achievements["emerald_engineer"] = true
+						achievements_updated = true
+				"Ruby Ore":
+					if !Achievement.achievements["ruby_radiance"]:
+						Achievement.achievements["ruby_radiance"] = true
+						achievements_updated = true
+				"Topaz Ore":
+					if !Achievement.achievements["topaz_treasures"]:
+						Achievement.achievements["topaz_treasures"] = true
+						achievements_updated = true
+				"Magma Ore":
+					if !Achievement.achievements["magma_master"]:
+						Achievement.achievements["magma_master"] = true
+						achievements_updated = true
 
-
-
+		if achievements_updated:
+			Achievement.save_achievements()
+	else:
+		print("Not enough materials")
 
 func _on_button_pressedSHOW() -> void:
 	button1.visible = true

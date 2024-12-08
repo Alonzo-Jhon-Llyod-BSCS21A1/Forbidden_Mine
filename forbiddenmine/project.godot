@@ -20,6 +20,7 @@ config/icon="res://457905861_995796022322525_1255581322795427183_n.png"
 GlobalVar="*res://script/GlobalVar.gd"
 PlayerVar="*res://script/PlayerVar.gd"
 GlobalOst="*res://Scene/GlobalOst.tscn"
+Achievement="*res://script/Achievement.gd"
 
 [display]
 

@@ -21,59 +21,69 @@ var char_coords
 var charlocal_position
 # Called when the node enters the scene tree for the first time.
 
-var item_to_tile_data = {
-	# Blocks (scaled with "Dirt" base durability of 10)
-	"Stone": {"tile": Vector2i(1, 0), "durability": 30},
-	"Iron": {"tile": Vector2i(0, 1), "durability": 30},
-	"Ruby": {"tile": Vector2i(3, 1), "durability": 60},
-	"Gold": {"tile": Vector2i(2, 1), "durability": 40},
-	"Emerald": {"tile": Vector2i(5, 1), "durability": 65},
-	"DeepStone": {"tile": Vector2i(2, 0), "durability": 50},
-	"HardStone": {"tile": Vector2i(3, 0), "durability": 55},
-	"Deorite": {"tile": Vector2i(4, 0), "durability": 45},
-	"Andesite": {"tile": Vector2i(5, 0), "durability": 40},
-	"Grass Block": {"tile": Vector2i(0, 2), "durability": 10},
+var item_to_tile_data = { 
+	"Sand": {"tile": Vector2i(0, 0), "durability": 5},
+	"Stone": {"tile": Vector2i(1, 0), "durability": 20},
+	"DeepStone": {"tile": Vector2i(2, 0), "durability": 30},
+	"HardStone": {"tile": Vector2i(3, 0), "durability": 40},
+	"Diorite": {"tile": Vector2i(4, 0), "durability": 25},
+	"Andesite": {"tile": Vector2i(5, 0), "durability": 25},
+	"Jungle Leaf": {"tile": Vector2i(6, 0), "durability": 5},
+	"Oak Leaf": {"tile": Vector2i(7, 0), "durability": 5},
+	
+	"Iron": {"tile": Vector2i(0, 1), "durability": 35},
+	"Diamond": {"tile": Vector2i(1, 1), "durability": 45},
+	"Gold": {"tile": Vector2i(2, 1), "durability": 30},
+	"Ruby": {"tile": Vector2i(3, 1), "durability": 50},
+	"Topaz": {"tile": Vector2i(4, 1), "durability": 50},
+	"Emerald": {"tile": Vector2i(5, 1), "durability": 60},
+	"Jungle Log": {"tile": Vector2i(6, 1), "durability": 20},
+	"Oak Log": {"tile": Vector2i(7, 1), "durability": 25},
+	
+	"Grass": {"tile": Vector2i(0, 2), "durability": 15},
 	"Dirt": {"tile": Vector2i(1, 2), "durability": 10},
-	"Snow Block": {"tile": Vector2i(1, 3), "durability": 15},
-	"Ice Block": {"tile": Vector2i(2, 3), "durability": 5},
-	"Magma Block": {"tile": Vector2i(3, 3), "durability": 60},
-	"Snow Grass Block": {"tile": Vector2i(0, 3), "durability": 12},
-	"Emerald Block": {"tile": Vector2i(2, 5), "durability": 65},
-	"Topaz Block": {"tile": Vector2i(3, 5), "durability": 55},
-	"Ruby Block": {"tile": Vector2i(4, 5), "durability": 70},
-	"Iron Block": {"tile": Vector2i(5, 5), "durability": 80},
-	"Diamond Block": {"tile": Vector2i(6, 5), "durability": 100},
-	"Gold Block": {"tile": Vector2i(7, 5), "durability": 60},
-	"Obsidian Block": {"tile": Vector2i(1, 6), "durability": 200},
-	"Andesite Block": {"tile": Vector2i(2, 6), "durability": 45},
-	"Moss Stone Block": {"tile": Vector2i(5, 6), "durability": 60},
-	"Sand Stone Block": {"tile": Vector2i(6, 6), "durability": 50},
-	"Brick Block": {"tile": Vector2i(7, 6), "durability": 70},
-	"Diorite Block": {"tile": Vector2i(2, 7), "durability": 60},
-	"Deepstone Brick Block": {"tile": Vector2i(6, 7), "durability": 70},
-	"Stone Brickblock": {"tile": Vector2i(7, 7), "durability": 75},
-
-	# Logs
-	"Jungle Log": {"tile": Vector2i(6, 1), "durability": 25},
-	"Oak Log": {"tile": Vector2i(7, 1), "durability": 30},
-	"Frosted Oak Log": {"tile": Vector2i(6, 3), "durability": 50},
-	"Acacia Log": {"tile": Vector2i(7, 3), "durability": 45},
-
-	# Leaves
-	"JungleLeafBlock": {"tile": Vector2i(6, 0), "durability": 5},
-	"Leaf Block": {"tile": Vector2i(7, 0), "durability": 2},
-	"Frosted Leaf Block": {"tile": Vector2i(6, 2), "durability": 7},
-	"Acacia Leaf Block": {"tile": Vector2i(7, 2), "durability": 10},
-
-	# Miscellaneous
-	"Big Cactus Block": {"tile": Vector2i(6, 4), "durability": 3},
-	"Small Cactus Block": {"tile": Vector2i(7, 4), "durability": 1},
-	"Ash Grass Block": {"tile": Vector2i(0, 5), "durability": 8},
-	"Ash Dirt Block": {"tile": Vector2i(1, 5), "durability": 6},
-	"Frosted Oak Planks": {"tile": Vector2i(3, 7), "durability": 15},
-	"Jungle Planks": {"tile": Vector2i(4, 7), "durability": 12},
-	"Snowbrick": {"tile": Vector2i(5, 7), "durability": 20},
+	"Frosted Leaf": {"tile": Vector2i(6, 2), "durability": 5},
+	"Acacia Leaf": {"tile": Vector2i(7, 2), "durability": 5},
+	
+	"Snow Grass": {"tile": Vector2i(0, 3), "durability": 5},
+	"Snow": {"tile": Vector2i(1, 3), "durability": 5},
+	"Ice": {"tile": Vector2i(2, 3), "durability": 5},
+	"Magma": {"tile": Vector2i(3, 3), "durability": 15},
+	"Frosted Oak Log": {"tile": Vector2i(6, 3), "durability": 10},
+	"Acacia Log": {"tile": Vector2i(7, 3), "durability": 15},
+	
+	"Jungle Grass": {"tile": Vector2i(0, 4), "durability": 10},
+	"Jungle Dirt": {"tile": Vector2i(1, 4), "durability": 10},
+	"Big Cactus": {"tile": Vector2i(6, 4), "durability": 10},
+	"Small Cactus": {"tile": Vector2i(7, 4), "durability": 10},
+	
+	"Ash Grass": {"tile": Vector2i(0, 5), "durability": 10},
+	"Ash": {"tile": Vector2i(1, 5), "durability": 10},
+	"Emerald Block": {"tile": Vector2i(2, 5), "durability": 75},
+	"Topaz Block": {"tile": Vector2i(3, 5), "durability": 70},
+	"Ruby Block": {"tile": Vector2i(4, 5), "durability": 80},
+	"Iron Block": {"tile": Vector2i(5, 5), "durability": 60},
+	"Diamond Block": {"tile": Vector2i(6, 5), "durability": 85},
+	"Gold Block": {"tile": Vector2i(7, 5), "durability": 50},
+	
+	"Obsidian Block": {"tile": Vector2i(1, 6), "durability": 100},
+	"Andesite Block": {"tile": Vector2i(2, 6), "durability": 40},
+	"Acacia Planks": {"tile": Vector2i(3, 6), "durability": 30},
+	"Oak Planks": {"tile": Vector2i(4, 6), "durability": 40},
+	"Moss Stone Block": {"tile": Vector2i(5, 6), "durability": 50},
+	"Sand Stone Block": {"tile": Vector2i(6, 6), "durability": 45},
+	"Brick Block": {"tile": Vector2i(7, 6), "durability": 50},
+	
+	"Water": {"tile": Vector2i(0, 7), "durability": 0},
+	"Lava": {"tile": Vector2i(1, 7), "durability": 0},
+	"Diorite Block": {"tile": Vector2i(2, 7), "durability": 40},
+	"Frosted Oak Planks": {"tile": Vector2i(3, 7), "durability": 25},
+	"Jungle Planks": {"tile": Vector2i(4, 7), "durability": 30},
+	"Snow Brick Block": {"tile": Vector2i(5, 7), "durability": 20},
+	"DeepStone Brick Block": {"tile": Vector2i(6, 7), "durability": 60},
+	"Stone Brick Block": {"tile": Vector2i(7, 7), "durability": 50},
 }
+
 
 
 
@@ -109,6 +119,7 @@ const LAVA = preload("res://Scene/Artifacts/Lava.tscn")
 func _ready() -> void:
 	if GlobalVar.load == 0:
 		PlayerVar.load_player_data()
+		$CharacterBody2D.global_position = GlobalVar.charposition
 	if PlayerVar.lavaartifact != null:
 		var lavasrtifact = LAVA.instantiate()
 		var lavaart_position = tile_map_layer.map_to_local(PlayerVar.lavaartifact)
@@ -244,57 +255,64 @@ func _on_timer_timeout() -> void:
 func drop_item(tile_data: Vector2i):
 	var tile_to_item_data = {
 		
-		# Stone Ore Blocks
-		Vector2i(1, 0): {"name": "Stone", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/stone.png"), "effect": "restore_health", "value" : 50},
+		#Vector2i(0, 0): {"name": "Sand", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/stone.png")},
+		Vector2i(1, 0): {"name": "Stone", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/stone.png")},
 		Vector2i(2, 0): {"name": "DeepStone", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/deepstone.png")},
 		Vector2i(3, 0): {"name": "HardStone", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/hardstone.png")},
-		Vector2i(4, 0): {"name": "Deorite", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/diorite_block.png")},
-		Vector2i(5, 0): {"name": "Andesite", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/andesite_block.png")},
+		Vector2i(4, 0): {"name": "Diorite", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/diorite.png")},
+		Vector2i(5, 0): {"name": "Andesite", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/andesite.png")},
+		Vector2i(6, 0): {"name": "Jungle Leaf", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/andesite.png")},
+		Vector2i(7, 0): {"name": "Oak Leaf", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/andesite.png")},
+		
+		
 		Vector2i(3, 1): {"name": "Ruby Ore", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/ruby_ore_drop.png")},
 		Vector2i(2, 1): {"name": "Gold Ore", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/gold_ore_drop.png")},
 		Vector2i(5, 1): {"name": "Emerald Ore", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		Vector2i(4, 1): {"name": "Topaz Ore", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/topaz_ore_drop.png")},
 		Vector2i(1, 1): {"name": "Diamond Ore", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/diamond_ore.png")},
 		Vector2i(0, 1): {"name": "Iron Ore", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/iron_ore_drop.png")},
-
-		# Wood Blocks
 		Vector2i(6, 1): {"name": "Jungle Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/jungle_logs.png")},
 		Vector2i(7, 1): {"name": "Oak Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/oak_logs.png")},
-		Vector2i(6, 2): {"name": "Frosted Leaf Block", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_leaf.png")},
-		Vector2i(7, 2): {"name": "Acacia Leaf Block", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/accacia_leaf.png")},
+		
+		#Vector2i(0, 2): {"name": "Grass", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		#Vector2i(1, 2): {"name": "Dirt", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(6, 2): {"name": "Frosted Leaf", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_leaf.png")},
+		Vector2i(7, 2): {"name": "Acacia Leaf", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/accacia_leaf.png")},
+		Vector2i(0, 3): {"name": "Snow Grass", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(1, 3): {"name": "Snow", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(2, 3): {"name": "Ice", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(3, 3): {"name": "Magma Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/magma_block.png")},
 		Vector2i(6, 3): {"name": "Frosted Oak Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_logs.png")},
 		Vector2i(7, 3): {"name": "Acacia Log", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/acacia_logs.png")},
-		Vector2i(0, 4): {"name": "Jungle Grass Block", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/jungle_leaf.png")},
-		Vector2i(1, 4): {"name": "Jungle Dirt Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(6, 4): {"name": "Big Cactus Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(7, 4): {"name": "Small Cactus Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(3, 7): {"name": "Frosted Oak Planks", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_planks.png")},
-		Vector2i(4, 7): {"name": "Jungle Planks", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/jungle_planks.png")},
-
-		# Stone Brick Blocks
-		Vector2i(4, 6): {"name": "Oak Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/brickblock.png")},
-		Vector2i(5, 6): {"name": "Moss Stone Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(6, 6): {"name": "Sand Stone Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(7, 6): {"name": "Brick Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/brickblock.png")},
-		Vector2i(2, 7): {"name": "Diorite Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(5, 7): {"name": "Snowbrick", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/snowbrickblock.png")},
-		Vector2i(6, 7): {"name": "Deepstone Brick Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/deepstonebrick.png")},
-		Vector2i(7, 7): {"name": "Stone Brickblock", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/stonebrick.png")},
-
-		# Other Blocks
-		Vector2i(0, 2): {"name": "Grass Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(1, 2): {"name": "Dirt", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(0, 3): {"name": "Snow Grass Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(1, 3): {"name": "Snow Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(2, 3): {"name": "Ice Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(3, 3): {"name": "Magma Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/magma_block.png")},
-		Vector2i(0, 5): {"name": "Ash Grass Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
-		Vector2i(1, 5): {"name": "Ash Dirt Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		
+		Vector2i(0, 4): {"name": "Jungle Grass", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(1, 4): {"name": "Jungle Dirt", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(6, 4): {"name": "Big Cactus", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(7, 4): {"name": "Small Cactus", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		
+		Vector2i(0, 5): {"name": "Ash Grass", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(1, 5): {"name": "Ash Dirt", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
 		Vector2i(2, 5): {"name": "Emerald Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_block.png")},
 		Vector2i(3, 5): {"name": "Topaz Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/topaz_block.png")},
 		Vector2i(4, 5): {"name": "Ruby Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/ruby_block.png")},
 		Vector2i(5, 5): {"name": "Iron Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/iron_block.png")},
-		Vector2i(6, 5): {"name": "Gold Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/gold_block.png")}
+		Vector2i(6, 5): {"name": "Diamond Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/iron_block.png")},
+		Vector2i(7, 5): {"name": "Gold Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/gold_block.png")},
+		
+		Vector2i(2, 6): {"name": "Andesite Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/andesite_block.png")},
+		Vector2i(3, 6): {"name": "Acacia Planks", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/acacia_planks.png")},
+		Vector2i(4, 6): {"name": "Oak Planks", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/oak_planks.png")},
+		Vector2i(5, 6): {"name": "Moss Stone Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/mossybrickstone.png")},
+		Vector2i(6, 6): {"name": "Sand Stone Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(7, 6): {"name": "Brick Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/brickblock.png")},
+		
+		Vector2i(2, 7): {"name": "Diorite Block", "type": "tiles", "texture": preload("res://Item assets/stone-ore-blocks/emerald_ore_drop.png")},
+		Vector2i(3, 7): {"name": "Frosted Oak Planks", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_planks.png")},
+		Vector2i(4, 7): {"name": "Jungle Planks", "type": "tiles", "texture": preload("res://Item assets/wood-tree-blocks/jungle_planks.png")},
+		Vector2i(5, 7): {"name": "Snow Brick Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/snowbrickblock.png")},
+		Vector2i(6, 7): {"name": "DeepStone Brick Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/deepstonebrick.png")},
+		Vector2i(7, 7): {"name": "Stone Brick Block", "type": "tiles", "texture": preload("res://Item assets/brick-blocks/stonebrick.png")},
+
 	}
 
 	if tile_data in tile_to_item_data:
