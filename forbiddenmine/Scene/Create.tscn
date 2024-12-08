@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d35vcvk5hoep7"]
+[gd_scene load_steps=9 format=3 uid="uid://d35vcvk5hoep7"]
 
 [ext_resource type="Script" path="res://script/create.gd" id="1_3qhyl"]
 [ext_resource type="Texture2D" uid="uid://ds4ihf43o0nxg" path="res://Media/button-normal.png" id="2_jehgg"]
+[ext_resource type="Texture2D" uid="uid://b8o2n8p4e2dt1" path="res://Media/Create.png" id="2_oq25q"]
 [ext_resource type="FontFile" uid="uid://bo4nr4tji5dlc" path="res://Media/upheavtt.ttf" id="3_fdmp3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jg6a2"]
@@ -26,28 +27,36 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3qhyl")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("2_oq25q")
+expand_mode = 1
+
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 452.0
-offset_top = 77.0
+offset_top = 270.0
 offset_right = 716.0
-offset_bottom = 108.0
+offset_bottom = 301.0
 placeholder_text = "World Name:"
 
 [node name="LineEdit2" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 453.0
-offset_top = 117.0
+offset_top = 310.0
 offset_right = 716.0
-offset_bottom = 148.0
+offset_bottom = 341.0
 placeholder_text = "Seed:"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 520.0
-offset_top = 159.0
+offset_top = 352.0
 offset_right = 645.0
-offset_bottom = 201.0
+offset_bottom = 394.0
 theme = SubResource("Theme_odfqt")
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -58,8 +67,10 @@ text = "CREATE"
 [node name="BACK" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_right = 36.0
-offset_bottom = 8.0
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 69.0
+offset_bottom = 50.0
 text = "BACK"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
