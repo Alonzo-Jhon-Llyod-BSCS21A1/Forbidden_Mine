@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg1cs3o4afp34"]
+
+[ext_resource type="Texture2D" uid="uid://cknpxr8ptiwf6" path="res://Media/moon.png" id="1_fxmxm"]
+
+[node name="Moon" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fxmxm")
