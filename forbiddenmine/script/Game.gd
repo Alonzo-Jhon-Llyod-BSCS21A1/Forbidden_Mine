@@ -12,9 +12,22 @@ var inventory_instance = null
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 @onready var color_rect = $CanvasLayer2/ColorRect
+@onready var cloud_layer = $CanvasLayer2/CloudLayer  # Layer for clouds
+@onready var star_layer = $CanvasLayer2/StarLayer
+@onready var moon_layer = $CanvasLayer2/MoonLayer
 
-var color_day = Color(0.53, 0.81, 0.92) # Sky blue (R:135, G:206, B:235)
-var color_night = Color(0.29, 0.0, 0.51) # Dark violet (R:74, G:0, B:130)
+@export var player : CharacterBody2D
+
+# Cloud and Star scene paths (assuming you have pre-created these)
+var cloud_scene = preload("res://Scene/Cloud.tscn")  # Path to the Cloud scene (Sprite)
+var star_scene = preload("res://Scene/Star.tscn")
+var moon_scene = preload("res://Scene/Moon.tscn")
+
+var moon_parallax_speed = 1.0
+
+var color_day = Color(173 / 255.0, 216 / 255.0, 230 / 255.0)  # Light blue (R:173, G:216, B:230)
+var color_night = Color(25 / 255.0, 25 / 255.0, 112 / 255.0)  # Dark blue (R:25, G:25, B:112)
+
 var duration = 30.0 # Duration of the transition in seconds
 
 var time_elapsed = 0.0
@@ -135,8 +148,23 @@ func _ready() -> void:
 		add_child(lavasrtifact)
 	SAVE_FILE_PATH += GlobalVar.new_world
 	
-	color_rect.color = color_day
-	color_rect.size = get_viewport_rect().size
+	print("CloudLayer:", cloud_layer)
+	print("StarLayer:", star_layer)
+
+		# Check if they are valid and print their initial visibility
+	if cloud_layer:
+		print("CloudLayer visible:", cloud_layer.visible)
+	if star_layer:
+		print("StarLayer visible:", star_layer.visible)
+		
+		# Initial setup for the background color
+	color_rect.color = color_day  # Set background color to sky blue at the start
+	color_rect.size = get_viewport_rect().size  # Fill the entire screen
+
+		# Create initial clouds and stars
+	_create_clouds()  # Create clouds
+	_create_stars()  # Create stars
+	_create_moon()   # Create moon
 	
 	pass # Replace with function body.
 	
@@ -253,28 +281,112 @@ func _process(_delta: float) -> void:
 					
 	time_elapsed += _delta
 
-	# Calculate the progress of the transition
+		# Transition progress (t) from 0.0 to 1.0
 	var t = time_elapsed / duration
-
 	if transitioning_to_night:
-		# Interpolate from day to night color
-		color_rect.color = color_day.lerp(color_night, t)
-		if t >= 1.0:
-			# Switch to transitioning back to day
-			transitioning_to_night = false
-			time_elapsed = 0.0
+				# Gradually change the background color from day to night
+			color_rect.color = color_day.lerp(color_night, t)
+			_show_night_effects(t)  # Manage visibility of clouds and stars
+			if t >= 1.0:
+					transitioning_to_night = false  # Switch to day after 30 seconds
+					time_elapsed = 0.0  # Reset time for the next transition
 	else:
-		# Interpolate from night to day color
-		color_rect.color = color_night.lerp(color_day, t)
-		if t >= 1.0:
-			# Switch to transitioning back to night
-			transitioning_to_night = true
-			time_elapsed = 0.0
+				# Gradually change the background color from night to day
+			color_rect.color = color_night.lerp(color_day, t)
+			_show_day_effects(t)  # Manage visibility of clouds and stars
+			if t >= 1.0:
+				transitioning_to_night = true  # Switch to night after 30 seconds
+				time_elapsed = 0.0  # Reset time for the next transition
 
-	# Ensure the ColorRect dynamically resizes to the viewport
-	color_rect.size = get_viewport_rect().size
-	
-	pass
+		# Update background size dynamically to fit the screen
+			color_rect.size = get_viewport_rect().size
+			
+	_update_moon_visibility(t)
+
+		# Parallax effect: move the moon based on the player's position
+	if player:
+		_apply_moon_parallax(player.position)
+			
+
+# Function to create clouds during the day
+func _create_clouds():
+		for i in range(10):  # Number of clouds to spawn
+				var cloud = cloud_scene.instantiate()  # Instantiate the Cloud scene using 'instantiate()'
+
+				# Random position in the upper half of the screen
+				cloud.position = Vector2(randf_range(0, get_viewport_rect().size.x), randf_range(0, get_viewport_rect().size.y / 2))
+
+				# Randomize the size of the cloud (scale between 0.5 and 1.5 times the original size)
+				var random_size = randf_range(1.0, 3.0)
+				cloud.scale = Vector2(random_size, random_size)
+
+				# Add the cloud instance to the CloudLayer
+				cloud_layer.add_child(cloud)  # Add the cloud instance to the CloudLayer
+
+# Function to create stars during the night
+func _create_stars():
+		for i in range(50):  # Number of stars to spawn
+				var star = star_scene.instantiate()  # Instantiate the Star scene using 'instantiate()'
+
+				# Random position across the entire screen
+				star.position = Vector2(randf_range(0, get_viewport_rect().size.x), randf_range(0, get_viewport_rect().size.y))
+
+				# Randomize the size of the stars (scale between 0.1 and 0.3 times the original size)
+				var random_star_size = randf_range(1.0, 2.0)
+				star.scale = Vector2(random_star_size, random_star_size)  # Maintain aspect ratio (no stretching)
+
+				# Add the star instance to the StarLayer
+				star_layer.add_child(star)
+				
+func _apply_parallax(player_position: Vector2):
+		# Move clouds, stars, and moon based on player's position with parallax effect
+
+		for moon in moon_layer.get_children():
+				moon.position.x += (player_position.x - moon.position.x) * moon_parallax_speed  # Moon moves slower
+
+func _apply_moon_parallax(player_position: Vector2):
+	# Move the moon based on the player's position with parallax effect
+	for moon in moon_layer.get_children():
+		moon.position.x += (player_position.x - moon.position.x) * moon_parallax_speed
+# Manage cloud and star visibility and effects during night transitions
+
+func _create_moon():
+		# Instantiate the moon scene
+		var moon = moon_scene.instantiate()  # Instantiate the Moon scene using 'instantiate()'
+
+		# Set a random position for the moon (it stays in the upper half of the screen)
+		moon.position = Vector2(randf_range(0, get_viewport_rect().size.x), randf_range(0, get_viewport_rect().size.y / 2))
+
+		# Make the moon bigger by scaling it
+		moon.scale = Vector2(2, 2)  # Scale it to twice its original size
+
+		# Add the moon instance to the MoonLayer
+		moon_layer.add_child(moon)
+
+func _update_moon_visibility(t: float):
+	# Show the moon only during the night
+	for moon in moon_layer.get_children():
+		if transitioning_to_night:
+				moon.visible = true  # Show moon during the night
+		else:
+				moon.visible = false
+
+func _show_night_effects(t):
+		if cloud_layer:
+				cloud_layer.visible = false  # Hide clouds during the night
+		if star_layer:
+				star_layer.visible = true  # Show stars during the night
+		for star in star_layer.get_children():
+				star.modulate.a = t  # Fade in stars as it gets darker
+
+# Manage cloud and star visibility and effects during day transitions
+func _show_day_effects(t):
+		if cloud_layer:
+				cloud_layer.visible = true  # Show clouds during the day
+		if star_layer:
+				star_layer.visible = false  # Hide stars during the day
+		for cloud in cloud_layer.get_children():
+				cloud.modulate.a = 1 - t  # Fade out clouds as it gets brighter
 
 func _on_timer_timeout() -> void:
 	if is_instance_valid(breakable_block):
