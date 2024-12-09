@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://dn5s8bstqe12"]
+[gd_scene load_steps=120 format=3 uid="uid://dn5s8bstqe12"]
 
 [ext_resource type="Script" path="res://script/recipe.gd" id="1_f1rv3"]
 [ext_resource type="Texture2D" uid="uid://btv7vj4o0o36x" path="res://Media/inventory_noSquare.png" id="2_3hlfb"]
@@ -88,6 +88,37 @@
 [ext_resource type="Texture2D" uid="uid://bhj1etlnrkoth" path="res://Item assets/tools/magma_pickaxe.png" id="86_j6bhj"]
 [ext_resource type="Texture2D" uid="uid://cun4wnvqsnat" path="res://Item assets/tools/magma_shovel.png" id="87_38ulb"]
 [ext_resource type="Texture2D" uid="uid://bk1xynybl6vbv" path="res://Item assets/wood-tree-blocks/acacia_logs.png" id="88_6tjcp"]
+[ext_resource type="Texture2D" uid="uid://di7gr1so0qtc6" path="res://Item assets/wood-tree-blocks/acacia_slabs.png" id="89_n87pk"]
+[ext_resource type="Texture2D" uid="uid://catae1014oww1" path="res://Item assets/wood-tree-blocks/acacia_staircase.png" id="90_pbw51"]
+[ext_resource type="Texture2D" uid="uid://5mvji1yxa34s" path="res://Item assets/wood-tree-blocks/acacia_fence.png" id="91_tvoh1"]
+[ext_resource type="Texture2D" uid="uid://ddltd3ur71y5k" path="res://Item assets/wood-tree-blocks/acacia_fence_end_left.png" id="92_6ce56"]
+[ext_resource type="Texture2D" uid="uid://b4nopp0fcd7i3" path="res://Item assets/wood-tree-blocks/acacia_fence_end_right.png" id="93_qhcxf"]
+[ext_resource type="Texture2D" uid="uid://iog7xp35qx8q" path="res://Item assets/wood-tree-blocks/frosted_oak_slabs.png" id="94_yp48j"]
+[ext_resource type="Texture2D" uid="uid://v22xftqrcajc" path="res://Item assets/wood-tree-blocks/frosted_oak_staircase.png" id="95_g7b6j"]
+[ext_resource type="Texture2D" uid="uid://evnrpj25g3if" path="res://Item assets/wood-tree-blocks/frosted_oak_fence.png" id="96_gt407"]
+[ext_resource type="Texture2D" uid="uid://camu2kvqtrtus" path="res://Item assets/wood-tree-blocks/frosted_oak_fence_end_left.png" id="97_q88wg"]
+[ext_resource type="Texture2D" uid="uid://cf3et115e8vmx" path="res://Item assets/wood-tree-blocks/frosted_oak_fence_end_right.png" id="98_co1yf"]
+[ext_resource type="Texture2D" uid="uid://bjeqk4n0wrnlg" path="res://Item assets/wood-tree-blocks/jungle_slabs.png" id="99_5fiql"]
+[ext_resource type="Texture2D" uid="uid://dnb6io2j4wgvo" path="res://Item assets/wood-tree-blocks/jungle_staircase.png" id="100_33qxi"]
+[ext_resource type="Texture2D" uid="uid://bere5wuypdmj4" path="res://Item assets/wood-tree-blocks/jungle_fence.png" id="101_nilcb"]
+[ext_resource type="Texture2D" uid="uid://dk1vpxq7b5wre" path="res://Item assets/wood-tree-blocks/jungle_fence_end_left.png" id="102_1jntm"]
+[ext_resource type="Texture2D" uid="uid://d23elh83n2w27" path="res://Item assets/wood-tree-blocks/jungle_fence_end_right.png" id="103_kpuei"]
+[ext_resource type="Texture2D" uid="uid://b41nkjp6huwnj" path="res://Item assets/wood-tree-blocks/oak_slabs.png" id="104_fsqp6"]
+[ext_resource type="Texture2D" uid="uid://bs4ypk5ti4o1t" path="res://Item assets/wood-tree-blocks/oak_staircase.png" id="105_wnxio"]
+[ext_resource type="Texture2D" uid="uid://84bo0p17u4pc" path="res://Item assets/wood-tree-blocks/oak_fence.png" id="106_idv0f"]
+[ext_resource type="Texture2D" uid="uid://bcqqflcoxx4g6" path="res://Item assets/wood-tree-blocks/oak_fence_end_left.png" id="107_g7yuv"]
+[ext_resource type="Texture2D" uid="uid://xquvjs8ktqew" path="res://Item assets/wood-tree-blocks/oak_fence_end_right.png" id="108_b8u7i"]
+[ext_resource type="Texture2D" uid="uid://brebtvqs0jts4" path="res://Item assets/brick-blocks/stonebrick.png" id="109_hnh8q"]
+[ext_resource type="Texture2D" uid="uid://bdopd2qdfmvrl" path="res://Item assets/brick-blocks/snowbrickblock.png" id="110_c6mxs"]
+[ext_resource type="Texture2D" uid="uid://dglpud0c8xneg" path="res://Item assets/brick-blocks/sandstonebrick.png" id="111_fmsku"]
+[ext_resource type="Texture2D" uid="uid://dxcqnmt2ijjvd" path="res://Item assets/brick-blocks/mossybrickstone.png" id="112_7vwd8"]
+[ext_resource type="Texture2D" uid="uid://u0iikq85pjg8" path="res://Item assets/brick-blocks/brickblock.png" id="113_feprw"]
+[ext_resource type="Texture2D" uid="uid://dmggqgxiwmw2j" path="res://Item assets/stone-ore-blocks/andesite_block.png" id="114_pa557"]
+[ext_resource type="Texture2D" uid="uid://cr3o4ipk4xx62" path="res://Item assets/stone-ore-blocks/diorite_block.png" id="115_sj17u"]
+[ext_resource type="Texture2D" uid="uid://cysi8vcjjm2w7" path="res://Item assets/stone-ore-blocks/iron_block.png" id="116_u0k3o"]
+[ext_resource type="Texture2D" uid="uid://cwxbutn5t7xs3" path="res://Item assets/stone-ore-blocks/gold_block.png" id="117_h4quu"]
+[ext_resource type="Texture2D" uid="uid://cuw2bdlkt1xbe" path="res://Item assets/stone-ore-blocks/diamond_block.png" id="118_fggdw"]
+[ext_resource type="Texture2D" uid="uid://dffvqub5pmqnn" path="res://Item assets/stone-ore-blocks/emerald_block.png" id="119_ac4do"]
 
 [node name="Control" type="CanvasLayer"]
 script = ExtResource("1_f1rv3")
@@ -4365,6 +4396,7 @@ expand_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="TEMP" type="Label" parent="TabContainer/Materials"]
+visible = false
 layout_mode = 0
 offset_left = 10.0
 offset_top = -13.0
@@ -4451,6 +4483,294 @@ offset_right = 62.0
 offset_bottom = 59.0
 text = "
 "
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 64.0
+offset_right = 99.0
+offset_bottom = 104.0
+texture = ExtResource("4_xbcm5")
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 65.0
+offset_right = 196.0
+offset_bottom = 105.0
+texture = ExtResource("89_n87pk")
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 64.0
+offset_right = 288.0
+offset_bottom = 104.0
+texture = ExtResource("90_pbw51")
+
+[node name="TextureRect4" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 63.0
+offset_right = 386.0
+offset_bottom = 103.0
+texture = ExtResource("91_tvoh1")
+
+[node name="TextureRect5" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 64.0
+offset_right = 480.0
+offset_bottom = 104.0
+texture = ExtResource("92_6ce56")
+
+[node name="TextureRect6" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 63.0
+offset_right = 580.0
+offset_bottom = 103.0
+texture = ExtResource("93_qhcxf")
+
+[node name="TextureRect7" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 154.0
+offset_right = 97.0
+offset_bottom = 194.0
+texture = ExtResource("9_m8gf7")
+
+[node name="TextureRect8" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 153.0
+offset_right = 192.0
+offset_bottom = 193.0
+texture = ExtResource("94_yp48j")
+
+[node name="TextureRect9" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 154.0
+offset_right = 289.0
+offset_bottom = 194.0
+texture = ExtResource("95_g7b6j")
+
+[node name="TextureRect10" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 157.0
+offset_right = 385.0
+offset_bottom = 197.0
+texture = ExtResource("96_gt407")
+
+[node name="TextureRect11" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 154.0
+offset_right = 477.0
+offset_bottom = 194.0
+texture = ExtResource("97_q88wg")
+
+[node name="TextureRect12" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 153.0
+offset_right = 580.0
+offset_bottom = 193.0
+texture = ExtResource("98_co1yf")
+
+[node name="TextureRect13" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 240.0
+offset_right = 99.0
+offset_bottom = 280.0
+texture = ExtResource("17_re7nu")
+
+[node name="TextureRect14" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 240.0
+offset_right = 192.0
+offset_bottom = 280.0
+texture = ExtResource("99_5fiql")
+
+[node name="TextureRect15" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 244.0
+offset_right = 289.0
+offset_bottom = 284.0
+texture = ExtResource("100_33qxi")
+
+[node name="TextureRect16" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 243.0
+offset_right = 390.0
+offset_bottom = 283.0
+texture = ExtResource("101_nilcb")
+
+[node name="TextureRect17" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 240.0
+offset_right = 481.0
+offset_bottom = 280.0
+texture = ExtResource("102_1jntm")
+
+[node name="TextureRect18" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 244.0
+offset_right = 584.0
+offset_bottom = 284.0
+texture = ExtResource("103_kpuei")
+
+[node name="TextureRect19" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 336.0
+offset_right = 100.0
+offset_bottom = 376.0
+texture = ExtResource("13_46jsm")
+
+[node name="TextureRect20" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 331.0
+offset_right = 189.0
+offset_bottom = 371.0
+texture = ExtResource("104_fsqp6")
+
+[node name="TextureRect21" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 328.0
+offset_right = 289.0
+offset_bottom = 368.0
+texture = ExtResource("105_wnxio")
+
+[node name="TextureRect22" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 332.0
+offset_right = 387.0
+offset_bottom = 372.0
+texture = ExtResource("106_idv0f")
+
+[node name="TextureRect23" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 332.0
+offset_right = 479.0
+offset_bottom = 372.0
+texture = ExtResource("107_g7yuv")
+
+[node name="TextureRect24" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 329.0
+offset_right = 580.0
+offset_bottom = 369.0
+texture = ExtResource("108_b8u7i")
+
+[node name="TextureRect25" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 418.0
+offset_right = 99.0
+offset_bottom = 458.0
+texture = ExtResource("5_m42cx")
+
+[node name="TextureRect26" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 421.0
+offset_right = 191.0
+offset_bottom = 461.0
+texture = ExtResource("109_hnh8q")
+
+[node name="TextureRect27" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 424.0
+offset_right = 288.0
+offset_bottom = 464.0
+texture = ExtResource("110_c6mxs")
+
+[node name="TextureRect28" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 421.0
+offset_right = 385.0
+offset_bottom = 461.0
+texture = ExtResource("111_fmsku")
+
+[node name="TextureRect29" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 420.0
+offset_right = 491.0
+offset_bottom = 460.0
+texture = ExtResource("112_7vwd8")
+
+[node name="TextureRect30" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 420.0
+offset_right = 577.0
+offset_bottom = 460.0
+texture = ExtResource("113_feprw")
+
+[node name="TextureRect31" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 508.0
+offset_right = 101.0
+offset_bottom = 548.0
+texture = ExtResource("114_pa557")
+
+[node name="TextureRect32" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 511.0
+offset_right = 196.0
+offset_bottom = 551.0
+texture = ExtResource("115_sj17u")
+
+[node name="TextureRect33" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 512.0
+offset_right = 296.0
+offset_bottom = 552.0
+texture = ExtResource("116_u0k3o")
+
+[node name="TextureRect34" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 508.0
+offset_right = 390.0
+offset_bottom = 548.0
+texture = ExtResource("117_h4quu")
+
+[node name="TextureRect35" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 508.0
+offset_right = 477.0
+offset_bottom = 548.0
+texture = ExtResource("118_fggdw")
+
+[node name="TextureRect36" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 508.0
+offset_right = 583.0
+offset_bottom = 548.0
+texture = ExtResource("119_ac4do")
 
 [node name="TabBar4" type="TabBar" parent="TabContainer"]
 visible = false
