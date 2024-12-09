@@ -1,1 +1,15 @@
-res://Scene/Recipe.tscn
+res://Scene/Inventorty_UI.tscn
+res://Scene/control.tscn
+res://Scene/Create.tscn
+res://Scene/CreatedWorld.tscn
+res://Scene/Cloud.tscn
+res://Scene/Deer.tscn
+res://Scene/EnemyPrototype.tscn
+res://Scene/DungeonWatcher.tscn
+res://Scene/Fox.tscn
+res://Scene/game_controls.tscn
+res://Scene/GlobalOst.tscn
+res://Scene/Inventory.tscn
+res://Scene/inventory_hotbar.tscn
+res://Scene/inventory_slot.tscn
+res://Scene/Achievement.tscn

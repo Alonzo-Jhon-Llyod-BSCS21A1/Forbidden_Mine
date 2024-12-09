@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://byymqcyhon4w"]
+[gd_scene load_steps=4 format=3 uid="uid://byymqcyhon4w"]
 
 [ext_resource type="Script" path="res://Scene/achievement.gd" id="1_hwdwa"]
 [ext_resource type="Texture2D" uid="uid://4aaxwnbugkem" path="res://Media/462585862_1448355969411210_28473098532662935_n.png" id="2_ff2ng"]
+[ext_resource type="Texture2D" uid="uid://brtuaryjb67dl" path="res://Media/achievement.png" id="2_j72i1"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_hwdwa")
@@ -27,208 +28,284 @@ current_tab = 0
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Label3" type="Label" parent="TabContainer/CRAFTING"]
-layout_mode = 1
-offset_left = 149.0
-offset_top = 40.0
-offset_right = 549.0
-offset_bottom = 63.0
-text = "Acacia Artisan – Craft something using acacia wood."
+[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 2
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1149.0
+offset_bottom = 669.0
+texture = ExtResource("2_j72i1")
+expand_mode = 1
+metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label3"]
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/CRAFTING"]
 layout_mode = 0
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
+offset_left = 125.0
+offset_top = 33.0
+offset_right = 152.0
+offset_bottom = 64.0
 texture = ExtResource("2_ff2ng")
 expand_mode = 1
 
-[node name="Label4" type="Label" parent="TabContainer/CRAFTING"]
-layout_mode = 2
-offset_left = 152.0
-offset_top = 73.0
-offset_right = 548.0
-offset_bottom = 96.0
-text = "Jungle Crafter – Craft something using jungle wood."
-
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label4"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
-texture = ExtResource("2_ff2ng")
-expand_mode = 1
-
-[node name="Label5" type="Label" parent="TabContainer/CRAFTING"]
-layout_mode = 2
-offset_left = 34.0
-offset_top = 101.0
-offset_right = 436.0
-offset_bottom = 124.0
-text = "Frosted Masterpiece – Craft using frosted oak wood."
-
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label5"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
-texture = ExtResource("2_ff2ng")
-expand_mode = 1
-
-[node name="Label6" type="Label" parent="TabContainer/CRAFTING"]
-layout_mode = 2
-offset_left = 35.0
-offset_top = 141.0
-offset_right = 422.0
-offset_bottom = 164.0
-text = "Oak Enthusiast – Craft something using oak wood."
-
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label6"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
-texture = ExtResource("2_ff2ng")
-expand_mode = 1
-
-[node name="Label7" type="Label" parent="TabContainer/CRAFTING"]
-layout_mode = 2
-offset_left = 37.0
-offset_top = 183.0
-offset_right = 355.0
-offset_bottom = 206.0
-text = "Stone Shaper – Craft a stone tool or item."
-
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label7"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
-texture = ExtResource("2_ff2ng")
-expand_mode = 1
-
-[node name="Label8" type="Label" parent="TabContainer/CRAFTING"]
+[node name="Label3" type="Label" parent="TabContainer/CRAFTING/TextureRect2"]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 41.0
-offset_top = -39.5
-offset_right = 278.0
-offset_bottom = -16.5
-grow_vertical = 2
-text = "Iron Forge – Craft an iron item."
-
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label8"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
-texture = ExtResource("2_ff2ng")
-expand_mode = 1
-
-[node name="Label9" type="Label" parent="TabContainer/CRAFTING"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 40.0
-offset_top = -88.5
-offset_right = 375.0
-offset_bottom = -65.5
-grow_vertical = 2
-text = "Golden Touch – Craft something using gold."
-
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label9"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
-texture = ExtResource("2_ff2ng")
-expand_mode = 1
-
-[node name="Label10" type="Label" parent="TabContainer/CRAFTING"]
-layout_mode = 2
 offset_left = 45.0
-offset_top = 317.0
-offset_right = 408.0
-offset_bottom = 340.0
-text = "Diamond Crafter – Craft an item with diamond."
+offset_top = -1.0
+offset_right = 858.0
+offset_bottom = 30.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Acacia Artisan – Craft something using acacia wood."
+horizontal_alignment = 1
+visible_ratio = -0.0196078
 
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label10"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 84.0
+offset_right = 153.0
+offset_bottom = 115.0
 texture = ExtResource("2_ff2ng")
 expand_mode = 1
 
-[node name="Label11" type="Label" parent="TabContainer/CRAFTING"]
+[node name="Label4" type="Label" parent="TabContainer/CRAFTING/TextureRect3"]
 layout_mode = 2
-offset_left = 42.0
-offset_top = 358.0
-offset_right = 352.0
-offset_bottom = 381.0
-text = "Emerald Engineer – Craft with emeralds."
+offset_left = 47.0
+offset_top = -3.0
+offset_right = 856.0
+offset_bottom = 28.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Jungle Crafter – Craft something using jungle wood."
+horizontal_alignment = 1
+visible_ratio = -0.0196078
 
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label11"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
+[node name="TextureRect4" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 137.0
+offset_right = 153.0
+offset_bottom = 168.0
 texture = ExtResource("2_ff2ng")
 expand_mode = 1
 
-[node name="Label12" type="Label" parent="TabContainer/CRAFTING"]
-layout_mode = 2
-offset_left = 40.0
-offset_top = 402.0
-offset_right = 375.0
-offset_bottom = 425.0
-text = "Ruby Radiance – Craft an item using rubies."
-
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label12"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
-texture = ExtResource("2_ff2ng")
-expand_mode = 1
-
-[node name="Label13" type="Label" parent="TabContainer/CRAFTING"]
+[node name="Label5" type="Label" parent="TabContainer/CRAFTING/TextureRect4"]
 layout_mode = 2
 offset_left = 44.0
-offset_top = 446.0
-offset_right = 323.0
-offset_bottom = 469.0
-text = "Topaz Treasures – Craft using topaz."
+offset_top = -1.0
+offset_right = 854.0
+offset_bottom = 30.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Frosted Masterpiece – Craft using frosted oak wood."
+horizontal_alignment = 1
+visible_ratio = -0.0196078
 
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label13"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
+[node name="TextureRect5" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 186.0
+offset_right = 154.0
+offset_bottom = 217.0
 texture = ExtResource("2_ff2ng")
 expand_mode = 1
 
-[node name="Label14" type="Label" parent="TabContainer/CRAFTING"]
+[node name="Label6" type="Label" parent="TabContainer/CRAFTING/TextureRect5"]
 layout_mode = 2
-offset_left = 41.0
-offset_top = 494.0
-offset_right = 462.0
-offset_bottom = 517.0
-text = "Magma Master – Craft using magma-related materials."
+offset_left = 44.0
+offset_top = -1.0
+offset_right = 830.0
+offset_bottom = 30.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Oak Enthusiast – Craft something using oak wood."
+horizontal_alignment = 1
+visible_ratio = -0.0208333
 
-[node name="TextureRect" type="TextureRect" parent="TabContainer/CRAFTING/Label14"]
-offset_left = -35.0
-offset_top = -6.0
-offset_right = -8.0
-offset_bottom = 25.0
+[node name="TextureRect6" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 241.0
+offset_right = 153.0
+offset_bottom = 272.0
 texture = ExtResource("2_ff2ng")
 expand_mode = 1
+
+[node name="Label7" type="Label" parent="TabContainer/CRAFTING/TextureRect6"]
+layout_mode = 2
+offset_left = 44.0
+offset_top = -5.0
+offset_right = 740.0
+offset_bottom = 26.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Stone Shaper – Craft a stone tool or item."
+horizontal_alignment = 1
+visible_ratio = -0.0238095
+
+[node name="TextureRect7" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 345.0
+offset_right = 152.0
+offset_bottom = 376.0
+texture = ExtResource("2_ff2ng")
+expand_mode = 1
+
+[node name="Label8" type="Label" parent="TabContainer/CRAFTING/TextureRect7"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 47.0
+offset_top = -20.5
+offset_right = 626.0
+offset_bottom = 10.5
+grow_vertical = 2
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Iron Forge – Craft an iron item."
+horizontal_alignment = 1
+visible_ratio = -0.03125
+
+[node name="TextureRect8" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 294.0
+offset_right = 153.0
+offset_bottom = 325.0
+texture = ExtResource("2_ff2ng")
+expand_mode = 1
+
+[node name="Label9" type="Label" parent="TabContainer/CRAFTING/TextureRect8"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 44.0
+offset_top = -23.5
+offset_right = 760.0
+offset_bottom = 7.5
+grow_vertical = 2
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Golden Touch – Craft something using gold."
+horizontal_alignment = 1
+visible_ratio = -0.0238095
+
+[node name="TextureRect9" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 397.0
+offset_right = 152.0
+offset_bottom = 428.0
+texture = ExtResource("2_ff2ng")
+expand_mode = 1
+
+[node name="Label10" type="Label" parent="TabContainer/CRAFTING/TextureRect9"]
+layout_mode = 2
+offset_left = 49.0
+offset_top = -1.0
+offset_right = 797.0
+offset_bottom = 30.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Diamond Crafter – Craft an item with diamond."
+horizontal_alignment = 1
+visible_ratio = -0.0222222
+
+[node name="TextureRect10" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 450.0
+offset_right = 152.0
+offset_bottom = 481.0
+texture = ExtResource("2_ff2ng")
+expand_mode = 1
+
+[node name="Label11" type="Label" parent="TabContainer/CRAFTING/TextureRect10"]
+layout_mode = 2
+offset_left = 46.0
+offset_top = -2.0
+offset_right = 730.0
+offset_bottom = 29.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Emerald Engineer – Craft with emeralds."
+horizontal_alignment = 1
+visible_ratio = -0.025641
+
+[node name="TextureRect11" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 501.0
+offset_right = 151.0
+offset_bottom = 532.0
+texture = ExtResource("2_ff2ng")
+expand_mode = 1
+
+[node name="Label12" type="Label" parent="TabContainer/CRAFTING/TextureRect11"]
+layout_mode = 2
+offset_left = 47.0
+offset_top = 0.999999
+offset_right = 765.0
+offset_bottom = 32.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Ruby Radiance – Craft an item using rubies."
+horizontal_alignment = 1
+visible_ratio = -0.0232558
+
+[node name="TextureRect12" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 554.0
+offset_right = 151.0
+offset_bottom = 585.0
+texture = ExtResource("2_ff2ng")
+expand_mode = 1
+
+[node name="Label13" type="Label" parent="TabContainer/CRAFTING/TextureRect12"]
+layout_mode = 2
+offset_left = 48.0
+offset_right = 688.0
+offset_bottom = 31.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Topaz Treasures – Craft using topaz."
+horizontal_alignment = 1
+visible_ratio = -0.0277778
+
+[node name="TextureRect13" type="TextureRect" parent="TabContainer/CRAFTING"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 607.0
+offset_right = 151.0
+offset_bottom = 638.0
+texture = ExtResource("2_ff2ng")
+expand_mode = 1
+
+[node name="Label14" type="Label" parent="TabContainer/CRAFTING/TextureRect13"]
+layout_mode = 2
+offset_left = 44.0
+offset_right = 875.0
+offset_bottom = 31.0
+scale = Vector2(1.055, 1.055)
+theme_override_font_sizes/font_size = 22
+text = "Magma Master – Craft using magma-related materials."
+horizontal_alignment = 1
+visible_ratio = -0.0196078
 
 [node name="COMBAT" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/COMBAT"]
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1149.0
+offset_bottom = 669.0
+texture = ExtResource("2_j72i1")
+expand_mode = 1
+metadata/_edit_lock_ = true
