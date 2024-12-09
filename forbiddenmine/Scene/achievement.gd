@@ -37,3 +37,8 @@ func _ready() -> void:
 	
 	if Achievement.achievements["magma_master"] != false:
 		$TabContainer/CRAFTING/Label14/TextureRect.texture = load("res://Media/QW.png")
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/control.tscn")
+	pass # Replace with function body.

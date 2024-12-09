@@ -13,3 +13,7 @@ res://Scene/Inventory.tscn
 res://Scene/inventory_hotbar.tscn
 res://Scene/inventory_slot.tscn
 res://Scene/Achievement.tscn
+res://Scene/Recipe.tscn
+res://Scene/node_2d.tscn
+res://Scene/game_controls.gd
+res://Scene/achievement.gd
