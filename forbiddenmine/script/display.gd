@@ -15,3 +15,11 @@ func _process(_delta: float) -> void:
 	if PlayerVar.player_thirst != null:
 		$ThirstBar.value = PlayerVar.player_thirst
 	pass
+
+const PAUSE = preload("res://Scene/pause.tscn")
+
+var pause_instance: Node = null  # To keep track of the pause scene instance
+
+func _on_button_pressed() -> void:
+	$"../CanvasLayer".visible = true
+	get_tree().paused = true

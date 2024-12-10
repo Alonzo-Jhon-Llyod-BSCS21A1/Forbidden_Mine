@@ -1,26 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdwnh588ui1n4"]
+[gd_scene load_steps=3 format=3 uid="uid://bdwnh588ui1n4"]
 
 [ext_resource type="Script" path="res://script/display.gd" id="1_wf37e"]
+[ext_resource type="Texture2D" uid="uid://bi74tph7jgkst" path="res://Media/pause.png" id="2_m7cx4"]
 
 [node name="Display" type="CanvasLayer"]
 script = ExtResource("1_wf37e")
 
+[node name="Button" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -53.0
+offset_top = 10.0
+offset_right = -34.0
+offset_bottom = 33.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+size_flags_horizontal = 8
+size_flags_vertical = 0
+keep_pressed_outside = true
+icon = ExtResource("2_m7cx4")
+flat = true
+
 [node name="HealthBar" type="ProgressBar" parent="."]
 modulate = Color(0.176471, 1, 0.176471, 1)
+offset_top = 19.0
 offset_right = 102.0
-offset_bottom = 27.0
+offset_bottom = 46.0
 value = 50.0
 
 [node name="HungerBar" type="ProgressBar" parent="."]
 modulate = Color(1, 0.673254, 0.321224, 1)
-offset_top = 27.0
+offset_top = 46.0
 offset_right = 102.0
-offset_bottom = 54.0
+offset_bottom = 73.0
 value = 50.0
 
 [node name="ThirstBar" type="ProgressBar" parent="."]
 modulate = Color(0.270192, 0.575205, 1, 1)
-offset_top = 54.0
+offset_top = 73.0
 offset_right = 101.0
-offset_bottom = 81.0
+offset_bottom = 100.0
 value = 75.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,6 +1,8 @@
 extends Node2D
 const BREAK_ANIMATION = preload("res://Scene/BreakAnimation.tscn")
 const enemy = preload("res://Scene/EnemyPrototype.tscn")
+const cat = preload("res://Scene/Cat.tscn")
+const deer = preload("res://Scene/Deer.tscn")
 const itemdrops = preload("res://Scene/Inventory.tscn")
 const recipe = preload("res://Scene/Recipe.tscn")
 var recipe_instance = null
@@ -477,6 +479,8 @@ func drop_item(tile_data: Vector2i):
 
 func _on_spawn_timer_timeout() -> void:
 	var enemy_instance = enemy.instantiate()
+	var cats = cat.instantiate()
+	var deers = deer.instantiate()
 	enemy_instance.scale = Vector2(2, 2)
 	
 	var character_position = GlobalVar.charposition
@@ -491,8 +495,8 @@ func _on_spawn_timer_timeout() -> void:
 			break
 	
 	enemy_instance.global_position = spawn_position
+	cats.global_position = spawn_position
+	deers.global_position = spawn_position
 	add_child(enemy_instance)
-
-
-
-	
+	add_child(cats)
+	add_child(deers)
