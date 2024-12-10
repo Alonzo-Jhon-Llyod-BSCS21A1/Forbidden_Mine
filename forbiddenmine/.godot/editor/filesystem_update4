@@ -1,4 +1,6 @@
-res://Scene/Inventorty_UI.tscn
+res://Scene/Achievement.tscn
+res://Scene/Recipe.tscn
+res://script/recipe.gd
 res://Scene/control.tscn
 res://Scene/Create.tscn
 res://Scene/CreatedWorld.tscn
@@ -9,11 +11,8 @@ res://Scene/DungeonWatcher.tscn
 res://Scene/Fox.tscn
 res://Scene/game_controls.tscn
 res://Scene/GlobalOst.tscn
+res://Scene/Inventorty_UI.tscn
 res://Scene/Inventory.tscn
 res://Scene/inventory_hotbar.tscn
 res://Scene/inventory_slot.tscn
-res://Scene/Achievement.tscn
-res://Scene/Recipe.tscn
 res://Scene/node_2d.tscn
-res://Scene/game_controls.gd
-res://Scene/achievement.gd

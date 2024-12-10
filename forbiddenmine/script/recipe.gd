@@ -78,9 +78,36 @@ extends CanvasLayer
 @onready var button_35 = $TabContainer/Tools/magma/TextureRect2/ButtonMAGMA2
 @onready var button_36 = $TabContainer/Tools/magma/TextureRect3/ButtonMAGMA3
 
-@onready var button_m1 = $"TabContainer/Materials/TEMP/Acacia PLANKS/CRAFT1"
-@onready var button_m2 = $TabContainer/Materials/TEMP/Sticks/CRAFT2
-
+@onready var button_m1 = $TabContainer/Materials/acacia/TextureRect/CRAFT
+@onready var button_m2 = $TabContainer/Materials/acacia/TextureRect2/Button2
+@onready var button_m3 = $TabContainer/Materials/acacia/TextureRect3/Button3
+@onready var button_m4 = $TabContainer/Materials/acacia/TextureRect4/Button4
+@onready var button_m5 = $TabContainer/Materials/acacia/TextureRect5/Button5
+@onready var button_m6 = $TabContainer/Materials/acacia/TextureRect6/Button6
+@onready var button_m7 = $TabContainer/Materials/frosted/TextureRect7/Button
+@onready var button_m8 = $TabContainer/Materials/frosted/TextureRect8/Button2
+@onready var button_m9 = $TabContainer/Materials/frosted/TextureRect9/Button4
+@onready var button_m10 = $TabContainer/Materials/frosted/TextureRect10/Button5
+@onready var button_m11 = $TabContainer/Materials/frosted/TextureRect11/Button6
+@onready var button_m12 = $TabContainer/Materials/frosted/TextureRect12/Button7
+@onready var button_m13 = $TabContainer/Materials/jungle/TextureRect13/Button
+@onready var button_m14 = $TabContainer/Materials/jungle/TextureRect14/Button2
+@onready var button_m15 = $TabContainer/Materials/jungle/TextureRect15/Button3
+@onready var button_m16 = $TabContainer/Materials/jungle/TextureRect16/Button4
+@onready var button_m17 = $TabContainer/Materials/jungle/TextureRect17/Button5
+@onready var button_m18 = $TabContainer/Materials/jungle/TextureRect18/Button6
+@onready var button_m19 = $TabContainer/Materials/oak/TextureRect19/Button
+@onready var button_m20 = $TabContainer/Materials/oak/TextureRect20/Button2
+@onready var button_m21 = $TabContainer/Materials/oak/TextureRect21/Button3
+@onready var button_m22 = $TabContainer/Materials/oak/TextureRect22/Button4
+@onready var button_m23 = $TabContainer/Materials/oak/TextureRect23/Button5
+@onready var button_m24 = $TabContainer/Materials/oak/TextureRect24/Button6
+@onready var button_m25 = $TabContainer/Materials/Sticks/CRAFT2
+@onready var button_m26 = $TabContainer/Materials/bricks/TextureRect26/Button
+@onready var button_m27 = $TabContainer/Materials/bricks/TextureRect27/Button2
+@onready var button_m28 = $TabContainer/Materials/bricks/TextureRect28/Button3
+@onready var button_m29 = $TabContainer/Materials/bricks/TextureRect29/Button4
+@onready var button_m30 = $TabContainer/Materials/bricks/TextureRect30/Button5
 
 
 var tile_to_item_data = {
@@ -137,10 +164,86 @@ var tile_to_item_data = {
 "Acacia Shovel": {"name": "Acacia Shovel", "type": "tool", "texture": preload("res://Item assets/tools/accacia_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
 
 
+"Frosted Oak Axe": {"name": "Frosted Oak Axe", "type": "tool", "texture": preload("res://Item assets/tools/frosted_oak_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Frosted Oak Pickaxe": {"name": "Frosted Oak Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/frosted_oak_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Frosted Oak Shovel": {"name": "Frosted Oak Shovel", "type": "tool", "texture": preload("res://Item assets/tools/frosted_oak_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+ 
+"Oak Axe": {"name": "Oak Axe", "type": "tool", "texture": preload("res://Item assets/tools/oak_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Oak Pickaxe": {"name": "Oak Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/oak_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Oak Shovel": {"name": "Oak Shovel", "type": "tool", "texture": preload("res://Item assets/tools/oak_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Jungle Axe": {"name": "Jungle Axe", "type": "tool", "texture": preload("res://Item assets/tools/jungle_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Jungle Pickaxe": {"name": "Jungle Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/jungle_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Jungle Shovel": {"name": "Jungle Shovel", "type": "tool", "texture": preload("res://Item assets/tools/jungle_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Stone Axe": {"name": "Stone Axe", "type": "tool", "texture": preload("res://Item assets/tools/stone_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Stone Pickaxe": {"name": "Stone Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/stone_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Stone Shovel": {"name": "Stone Shovel", "type": "tool", "texture": preload("res://Item assets/tools/stone_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Iron Axe": {"name": "Iron Axe", "type": "tool", "texture": preload("res://Item assets/tools/iron_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Iron Pickaxe": {"name": "Iron Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/iron_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Iron Shovel": {"name": "Iron Shovel", "type": "tool", "texture": preload("res://Item assets/tools/iron_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Gold Axe": {"name": "Gold Axe", "type": "tool", "texture": preload("res://Item assets/tools/gold_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Gold Pickaxe": {"name": "Gold Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/gold_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Gold Shovel": {"name": "Gold Shovel", "type": "tool", "texture": preload("res://Item assets/tools/gold_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Diamond Axe": {"name": "Diamond Axe", "type": "tool", "texture": preload("res://Item assets/tools/diamond_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Diamond Pickaxe": {"name": "Diamond Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/diamond_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Diamond Shovel": {"name": "Diamond Shovel", "type": "tool", "texture": preload("res://Item assets/tools/diamond_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Emerald Axe": {"name": "Emerald Axe", "type": "tool", "texture": preload("res://Item assets/tools/emerald_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Emerald Pickaxe": {"name": "Emerald Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/emerald_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Emerald Shovel": {"name": "Emerald Shovel", "type": "tool", "texture": preload("res://Item assets/tools/emerald_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Ruby Axe": {"name": "Ruby Axe", "type": "tool", "texture": preload("res://Item assets/tools/ruby_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Ruby Pickaxe": {"name": "Ruby Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/ruby_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Ruby Shovel": {"name": "Ruby Shovel", "type": "tool", "texture": preload("res://Item assets/tools/ruby_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Topaz Axe": {"name": "Topaz Axe", "type": "tool", "texture": preload("res://Item assets/tools/topaz_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Topaz Pickaxe": {"name": "Topaz Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/topaz_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Topaz Shovel": {"name": "Topaz Shovel", "type": "tool", "texture": preload("res://Item assets/tools/topaz_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Magma Axe": {"name": "Magma Axe", "type": "tool", "texture": preload("res://Item assets/tools/magma_axe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Magma Pickaxe": {"name": "Magma Pickaxe", "type": "tool", "texture": preload("res://Item assets/tools/magma_pickaxe.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+"Magma Shovel": {"name": "Magma Shovel", "type": "tool", "texture": preload("res://Item assets/tools/magma_shovel.png"), "effect": "Slash", "scene_path": "res://Scene/Inventory.tscn"},
+
+
+
 #MATERIALS
 
 "Acacia Planks": {"name": "Acacia Planks", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/acacia_planks.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Acacia Slabs ": {"name": "Acacia Slabs", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/acacia_slabs.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Acacia Staircase": {"name": "Acacia Staircase", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/acacia_staircase.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Acacia Fence MiddlePart": {"name": "Acacia Fence MiddlePart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/acacia_fence.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Acacia Fence LeftPart": {"name": "Acacia Fence LeftPart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/acacia_fence_end_right.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Acacia Fence RightPart": {"name": "Acacia Fence RightPart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/acacia_fence_end_left.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Frosted Oak Planks": {"name": "Frosted Oak Planks", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_planks.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Frosted Oak Slabs": {"name": "Frosted Oak Slabs", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_slabs.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Frosted Oak Staircase": {"name": "Frosted Oak Staircase", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_staircase.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Frosted Oak Fence MiddlePart": {"name": "Frosted Oak Fence MiddlePart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_fence.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Frosted Oak Fence LeftPart": {"name": "Frosted Oak Fence LeftPart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_fence_end_right.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Frosted Oak Fence RightPart": {"name": "Frosted Oak Fence RightPart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/frosted_oak_fence_end_left.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Jungle Planks": {"name": "Jungle Planks", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/jungle_planks.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Jungle Slabs": {"name": "Jungle Slabs", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/jungle_slabs.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Jungle Staircase": {"name": "Jungle Staircase", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/jungle_staircase.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Jungle Fence MiddlePart": {"name": "Jungle Fence MiddlePart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/jungle_fence.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Jungle Fence LeftPart": {"name": "Jungle Fence LeftPart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/jungle_fence_end_right.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Jungle Fence RightPart": {"name": "Jungle Fence RightPart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/jungle_fence_end_left.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+
+"Oak Planks": {"name": "Oak Planks", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/oak_planks.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Oak Slabs": {"name": "Oak Slabs", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/oak_slabs.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Oak Staircase": {"name": "Oak Staircase", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/oak_staircase.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Oak Fence MiddlePart": {"name": "Oak Fence MiddlePart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/oak_fence.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Oak Fence LeftPart": {"name": "Oak Fence LeftPart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/oak_fence_end_right.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+"Oak Fence RightPart": {"name": "Oak Fence RightPart", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/oak_fence_end_left.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+
+
+
 "Stick": {"name": "Stick", "type": "Material", "texture": preload("res://Item assets/wood-tree-blocks/stick_base.png"), "effect": "none", "scene_path": "res://Scene/Inventory.tscn"},
+
 
 }
 
@@ -3639,19 +3742,1009 @@ func _on_button_TEST1() -> void:
 	}
 	craft_item(recipe)
 
-
 func _on_button_TEST2() -> void:
+	var recipe = {
+	"Acacia Planks": 1,
+	"result": tile_to_item_data["Acacia Slabs"]
+	}
+	craft_item(recipe)
+
+func _on_button_TEST3() -> void:
+	var recipe = {
+	"Acacia Planks": 3,
+	"result": tile_to_item_data["Acacia Staircase"]
+	}
+	craft_item(recipe)
+	
+func _on_button_TEST4() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Acacia Planks": 4,
+	"result": tile_to_item_data["Acacia Fence MiddlePart"]
+	}
+	craft_item(recipe)
+
+func _on_button_TEST5() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Acacia Planks": 3,
+	"result": tile_to_item_data["Acacia Fence RightPart"]
+	}
+	craft_item(recipe)
+
+func _on_button_TEST6() -> void:
+	var recipe = {
+	"Stick": 2,
+	"Acacia Planks": 3,
+	"result": tile_to_item_data["Acacia Fence LeftPart"]
+	}
+	craft_item(recipe)
+
+
+func _on_button_TEST25() -> void:
 	var recipe = {
 	"Wood": 2,  # Here, "Wood" will match any of the wood types you defined in the list
 	"result": tile_to_item_data["Stick"]
 	}
 	craft_item(recipe)
+	
 
 func _on_button_TESTshow1() -> void:
 	button_m1.visible = true
 	button_m2.visible = false
-
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
 
 func _on_button_TESTshow2() -> void:
-	button_m2.visible = true
 	button_m1.visible = false
+	button_m2.visible = true
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow3() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = true
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow4() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = true
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow5() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = true
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow6() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = true
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow7() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = true
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow8() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = true
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow9() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = true
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow10() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = true
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow11() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = true
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow12() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = true
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow13() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = true
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow14() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = true
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+	
+func _on_button_TESTshow15() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = true
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow16() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = true
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow17() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = true
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow18() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = true
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow19() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = true
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow20() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = true
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow21() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = true
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow22() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = true
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow23() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = true
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow24() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = true
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow25() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = true
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow26() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = true
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow27() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = true
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow28() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = true
+	button_m29.visible = false
+	button_m30.visible = false
+
+func _on_button_TESTshow29() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = true
+	button_m30.visible = false
+
+func _on_button_TESTshow30() -> void:
+	button_m1.visible = false
+	button_m2.visible = false
+	button_m3.visible = false
+	button_m4.visible = false
+	button_m5.visible = false
+	button_m6.visible = false
+	button_m7.visible = false
+	button_m8.visible = false
+	button_m9.visible = false
+	button_m10.visible = false
+	button_m11.visible = false
+	button_m12.visible = false
+	button_m13.visible = false
+	button_m14.visible = false
+	button_m15.visible = false
+	button_m16.visible = false
+	button_m17.visible = false
+	button_m18.visible = false
+	button_m19.visible = false
+	button_m20.visible = false
+	button_m21.visible = false
+	button_m22.visible = false
+	button_m23.visible = false
+	button_m24.visible = false
+	button_m25.visible = false
+	button_m26.visible = false
+	button_m27.visible = false
+	button_m28.visible = false
+	button_m29.visible = false
+	button_m30.visible = true

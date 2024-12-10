@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=3 uid="uid://dn5s8bstqe12"]
+[gd_scene load_steps=121 format=3 uid="uid://dn5s8bstqe12"]
 
 [ext_resource type="Script" path="res://script/recipe.gd" id="1_f1rv3"]
 [ext_resource type="Texture2D" uid="uid://btv7vj4o0o36x" path="res://Media/inventory_noSquare.png" id="2_3hlfb"]
@@ -87,7 +87,6 @@
 [ext_resource type="Texture2D" uid="uid://t60mnhd1ji6c" path="res://Item assets/tools/magma_axe.png" id="85_o41lh"]
 [ext_resource type="Texture2D" uid="uid://bhj1etlnrkoth" path="res://Item assets/tools/magma_pickaxe.png" id="86_j6bhj"]
 [ext_resource type="Texture2D" uid="uid://cun4wnvqsnat" path="res://Item assets/tools/magma_shovel.png" id="87_38ulb"]
-[ext_resource type="Texture2D" uid="uid://bk1xynybl6vbv" path="res://Item assets/wood-tree-blocks/acacia_logs.png" id="88_6tjcp"]
 [ext_resource type="Texture2D" uid="uid://di7gr1so0qtc6" path="res://Item assets/wood-tree-blocks/acacia_slabs.png" id="89_n87pk"]
 [ext_resource type="Texture2D" uid="uid://catae1014oww1" path="res://Item assets/wood-tree-blocks/acacia_staircase.png" id="90_pbw51"]
 [ext_resource type="Texture2D" uid="uid://5mvji1yxa34s" path="res://Item assets/wood-tree-blocks/acacia_fence.png" id="91_tvoh1"]
@@ -118,7 +117,9 @@
 [ext_resource type="Texture2D" uid="uid://cysi8vcjjm2w7" path="res://Item assets/stone-ore-blocks/iron_block.png" id="116_u0k3o"]
 [ext_resource type="Texture2D" uid="uid://cwxbutn5t7xs3" path="res://Item assets/stone-ore-blocks/gold_block.png" id="117_h4quu"]
 [ext_resource type="Texture2D" uid="uid://cuw2bdlkt1xbe" path="res://Item assets/stone-ore-blocks/diamond_block.png" id="118_fggdw"]
+[ext_resource type="Texture2D" uid="uid://bigslvl13xet2" path="res://Item assets/stone-ore-blocks/ruby_block.png" id="118_xwdoy"]
 [ext_resource type="Texture2D" uid="uid://dffvqub5pmqnn" path="res://Item assets/stone-ore-blocks/emerald_block.png" id="119_ac4do"]
+[ext_resource type="Texture2D" uid="uid://buldtxjdi2r2a" path="res://Item assets/stone-ore-blocks/topaz_block.png" id="119_or3mo"]
 
 [node name="Control" type="CanvasLayer"]
 script = ExtResource("1_f1rv3")
@@ -4395,77 +4396,34 @@ texture = ExtResource("2_3hlfb")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="TEMP" type="Label" parent="TabContainer/Materials"]
-visible = false
+[node name="acacia" type="Label" parent="TabContainer/Materials"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = -13.0
-offset_right = 89.0
-offset_bottom = 16.0
+offset_left = 50.0
+offset_top = 57.0
+offset_right = 90.0
+offset_bottom = 80.0
 
-[node name="Acacia PLANKS" type="TextureRect" parent="TabContainer/Materials/TEMP"]
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Materials/acacia"]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 71.0
-offset_right = 96.0
-offset_bottom = 125.0
+offset_right = 54.0
+offset_bottom = 54.0
 texture = ExtResource("4_xbcm5")
 
-[node name="CRAFT1" type="Button" parent="TabContainer/Materials/TEMP/Acacia PLANKS"]
+[node name="CRAFT" type="Button" parent="TabContainer/Materials/acacia/TextureRect"]
 visible = false
-layout_mode = 0
-offset_left = 608.0
-offset_top = 341.0
-offset_right = 1061.0
-offset_bottom = 503.0
+offset_left = 610.0
+offset_top = 340.0
+offset_right = 1064.0
+offset_bottom = 505.0
 text = "CRAFT"
 flat = true
 
-[node name="AcaciaLogs" type="Sprite2D" parent="TabContainer/Materials/TEMP/Acacia PLANKS/CRAFT1"]
-position = Vector2(221, -189)
-scale = Vector2(8, 8)
-texture = ExtResource("88_6tjcp")
-
-[node name="count" type="Label" parent="TabContainer/Materials/TEMP/Acacia PLANKS/CRAFT1"]
-layout_mode = 0
-offset_left = 216.0
-offset_top = -144.0
-offset_right = 226.0
-offset_bottom = -121.0
-text = "1"
-
-[node name="button" type="Button" parent="TabContainer/Materials/TEMP/Acacia PLANKS"]
-self_modulate = Color(1, 1, 1, 0.156863)
-layout_mode = 0
-offset_left = -9.0
-offset_top = -5.0
-offset_right = 61.0
-offset_bottom = 60.0
-
-[node name="Sticks" type="TextureRect" parent="TabContainer/Materials/TEMP"]
-layout_mode = 0
-offset_left = 137.0
-offset_top = 71.0
-offset_right = 191.0
-offset_bottom = 125.0
-texture = ExtResource("5_m42cx")
-
-[node name="CRAFT2" type="Button" parent="TabContainer/Materials/TEMP/Sticks"]
-visible = false
-layout_mode = 0
-offset_left = 512.0
-offset_top = 339.0
-offset_right = 966.0
-offset_bottom = 504.0
-text = "CRAFT"
-flat = true
-
-[node name="AcaciaLogs2" type="Sprite2D" parent="TabContainer/Materials/TEMP/Sticks/CRAFT2"]
+[node name="AcaciaLogs2" type="Sprite2D" parent="TabContainer/Materials/acacia/TextureRect/CRAFT"]
 position = Vector2(221, -186)
 scale = Vector2(8, 8)
 texture = ExtResource("4_xbcm5")
 
-[node name="count2" type="Label" parent="TabContainer/Materials/TEMP/Sticks/CRAFT2"]
+[node name="count2" type="Label" parent="TabContainer/Materials/acacia/TextureRect/CRAFT"]
 layout_mode = 0
 offset_left = 217.0
 offset_top = -142.0
@@ -4474,7 +4432,549 @@ offset_bottom = -119.0
 text = "2
 "
 
-[node name="button" type="Button" parent="TabContainer/Materials/TEMP/Sticks"]
+[node name="button" type="Button" parent="TabContainer/Materials/acacia/TextureRect"]
+self_modulate = Color(1, 1, 1, 0.156863)
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 62.0
+offset_bottom = 59.0
+text = "
+"
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Materials/acacia"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 1.0
+offset_right = 151.0
+offset_bottom = 55.0
+texture = ExtResource("89_n87pk")
+
+[node name="Button2" type="Button" parent="TabContainer/Materials/acacia/TextureRect2"]
+visible = false
+layout_mode = 0
+offset_left = 512.0
+offset_top = 340.0
+offset_right = 964.0
+offset_bottom = 505.0
+text = "CRAFT"
+icon = ExtResource("89_n87pk")
+flat = true
+
+[node name="count" type="Label" parent="TabContainer/Materials/acacia/TextureRect2/Button2"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = -140.0
+offset_right = 261.0
+offset_bottom = -117.0
+text = "1"
+horizontal_alignment = 1
+
+[node name="AcaciaPlanks" type="Sprite2D" parent="TabContainer/Materials/acacia/TextureRect2/Button2"]
+position = Vector2(225, -187)
+scale = Vector2(8, 8)
+texture = ExtResource("4_xbcm5")
+
+[node name="Button" type="Button" parent="TabContainer/Materials/acacia/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = -5.0
+offset_right = 61.0
+offset_bottom = 59.0
+
+[node name="TextureRect3" type="TextureRect" parent="TabContainer/Materials/acacia"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 1.0
+offset_right = 245.0
+offset_bottom = 55.0
+texture = ExtResource("90_pbw51")
+
+[node name="Button3" type="Button" parent="TabContainer/Materials/acacia/TextureRect3"]
+visible = false
+layout_mode = 0
+offset_left = 419.0
+offset_top = 341.0
+offset_right = 872.0
+offset_bottom = 506.0
+text = "CRAFT"
+flat = true
+
+[node name="Button" type="Button" parent="TabContainer/Materials/acacia/TextureRect3"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 64.0
+offset_bottom = 58.0
+
+[node name="TextureRect4" type="TextureRect" parent="TabContainer/Materials/acacia"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = -1.0
+offset_right = 341.0
+offset_bottom = 53.0
+texture = ExtResource("91_tvoh1")
+
+[node name="Button4" type="Button" parent="TabContainer/Materials/acacia/TextureRect4"]
+visible = false
+layout_mode = 0
+offset_left = 324.0
+offset_top = 343.0
+offset_right = 777.0
+offset_bottom = 507.0
+text = "CRAFT"
+flat = true
+
+[node name="Button" type="Button" parent="TabContainer/Materials/acacia/TextureRect4"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -3.0
+offset_right = 63.0
+offset_bottom = 60.0
+
+[node name="TextureRect5" type="TextureRect" parent="TabContainer/Materials/acacia"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 2.0
+offset_right = 443.0
+offset_bottom = 56.0
+texture = ExtResource("92_6ce56")
+
+[node name="Button5" type="Button" parent="TabContainer/Materials/acacia/TextureRect5"]
+visible = false
+layout_mode = 0
+offset_left = 220.0
+offset_top = 339.0
+offset_right = 673.0
+offset_bottom = 503.0
+text = "CRAFT"
+flat = true
+
+[node name="Button" type="Button" parent="TabContainer/Materials/acacia/TextureRect5"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -12.0
+offset_top = -8.0
+offset_right = 57.0
+offset_bottom = 58.0
+
+[node name="TextureRect6" type="TextureRect" parent="TabContainer/Materials/acacia"]
+layout_mode = 0
+offset_left = 481.0
+offset_top = -1.0
+offset_right = 535.0
+offset_bottom = 53.0
+texture = ExtResource("93_qhcxf")
+
+[node name="Button6" type="Button" parent="TabContainer/Materials/acacia/TextureRect6"]
+visible = false
+layout_mode = 0
+offset_left = 130.0
+offset_top = 341.0
+offset_right = 582.0
+offset_bottom = 504.0
+text = "CRAFT"
+flat = true
+
+[node name="Button" type="Button" parent="TabContainer/Materials/acacia/TextureRect6"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -7.0
+offset_top = -3.0
+offset_right = 62.0
+offset_bottom = 65.0
+
+[node name="frosted" type="Label" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 147.0
+offset_right = 88.0
+offset_bottom = 170.0
+
+[node name="TextureRect7" type="TextureRect" parent="TabContainer/Materials/frosted"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 55.0
+offset_bottom = 53.0
+texture = ExtResource("9_m8gf7")
+
+[node name="Button2" type="Button" parent="TabContainer/Materials/frosted/TextureRect7"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 40.0
+offset_right = 56.0
+offset_bottom = 71.0
+text = "CRAFT"
+
+[node name="Button" type="Button" parent="TabContainer/Materials/frosted/TextureRect7"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -13.0
+offset_top = -6.0
+offset_right = 59.0
+offset_bottom = 60.0
+
+[node name="TextureRect8" type="TextureRect" parent="TabContainer/Materials/frosted"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = -1.0
+offset_right = 152.0
+offset_bottom = 53.0
+texture = ExtResource("94_yp48j")
+
+[node name="Button2" type="Button" parent="TabContainer/Materials/frosted/TextureRect8"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 41.0
+offset_right = 56.0
+offset_bottom = 72.0
+text = "CRAFT"
+
+[node name="Button" type="Button" parent="TabContainer/Materials/frosted/TextureRect8"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 63.0
+offset_bottom = 60.0
+
+[node name="TextureRect9" type="TextureRect" parent="TabContainer/Materials/frosted"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 1.0
+offset_right = 248.0
+offset_bottom = 55.0
+texture = ExtResource("95_g7b6j")
+
+[node name="Button3" type="Button" parent="TabContainer/Materials/frosted/TextureRect9"]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 39.0
+offset_right = 59.0
+offset_bottom = 70.0
+text = "CRAFT"
+
+[node name="Button" type="Button" parent="TabContainer/Materials/frosted/TextureRect9"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 62.0
+offset_bottom = 58.0
+
+[node name="TextureRect10" type="TextureRect" parent="TabContainer/Materials/frosted"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 2.0
+offset_right = 345.0
+offset_bottom = 56.0
+texture = ExtResource("96_gt407")
+
+[node name="Button4" type="Button" parent="TabContainer/Materials/frosted/TextureRect10"]
+visible = false
+layout_mode = 0
+offset_left = -2.0
+offset_top = 38.0
+offset_right = 55.0
+offset_bottom = 69.0
+text = "CRAFT"
+
+[node name="Button" type="Button" parent="TabContainer/Materials/frosted/TextureRect10"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -6.0
+offset_right = 63.0
+offset_bottom = 59.0
+
+[node name="TextureRect11" type="TextureRect" parent="TabContainer/Materials/frosted"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 1.0
+offset_right = 446.0
+offset_bottom = 55.0
+texture = ExtResource("97_q88wg")
+
+[node name="Button5" type="Button" parent="TabContainer/Materials/frosted/TextureRect11"]
+visible = false
+layout_mode = 0
+offset_left = -8.0
+offset_top = 39.0
+offset_right = 49.0
+offset_bottom = 70.0
+text = "CRAFT"
+
+[node name="Button" type="Button" parent="TabContainer/Materials/frosted/TextureRect11"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -11.0
+offset_top = -6.0
+offset_right = 59.0
+offset_bottom = 61.0
+
+[node name="TextureRect12" type="TextureRect" parent="TabContainer/Materials/frosted"]
+layout_mode = 0
+offset_left = 483.0
+offset_right = 537.0
+offset_bottom = 54.0
+texture = ExtResource("98_co1yf")
+
+[node name="Button6" type="Button" parent="TabContainer/Materials/frosted/TextureRect12"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 40.0
+offset_right = 56.0
+offset_bottom = 71.0
+text = "CRAFT"
+
+[node name="Button" type="Button" parent="TabContainer/Materials/frosted/TextureRect12"]
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 0
+offset_left = -6.0
+offset_top = -5.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="jungle" type="Label" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 233.0
+offset_right = 90.0
+offset_bottom = 256.0
+
+[node name="TextureRect13" type="TextureRect" parent="TabContainer/Materials/jungle"]
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 54.0
+texture = ExtResource("17_re7nu")
+
+[node name="Button" type="Button" parent="TabContainer/Materials/jungle/TextureRect13"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 42.0
+offset_right = 56.0
+offset_bottom = 73.0
+text = "CRAFT"
+
+[node name="TextureRect14" type="TextureRect" parent="TabContainer/Materials/jungle"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 1.0
+offset_right = 151.0
+offset_bottom = 55.0
+texture = ExtResource("99_5fiql")
+
+[node name="Button2" type="Button" parent="TabContainer/Materials/jungle/TextureRect14"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 42.0
+offset_right = 53.0
+offset_bottom = 73.0
+text = "CRAFT"
+
+[node name="TextureRect15" type="TextureRect" parent="TabContainer/Materials/jungle"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 5.0
+offset_right = 246.0
+offset_bottom = 59.0
+texture = ExtResource("100_33qxi")
+
+[node name="Button3" type="Button" parent="TabContainer/Materials/jungle/TextureRect15"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 37.0
+offset_right = 56.0
+offset_bottom = 68.0
+text = "CRAFT"
+
+[node name="TextureRect16" type="TextureRect" parent="TabContainer/Materials/jungle"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 3.0
+offset_right = 345.0
+offset_bottom = 57.0
+texture = ExtResource("101_nilcb")
+
+[node name="Button4" type="Button" parent="TabContainer/Materials/jungle/TextureRect16"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 39.0
+offset_right = 54.0
+offset_bottom = 70.0
+text = "CRAFT"
+
+[node name="TextureRect17" type="TextureRect" parent="TabContainer/Materials/jungle"]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 3.0
+offset_right = 442.0
+offset_bottom = 57.0
+texture = ExtResource("102_1jntm")
+
+[node name="Button5" type="Button" parent="TabContainer/Materials/jungle/TextureRect17"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 38.0
+offset_right = 52.0
+offset_bottom = 69.0
+text = "CRAFT"
+
+[node name="TextureRect18" type="TextureRect" parent="TabContainer/Materials/jungle"]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 4.0
+offset_right = 535.0
+offset_bottom = 58.0
+texture = ExtResource("103_kpuei")
+
+[node name="Button6" type="Button" parent="TabContainer/Materials/jungle/TextureRect18"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 36.0
+offset_right = 54.0
+offset_bottom = 67.0
+text = "CRAFT"
+
+[node name="oak" type="Label" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 329.0
+offset_right = 91.0
+offset_bottom = 352.0
+
+[node name="TextureRect19" type="TextureRect" parent="TabContainer/Materials/oak"]
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 54.0
+texture = ExtResource("13_46jsm")
+
+[node name="Button" type="Button" parent="TabContainer/Materials/oak/TextureRect19"]
+layout_mode = 0
+offset_top = 36.0
+offset_right = 57.0
+offset_bottom = 67.0
+text = "CRAFT"
+
+[node name="TextureRect20" type="TextureRect" parent="TabContainer/Materials/oak"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = -4.0
+offset_right = 150.0
+offset_bottom = 50.0
+texture = ExtResource("104_fsqp6")
+
+[node name="Button2" type="Button" parent="TabContainer/Materials/oak/TextureRect20"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 38.0
+offset_right = 55.0
+offset_bottom = 69.0
+text = "CRAFT"
+
+[node name="TextureRect21" type="TextureRect" parent="TabContainer/Materials/oak"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = -7.0
+offset_right = 245.0
+offset_bottom = 47.0
+texture = ExtResource("105_wnxio")
+
+[node name="Button3" type="Button" parent="TabContainer/Materials/oak/TextureRect21"]
+layout_mode = 0
+offset_top = 43.0
+offset_right = 57.0
+offset_bottom = 74.0
+text = "CRAFT"
+
+[node name="TextureRect22" type="TextureRect" parent="TabContainer/Materials/oak"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = -5.0
+offset_right = 343.0
+offset_bottom = 49.0
+texture = ExtResource("106_idv0f")
+
+[node name="Button4" type="Button" parent="TabContainer/Materials/oak/TextureRect22"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 39.0
+offset_right = 53.0
+offset_bottom = 70.0
+text = "CRAFT"
+
+[node name="TextureRect23" type="TextureRect" parent="TabContainer/Materials/oak"]
+layout_mode = 0
+offset_left = 387.0
+offset_top = -4.0
+offset_right = 441.0
+offset_bottom = 50.0
+texture = ExtResource("107_g7yuv")
+
+[node name="Button5" type="Button" parent="TabContainer/Materials/oak/TextureRect23"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 71.0
+text = "CRAFT"
+
+[node name="TextureRect24" type="TextureRect" parent="TabContainer/Materials/oak"]
+layout_mode = 0
+offset_left = 481.0
+offset_top = -4.0
+offset_right = 535.0
+offset_bottom = 50.0
+texture = ExtResource("108_b8u7i")
+
+[node name="Button6" type="Button" parent="TabContainer/Materials/oak/TextureRect24"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 41.0
+offset_right = 53.0
+offset_bottom = 72.0
+text = "CRAFT"
+
+[node name="Sticks" type="TextureRect" parent="TabContainer/Materials"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 413.0
+offset_right = 105.0
+offset_bottom = 467.0
+texture = ExtResource("5_m42cx")
+
+[node name="CRAFT2" type="Button" parent="TabContainer/Materials/Sticks"]
+visible = false
+layout_mode = 0
+offset_left = 605.0
+offset_top = -13.0
+offset_right = 1059.0
+offset_bottom = 152.0
+text = "CRAFT"
+flat = true
+
+[node name="AcaciaLogs2" type="Sprite2D" parent="TabContainer/Materials/Sticks/CRAFT2"]
+position = Vector2(221, -186)
+scale = Vector2(8, 8)
+texture = ExtResource("4_xbcm5")
+
+[node name="count2" type="Label" parent="TabContainer/Materials/Sticks/CRAFT2"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = -142.0
+offset_right = 227.0
+offset_bottom = -119.0
+text = "2
+"
+
+[node name="button" type="Button" parent="TabContainer/Materials/Sticks"]
 self_modulate = Color(1, 1, 1, 0.156863)
 layout_mode = 2
 offset_left = -6.0
@@ -4484,298 +4984,251 @@ offset_bottom = 59.0
 text = "
 "
 
-[node name="TextureRect" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 57.0
-offset_right = 104.0
-offset_bottom = 111.0
-texture = ExtResource("4_xbcm5")
-
-[node name="TextureRect2" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 147.0
-offset_top = 58.0
-offset_right = 201.0
-offset_bottom = 112.0
-texture = ExtResource("89_n87pk")
-
-[node name="TextureRect3" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 241.0
-offset_top = 58.0
-offset_right = 295.0
-offset_bottom = 112.0
-texture = ExtResource("90_pbw51")
-
-[node name="TextureRect4" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 337.0
-offset_top = 56.0
-offset_right = 391.0
-offset_bottom = 110.0
-texture = ExtResource("91_tvoh1")
-
-[node name="TextureRect5" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 439.0
-offset_top = 59.0
-offset_right = 493.0
-offset_bottom = 113.0
-texture = ExtResource("92_6ce56")
-
-[node name="TextureRect6" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 531.0
-offset_top = 56.0
-offset_right = 585.0
-offset_bottom = 110.0
-texture = ExtResource("93_qhcxf")
-
-[node name="TextureRect7" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 147.0
-offset_right = 102.0
-offset_bottom = 201.0
-texture = ExtResource("9_m8gf7")
-
-[node name="TextureRect8" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 146.0
-offset_top = 146.0
-offset_right = 200.0
-offset_bottom = 200.0
-texture = ExtResource("94_yp48j")
-
-[node name="TextureRect9" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 242.0
-offset_top = 148.0
-offset_right = 296.0
-offset_bottom = 202.0
-texture = ExtResource("95_g7b6j")
-
-[node name="TextureRect10" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 339.0
-offset_top = 149.0
-offset_right = 393.0
-offset_bottom = 203.0
-texture = ExtResource("96_gt407")
-
-[node name="TextureRect11" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 440.0
-offset_top = 148.0
-offset_right = 494.0
-offset_bottom = 202.0
-texture = ExtResource("97_q88wg")
-
-[node name="TextureRect12" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 531.0
-offset_top = 147.0
-offset_right = 585.0
-offset_bottom = 201.0
-texture = ExtResource("98_co1yf")
-
-[node name="TextureRect13" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 233.0
-offset_right = 104.0
-offset_bottom = 287.0
-texture = ExtResource("17_re7nu")
-
-[node name="TextureRect14" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 147.0
-offset_top = 234.0
-offset_right = 201.0
-offset_bottom = 288.0
-texture = ExtResource("99_5fiql")
-
-[node name="TextureRect15" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 242.0
-offset_top = 238.0
-offset_right = 296.0
-offset_bottom = 292.0
-texture = ExtResource("100_33qxi")
-
-[node name="TextureRect16" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 341.0
-offset_top = 236.0
-offset_right = 395.0
-offset_bottom = 290.0
-texture = ExtResource("101_nilcb")
-
-[node name="TextureRect17" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 438.0
-offset_top = 236.0
-offset_right = 492.0
-offset_bottom = 290.0
-texture = ExtResource("102_1jntm")
-
-[node name="TextureRect18" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 531.0
-offset_top = 237.0
-offset_right = 585.0
-offset_bottom = 291.0
-texture = ExtResource("103_kpuei")
-
-[node name="TextureRect19" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 51.0
-offset_top = 329.0
-offset_right = 105.0
-offset_bottom = 383.0
-texture = ExtResource("13_46jsm")
-
-[node name="TextureRect20" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 147.0
-offset_top = 325.0
-offset_right = 201.0
-offset_bottom = 379.0
-texture = ExtResource("104_fsqp6")
-
-[node name="TextureRect21" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 242.0
-offset_top = 322.0
-offset_right = 296.0
-offset_bottom = 376.0
-texture = ExtResource("105_wnxio")
-
-[node name="TextureRect22" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 340.0
-offset_top = 324.0
-offset_right = 394.0
-offset_bottom = 378.0
-texture = ExtResource("106_idv0f")
-
-[node name="TextureRect23" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 438.0
-offset_top = 325.0
-offset_right = 492.0
-offset_bottom = 379.0
-texture = ExtResource("107_g7yuv")
-
-[node name="TextureRect24" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 532.0
-offset_top = 325.0
-offset_right = 586.0
-offset_bottom = 379.0
-texture = ExtResource("108_b8u7i")
-
-[node name="TextureRect25" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 414.0
-offset_right = 103.0
-offset_bottom = 468.0
-texture = ExtResource("5_m42cx")
-
-[node name="TextureRect26" type="TextureRect" parent="TabContainer/Materials"]
+[node name="bricks" type="Label" parent="TabContainer/Materials"]
 layout_mode = 0
 offset_left = 149.0
 offset_top = 415.0
-offset_right = 203.0
-offset_bottom = 469.0
+offset_right = 189.0
+offset_bottom = 438.0
+
+[node name="TextureRect26" type="TextureRect" parent="TabContainer/Materials/bricks"]
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 54.0
 texture = ExtResource("109_hnh8q")
 
-[node name="TextureRect27" type="TextureRect" parent="TabContainer/Materials"]
+[node name="Button" type="Button" parent="TabContainer/Materials/bricks/TextureRect26"]
 layout_mode = 0
-offset_left = 242.0
-offset_top = 416.0
-offset_right = 296.0
-offset_bottom = 470.0
+offset_left = -2.0
+offset_top = 40.0
+offset_right = 55.0
+offset_bottom = 71.0
+text = "CRAFT"
+
+[node name="TextureRect27" type="TextureRect" parent="TabContainer/Materials/bricks"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 1.0
+offset_right = 147.0
+offset_bottom = 55.0
 texture = ExtResource("110_c6mxs")
 
-[node name="TextureRect28" type="TextureRect" parent="TabContainer/Materials"]
+[node name="Button2" type="Button" parent="TabContainer/Materials/bricks/TextureRect27"]
 layout_mode = 0
-offset_left = 341.0
-offset_top = 415.0
-offset_right = 395.0
-offset_bottom = 469.0
+offset_left = -1.0
+offset_top = 38.0
+offset_right = 56.0
+offset_bottom = 69.0
+text = "CRAFT"
+
+[node name="TextureRect28" type="TextureRect" parent="TabContainer/Materials/bricks"]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 246.0
+offset_bottom = 54.0
 texture = ExtResource("111_fmsku")
 
-[node name="TextureRect29" type="TextureRect" parent="TabContainer/Materials"]
+[node name="Button3" type="Button" parent="TabContainer/Materials/bricks/TextureRect28"]
 layout_mode = 0
-offset_left = 433.0
-offset_top = 414.0
-offset_right = 487.0
-offset_bottom = 468.0
+offset_top = 38.0
+offset_right = 57.0
+offset_bottom = 69.0
+text = "CRAFT"
+
+[node name="TextureRect29" type="TextureRect" parent="TabContainer/Materials/bricks"]
+layout_mode = 0
+offset_left = 284.0
+offset_top = -1.0
+offset_right = 338.0
+offset_bottom = 53.0
 texture = ExtResource("112_7vwd8")
 
-[node name="TextureRect30" type="TextureRect" parent="TabContainer/Materials"]
+[node name="Button4" type="Button" parent="TabContainer/Materials/bricks/TextureRect29"]
 layout_mode = 0
-offset_left = 531.0
-offset_top = 416.0
-offset_right = 585.0
-offset_bottom = 470.0
+offset_left = 1.0
+offset_top = 40.0
+offset_right = 58.0
+offset_bottom = 71.0
+text = "CRAFT"
+
+[node name="TextureRect30" type="TextureRect" parent="TabContainer/Materials/bricks"]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 1.0
+offset_right = 436.0
+offset_bottom = 55.0
 texture = ExtResource("113_feprw")
 
-[node name="TextureRect31" type="TextureRect" parent="TabContainer/Materials"]
+[node name="Button5" type="Button" parent="TabContainer/Materials/bricks/TextureRect30"]
 layout_mode = 0
-offset_left = 52.0
-offset_top = 501.0
-offset_right = 106.0
-offset_bottom = 555.0
-texture = ExtResource("114_pa557")
+offset_top = 36.0
+offset_right = 57.0
+offset_bottom = 67.0
+text = "CRAFT"
 
-[node name="TextureRect32" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 147.0
-offset_top = 504.0
-offset_right = 201.0
-offset_bottom = 558.0
-texture = ExtResource("115_sj17u")
-
-[node name="TextureRect33" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 247.0
-offset_top = 505.0
-offset_right = 301.0
-offset_bottom = 559.0
-texture = ExtResource("116_u0k3o")
-
-[node name="TextureRect34" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 338.0
-offset_top = 502.0
-offset_right = 392.0
-offset_bottom = 556.0
-texture = ExtResource("117_h4quu")
-
-[node name="TextureRect35" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 434.0
-offset_top = 504.0
-offset_right = 488.0
-offset_bottom = 558.0
-texture = ExtResource("118_fggdw")
-
-[node name="TextureRect36" type="TextureRect" parent="TabContainer/Materials"]
-layout_mode = 0
-offset_left = 530.0
-offset_top = 504.0
-offset_right = 584.0
-offset_bottom = 558.0
-texture = ExtResource("119_ac4do")
-
-[node name="TabBar4" type="TabBar" parent="TabContainer"]
+[node name="More" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
+
+[node name="inventory" type="TextureRect" parent="TabContainer/More"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 2.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3hlfb")
+expand_mode = 1
+
+[node name="Ores_Stone" type="Label" parent="TabContainer/More"]
+offset_left = -143.0
+offset_top = 55.0
+offset_right = -103.0
+offset_bottom = 78.0
+
+[node name="TextureRect33" type="TextureRect" parent="TabContainer/More/Ores_Stone"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 4.0
+offset_right = 249.0
+offset_bottom = 58.0
+texture = ExtResource("116_u0k3o")
+
+[node name="Button" type="Button" parent="TabContainer/More/Ores_Stone/TextureRect33"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 38.0
+offset_right = 56.0
+offset_bottom = 69.0
+text = "CRAFT"
+
+[node name="TextureRect34" type="TextureRect" parent="TabContainer/More/Ores_Stone"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 4.0
+offset_right = 344.0
+offset_bottom = 58.0
+texture = ExtResource("117_h4quu")
+
+[node name="Button2" type="Button" parent="TabContainer/More/Ores_Stone/TextureRect34"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 42.0
+offset_right = 55.0
+offset_bottom = 73.0
+text = "CRAFT"
+
+[node name="TextureRect35" type="TextureRect" parent="TabContainer/More/Ores_Stone"]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 2.0
+offset_right = 442.0
+offset_bottom = 56.0
+texture = ExtResource("118_fggdw")
+
+[node name="Button3" type="Button" parent="TabContainer/More/Ores_Stone/TextureRect35"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 43.0
+offset_right = 55.0
+offset_bottom = 74.0
+text = "CRAFT"
+
+[node name="TextureRect36" type="TextureRect" parent="TabContainer/More/Ores_Stone"]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 4.0
+offset_right = 537.0
+offset_bottom = 58.0
+texture = ExtResource("119_ac4do")
+
+[node name="Button4" type="Button" parent="TabContainer/More/Ores_Stone"]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 41.0
+offset_right = 540.0
+offset_bottom = 72.0
+text = "CRAFT"
+
+[node name="TextureRect37" type="TextureRect" parent="TabContainer/More/Ores_Stone"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 1.0
+offset_right = 631.0
+offset_bottom = 55.0
+texture = ExtResource("118_xwdoy")
+
+[node name="Button5" type="Button" parent="TabContainer/More/Ores_Stone/TextureRect37"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 40.0
+offset_right = 55.0
+offset_bottom = 71.0
+text = "CRAFT"
+
+[node name="TextureRect38" type="TextureRect" parent="TabContainer/More/Ores_Stone"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 1.0
+offset_right = 730.0
+offset_bottom = 55.0
+texture = ExtResource("119_or3mo")
+
+[node name="Button6" type="Button" parent="TabContainer/More/Ores_Stone/TextureRect38"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 41.0
+offset_right = 53.0
+offset_bottom = 72.0
+text = "CRAFT"
+
+[node name="stone" type="Label" parent="TabContainer/More"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08
+anchor_top = 0.723
+anchor_right = 0.08
+anchor_bottom = 0.723
+offset_left = -40.16
+offset_top = -300.091
+offset_right = -0.160004
+offset_bottom = -277.091
+
+[node name="TextureRect31" type="TextureRect" parent="TabContainer/More/stone"]
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 54.0
+texture = ExtResource("114_pa557")
+
+[node name="Button" type="Button" parent="TabContainer/More/stone/TextureRect31"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 40.0
+offset_right = 55.0
+offset_bottom = 71.0
+text = "CRAFT"
+
+[node name="TextureRect32" type="TextureRect" parent="TabContainer/More/stone"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 1.0
+offset_right = 150.0
+offset_bottom = 55.0
+texture = ExtResource("115_sj17u")
+
+[node name="Button2" type="Button" parent="TabContainer/More/stone/TextureRect32"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 41.0
+offset_right = 56.0
+offset_bottom = 72.0
+text = "CRAFT"
 
 [connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect/Buttonacacia" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TabContainer/Weapon/acaccia/TextureRect/Button" to="." method="_on_button_pressedSHOW"]
@@ -4894,7 +5347,23 @@ metadata/_tab_index = 3
 [connection signal="pressed" from="TabContainer/Tools/magma/TextureRect/Button#34" to="." method="_on_button_34_SHOW"]
 [connection signal="pressed" from="TabContainer/Tools/magma/TextureRect2/Button#35" to="." method="_on_button_35_SHOW"]
 [connection signal="pressed" from="TabContainer/Tools/magma/TextureRect3/Button#36" to="." method="_on_button_36_SHOW"]
-[connection signal="pressed" from="TabContainer/Materials/TEMP/Acacia PLANKS/CRAFT1" to="." method="_on_button_TEST1"]
-[connection signal="pressed" from="TabContainer/Materials/TEMP/Acacia PLANKS/button" to="." method="_on_button_TESTshow1"]
-[connection signal="pressed" from="TabContainer/Materials/TEMP/Sticks/CRAFT2" to="." method="_on_button_TEST2"]
-[connection signal="pressed" from="TabContainer/Materials/TEMP/Sticks/button" to="." method="_on_button_TESTshow2"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect/CRAFT" to="." method="_on_button_TEST2"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect/button" to="." method="_on_button_TESTshow2"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect2/Button2" to="." method="_on_button_TEST2"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect2/Button" to="." method="_on_button_TESTshow2"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect3/Button3" to="." method="_on_button_TEST3"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect3/Button" to="." method="_on_button_TESTshow3"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect4/Button4" to="." method="_on_button_TEST4"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect4/Button" to="." method="_on_button_TESTshow4"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect5/Button5" to="." method="_on_button_TEST5"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect5/Button" to="." method="_on_button_TESTshow5"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect6/Button6" to="." method="_on_button_TEST6"]
+[connection signal="pressed" from="TabContainer/Materials/acacia/TextureRect6/Button" to="." method="_on_button_TESTshow6"]
+[connection signal="pressed" from="TabContainer/Materials/frosted/TextureRect7/Button" to="." method="_on_button_TESTshow7"]
+[connection signal="pressed" from="TabContainer/Materials/frosted/TextureRect8/Button" to="." method="_on_button_TESTshow8"]
+[connection signal="pressed" from="TabContainer/Materials/frosted/TextureRect9/Button" to="." method="_on_button_TESTshow9"]
+[connection signal="pressed" from="TabContainer/Materials/frosted/TextureRect10/Button" to="." method="_on_button_TESTshow10"]
+[connection signal="pressed" from="TabContainer/Materials/frosted/TextureRect11/Button" to="." method="_on_button_TESTshow11"]
+[connection signal="pressed" from="TabContainer/Materials/frosted/TextureRect12/Button" to="." method="_on_button_TESTshow12"]
+[connection signal="pressed" from="TabContainer/Materials/Sticks/CRAFT2" to="." method="_on_button_TEST2"]
+[connection signal="pressed" from="TabContainer/Materials/Sticks/button" to="." method="_on_button_TESTshow25"]
