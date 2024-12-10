@@ -86,10 +86,10 @@ extends CanvasLayer
 @onready var button_m6 = $TabContainer/Materials/acacia/TextureRect6/Button6
 @onready var button_m7 = $TabContainer/Materials/frosted/TextureRect7/Button
 @onready var button_m8 = $TabContainer/Materials/frosted/TextureRect8/Button2
-@onready var button_m9 = $TabContainer/Materials/frosted/TextureRect9/Button4
-@onready var button_m10 = $TabContainer/Materials/frosted/TextureRect10/Button5
-@onready var button_m11 = $TabContainer/Materials/frosted/TextureRect11/Button6
-@onready var button_m12 = $TabContainer/Materials/frosted/TextureRect12/Button7
+@onready var button_m9 = $TabContainer/Materials/frosted/TextureRect9/Button3
+@onready var button_m10 = $TabContainer/Materials/frosted/TextureRect10/Button4
+@onready var button_m11 = $TabContainer/Materials/frosted/TextureRect11/Button5
+@onready var button_m12 = $TabContainer/Materials/frosted/TextureRect12/Button6
 @onready var button_m13 = $TabContainer/Materials/jungle/TextureRect13/Button
 @onready var button_m14 = $TabContainer/Materials/jungle/TextureRect14/Button2
 @onready var button_m15 = $TabContainer/Materials/jungle/TextureRect15/Button3
@@ -3783,7 +3783,7 @@ func _on_button_TEST6() -> void:
 
 func _on_button_TEST25() -> void:
 	var recipe = {
-	"Wood": 2,  # Here, "Wood" will match any of the wood types you defined in the list
+	"Acacia Planks": 2,  # Here, "Wood" will match any of the wood types you defined in the list
 	"result": tile_to_item_data["Stick"]
 	}
 	craft_item(recipe)
