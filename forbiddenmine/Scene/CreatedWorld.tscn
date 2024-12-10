@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ce702xxj4oias"]
+[gd_scene load_steps=8 format=3 uid="uid://ce702xxj4oias"]
 
 [ext_resource type="Script" path="res://script/load.gd" id="1_5epbb"]
 [ext_resource type="VideoStream" path="res://Media/menu.ogv" id="2_12si6"]
@@ -7,6 +7,24 @@
 [sub_resource type="LabelSettings" id="LabelSettings_2ps4g"]
 font = ExtResource("3_nt1vw")
 font_size = 33
+
+[sub_resource type="FontFile" id="FontFile_1suf2"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_yojag"]
+Button/fonts/font = SubResource("FontFile_1suf2")
+Button/icons/icon = null
+
+[sub_resource type="FontFile" id="FontFile_82uq8"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="Load" type="Control"]
 layout_mode = 3
@@ -65,6 +83,8 @@ texture_filter = 1
 layout_mode = 0
 offset_right = 35.0
 offset_bottom = 17.0
+theme = SubResource("Theme_yojag")
+theme_override_fonts/font = SubResource("FontFile_82uq8")
 text = "Back"
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]

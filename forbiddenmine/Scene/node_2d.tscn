@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://mclnmadsjcpj" path="res://Scene/character_body_2d.tscn" id="3_5ggpm"]
 [ext_resource type="Texture2D" uid="uid://cg8gp0xkl32a8" path="res://UpdatedTILEMAP.png" id="3_5jouv"]
 [ext_resource type="Texture2D" uid="uid://dsynhalh8m3qt" path="res://icon.svg" id="3_fdor4"]
-[ext_resource type="Script" path="res://script/spectator.gd" id="6_gtc0j"]
 [ext_resource type="AudioStream" uid="uid://dadypxc2rrp2p" path="res://Audio/mining-with-pick-axe-in-a-group-29590-[AudioTrimmer.com].mp3" id="8_00hk5"]
+[ext_resource type="PackedScene" uid="uid://bnx4nx7ena2w4" path="res://Scene/pause.tscn" id="9_u2li6"]
 [ext_resource type="PackedScene" uid="uid://bdwnh588ui1n4" path="res://Scene/display.tscn" id="9_yy0nf"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j5x2w"]
@@ -161,29 +161,6 @@ noise_height_text = SubResource("NoiseTexture2D_mp21e")
 z_as_relative = false
 position = Vector2(-8, -476)
 scale = Vector2(2, 2)
-script = ExtResource("6_gtc0j")
-SPECTATOR_SPEED = 800.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="TouchScreenButton3" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
-position = Vector2(950, 322)
-texture_normal = ExtResource("3_fdor4")
-action = "ui_accept"
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
-position = Vector2(46, 449)
-texture_normal = ExtResource("3_fdor4")
-action = "ui_left"
-
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer"]
-visible = false
-position = Vector2(242, 450)
-texture_normal = ExtResource("3_fdor4")
-action = "ui_right"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
@@ -200,6 +177,14 @@ autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_00hk5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("9_u2li6")]
+offset_top = 1.0
+offset_bottom = 1.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

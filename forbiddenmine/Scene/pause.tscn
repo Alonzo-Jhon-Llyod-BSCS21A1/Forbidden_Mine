@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnx4nx7ena2w4"]
+
+[ext_resource type="Script" path="res://script/pause.gd" id="1_onw1t"]
+[ext_resource type="Texture2D" uid="uid://ds4ihf43o0nxg" path="res://Media/button-normal.png" id="1_qhtrd"]
+[ext_resource type="Texture2D" uid="uid://bdc27t50cl8oq" path="res://Media/button-clicked.png" id="2_46wn8"]
+[ext_resource type="FontFile" uid="uid://bo4nr4tji5dlc" path="res://Media/upheavtt.ttf" id="3_ax7jg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obp8h"]
+texture = ExtResource("1_qhtrd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72wvx"]
+texture = ExtResource("1_qhtrd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvd38"]
+texture = ExtResource("2_46wn8")
+
+[sub_resource type="Theme" id="Theme_8nfys"]
+Button/styles/hover = SubResource("StyleBoxTexture_obp8h")
+Button/styles/normal = SubResource("StyleBoxTexture_72wvx")
+Button/styles/pressed = SubResource("StyleBoxTexture_nvd38")
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_onw1t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -37.0
+offset_right = 91.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_ax7jg")
+text = "Paused"
+
+[node name="MainMenu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8nfys")
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ax7jg")
+theme_override_font_sizes/font_size = 17
+text = "main menu"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8nfys")
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ax7jg")
+theme_override_font_sizes/font_size = 17
+text = "Exit"
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8nfys")
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ax7jg")
+theme_override_font_sizes/font_size = 17
+text = "Continue"
+
+[connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
