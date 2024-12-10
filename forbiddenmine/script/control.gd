@@ -21,3 +21,8 @@ func _on_controls_pressed() -> void:
 func _on_achievement_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/Achievement.tscn")
 	pass # Replace with function body.
+
+
+func _on_final_stage_preview_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/Abyss.tscn")
+	pass # Replace with function body.

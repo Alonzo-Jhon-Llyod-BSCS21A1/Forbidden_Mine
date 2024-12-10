@@ -70,6 +70,19 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_ckuqh")
 text = "CREATE WORLD"
 
+[node name="FinalStagePreviewButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 586.0
+offset_right = 208.0
+offset_bottom = 630.0
+theme = SubResource("Theme_t6ws4")
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ckuqh")
+text = "FINAL STAGE PREVIEW"
+
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 323.0
@@ -135,6 +148,7 @@ Magulang mo pa rin yan"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="FinalStagePreviewButton" to="." method="_on_final_stage_preview_button_pressed"]
 [connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]
 [connection signal="pressed" from="Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="AchievementButton" to="." method="_on_achievement_button_pressed"]

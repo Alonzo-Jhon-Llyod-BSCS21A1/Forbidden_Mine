@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://csu3kc7rn68lx" path="res://character/walk2.png" id="14_nooj6"]
 [ext_resource type="Texture2D" uid="uid://vvhxv35ya65w" path="res://character/walk3.png" id="15_ecwnv"]
 [ext_resource type="Texture2D" uid="uid://by58qh8hcsiu1" path="res://character/walk4.png" id="16_o07f0"]
-[ext_resource type="PackedScene" uid="uid://d35a6x6siepy7" path="res://Scene/inventory_hotbar.tscn" id="18_ioy0u"]
+[ext_resource type="PackedScene" uid="uid://d35a6x6siepy7" path="res://inventory_hotbar.tscn" id="18_ioy0u"]
 [ext_resource type="AudioStream" uid="uid://bj6jfekqpu1o5" path="res://Audio/Footsteps Grass Sound Effect (HD).mp3" id="21_ptd0o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10u7y"]
